@@ -1,12 +1,276 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Погнали</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Главная страница Погнали</title>
+</head>
+<body>
+  <header class="header">
+    <a class="header__link-logo link-logo"><img src="img/logo.svg" alt="Логотип Погнали?"></a>
+    <button class="header__toggle" aria-label="открыть меню"></button>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a href="service.html" class="navigation__link">
+            О сервисе
+          </a></li>
+        <li class="navigation__item"><a href="form.html" class="navigation__link">
+            Направления
+          </a></li>
+        <li class="navigation__item"><a href="catalog.html" class="navigation__link">
+            Попутчики
+          </a></li>
+      </ul>
+      <a href="login.html" class="header__login-link link">авторизация</a>
+      <div class="navigation__footer">
+        <div class="contact navigation__contact">
+          <a href="tel:88005558628" class="contact__phone-link">8 800 555-86-28</a>
+          <address class="contact__mail"><a href="mailto:mail@htmlacademy.ru" class="contact__mail-link">mail@htmlacademy.ru</a></address>
+        </div>
+        <ul class="social navigation__social">
+          <li class="social__item"><a href="fb.com" class="social__link">
+              <span class="visually-hidden">Мы в Facebook</span>
+            </a></li>
+          <li class="social__item"><a href="vk.com" class="social__link">
+              <span class="visually-hidden">Мы ВКонтакте</span>
+            </a></li>
+          <li class="social__item"><a href="instagram.com" class="social__link">
+              <span class="visually-hidden">Мы в Instagram</span>
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page page-main">
+    <h1 class="visually-hidden">Главная страница сервиса Погнали?</h1>
+    <section class="promo">
+      <b class="promo__title">
+        В путешествие
+        с крутыми попутчиками!
+      </b>
+      <p class="promo__contact">
+        <a href="tel:88005558628" class="promo__phone-link">
+          <span class="visually-hidden">Позвоните нам</span>
+        </a>
+        <a href="mailto:mail@htmlacademy.ru" class="promo__mail-link">
+          <span class="visually-hidden">Напишите нам</span>
+        </a>
+        <a href="login.html" class="promo__login-link">авторизация</a>
+      </p>
+    </section>
+    <section class="reviews">
+      <h2 class="visually-hidden">Люди о нас</h2>
+      <blockquote class="reviews__item">
+        «Лучшее приложение,
+        что я видел в жизни!»
+        <cite class="reviews__author">
+          Мурат Эльтазин главный редактор
+          газеты «гаджетлайф»
+        </cite>
+      </blockquote>
+    </section>
+    <section class="guide">
+      <h2 class="visually-hidden">Как начать пользоваться нашим сервисом?</h2>
+      <ol class="guide__list">
+        <li class="guide__item">
+          Выберите
+          направление
+        </li>
+        <li class="guide__item">
+          Изучите идеи
+          путешественников
+        </li>
+        <li class="guide__item">
+          Находите тех,
+          кто похож на вас
+        </li>
+        <li class="guide__item">
+          Путешествуйте
+          вместе!
+        </li>
+      </ol>
+    </section>
+    <section class="about">
+      <h2 class="about__title">О сервисе</h2>
+      <p class="about__description">
+        Любое путешествие веселее
+        с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+      </p>
+      <b>
+        А если найдете кого-то
+        близкого по духу — скорее
+        зовите в совместный трип!
+      </b>
+    </section>
+    <section class="directions">
+      <h2 class="directions__title">Направления</h2>
+      <p class="directions__desription">
+        Мы не продаем туры
+        и ничего не рекламируем.
+        Люди сами пишут о странах, куда хотели бы отправиться
+        и чем можно там заняться.
+      </p>
+      <ul class="directions__list countries">
+        <li class="countries__item country-item country-item_tai">
+          <blockquote class="country-item__box">
+            <h3 class="country-item__title country-item__title_tai">Таиланд</h3>
+            <p class="country-item__lead">Джунгли зовут!</p>
+            <span class="country-item__statistic">18321</span>
+          </blockquote>
+        </li>
+        <li class="countries__item country-item country-item_france">
+          <blockquote class="country-item__box">
+            <h3 class="country-item__title country-item__title_france">Франция</h3>
+            <p class="country-item__lead">Трэ бьен, манифик!</p>
+            <span class="country-item__statistic">12518</span>
+          </blockquote>
+        </li>
+        <li class="countries__item country-item county-item_czech">
+          <blockquote class="country-item__box">
+            <h3 class="country-item__title country-item__title_czech">Чехия</h3>
+            <p class="country-item__lead">Закоулки старой Европы</p>
+            <span class="country-item__statistic">5326</span>
+          </blockquote>
+        </li>
+      </ul>
+      <a href="form.html" class="directions__button button">Показать все</a>
+    </section>
+    <section class="people">
+      <h2 class="people__title">Попутчики</h2>
+      <p class="description">
+        Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+      </p>
+      <b>
+        Теперь можно легко найти единомышленников!
+      </b>
+      <ul class="people__list peoples">
+        <li class="peoples__item human">
+          <p class="level human__level">99</p>
+          <img src="img/tania.jpg" alt="Таня Фирсова" class="human__image">
+          <footer class="human__info">
+            <ul class="human__need-list">
+              <li class="human__need-country human__need-country_srilanka"></li>
+              <li class="human__need-country human__need-country_tai"></li>
+              <li class="human__need-country human__need-country_seychelles"></li>
+            </ul>
+            <h3 class="human__title">Таня Фирсова</h3>
+            <ul class="human__tag-list">
+              <li class="human__tag-item">#ЗОЖ</li>
+              <li class="human__tag-item">#ПП</li>
+              <li class="human__tag-item">#Фитнес</li>
+              <li class="human__tag-item">#пляж</li>
+              <li class="human__tag-item">#авокадо</li>
+              <li class="human__tag-item">#смузи</li>
+            </ul>
+            <ul class="human__prefer-list">
+              <li class="human__prefer-item human__prefer-item_plane human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bus"></li>
+              <li class="human__prefer-item human__prefer-item_bicycle"></li>
+              <li class="human__prefer-item human__prefer-item_run"></li>
+            </ul>
+          </footer>
+        </li>
+        <li class="peoples__item human">
+          <p class="level human__level">80</p>
+          <img src="img/petr.jpg" alt="Петя Демин" class="human__image">
+          <footer class="human__info">
+            <ul class="human__need-list">
+              <li class="human__need-country human__need-country_belgium"></li>
+              <li class="human__need-country human__need-country_czech"></li>
+            </ul>
+            <h3 class="human__title">Петя Демин</h3>
+            <ul class="human__tag-list">
+              <li class="human__tag-item">#бургер</li>
+              <li class="human__tag-item">#бар</li>
+              <li class="human__tag-item">#футбол</li>
+              <li class="human__tag-item">#концерт</li>
+              <li class="human__tag-item">#крафт</li>
+            </ul>
+            <ul class="human__prefer-list">
+              <li class="human__prefer-item human__prefer-item_plane human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bus human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bicycle"></li>
+              <li class="human__prefer-item human__prefer-item_run human__prefer-item_active"></li>
+            </ul>
+          </footer>
+        </li>
+      </ul>
+      <a href="catalog.html" class="people__button button">Показать всех</a>
+    </section>
+    <section class="offer">
+      <h2 class="offer__title">
+        Добавьте
+        свой
+        профиль
+      </h2>
+      <ul class="offer__list">
+        <li class="offer__item">
+          Базовое размещение
+          Бесплатно
+        </li>
+        <li class="offer__item">
+          Вывод на первых позициях
+          99 руб./мес
+        </li>
+        <li class="offer__item">
+          Кастомный цвет карточки
+          59 руб./мес
+        </li>
+      </ul>
+      <a href="" class="offer__button">Показать тарифы для бизнеса</a>
+    </section>
+    <section class="registration">
+      <h2 class="visually-hidden">Форма регистрации</h2>
+      <b class="registration__title">Заинтересовались?</b>
+      <p class="registration__lead">
+        Зарегистрируйтесь,
+        это быстро и бесплатно!
+        Уже зарегистрированы? Тогда скорее <a href="registration.html" class="reg-link">авторизуйтесь.</a>
+      </p>
+      <form action="https://echo.htmlacademy.ru" class="registration__email-form" method="post">
+        <input type="email" class="registration__mail" placeholder="E-mail">
+        <button class="registration__button" type="submit">
+          <span class="visually-hidden">Отправить форму</span>
+        </button>
+      </form>
+      <p class="registration__lead">
+        Остались вопросы?
+        Мы с радостью на них ответим!
+      </p>
+    </section>
+    <section class="contact-us">
+      <h2 class="vissual-hidden">Наши контактные данные</h2>
+      <div class="contact">
+        <a href="tel:88005558628" class="contact__phone-link">8 800 555-86-28</a>
+        <address class="contact__mail"><a href="mailto:mail@htmlacademy.ru" class="contact__mail-link">mail@htmlacademy.ru</a></address>
+      </div>
+      <div class="contact-us__yellow-box">
+        <address class="contact-us__address"><b>
+            ул. Большая
+            Конюшенная, 19/8
+          </b></address>
+        <a href="map.html" class="contact-us__link">Проложить маршрут</a>
+      </div>
+      <div class="contact-us__map map">
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a class="footer__link-logo link-logo"><img src="img/logo.svg" alt="Логотип Погнали?"></a>
+    <ul class="social footer__social">
+      <li class="social__item"><a href="fb.com" class="social__link">
+          <span class="visually-hidden">Мы в Facebook</span>
+        </a></li>
+      <li class="social__item"><a href="vk.com" class="social__link">
+          <span class="visually-hidden">Мы ВКонтакте</span>
+        </a></li>
+      <li class="social__item"><a href="instagram.com" class="social__link">
+          <span class="visually-hidden">Мы в Instagram</span>
+        </a></li>
+    </ul>
+    <p class="author">
+      <span class="author__develop">Разработано</span>
+      <a href="htmlacademy.ru" class="author__link"><img src="img/html.svg" alt="логотип htmlacademy"></a>
+    </p>
+  </footer>
+</body>
 </html>

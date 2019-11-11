@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Каталог попутчиков Погнали</title>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header__link-logo link-logo"><img src="img/logo.svg" alt="Логотип Погнали?"></a>
+    <button class="header__toggle" aria-label="открыть меню"></button>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a href="service.html" class="navigation__link">
+            О сервисе
+          </a></li>
+        <li class="navigation__item"><a href="form.html" class="navigation__link">
+            Направления
+          </a></li>
+        <li class="navigation__item"><a class="navigation__link">
+            Попутчики
+          </a></li>
+      </ul>
+      <a href="login.html" class="header__login-link link">авторизация</a>
+      <div class="navigation__footer">
+        <div class="contact navigation__contact">
+          <a href="tel:88005558628" class="contact__phone-link">8 800 555-86-28</a>
+          <address class="contact__mail"><a href="mailto:mail@htmlacademy.ru" class="contact__mail-link">mail@htmlacademy.ru</a></address>
+        </div>
+        <ul class="social navigation__social">
+          <li class="social__item"><a href="fb.com" class="social__link">
+              <span class="visually-hidden">Мы в Facebook</span>
+            </a></li>
+          <li class="social__item"><a href="vk.com" class="social__link">
+              <span class="visually-hidden">Мы ВКонтакте</span>
+            </a></li>
+          <li class="social__item"><a href="instagram.com" class="social__link">
+              <span class="visually-hidden">Мы в Instagram</span>
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page page-catalog">
+
+    <h1 class="page__title">Попутчики</h1>
+    <a class="button-filter">Фильтрация по странам</a>
+
+    <form action="https://echo.htmlacademy.ru" method="post" class="people-form">
+      <b class="people-form__slogan"></b>
+      <details class="people-form__box">
+        <summary class="people-form__title">
+          Хобби
+        </summary>
+        <fieldset>
+          <legend class="visually-hidden">Хобби</legend>
+        </fieldset>
+      </details>
+      <details class="people-form__box" open>
+        <summary class="people-form__title">
+          Музыка
+        </summary>
+        <fieldset>
+          <legend class="visually-hidden">Музыка</legend>
+          <ul class="people-form__list">
+            <li class="people-form__item">
+              <label class="people-form__label">
+                <input type="checkbox" class="visually-hidden" name="hard" checked>
+                <span class="checkbox"></span>
+                Тяжелый рок
+              </label>
+            </li>
+            <li class="people-form__item">
+              <label class="people-form__label">
+                <input type="checkbox" class="visually-hidden" name="rap">
+                <span class="checkbox"></span>
+                Русский рэп
+              </label>
+            </li>
+            <li class="people-form__item">
+              <label class="people-form__label">
+                <input type="checkbox" class="visually-hidden" name="euro">
+                <span class="checkbox"></span>
+                Евроденс
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </details>
+      <details class="people-form__box">
+        <summary class="people-form__title">
+          Еда
+        </summary>
+        <fieldset>
+          <legend class="visually-hidden">Еда</legend>
+        </fieldset>
+      </details>
+      <details class="people-form__box" open>
+        <summary class="people-form__title">
+          Транспорт
+        </summary>
+        <fieldset>
+          <legend class="visually-hidden">Транспорт</legend>
+          <ul class="people-form__list people-form__list_image prefer">
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="plane" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Самолет</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="bus" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Автобус</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="bicycle">
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Велосипед</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="run" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Бег</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </details>
+      <details class="people-form__box" open>
+        <summary class="people-form__title">
+          Левел
+        </summary>
+        <fieldset>
+          <legend class="visually-hidden">Левел</legend>
+          <div class="level-box">
+            <input type="text" value="30" name="Минимальный уровень" aria-label="Минимальный уровень" class="level-box__input">
+            <input type="text" value="100" name="Максимальный уровень" aria-label="Максимальный уровень" class="level-box__input">
+            <div class="range-box">
+              <span class="range-box__line range-box__line_back"></span>
+              <span class="range-box__line range-box__line_up"></span>
+              <button type="button" aria-label="Минимальный уровень" class="range-box__button range-box__button_min"></button>
+              <button type="button" aria-label="Максимальный уровень" class="range-box__button range-box__button_max"></button>
+            </div>
+          </div>
+        </fieldset>
+      </details>
+      <button type="submit" class="people-form__button button">Показать</button>
+    </form>
+    <section class="catalog">
+      <ul class="catalog__list">
+        <li class="catalog__item card human">
+          <div class="card__top">
+            <img src="img/tania.jpg" alt="Таня Фирсова" class="human__image card__image">
+            <h3 class="human__title card__title">Таня Фирсова</h3>
+            <b class="card__like card__like_more">1,5 m</b>
+          </div>
+          <ul class="human__tag-list">
+            <li class="human__tag-item">#ЗОЖ</li>
+            <li class="human__tag-item">#ПП</li>
+            <li class="human__tag-item">#Фитнес</li>
+            <li class="human__tag-item">#пляж</li>
+            <li class="human__tag-item">#авокадо</li>
+            <li class="human__tag-item">#смузи</li>
+          </ul>
+          <span class="card__sub-title">хочет посетить:</span>
+          <ul class="human__need-list card__need-list">
+            <li class="human__need-country human__need-country_srilanka">Шри-ланка</li>
+            <li class="human__need-country human__need-country_tai">Таиланд</li>
+            <li class="human__need-country human__need-country_seychelles">Сейшелы</li>
+          </ul>
+          <span class="card__sub-title">транспорт:</span>
+          <span class="card__sub-title">левел:</span>
+          <div>
+            <ul class="human__prefer-list card__prefer-list">
+              <li class="human__prefer-item human__prefer-item_plane human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bus"></li>
+              <li class="human__prefer-item human__prefer-item_bicycle"></li>
+              <li class="human__prefer-item human__prefer-item_run"></li>
+            </ul>
+            <p class="level card__level">99</p>
+          </div>
+          <a href="call.html" class="card__button button">Позвать!</a>
+        </li>
+        <li class="catalog__item card human">
+          <div class="card__top">
+            <img src="img/petr.jpg" alt="Петя Демин" class="human__image card__image">
+            <h3 class="human__title card__title">Петя Демин</h3>
+            <b class="card__like">150</b>
+          </div>
+          <ul class="human__tag-list">
+            <li class="human__tag-item">#бургер</li>
+            <li class="human__tag-item">#бар</li>
+            <li class="human__tag-item">#футбол</li>
+            <li class="human__tag-item">#концерт</li>
+            <li class="human__tag-item">#крафт</li>
+          </ul>
+          <span class="card__sub-title">хочет посетить:</span>
+          <ul class="human__need-list card__need-list">
+            <li class="human__need-country human__need-country_belgium">Бельгия</li>
+            <li class="human__need-country human__need-country_czech">Чехия</li>
+          </ul>
+          <span class="card__sub-title">транспорт:</span>
+          <span class="card__sub-title">левел:</span>
+          <div>
+            <ul class="human__prefer-list card__prefer-list">
+              <li class="human__prefer-item human__prefer-item_plane human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bus human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bicycle"></li>
+              <li class="human__prefer-item human__prefer-item_run human__prefer-item_active"></li>
+            </ul>
+            <p class="level card__level">80</p>
+          </div>
+          <a href="call.html" class="card__button button">Позвать!</a>
+        </li>
+        <li class="catalog__item card human">
+          <div class="card__top">
+            <img src="img/mark.jpg" alt="Марк Смолов" class="human__image card__image">
+            <h3 class="human__title card__title">Марк Смолов</h3>
+            <b class="card__like">1700</b>
+          </div>
+          <ul class="human__tag-list">
+            <li class="human__tag-item">#рэп</li>
+            <li class="human__tag-item">#тату</li>
+            <li class="human__tag-item">#хайпбист</li>
+            <li class="human__tag-item">#кроссовки</li>
+            <li class="human__tag-item">#суприм</li>
+          </ul>
+          <span class="card__sub-title">хочет посетить:</span>
+          <ul class="human__need-list card__need-list">
+            <li class="human__need-country human__need-country_usa">США</li>
+            <li class="human__need-country human__need-country_australia">Австралия</li>
+            <li class="human__need-country human__need-country_dominicana">Доминикана</li>
+          </ul>
+          <span class="card__sub-title">транспорт:</span>
+          <span class="card__sub-title">левел:</span>
+          <div>
+            <ul class="human__prefer-list card__prefer-list">
+              <li class="human__prefer-item human__prefer-item_plane human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bus"></li>
+              <li class="human__prefer-item human__prefer-item_bicycle human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_run"></li>
+            </ul>
+            <p class="level card__level">25</p>
+          </div>
+          <a href="call.html" class="card__button button">Позвать!</a>
+        </li>
+        <li class="catalog__item card human">
+          <div class="card__top">
+            <img src="img/larisa.jpg" alt="Лариса Роговая" class="human__image card__image">
+            <h3 class="human__title card__title">Лариса Роговая</h3>
+            <b class="card__like">23</b>
+          </div>
+          <ul class="human__tag-list">
+            <li class="human__tag-item">#образование</li>
+            <li class="human__tag-item">#карьера</li>
+            <li class="human__tag-item">#учеба</li>
+            <li class="human__tag-item">#линкедин</li>
+          </ul>
+          <span class="card__sub-title">хочет посетить:</span>
+          <ul class="human__need-list card__need-list">
+            <li class="human__need-country human__need-country_britan">Великобритания</li>
+            <li class="human__need-country human__need-country_german">Германия</li>
+          </ul>
+          <span class="card__sub-title">транспорт:</span>
+          <span class="card__sub-title">левел:</span>
+          <div>
+            <ul class="human__prefer-list card__prefer-list">
+              <li class="human__prefer-item human__prefer-item_plane human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bus human__prefer-item_active"></li>
+              <li class="human__prefer-item human__prefer-item_bicycle"></li>
+              <li class="human__prefer-item human__prefer-item_run"></li>
+            </ul>
+            <p class="level card__level">50</p>
+          </div>
+          <a href="call.html" class="card__button button">Позвать!</a>
+        </li>
+      </ul>
+      <a href="more.html" class="catalog__button">Показать еще</a>
+      <p class="catalog__pagination pagination">
+        <button class="pagination__button-prev">
+          <span class="vusualli-hidden">Предыдущая страница</span>
+        </button>
+        <button class="pagination__button-next">
+          <span class="vusualli-hidden">Следующая страница</span>
+        </button>
+      </p>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="index.html" class="footer__link-logo link-logo"><img src="img/logo.svg" alt="Логотип Погнали?"></a>
+    <ul class="social footer__social">
+      <li class="social__item"><a href="fb.com" class="social__link">
+          <span class="visually-hidden">Мы в Facebook</span>
+        </a></li>
+      <li class="social__item"><a href="vk.com" class="social__link">
+          <span class="visually-hidden">Мы ВКонтакте</span>
+        </a></li>
+      <li class="social__item"><a href="instagram.com" class="social__link">
+          <span class="visually-hidden">Мы в Instagram</span>
+        </a></li>
+    </ul>
+    <p class="author">
+      <span class="author__develop">Разработано</span>
+      <a href="htmlacademy.ru" class="author__link"><img src="img/html.svg" alt="логотип htmlacademy"></a>
+    </p>
+  </footer>
+</body>
+</html>
