@@ -46,7 +46,10 @@
       <h2 class="visually-hidden">Ваш профиль</h2>
       <p class="profile__level">80</p>
       <img src="img/petr.jpg" alt="Петя" class="profile__image">
-      <a href="change.html" class="profile__button-image">Сменить фото</a>
+      <label class="profile__label-photo">
+        сменить фото
+        <input type="file" class="profile__input-photo">
+      </label>
       <label class="profile__label">
         Тэги
         <textarea name="tags" cols="60" rows="5" class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
@@ -124,19 +127,19 @@
             вы хотели бы позвать в поездку и ее предполагаемую длительность.
           </p>
           <p class="step__box">
+            <button class="less" aria-label="Уменьшить"></button>
             <label class="step__label">
               ищу попутчиков:
               <input type="text" value="2" class="step__input">
             </label>
-            <button class="less" aria-label="Уменьшить"></button>
             <button class="more" aria-label="Увеличить"></button>
           </p>
           <p class="step__box">
+            <button class="less" aria-label="Уменьшить"></button>
             <label class="step__label">
               Длительность:
               <input type="text" value="2" class="step__input">
             </label>
-            <button class="less" aria-label="Уменьшить"></button>
             <button class="more" aria-label="Увеличить"></button>
           </p>
           <label>
@@ -154,11 +157,11 @@
             Маршрут
           </h3>
           <p class="step__description">
-            Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.
+            Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
           </p>
           <select name="first-country" class="step__select select">
             <option value="0" class="select__country">Выберите страну</option>
-            <option value="Босния и герцегов" class="select__country select__country_bos" selected>Босния и герцегов</option>
+            <option value="Босния и Герцеговина" class="select__country select__country_bos" selected>Босния и Герцеговина</option>
           </select>
           <select name="second-country" class="step__select select">
             <option value="0" class="select__country">Выберите страну</option>
@@ -182,7 +185,7 @@
             Можно писать в свободной форме и ставить тэги.
           </p>
           <label class="step__label step__label_bos">
-            Босния и герцегови
+            Босния и Герцеговина
             <textarea name="bos" cols="30" rows="10" placeholder="План действий" class="step__textarea"></textarea>
           </label>
           <label class="step__label step__label_czech">
