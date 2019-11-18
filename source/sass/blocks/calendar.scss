@@ -1,0 +1,37 @@
+.calendar__head {
+  margin: 0;
+}
+
+.calendar__month-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.calendar__table {
+  font-size: 14px;
+  line-height: 18px;
+
+  @include opacity-color($grey, 0.3);
+}
+
+.calendar__row:first-child {
+  color: $grey;
+}
+
+.calendar__th {
+  text-align: center;
+}
+
+.calendar__th:nth-last-child(1) {
+  color: #ff5c23;
+}
+
+.calendar__th:nth-last-child(2) {
+  color: #ff5c23;
+}
+
+.calendar__td {
+  text-align: center;
+}

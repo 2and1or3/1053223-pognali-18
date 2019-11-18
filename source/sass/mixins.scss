@@ -1,5 +1,23 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
 
-@mixin title-1 {
-  font-size: 20px;
-  color: #fff;
+  list-style: none;
+}
+
+@mixin section-title-orange {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: $orange;
+}
+
+@mixin opacity-color($color, $opacity) {
+  $color: transparentize($color, 1);
+  color: opacify($color, $opacity);
+}
+
+@mixin opacity-bg($color, $opacity) {
+  $color: transparentize($color, 1);
+  background-color: opacify($color, $opacity);
 }

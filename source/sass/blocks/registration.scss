@@ -1,0 +1,16 @@
+.registration__title {
+  margin: 0;
+
+  @include section-title-orange;
+}
+
+.registration__lead {
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+}
+
+.registration__link {
+  color: $light-yellow;
+  text-decoration: underline;
+}

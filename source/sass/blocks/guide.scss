@@ -1,0 +1,30 @@
+.guide {
+  padding-bottom: 40px;
+
+  background-image: linear-gradient(to bottom, $darkness-blue 0%, $darkness-blue 25%, transparent 25%);
+}
+
+.guide__list {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: $darkness-blue;
+
+  @include list-reset;
+}
+
+.guide__item:nth-child(1) {
+  background-color: $orange;
+}
+
+.guide__item:nth-child(2) {
+  background-color: $light-orange;
+}
+
+.guide__item:nth-child(3) {
+  background-color: $yellow;
+}
+
+.guide__item:nth-child(4) {
+  background-color: $light-yellow;
+}

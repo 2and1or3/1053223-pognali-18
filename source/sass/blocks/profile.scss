@@ -1,0 +1,23 @@
+.profile__label-photo {
+  background-color: $lightness-blue;
+  color: $darkness-blue;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile__label {
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.profile__tags {
+  border: 1px solid #cbced9;
+  background-color: $grey-blue;
+  resize: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: $grey;
+}

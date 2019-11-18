@@ -1,0 +1,33 @@
+.country-item {
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.country-item__box {
+  margin: 0;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.country-item__title {
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 21px;
+  color: $darkness-blue;
+}
+
+.country-item__lead {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+ margin: 0;
+  @include opacity-color($grey, 0.3);
+}
+
+.country-item__statistic {
+  @include opacity-color($grey, 0.3);
+  font-weight: 500;
+}

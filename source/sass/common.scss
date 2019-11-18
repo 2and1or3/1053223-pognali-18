@@ -3,15 +3,16 @@ body {
 
   font-style: normal;
   font-weight: normal;
-  font-family: "BloggerSans", "Arial", serif;
+  font-family: "BloggerSans", "Arial", sans-serif;
   color: #ffffff;
   font-size: 16px;
   line-height: 22px;
-  background-color: #141b3b;
+  background-color: $grey-blue;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .visually-hidden {

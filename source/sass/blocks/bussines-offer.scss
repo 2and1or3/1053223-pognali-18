@@ -1,0 +1,21 @@
+.bussines-offer {
+  font-weight: 300;
+}
+
+.bussines-offer__title {
+  @include section-title-orange;
+  margin: 0;
+}
+
+.bussines-offer__list {
+  @include list-reset;
+}
+
+.bussines-offer__button {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $blue;
+  text-transform: uppercase;
+  font-weight: bold;
+}

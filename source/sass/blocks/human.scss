@@ -1,0 +1,35 @@
+.human {
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.human__info {
+  color: $blue;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.human__need-list {
+  @include list-reset;
+}
+
+.human__title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  margin: 0;
+}
+
+.human__tag-list {
+  text-align: center;
+  color: $grey;
+
+  @include list-reset;
+}
+
+.human__prefer-list {
+  @include list-reset;
+}

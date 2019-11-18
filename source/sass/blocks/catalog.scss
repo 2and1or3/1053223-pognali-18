@@ -1,0 +1,11 @@
+.catalog__list {
+  @include list-reset;
+}
+
+.catalog__button {
+  color: $blue;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}

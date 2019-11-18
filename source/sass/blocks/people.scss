@@ -1,0 +1,9 @@
+.people__title {
+  @include section-title-orange;
+  margin: 0;
+}
+
+.people__description {
+  font-weight: 300;
+  margin: 0;
+}

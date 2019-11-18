@@ -1,0 +1,25 @@
+.plan {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.plan__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.plan__info {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.plan__change {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @include opacity-color(#000000, 0.3);
+}

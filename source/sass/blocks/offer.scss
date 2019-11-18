@@ -1,0 +1,27 @@
+.offer {
+  color: $grey;
+  font-weight: 300;
+
+  background-color: $grey-blue;
+  background-image: url(../img/rates@1x.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 99px 99px;
+}
+
+.offer__title {
+  margin: 0;
+
+  @include section-title-orange;
+}
+
+.offer__list {
+  @include list-reset;
+}
+
+.offer__button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: $dark-blue;
+}

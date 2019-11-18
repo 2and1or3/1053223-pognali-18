@@ -1,0 +1,24 @@
+.list-filter__title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.list-filter__button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "BloggerSans", "Arial", serif;
+  color: $darkness-blue;
+  text-transform: uppercase;
+
+  background-color: #e2e5f2;
+  border: none;
+}
+
+.list-filter__area {
+  background-color: #e2e5f2;
+}
+
+.list-filter__countries {
+  color: $grey;
+}
