@@ -38,6 +38,7 @@
   border: 1px solid #cbced9;
 
   resize: none;
+
   &::placeholder {
     @include opacity-color($grey, 0.3);
   }

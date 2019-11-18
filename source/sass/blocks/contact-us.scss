@@ -2,13 +2,15 @@
   .contact__phone-link {
     color: $light-yellow;
   }
+
   .contact__mail-link {
     color: $light-yellow;
   }
 }
 
 .contact-us__yellow-box {
-  background-color: $light-yellow;
-  color: $dark-blue;
   font-weight: bold;
+  color: $dark-blue;
+
+  background-color: $light-yellow;
 }

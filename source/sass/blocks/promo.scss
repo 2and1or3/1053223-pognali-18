@@ -1,8 +1,7 @@
 .promo {
   background: $darkness-blue;
-  background-image:
-  url("../img/traveller-illustration-mobile@1x.png"),
-  url("../img/globe-back-mobile@1x.jpg");
+  background-image: url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -12,11 +11,12 @@
 }
 
 .promo__title {
+  margin: 0;
+
+  font-weight: bold;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
-  font-weight: bold;
-  margin: 0;
 }
 
 .promo__login-link {

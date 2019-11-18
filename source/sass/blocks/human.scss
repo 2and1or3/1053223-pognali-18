@@ -1,5 +1,6 @@
 .human {
   margin-bottom: 10px;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -16,11 +17,12 @@
 }
 
 .human__title {
+  margin: 0;
+
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
-  margin: 0;
 }
 
 .human__tag-list {
