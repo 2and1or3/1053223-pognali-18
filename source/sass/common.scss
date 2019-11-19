@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: normal;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: $grey-blue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}

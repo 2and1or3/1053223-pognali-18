@@ -1,0 +1,19 @@
+.continents {
+  @include list-reset;
+}
+
+.continents__button {
+  padding: 0;
+
+  font: inherit;
+  font-weight: bold;
+
+  background-color: transparent;
+  border: none;
+
+  @include opacity-color($dark-blue, 0.3);
+}
+
+.continents__button_select {
+  color: $dark-blue;
+}

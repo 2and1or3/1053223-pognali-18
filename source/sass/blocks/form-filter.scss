@@ -1,0 +1,25 @@
+.form-filter {
+  background-color: $light-yellow;
+  color: $blue;
+}
+
+.form-filter__slogan {
+  font-size: 22.5px;
+  line-height: 22.5px;
+  font-weight: bold;
+}
+
+.form-filter__title {
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.form-filter__list {
+  @include list-reset;
+  color: $grey;
+}
+
+.form-filter__button {
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+}

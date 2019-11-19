@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог попутчиков Погнали</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <a href="index.html" class="header__link-logo link-logo"><img src="img/logo.svg" alt="Логотип Погнали?"></a>
+    <a href="index.html" class="header__link-logo link-logo"><img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали?"></a>
     <button class="header__toggle" aria-label="открыть меню"></button>
     <nav class="navigation">
       <ul class="navigation__list">
@@ -41,122 +42,274 @@
     </nav>
   </header>
   <main class="page page-catalog">
-
     <h1 class="page__title">Попутчики</h1>
-    <a class="button-filter">Фильтрация по странам</a>
-
-    <form action="https://echo.htmlacademy.ru" method="post" class="people-form">
-      <b class="people-form__slogan"></b>
-      <details class="people-form__box">
-        <summary class="people-form__title">
-          Хобби
-        </summary>
-        <fieldset>
-          <legend class="visually-hidden">Хобби</legend>
-        </fieldset>
-      </details>
-      <details class="people-form__box" open>
-        <summary class="people-form__title">
-          Музыка
-        </summary>
-        <fieldset>
-          <legend class="visually-hidden">Музыка</legend>
-          <ul class="people-form__list">
-            <li class="people-form__item">
-              <label class="people-form__label">
-                <input type="checkbox" class="visually-hidden" name="hard" checked>
-                <span class="checkbox"></span>
-                Тяжелый рок
-              </label>
-            </li>
-            <li class="people-form__item">
-              <label class="people-form__label">
-                <input type="checkbox" class="visually-hidden" name="rap">
-                <span class="checkbox"></span>
-                Русский рэп
-              </label>
-            </li>
-            <li class="people-form__item">
-              <label class="people-form__label">
-                <input type="checkbox" class="visually-hidden" name="euro">
-                <span class="checkbox"></span>
-                Евроденс
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-      </details>
-      <details class="people-form__box">
-        <summary class="people-form__title">
-          Еда
-        </summary>
-        <fieldset>
-          <legend class="visually-hidden">Еда</legend>
-        </fieldset>
-      </details>
-      <details class="people-form__box" open>
-        <summary class="people-form__title">
-          Транспорт
-        </summary>
-        <fieldset>
-          <legend class="visually-hidden">Транспорт</legend>
-          <ul class="people-form__list people-form__list_image prefer">
-            <li class="prefer__item">
-              <label class="prefer__label">
-                <input type="checkbox" class="visually-hidden" name="plane" checked>
-                <span class="checkbox-image"></span>
-                <span class="visually-hidden">Самолет</span>
-              </label>
-            </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
-                <input type="checkbox" class="visually-hidden" name="bus" checked>
-                <span class="checkbox-image"></span>
-                <span class="visually-hidden">Автобус</span>
-              </label>
-            </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
-                <input type="checkbox" class="visually-hidden" name="bicycle">
-                <span class="checkbox-image"></span>
-                <span class="visually-hidden">Велосипед</span>
-              </label>
-            </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
-                <input type="checkbox" class="visually-hidden" name="run" checked>
-                <span class="checkbox-image"></span>
-                <span class="visually-hidden">Бег</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-      </details>
-      <details class="people-form__box" open>
-        <summary class="people-form__title">
-          Левел
-        </summary>
-        <fieldset>
-          <legend class="visually-hidden">Левел</legend>
-          <div class="level-box">
-            <input type="text" value="30" name="Минимальный уровень" aria-label="Минимальный уровень" class="level-box__input">
-            <input type="text" value="100" name="Максимальный уровень" aria-label="Максимальный уровень" class="level-box__input">
-            <div class="range-box">
-              <span class="range-box__line range-box__line_back"></span>
-              <span class="range-box__line range-box__line_up"></span>
-              <button type="button" aria-label="Минимальный уровень" class="range-box__button range-box__button_min"></button>
-              <button type="button" aria-label="Максимальный уровень" class="range-box__button range-box__button_max"></button>
-            </div>
+    <section class="list-filter">
+      <h2 class="list-filter__title">
+        <button class="list-filter__button">Фильтрация по странам</button>
+      </h2>
+      <div class="list-filter__area area">
+        <ul class="list-filter__continents continents">
+          <li class="continents__item"><button type="button" class="continents__button continents__button_select">Европа</button></li>
+          <li class="continents__item"><button type="button" class="continents__button">Азия</button></li>
+          <li class="continents__item"><button type="button" class="continents__button">Америка</button></li>
+          <li class="continents__item"><button type="button" class="continents__button">Острова</button></li>
+        </ul>
+        <ul class="list-filter__letters letters">
+          <li class="letters__item">
+            <label class="letters__label letters__label_select">
+              А
+              <input type="radio" name="letter" value="А" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Б
+              <input type="radio" name="letter" value="Б" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              В
+              <input type="radio" name="letter" value="В" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Г
+              <input type="radio" name="letter" value="Г" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Д
+              <input type="radio" name="letter" value="Д" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Е
+              <input type="radio" name="letter" value="Е" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              З
+              <input type="radio" name="letter" value="З" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              И
+              <input type="radio" name="letter" value="И" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              К
+              <input type="radio" name="letter" value="К" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Л
+              <input type="radio" name="letter" value="Л" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              М
+              <input type="radio" name="letter" value="М" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Н
+              <input type="radio" name="letter" value="Н" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              О
+              <input type="radio" name="letter" value="О" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              П
+              <input type="radio" name="letter" value="П" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Р
+              <input type="radio" name="letter" value="Р" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              С
+              <input type="radio" name="letter" value="С" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Т
+              <input type="radio" name="letter" value="Т" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              У
+              <input type="radio" name="letter" value="У" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Ф
+              <input type="radio" name="letter" value="Ф" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Х
+              <input type="radio" name="letter" value="Х" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Ч
+              <input type="radio" name="letter" value="Ч" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Ш
+              <input type="radio" name="letter" value="Ш" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Э
+              <input type="radio" name="letter" value="Э" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Ю
+              <input type="radio" name="letter" value="Ю" class="letters__input">
+            </label>
+          </li>
+          <li class="letters__item">
+            <label class="letters__label">
+              Я
+              <input type="radio" name="letter" value="Я" class="letters__input">
+            </label>
+          </li>
+        </ul>
+        <ul class="list-filter__countries countries">
+          <li class="countries__item">Афганистан</li>
+          <li class="countries__item">Албания</li>
+          <li class="countries__item">Алжир</li>
+          <li class="countries__item">Андорра</li>
+          <li class="countries__item">Аргентина</li>
+          <li class="countries__item">Армения</li>
+          <li class="countries__item">Австралия</li>
+          <li class="countries__item">Австрия</li>
+          <li class="countries__item">Азербайджан</li>
+        </ul>
+        <button class="area__button-close">свернуть</button>
+      </div>
+    </section>
+    <form action="https://echo.htmlacademy.ru" method="post" class="form-filter">
+      <b class="form-filter__slogan">
+        Подберите идеального
+        попутчика
+      </b>
+      <fieldset class="form-filter__box form-filter__box_close">
+        <legend class="form-filter__title">Хобби</legend>
+      </fieldset>
+      <fieldset class="form-filter__box">
+        <legend class="form-filter__title">Музыка</legend>
+        <ul class="form-filter__list">
+          <li class="form-filter__item">
+            <label class="form-filter__label">
+              <input type="checkbox" class="visually-hidden" name="hard" checked>
+              <span class="checkbox"></span>
+              Тяжелый рок
+            </label>
+          </li>
+          <li class="form-filter__item">
+            <label class="form-filter__label">
+              <input type="checkbox" class="visually-hidden" name="rap">
+              <span class="checkbox"></span>
+              Русский рэп
+            </label>
+          </li>
+          <li class="form-filter__item">
+            <label class="form-filter__label">
+              <input type="checkbox" class="visually-hidden" name="euro">
+              <span class="checkbox"></span>
+              Евроденс
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form-filter__box form-filter__box_close">
+        <legend class="form-filter__title">Еда</legend>
+      </fieldset>
+      <fieldset class="form-filter__box">
+        <legend class="form-filter__title">Транспорт</legend>
+        <ul class="form-filter__list form-filter__list_image prefer">
+          <li class="prefer__item">
+            <label class="prefer__label">
+              <input type="checkbox" class="visually-hidden" name="plane" checked>
+              <span class="checkbox-image"></span>
+              <span class="visually-hidden">Самолет</span>
+            </label>
+          </li>
+          <li class="prefer__item">
+            <label class="prefer__label">
+              <input type="checkbox" class="visually-hidden" name="bus" checked>
+              <span class="checkbox-image"></span>
+              <span class="visually-hidden">Автобус</span>
+            </label>
+          </li>
+          <li class="prefer__item">
+            <label class="prefer__label">
+              <input type="checkbox" class="visually-hidden" name="bicycle">
+              <span class="checkbox-image"></span>
+              <span class="visually-hidden">Велосипед</span>
+            </label>
+          </li>
+          <li class="prefer__item">
+            <label class="prefer__label">
+              <input type="checkbox" class="visually-hidden" name="run" checked>
+              <span class="checkbox-image"></span>
+              <span class="visually-hidden">Бег</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form-filter__box">
+        <legend class="form-filter__title">Левел</legend>
+        <div class="level-box">
+          <input type="text" value="30" name="Минимальный уровень" aria-label="Минимальный уровень" class="level-box__input">
+          <input type="text" value="100" name="Максимальный уровень" aria-label="Максимальный уровень" class="level-box__input">
+          <div class="range-box">
+            <span class="range-box__line range-box__line_back"></span>
+            <span class="range-box__line range-box__line_up"></span>
+            <button type="button" aria-label="Минимальный уровень" class="range-box__button range-box__button_min"></button>
+            <button type="button" aria-label="Максимальный уровень" class="range-box__button range-box__button_max"></button>
           </div>
-        </fieldset>
-      </details>
-      <button type="submit" class="people-form__button button">Показать</button>
+        </div>
+      </fieldset>
+      <button type="submit" class="form-filter__button button">Показать</button>
     </form>
     <section class="catalog">
       <ul class="catalog__list">
         <li class="catalog__item card human">
           <div class="card__top">
-            <img src="img/tania.jpg" alt="Таня Фирсова" class="human__image card__image">
+            <img src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" class="human__image card__image">
             <h3 class="human__title card__title">Таня Фирсова</h3>
             <b class="card__like card__like_more">1,5 m</b>
           </div>
@@ -189,7 +342,7 @@
         </li>
         <li class="catalog__item card human">
           <div class="card__top">
-            <img src="img/petr.jpg" alt="Петя Демин" class="human__image card__image">
+            <img src="img/demin-mobile@1x.jpg" alt="Петя Демин" class="human__image card__image">
             <h3 class="human__title card__title">Петя Демин</h3>
             <b class="card__like">150</b>
           </div>
@@ -220,7 +373,7 @@
         </li>
         <li class="catalog__item card human">
           <div class="card__top">
-            <img src="img/mark.jpg" alt="Марк Смолов" class="human__image card__image">
+            <img src="img/smolov-mobile@1x.jpg" alt="Марк Смолов" class="human__image card__image">
             <h3 class="human__title card__title">Марк Смолов</h3>
             <b class="card__like">1700</b>
           </div>
@@ -252,7 +405,7 @@
         </li>
         <li class="catalog__item card human">
           <div class="card__top">
-            <img src="img/larisa.jpg" alt="Лариса Роговая" class="human__image card__image">
+            <img src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая" class="human__image card__image">
             <h3 class="human__title card__title">Лариса Роговая</h3>
             <b class="card__like">23</b>
           </div>
@@ -283,17 +436,17 @@
       </ul>
       <a href="more.html" class="catalog__button">Показать еще</a>
       <p class="catalog__pagination pagination">
-        <button class="pagination__button-prev">
-          <span class="vusualli-hidden">Предыдущая страница</span>
+        <button class="pagination__button pagination__button_prev">
+          <span class="visually-hidden">Предыдущая страница</span>
         </button>
-        <button class="pagination__button-next">
-          <span class="vusualli-hidden">Следующая страница</span>
+        <button class="pagination__button pagination__button_next">
+          <span class="visually-hidden">Следующая страница</span>
         </button>
       </p>
     </section>
   </main>
   <footer class="footer">
-    <a href="index.html" class="footer__link-logo link-logo"><img src="img/logo.svg" alt="Логотип Погнали?"></a>
+    <a href="index.html" class="footer__link-logo link-logo"><img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?"></a>
     <ul class="social footer__social">
       <li class="social__item"><a href="fb.com" class="social__link">
           <span class="visually-hidden">Мы в Facebook</span>
@@ -307,7 +460,7 @@
     </ul>
     <p class="author">
       <span class="author__develop">Разработано</span>
-      <a href="htmlacademy.ru" class="author__link"><img src="img/html.svg" alt="логотип htmlacademy"></a>
+      <a href="htmlacademy.ru" class="author__link"><img src="img/htmlacademy.svg" alt="логотип htmlacademy" width="27" height="34"></a>
     </p>
   </footer>
 </body>

@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Главная страница Погнали</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <a class="header__link-logo link-logo"><img src="img/logo.svg" alt="Логотип Погнали?"></a>
+    <a class="header__link-logo link-logo"><img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали?"></a>
     <button class="header__toggle" aria-label="открыть меню"></button>
     <nav class="navigation">
       <ul class="navigation__list">
@@ -41,12 +42,11 @@
     </nav>
   </header>
   <main class="page page-main">
-    <h1 class="visually-hidden">Главная страница сервиса Погнали?</h1>
     <section class="promo">
-      <b class="promo__title">
+      <h1 class="promo__title">
         В путешествие
         с крутыми попутчиками!
-      </b>
+      </h1>
       <p class="promo__contact">
         <a href="tel:88005558628" class="promo__phone-link">
           <span class="visually-hidden">Позвоните нам</span>
@@ -54,7 +54,7 @@
         <a href="mailto:mail@htmlacademy.ru" class="promo__mail-link">
           <span class="visually-hidden">Напишите нам</span>
         </a>
-        <a href="login.html" class="promo__login-link">авторизация</a>
+        <a href="login.html" class="promo__login-link link">авторизация</a>
       </p>
     </section>
     <section class="reviews">
@@ -110,21 +110,24 @@
         и чем можно там заняться.
       </p>
       <ul class="directions__list countries">
-        <li class="countries__item country-item country-item_tai">
+        <li class="countries__item country-item">
+          <img src="img/thailand-mobile@1x.jpg" alt="Берега Тайланда" class="country-item__img">
           <blockquote class="country-item__box">
             <h3 class="country-item__title country-item__title_tai">Таиланд</h3>
             <p class="country-item__lead">Джунгли зовут!</p>
             <span class="country-item__statistic">18321</span>
           </blockquote>
         </li>
-        <li class="countries__item country-item country-item_france">
+        <li class="countries__item country-item">
+          <img src="img/france-mobile@1x.jpg" alt="Улицы Франции" class="country-item__img">
           <blockquote class="country-item__box">
             <h3 class="country-item__title country-item__title_france">Франция</h3>
             <p class="country-item__lead">Трэ бьен, манифик!</p>
             <span class="country-item__statistic">12518</span>
           </blockquote>
         </li>
-        <li class="countries__item country-item county-item_czech">
+        <li class="countries__item country-item">
+          <img src="img/czech-mobile@1x.jpg" alt="Каналы Чехии" class="country-item__img">
           <blockquote class="country-item__box">
             <h3 class="country-item__title country-item__title_czech">Чехия</h3>
             <p class="country-item__lead">Закоулки старой Европы</p>
@@ -136,7 +139,7 @@
     </section>
     <section class="people">
       <h2 class="people__title">Попутчики</h2>
-      <p class="description">
+      <p class="people__description">
         Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
       </p>
       <b>
@@ -145,7 +148,7 @@
       <ul class="people__list peoples">
         <li class="peoples__item human">
           <p class="level human__level">99</p>
-          <img src="img/tania.jpg" alt="Таня Фирсова" class="human__image">
+          <img src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" class="human__image">
           <footer class="human__info">
             <ul class="human__need-list">
               <li class="human__need-country human__need-country_srilanka"></li>
@@ -171,7 +174,7 @@
         </li>
         <li class="peoples__item human">
           <p class="level human__level">80</p>
-          <img src="img/petr.jpg" alt="Петя Демин" class="human__image">
+          <img src="img/demin-mobile@1x.jpg" alt="Петя Демин" class="human__image">
           <footer class="human__info">
             <ul class="human__need-list">
               <li class="human__need-country human__need-country_belgium"></li>
@@ -217,6 +220,28 @@
         </li>
       </ul>
       <a href="" class="offer__button">Показать тарифы для бизнеса</a>
+      <article class="popup bussines-offer">
+        <h2 class="bussines-offer__title">Бизнес-тарифы</h2>
+        <ul class="bussines-offer__list">
+          <li class="bussines-offer__item">
+            Реклама у блоггера
+            300 000 руб./пост
+          </li>
+          <li class="bussines-offer__item">
+            Накрутка подписчиков
+            от 1 руб./шт.
+          </li>
+          <li class="bussines-offer__item">
+            Лайки от ботов
+            от 20 коп./лайк
+          </li>
+          <li class="bussines-offer__item">
+            Ваш продакт-плейсмент
+            Индивидуально
+          </li>
+        </ul>
+        <button class="bussines-offer__button">Закрыть окно</button>
+      </article>
     </section>
     <section class="registration">
       <h2 class="visually-hidden">Форма регистрации</h2>
@@ -224,7 +249,7 @@
       <p class="registration__lead">
         Зарегистрируйтесь,
         это быстро и бесплатно!
-        Уже зарегистрированы? Тогда скорее <a href="registration.html" class="reg-link">авторизуйтесь.</a>
+        Уже зарегистрированы? Тогда скорее <a href="registration.html" class="registration__link">авторизуйтесь.</a>
       </p>
       <form action="https://echo.htmlacademy.ru" class="registration__email-form" method="post">
         <input type="email" class="registration__mail" placeholder="E-mail">
@@ -238,8 +263,8 @@
       </p>
     </section>
     <section class="contact-us">
-      <h2 class="vissual-hidden">Наши контактные данные</h2>
-      <div class="contact">
+      <h2 class="visually-hidden">Наши контактные данные</h2>
+      <div class="contact contact-us__info">
         <a href="tel:88005558628" class="contact__phone-link">8 800 555-86-28</a>
         <address class="contact__mail"><a href="mailto:mail@htmlacademy.ru" class="contact__mail-link">mail@htmlacademy.ru</a></address>
       </div>
@@ -248,14 +273,14 @@
             ул. Большая
             Конюшенная, 19/8
           </b></address>
-        <a href="map.html" class="contact-us__link">Проложить маршрут</a>
+        <a href="map.html" class="contact-us__link button">Проложить маршрут</a>
       </div>
       <div class="contact-us__map map">
       </div>
     </section>
   </main>
   <footer class="footer">
-    <a class="footer__link-logo link-logo"><img src="img/logo.svg" alt="Логотип Погнали?"></a>
+    <a class="footer__link-logo link-logo"><img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?"></a>
     <ul class="social footer__social">
       <li class="social__item"><a href="fb.com" class="social__link">
           <span class="visually-hidden">Мы в Facebook</span>
@@ -269,7 +294,7 @@
     </ul>
     <p class="author">
       <span class="author__develop">Разработано</span>
-      <a href="htmlacademy.ru" class="author__link"><img src="img/html.svg" alt="логотип htmlacademy"></a>
+      <a href="htmlacademy.ru" class="author__link"><img src="img/htmlacademy.svg" alt="логотип htmlacademy" width="27" height="34"></a>
     </p>
   </footer>
 </body>

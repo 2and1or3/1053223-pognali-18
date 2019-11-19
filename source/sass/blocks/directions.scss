@@ -1,0 +1,17 @@
+.directions {
+  color: $grey;
+
+  background-color: $grey-blue;
+}
+
+.directions__title {
+  margin: 0;
+
+  @include section-title-orange;
+}
+
+.directions__desription {
+  margin: 0;
+
+  font-weight: 300;
+}
