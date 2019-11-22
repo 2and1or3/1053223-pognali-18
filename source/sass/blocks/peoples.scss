@@ -1,3 +1,23 @@
 .peoples {
   @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.peoples__item {
+  width: 270px;
+}
+
+@media (min-width: $tablet-width) {
+  .peoples {
+    width: 630px;
+    margin-bottom: 80px;
+  }
+
+  .peoples__item {
+    width: 285px;
+  }
 }
