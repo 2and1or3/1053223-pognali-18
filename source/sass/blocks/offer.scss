@@ -3,6 +3,15 @@
   color: $grey;
 
   background-color: $grey-blue;
+}
+
+.offer__wrapper {
+  position: relative;
+
+  width: 270px;
+  margin: 0 auto;
+  padding: 65px 25px 35px;
+
   background-image: url("../img/rates@1x.png");
   background-repeat: no-repeat;
   background-position: right top;
@@ -10,13 +19,27 @@
 }
 
 .offer__title {
-  margin: 0;
-
   @include section-title-orange;
+
+  margin-bottom: 40px;
+  padding-right: 145px;
 }
 
 .offer__list {
   @include list-reset;
+
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.offer__item {
+  padding: 10px 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
 }
 
 .offer__button {
@@ -24,4 +47,53 @@
   font-size: 16px;
   line-height: 16px;
   color: $dark-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .offer__wrapper {
+    width: 688px;
+    padding: 70px 40px;
+  }
+
+  .offer__title {
+    margin-bottom: 70px;
+
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .offer__list {
+    width: 562px;
+    padding-left: 90px;
+  }
+
+  .offer__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .offer__button {
+    padding-left: 90px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #132576;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer__wrapper {
+    width: 1180px;
+    padding: 150px 130px;
+  }
+
+  .offer__list {
+    width: 810px;
+  }
 }
