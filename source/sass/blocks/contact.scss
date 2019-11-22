@@ -3,9 +3,19 @@
 }
 
 .contact__phone-link {
+  display: inline-block;
+  margin-bottom: 25px;
+
+  vertical-align: middle;
   color: $darkness-blue;
 }
 
 .contact__mail-link {
   color: $darkness-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .contact {
+    margin-left: 40px;
+  }
 }

@@ -1,9 +1,27 @@
+.reviews {
+  padding: 0 25px;
+}
+
 .reviews__item {
   margin: 0;
   font-weight: 300;
-  background-color: $darkness-blue;
 }
 
 .reviews__author {
   font-weight: bold;
+  display: block;
+  margin: 20px 0 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    width: 260px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .reviews__author {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

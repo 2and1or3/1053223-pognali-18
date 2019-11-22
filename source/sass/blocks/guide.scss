@@ -13,6 +13,11 @@
   @include list-reset;
 }
 
+.guide__item {
+  padding: 25px;
+  padding-right: 102px;
+}
+
 .guide__item:nth-child(1) {
   background-color: $orange;
 }
@@ -27,4 +32,27 @@
 
 .guide__item:nth-child(4) {
   background-color: $light-yellow;
+}
+
+@media (min-width: $tablet-width) {
+  .guide__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .guide__item {
+    width: 50%;
+    padding: 30px 25px 60px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .guide__item {
+    width: 25%;
+    padding: 30px;
+  }
 }

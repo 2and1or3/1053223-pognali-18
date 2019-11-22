@@ -1,17 +1,27 @@
 .promo {
   background: $darkness-blue;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
-    url("../img/globe-back-mobile@1x.jpg");
+  url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center,
+  center;
+}
+
+.promo__wrapper {
+  width: 270px;
+  margin: 0 auto;
+  padding: 23px 25px;
 }
 
 .promo__contact {
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .promo__title {
   margin: 0;
+  margin-bottom: 242px;
+  padding: 0 15px;
 
   font-weight: bold;
   font-size: 36px;
@@ -21,4 +31,37 @@
 
 .promo__login-link {
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__wrapper {
+    width: 688px;
+    padding: 29px 40px;
+  }
+
+  .promo__contact {
+    display: none;
+  }
+
+  .promo__title {
+    font-size: 60px;
+    line-height: 70px;
+    padding: 0 145px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__wrapper {
+    width: 1320px;
+    padding: 29px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .promo__title {
+    text-align: left;
+    padding: 0 20px;
+    width: 400px;
+  }
 }

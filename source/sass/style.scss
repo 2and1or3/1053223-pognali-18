@@ -1,14 +1,16 @@
 @import "font.scss";
 @import "colors.scss";
+@import "variables.scss";
 @import "mixins.scss";
 @import "common.scss";
+@import "blocks/link.scss";
+@import "blocks/button.scss";
 @import "blocks/about.scss";
 @import "blocks/add-plan.scss";
 @import "blocks/add-select.scss";
 @import "blocks/area.scss";
 @import "blocks/author.scss";
 @import "blocks/bussines-offer.scss";
-@import "blocks/button.scss";
 @import "blocks/calendar.scss";
 @import "blocks/card.scss";
 @import "blocks/catalog.scss";
@@ -55,4 +57,3 @@
 @import "blocks/social.scss";
 @import "blocks/step.scss";
 @import "blocks/steps.scss";
-@import "blocks/link.scss";

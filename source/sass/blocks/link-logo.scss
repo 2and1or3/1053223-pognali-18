@@ -1,3 +1,10 @@
 .link-logo {
-  z-index: 1;
+  padding: 27px 0 20px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .link-logo {
+    padding: 55px 0 51px;
+  }
 }

@@ -3,91 +3,105 @@
 <head>
   <meta charset="utf-8">
   <title>Главная страница Погнали</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <a class="header__link-logo link-logo"><img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали?"></a>
-    <button class="header__toggle" aria-label="открыть меню"></button>
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="service.html" class="navigation__link">
-            О сервисе
-          </a></li>
-        <li class="navigation__item"><a href="form.html" class="navigation__link">
-            Направления
-          </a></li>
-        <li class="navigation__item"><a href="catalog.html" class="navigation__link">
-            Попутчики
-          </a></li>
-      </ul>
-      <a href="login.html" class="header__login-link link">авторизация</a>
-      <div class="navigation__footer">
-        <div class="contact navigation__contact">
-          <a href="tel:88005558628" class="contact__phone-link">8 800 555-86-28</a>
-          <address class="contact__mail"><a href="mailto:mail@htmlacademy.ru" class="contact__mail-link">mail@htmlacademy.ru</a></address>
-        </div>
-        <ul class="social navigation__social">
-          <li class="social__item"><a href="fb.com" class="social__link">
-              <span class="visually-hidden">Мы в Facebook</span>
+    <div class="header__wrapper">
+      <a class="header__link-logo link-logo"><img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали?"></a>
+      <button class="header__toggle" aria-label="открыть меню"></button>
+      <p class="header__contact">
+        <a href="tel:88005558628" class="header__phone-link">
+          <span class="visually-hidden">Позвоните нам</span>
+        </a>
+        <a href="mailto:mail@htmlacademy.ru" class="header__mail-link">
+          <span class="visually-hidden">Напишите нам</span>
+        </a>
+        <a href="login.html" class="header__login-link link">авторизация</a>
+      </p>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="service.html" class="navigation__link">
+              О сервисе
             </a></li>
-          <li class="social__item"><a href="vk.com" class="social__link">
-              <span class="visually-hidden">Мы ВКонтакте</span>
+          <li class="navigation__item"><a href="form.html" class="navigation__link">
+              Направления
             </a></li>
-          <li class="social__item"><a href="instagram.com" class="social__link">
-              <span class="visually-hidden">Мы в Instagram</span>
+          <li class="navigation__item"><a href="catalog.html" class="navigation__link">
+              Попутчики
             </a></li>
         </ul>
-      </div>
-    </nav>
+        <a href="login.html" class="navigation__login-link link">авторизация</a>
+        <div class="navigation__footer">
+          <div class="contact navigation__contact">
+            <a href="tel:88005558628" class="contact__phone-link">8 800 555-86-28</a>
+            <address class="contact__mail"><a href="mailto:mail@htmlacademy.ru" class="contact__mail-link">mail@htmlacademy.ru</a></address>
+          </div>
+          <ul class="social navigation__social">
+            <li class="social__item"><a href="fb.com" class="social__link">
+                <span class="visually-hidden">Мы в Facebook</span>
+              </a></li>
+            <li class="social__item"><a href="vk.com" class="social__link">
+                <span class="visually-hidden">Мы ВКонтакте</span>
+              </a></li>
+            <li class="social__item"><a href="instagram.com" class="social__link">
+                <span class="visually-hidden">Мы в Instagram</span>
+              </a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="page page-main">
     <section class="promo">
-      <h1 class="promo__title">
-        В путешествие
-        с крутыми попутчиками!
-      </h1>
-      <p class="promo__contact">
-        <a href="tel:88005558628" class="promo__phone-link">
-          <span class="visually-hidden">Позвоните нам</span>
-        </a>
-        <a href="mailto:mail@htmlacademy.ru" class="promo__mail-link">
-          <span class="visually-hidden">Напишите нам</span>
-        </a>
-        <a href="login.html" class="promo__login-link link">авторизация</a>
-      </p>
-    </section>
-    <section class="reviews">
-      <h2 class="visually-hidden">Люди о нас</h2>
-      <blockquote class="reviews__item">
-        «Лучшее приложение,
-        что я видел в жизни!»
-        <cite class="reviews__author">
-          Мурат Эльтазин главный редактор
-          газеты «гаджетлайф»
-        </cite>
-      </blockquote>
-    </section>
-    <section class="guide">
-      <h2 class="visually-hidden">Как начать пользоваться нашим сервисом?</h2>
-      <ol class="guide__list">
-        <li class="guide__item">
-          Выберите
-          направление
-        </li>
-        <li class="guide__item">
-          Изучите идеи
-          путешественников
-        </li>
-        <li class="guide__item">
-          Находите тех,
-          кто похож на вас
-        </li>
-        <li class="guide__item">
-          Путешествуйте
-          вместе!
-        </li>
-      </ol>
+      <div class="promo__wrapper">
+        <h1 class="promo__title">
+          В путешествие
+          с крутыми попутчиками!
+        </h1>
+        <p class="promo__contact">
+          <a href="tel:88005558628" class="promo__phone-link">
+            <span class="visually-hidden">Позвоните нам</span>
+          </a>
+          <a href="mailto:mail@htmlacademy.ru" class="promo__mail-link">
+            <span class="visually-hidden">Напишите нам</span>
+          </a>
+          <a href="login.html" class="promo__login-link link">авторизация</a>
+        </p>
+        <section class="reviews">
+          <h2 class="visually-hidden">Люди о нас</h2>
+          <blockquote class="reviews__item">
+            «Лучшее приложение,
+            что&nbsp;я&nbsp;видел&nbsp;в жизни!»
+            <cite class="reviews__author">
+              Мурат Эльтазин главный редактор
+              газеты «гаджетлайф»
+            </cite>
+          </blockquote>
+        </section>
+        <section class="guide">
+          <h2 class="visually-hidden">Как начать пользоваться нашим сервисом?</h2>
+          <ol class="guide__list">
+            <li class="guide__item">
+              Выберите
+              направление
+            </li>
+            <li class="guide__item">
+              Изучите идеи
+              путешественников
+            </li>
+            <li class="guide__item">
+              Находите тех,
+              кто похож на вас
+            </li>
+            <li class="guide__item">
+              Путешествуйте
+              вместе!
+            </li>
+          </ol>
+        </section>
+      </div>
     </section>
     <section class="about">
       <h2 class="about__title">О сервисе</h2>
