@@ -15,6 +15,14 @@
   margin-bottom: 25px;
 }
 
+.about__description-bold {
+  display: block;
+}
+
+.about__button {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .about {
     width: 688px;
@@ -36,8 +44,10 @@
     font-size: 21px;
     line-height: 25px;
     margin-bottom: 53px;
-    display: inline-block;
-    vertical-align: middle;
+  }
+
+  .about__button {
+    display: block;
   }
 }
 
