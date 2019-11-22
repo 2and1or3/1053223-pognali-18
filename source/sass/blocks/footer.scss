@@ -1,4 +1,42 @@
 .footer {
-  background-color: rgba(255, 255, 255, 1);
   color: $grey;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.footer__wrapper {
+  width: 270px;
+  margin: 0 auto;
+  padding: 40px 25px 15px;
+}
+
+.footer__link-logo {
+  margin-bottom: 40px;
+  padding: 0;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 688px;
+    padding: 50px 40px;
+  }
+
+  .footer__link-logo {
+    margin-bottom: 0;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__wrapper {
+    width: 1320px;
+    padding: 50 60px;
+  }
 }
