@@ -17,3 +17,13 @@
 .continents__button_select {
   color: $dark-blue;
 }
+
+@media (min-width: $tablet-width) {
+  .continents__item {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

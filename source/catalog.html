@@ -61,180 +61,463 @@
       </div>
     </nav>
     <section class="list-filter">
-      <h2 class="list-filter__title">
-        <button class="list-filter__button">Фильтрация по странам</button>
-      </h2>
-      <div class="list-filter__area area">
-        <ul class="list-filter__continents continents">
-          <li class="continents__item"><button type="button" class="continents__button continents__button_select">Европа</button></li>
-          <li class="continents__item"><button type="button" class="continents__button">Азия</button></li>
-          <li class="continents__item"><button type="button" class="continents__button">Америка</button></li>
-          <li class="continents__item"><button type="button" class="continents__button">Острова</button></li>
-        </ul>
-        <ul class="list-filter__letters letters">
-          <li class="letters__item">
-            <label class="letters__label letters__label_select">
-              А
-              <input type="radio" name="letter" value="А" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Б
-              <input type="radio" name="letter" value="Б" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              В
-              <input type="radio" name="letter" value="В" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Г
-              <input type="radio" name="letter" value="Г" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Д
-              <input type="radio" name="letter" value="Д" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Е
-              <input type="radio" name="letter" value="Е" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              З
-              <input type="radio" name="letter" value="З" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              И
-              <input type="radio" name="letter" value="И" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              К
-              <input type="radio" name="letter" value="К" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Л
-              <input type="radio" name="letter" value="Л" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              М
-              <input type="radio" name="letter" value="М" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Н
-              <input type="radio" name="letter" value="Н" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              О
-              <input type="radio" name="letter" value="О" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              П
-              <input type="radio" name="letter" value="П" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Р
-              <input type="radio" name="letter" value="Р" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              С
-              <input type="radio" name="letter" value="С" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Т
-              <input type="radio" name="letter" value="Т" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              У
-              <input type="radio" name="letter" value="У" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Ф
-              <input type="radio" name="letter" value="Ф" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Х
-              <input type="radio" name="letter" value="Х" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Ч
-              <input type="radio" name="letter" value="Ч" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Ш
-              <input type="radio" name="letter" value="Ш" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Э
-              <input type="radio" name="letter" value="Э" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Ю
-              <input type="radio" name="letter" value="Ю" class="letters__input">
-            </label>
-          </li>
-          <li class="letters__item">
-            <label class="letters__label">
-              Я
-              <input type="radio" name="letter" value="Я" class="letters__input">
-            </label>
-          </li>
-        </ul>
+      <h2 class="visually-hidden">Фильтрация по странам</h2>
+      <div class="list-filter__wrapper">
+        <header class="list-filter__header list-filter__header_active">
+          <button class="list-filter__button list-filter__button_title">Фильтрация по странам</button>
+          <ul class="list-filter__continents continents">
+            <li class="continents__item"><button type="button" class="continents__button continents__button_select">Европа</button></li>
+            <li class="continents__item"><button type="button" class="continents__button">Азия</button></li>
+            <li class="continents__item"><button type="button" class="continents__button">Америка</button></li>
+            <li class="continents__item"><button type="button" class="continents__button">Острова</button></li>
+          </ul>
+          <button class="list-filter__button list-filter__button_show-all">
+            <span class="list-filter__button_show-all_show">Показать все</span>
+            <span class="list-filter__button_show-all_hide">Свернуть</span>
+          </button>
+          <button class="list-filter__button-toggle"></button>
+          <ul class="list-filter__letters letters">
+            <li class="letters__item">
+              <label class="letters__label letters__label_select">
+                А
+                <input type="radio" name="letter" value="А" class="letters__input" checked>
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Б
+                <input type="radio" name="letter" value="Б" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                В
+                <input type="radio" name="letter" value="В" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Г
+                <input type="radio" name="letter" value="Г" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Д
+                <input type="radio" name="letter" value="Д" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Е
+                <input type="radio" name="letter" value="Е" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                З
+                <input type="radio" name="letter" value="З" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                И
+                <input type="radio" name="letter" value="И" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                К
+                <input type="radio" name="letter" value="К" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Л
+                <input type="radio" name="letter" value="Л" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                М
+                <input type="radio" name="letter" value="М" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Н
+                <input type="radio" name="letter" value="Н" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                О
+                <input type="radio" name="letter" value="О" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                П
+                <input type="radio" name="letter" value="П" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Р
+                <input type="radio" name="letter" value="Р" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                С
+                <input type="radio" name="letter" value="С" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Т
+                <input type="radio" name="letter" value="Т" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                У
+                <input type="radio" name="letter" value="У" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Ф
+                <input type="radio" name="letter" value="Ф" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Х
+                <input type="radio" name="letter" value="Х" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Ч
+                <input type="radio" name="letter" value="Ч" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Ш
+                <input type="radio" name="letter" value="Ш" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Э
+                <input type="radio" name="letter" value="Э" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Ю
+                <input type="radio" name="letter" value="Ю" class="letters__input">
+              </label>
+            </li>
+            <li class="letters__item">
+              <label class="letters__label">
+                Я
+                <input type="radio" name="letter" value="Я" class="letters__input">
+              </label>
+            </li>
+          </ul>
+        </header>
         <ul class="list-filter__countries countries">
-          <li class="countries__item">Афганистан</li>
-          <li class="countries__item">Албания</li>
-          <li class="countries__item">Алжир</li>
-          <li class="countries__item">Андорра</li>
-          <li class="countries__item">Аргентина</li>
-          <li class="countries__item">Армения</li>
-          <li class="countries__item">Австралия</li>
-          <li class="countries__item">Австрия</li>
-          <li class="countries__item">Азербайджан</li>
+          <li class="countries__item">
+            <ul class="countries__sub countries__sub_active">
+              <li class="countries__letter">А</li>
+              <li class="countries__item-sub">Афганистан</li>
+              <li class="countries__item-sub">Албания</li>
+              <li class="countries__item-sub">Алжир</li>
+              <li class="countries__item-sub">Андорра</li>
+              <li class="countries__item-sub">Аргентина</li>
+              <li class="countries__item-sub">Армения</li>
+              <li class="countries__item-sub">Австралия</li>
+              <li class="countries__item-sub">Австрия</li>
+              <li class="countries__item-sub">Азербайджан</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Б</li>
+              <li class="countries__item-sub">Багамские Острова</li>
+              <li class="countries__item-sub">Бангладеш</li>
+              <li class="countries__item-sub">Барбадос</li>
+              <li class="countries__item-sub">Бахрейн</li>
+              <li class="countries__item-sub">Белоруссия</li>
+              <li class="countries__item-sub">Белиз</li>
+              <li class="countries__item-sub">Бельгия</li>
+              <li class="countries__item-sub">Бенин</li>
+              <li class="countries__item-sub">Болгария</li>
+              <li class="countries__item-sub">Боливия</li>
+              <li class="countries__item-sub">Босния и Герцеговина</li>
+              <li class="countries__item-sub">Ботсвана</li>
+              <li class="countries__item-sub">Бразилия</li>
+              <li class="countries__item-sub">Бруней</li>
+              <li class="countries__item-sub">Буркина-Фасо</li>
+              <li class="countries__item-sub">Бурунди</li>
+              <li class="countries__item-sub">Бутан</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">В</li>
+              <li class="countries__item-sub">Вануату</li>
+              <li class="countries__item-sub">Великобритания</li>
+              <li class="countries__item-sub">Венгрия</li>
+              <li class="countries__item-sub">Венесуэла</li>
+              <li class="countries__item-sub">Восточный Тимор</li>
+              <li class="countries__item-sub">Вьетнам</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Г</li>
+              <li class="countries__item-sub">Габон</li>
+              <li class="countries__item-sub">Гаити</li>
+              <li class="countries__item-sub">Гайана</li>
+              <li class="countries__item-sub">Гамбия</li>
+              <li class="countries__item-sub">Гана</li>
+              <li class="countries__item-sub">Гватемала</li>
+              <li class="countries__item-sub">Гвинея</li>
+              <li class="countries__item-sub">Гвинея-Бисау</li>
+              <li class="countries__item-sub">Германия</li>
+              <li class="countries__item-sub">Гондурас</li>
+              <li class="countries__item-sub">Гренада</li>
+              <li class="countries__item-sub">Греция</li>
+              <li class="countries__item-sub">Грузия</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Д</li>
+              <li class="countries__item-sub">Дания</li>
+              <li class="countries__item-sub">Джибути</li>
+              <li class="countries__item-sub">Доминика</li>
+              <li class="countries__item-sub">Доминикана</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Е</li>
+              <li class="countries__item-sub">Египет</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">З</li>
+              <li class="countries__item-sub">Замбия</li>
+              <li class="countries__item-sub">Зимбабве</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">И</li>
+              <li class="countries__item-sub">Израиль</li>
+              <li class="countries__item-sub">Индия</li>
+              <li class="countries__item-sub">Индонезия</li>
+              <li class="countries__item-sub">Иордания</li>
+              <li class="countries__item-sub">Ирак</li>
+              <li class="countries__item-sub">Иран</li>
+              <li class="countries__item-sub">Ирландия</li>
+              <li class="countries__item-sub">Исландия</li>
+              <li class="countries__item-sub">Испания</li>
+              <li class="countries__item-sub">Италия</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">К</li>
+              <li class="countries__item-sub">Кабо-Верде</li>
+              <li class="countries__item-sub">Казахстан</li>
+              <li class="countries__item-sub">Камбоджа</li>
+              <li class="countries__item-sub">Камерун</li>
+              <li class="countries__item-sub">Канада</li>
+              <li class="countries__item-sub">Катар</li>
+              <li class="countries__item-sub">Кения</li>
+              <li class="countries__item-sub">Кипр</li>
+              <li class="countries__item-sub">Киргизия</li>
+              <li class="countries__item-sub">Кирибати</li>
+              <li class="countries__item-sub">Китай</li>
+              <li class="countries__item-sub">Колумбия</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Л</li>
+              <li class="countries__item-sub">Лаос</li>
+              <li class="countries__item-sub">Латвия</li>
+              <li class="countries__item-sub">Лесото</li>
+              <li class="countries__item-sub">Либерия</li>
+              <li class="countries__item-sub">Ливан</li>
+              <li class="countries__item-sub">Ливия</li>
+              <li class="countries__item-sub">Литва</li>
+              <li class="countries__item-sub">Лихтенштейн</li>
+              <li class="countries__item-sub">Люксембург</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">М</li>
+              <li class="countries__item-sub">Маврикий</li>
+              <li class="countries__item-sub">Мавритания</li>
+              <li class="countries__item-sub">Мадагаскар</li>
+              <li class="countries__item-sub">Малави</li>
+              <li class="countries__item-sub">Малайзия</li>
+              <li class="countries__item-sub">Мали</li>
+              <li class="countries__item-sub">Мальдивы</li>
+              <li class="countries__item-sub">Мальта</li>
+              <li class="countries__item-sub">Марокко</li>
+              <li class="countries__item-sub">Мексика</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Н</li>
+              <li class="countries__item-sub">Намибия</li>
+              <li class="countries__item-sub">Науру</li>
+              <li class="countries__item-sub">Непал</li>
+              <li class="countries__item-sub">Нигер</li>
+              <li class="countries__item-sub">Нигерия</li>
+              <li class="countries__item-sub">Нидерланды</li>
+              <li class="countries__item-sub">Никарагуа</li>
+              <li class="countries__item-sub">Новая Зеландия</li>
+              <li class="countries__item-sub">Норвегия</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">О</li>
+              <li class="countries__item-sub">ОАЭ</li>
+              <li class="countries__item-sub">Оман</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">П</li>
+              <li class="countries__item-sub">Пакистан</li>
+              <li class="countries__item-sub">Палау</li>
+              <li class="countries__item-sub">Панама</li>
+              <li class="countries__item-sub">Папуа — Новая Гвинея</li>
+              <li class="countries__item-sub">Парагвай</li>
+              <li class="countries__item-sub">Перу</li>
+              <li class="countries__item-sub">Польша</li>
+              <li class="countries__item-sub">Португалия</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Р</li>
+              <li class="countries__item-sub">Руанда</li>
+              <li class="countries__item-sub">Румыния</li>
+              <li class="countries__item-sub">Россия</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">С</li>
+              <li class="countries__item-sub">Сальвадор</li>
+              <li class="countries__item-sub">Самоа</li>
+              <li class="countries__item-sub">Сан-Марино</li>
+              <li class="countries__item-sub">Саудовская Аравия</li>
+              <li class="countries__item-sub">Сейшелы</li>
+              <li class="countries__item-sub">Сенегал</li>
+              <li class="countries__item-sub">Сербия</li>
+              <li class="countries__item-sub">Сингапур</li>
+              <li class="countries__item-sub">Сирия</li>
+              <li class="countries__item-sub">Словакия</li>
+              <li class="countries__item-sub">Словения</li>
+              <li class="countries__item-sub">США</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Т</li>
+              <li class="countries__item-sub">Таджикистан</li>
+              <li class="countries__item-sub">Таиланд</li>
+              <li class="countries__item-sub">Танзания</li>
+              <li class="countries__item-sub">Того</li>
+              <li class="countries__item-sub">Тонга</li>
+              <li class="countries__item-sub">Тринидад и Тобаго</li>
+              <li class="countries__item-sub">Тувалу</li>
+              <li class="countries__item-sub">Тунис</li>
+              <li class="countries__item-sub">Туркмения</li>
+              <li class="countries__item-sub">Турция</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">У</li>
+              <li class="countries__item-sub">Уганда</li>
+              <li class="countries__item-sub">Узбекистан</li>
+              <li class="countries__item-sub">Украина</li>
+              <li class="countries__item-sub">Уругвай</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Ф</li>
+              <li class="countries__item-sub">Фиджи</li>
+              <li class="countries__item-sub">Филиппины</li>
+              <li class="countries__item-sub">Финляндия</li>
+              <li class="countries__item-sub">ФранцЯмайка
+            </ul>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Х</li>
+              <li class="countries__item-sub">Хорватия</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Ч</li>
+              <li class="countries__item-sub">Чад</li>
+              <li class="countries__item-sub">Черногория</li>
+              <li class="countries__item-sub">Чехия</li>
+              <li class="countries__item-sub">Чили</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Ш</li>
+              <li class="countries__item-sub">Швейцария</li>
+              <li class="countries__item-sub">Швеция</li>
+              <li class="countries__item-sub">Шри-Ланка</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Э</li>
+              <li class="countries__item-sub">Эквадор</li>
+              <li class="countries__item-sub">Эритрея</li>
+              <li class="countries__item-sub">Эсватини</li>
+              <li class="countries__item-sub">Эстония</li>
+              <li class="countries__item-sub">Эфиопия</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Ю</li>
+              <li class="countries__item-sub">ЮАР</li>
+              <li class="countries__item-sub">Южный Судан</li>
+            </ul>
+          </li>
+          <li class="countries__item">
+            <ul class="countries__sub">
+              <li class="countries__letter">Я</li>
+              <li class="countries__item-sub">Ямайка</li>
+              <li class="countries__item-sub">Япония</li>
+            </ul>
+          </li>
         </ul>
-        <button class="area__button-close">свернуть</button>
+        <button class="list-filter__button-close">Свернуть</button>
       </div>
     </section>
     <form action="https://echo.htmlacademy.ru" method="post" class="form-filter">

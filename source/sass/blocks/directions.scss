@@ -22,6 +22,8 @@
 }
 
 .directions__list {
+  @include list-reset;
+
   margin-bottom: 25px;
 }
 

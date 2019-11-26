@@ -1,3 +1,37 @@
 .countries {
   @include list-reset;
 }
+
+.countries__sub {
+  @include list-reset;
+
+  display: none;
+}
+
+.countries__sub_active {
+  display: block;
+}
+
+@media (min-width: $desktop-width) {
+  .countries {
+    flex-wrap: wrap;
+  }
+
+  .countries__sub {
+    display: block;
+  }
+
+  .countries__item {
+    width: 20%;
+    margin-bottom: 55px;
+  }
+
+  .countries__letter {
+    margin-bottom: 50px;
+
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+    color: $darkness-blue;
+  }
+}
