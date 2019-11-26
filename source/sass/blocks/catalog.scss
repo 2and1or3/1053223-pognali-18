@@ -1,5 +1,14 @@
+.catalog {
+  width: 270px;
+  margin: 0 auto;
+}
+
 .catalog__list {
   @include list-reset;
+}
+
+.catalog__item {
+  margin-bottom: 10px;
 }
 
 .catalog__button {
@@ -8,4 +17,16 @@
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    width: 688px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    width: 950px;
+  }
 }
