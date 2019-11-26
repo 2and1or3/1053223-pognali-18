@@ -525,81 +525,142 @@
         Подберите идеального
         попутчика
       </b>
-      <fieldset class="form-filter__box form-filter__box_close">
-        <legend class="form-filter__title">Хобби</legend>
+      <fieldset class="form-filter__box">
+        <div class="form-filter__box-inner">
+          <label for="hobby-list" class="form-filter__title">Хобби</label>
+          <input type="checkbox" id="hobby-list" class="visually-hidden form-filter__category-toggle">
+          <ul class="form-filter__list">
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="sport" checked>
+                <span class="checkbox"></span>
+                Спортзал
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="hookah">
+                <span class="checkbox"></span>
+                Кальян
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="sofa">
+                <span class="checkbox"></span>
+                Диван
+              </label>
+            </li>
+          </ul>
+        </div>
       </fieldset>
       <fieldset class="form-filter__box">
-        <legend class="form-filter__title">Музыка</legend>
-        <ul class="form-filter__list">
-          <li class="form-filter__item">
-            <label class="form-filter__label">
-              <input type="checkbox" class="visually-hidden" name="hard" checked>
-              <span class="checkbox"></span>
-              Тяжелый рок
-            </label>
-          </li>
-          <li class="form-filter__item">
-            <label class="form-filter__label">
-              <input type="checkbox" class="visually-hidden" name="rap">
-              <span class="checkbox"></span>
-              Русский рэп
-            </label>
-          </li>
-          <li class="form-filter__item">
-            <label class="form-filter__label">
-              <input type="checkbox" class="visually-hidden" name="euro">
-              <span class="checkbox"></span>
-              Евроденс
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="form-filter__box form-filter__box_close">
-        <legend class="form-filter__title">Еда</legend>
-      </fieldset>
-      <fieldset class="form-filter__box">
-        <legend class="form-filter__title">Транспорт</legend>
-        <ul class="form-filter__list form-filter__list_image prefer">
-          <li class="prefer__item">
-            <label class="prefer__label">
-              <input type="checkbox" class="visually-hidden" name="plane" checked>
-              <span class="checkbox-image"></span>
-              <span class="visually-hidden">Самолет</span>
-            </label>
-          </li>
-          <li class="prefer__item">
-            <label class="prefer__label">
-              <input type="checkbox" class="visually-hidden" name="bus" checked>
-              <span class="checkbox-image"></span>
-              <span class="visually-hidden">Автобус</span>
-            </label>
-          </li>
-          <li class="prefer__item">
-            <label class="prefer__label">
-              <input type="checkbox" class="visually-hidden" name="bicycle">
-              <span class="checkbox-image"></span>
-              <span class="visually-hidden">Велосипед</span>
-            </label>
-          </li>
-          <li class="prefer__item">
-            <label class="prefer__label">
-              <input type="checkbox" class="visually-hidden" name="run" checked>
-              <span class="checkbox-image"></span>
-              <span class="visually-hidden">Бег</span>
-            </label>
-          </li>
-        </ul>
+        <div class="form-filter__box-inner">
+          <label for="music-list" class="form-filter__title">Музыка</label>
+          <input type="checkbox" id="music-list" class="visually-hidden form-filter__category-toggle" checked>
+          <ul class="form-filter__list">
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="hard" checked>
+                <span class="checkbox"></span>
+                Тяжелый рок
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="rap">
+                <span class="checkbox"></span>
+                Русский рэп
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="euro">
+                <span class="checkbox"></span>
+                Евроденс
+              </label>
+            </li>
+          </ul>
+        </div>
       </fieldset>
       <fieldset class="form-filter__box">
-        <legend class="form-filter__title">Левел</legend>
-        <div class="level-box">
-          <input type="text" value="30" name="Минимальный уровень" aria-label="Минимальный уровень" class="level-box__input">
-          <input type="text" value="100" name="Максимальный уровень" aria-label="Максимальный уровень" class="level-box__input">
-          <div class="range-box">
-            <span class="range-box__line range-box__line_back"></span>
-            <span class="range-box__line range-box__line_up"></span>
-            <button type="button" aria-label="Минимальный уровень" class="range-box__button range-box__button_min"></button>
-            <button type="button" aria-label="Максимальный уровень" class="range-box__button range-box__button_max"></button>
+        <div class="form-filter__box-inner">
+          <label for="food-list" class="form-filter__title">Еда:</label>
+          <input type="checkbox" id="food-list" class="visually-hidden form-filter__category-toggle">
+          <ul class="form-filter__list">
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="meet" checked>
+                <span class="checkbox"></span>
+                Мясоед
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="pp">
+                <span class="checkbox"></span>
+                Сидит на ПП
+              </label>
+            </li>
+            <li class="form-filter__item">
+              <label class="form-filter__label">
+                <input type="checkbox" class="visually-hidden" name="vegan">
+                <span class="checkbox"></span>
+                Веган-сыроед
+              </label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <fieldset class="form-filter__box">
+        <div class="form-filter__box-inner">
+          <label for="transport-list" class="form-filter__title">Транспорт:</label>
+          <input type="checkbox" id="transport-list" class="visually-hidden form-filter__category-toggle">
+          <ul class="form-filter__list form-filter__list_image prefer">
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="plane" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Самолет</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="bus" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Автобус</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="bicycle">
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Велосипед</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="run" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Бег</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <fieldset class="form-filter__box">
+        <div class="form-filter__box-inner">
+          <label for="level" class="form-filter__title">Левел:</label>
+          <input type="checkbox" id="level" class="visually-hidden form-filter__category-toggle">
+          <div class="level-box form-filter__list">
+            <input type="text" value="30" name="Минимальный уровень" aria-label="Минимальный уровень" class="level-box__input">
+            <input type="text" value="100" name="Максимальный уровень" aria-label="Максимальный уровень" class="level-box__input">
+            <div class="range-box">
+              <span class="range-box__line range-box__line_back"></span>
+              <span class="range-box__line range-box__line_up"></span>
+              <button type="button" aria-label="Минимальный уровень" class="range-box__button range-box__button_min"></button>
+              <button type="button" aria-label="Максимальный уровень" class="range-box__button range-box__button_max"></button>
+            </div>
           </div>
         </div>
       </fieldset>
