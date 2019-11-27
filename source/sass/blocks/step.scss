@@ -1,4 +1,7 @@
 .step {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 10px;
   padding: 25px;
 
@@ -80,12 +83,12 @@
   }
 }
 
+.step__button_next {
+  margin-bottom: 20px;
+}
+
 @media (min-width: $tablet-width) {
   .step {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-bottom: 40px;
     padding: 50px 45px 55px;
     &:last-child {
@@ -102,6 +105,7 @@
 
   .step__description {
     margin-bottom: 40px;
+    padding-right: 100px;
 
     font-size: 20px;
     line-height: 24px;
@@ -147,9 +151,9 @@
 
 @media (min-width: $desktop-width) {
   .step {
-    flex-direction: row;
     align-items: baseline;
     margin-bottom: 45px;
+    padding: 100px 160px;
 
     &:last-child {
       margin-bottom: 0;
@@ -162,7 +166,7 @@
 
   .step__description {
     margin-bottom: 55px;
-    padding-right: 660px;
+    padding-right: 420px;
   }
 
   .step__box {

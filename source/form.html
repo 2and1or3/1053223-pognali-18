@@ -476,33 +476,49 @@
                 </tr>
               </table>
             </article>
-            <a href="#2" class="step__button button step__button_next">Следующий шаг</a>
+            <a href="#2" class="step__button button">Следующий шаг</a>
           </li>
-          <li class="step">
+          <li class="step step-second">
             <h3 class="step__title">
               Шаг 2.<br>
               Маршрут
             </h3>
             <p class="step__description">
-              Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+              Укажите страны, которые вы хотели посетить. Это&nbsp;может быть&nbsp;одна или сразу несколько.
             </p>
-            <select name="first-country" class="step__select select">
-              <option value="0" class="select__country">Выберите страну</option>
-              <option value="Босния и Герцеговина" class="select__country select__country_bos" selected>Босния и Герцеговина</option>
-            </select>
-            <select name="second-country" class="step__select select">
-              <option value="0" class="select__country">Выберите страну</option>
-              <option value="Чехия" class="select__country select__country_czech" selected>Чехия</option>
-            </select>
-            <select name="third-country" class="step__select select">
-              <option value="0" class="select__country" selected>Выберите страну</option>
-              <option value="same-country" class="select__country">same-country</option>
-            </select>
-            <button class="add-select">Добавить страну</button>
+            <ul class="step-second__list">
+              <li class="step-second__box">
+                <select name="first-country" class="step-second__select select">
+                  <option value="0" class="select__country">Выберите страну</option>
+                  <option value="Босния и Герцеговина" class="select__country select__country_bos" selected>Босния и Герцеговина</option>
+                </select>
+                <p class="step-second__flag"></p>
+                <button type="button" class="step-second__select-delete" aria-label="Убрать страну"></button>
+              </li>
+              <li class="step-second__box">
+                <select name="second-country" class="step-second__select select">
+                  <option value="0" class="select__country">Выберите страну</option>
+                  <option value="Чехия" class="select__country select__country_czech" selected>Чехия</option>
+                </select>
+                <p class="step-second__flag"></p>
+                <button type="button" class="step-second__select-delete" aria-label="Убрать страну"></button>
+              </li>
+              <li class="step-second__box">
+                <select name="third-country" class="step-second__select select">
+                  <option value="0" class="select__country" selected>Выберите страну</option>
+                  <option value="same-country" class="select__country">same-country</option>
+                </select>
+                <p class="step-second__flag"></p>
+                <button type="button" class="step-second__select-delete" aria-label="Убрать страну"></button>
+              </li>
+              <li class="step-second__box">
+                <button class="step-second__add-select">Добавить страну</button>
+              </li>
+            </ul>
             <a href="#3" class="step__button button step__button_next">Следующий шаг</a>
             <a href="#1" class="step__button button step__button_prev">На шаг назад</a>
           </li>
-          <li class="step">
+          <li class="step step_third">
             <h3 class="step__title">
               Шаг 3.<br>
               Развлечения
