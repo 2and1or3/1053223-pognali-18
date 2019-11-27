@@ -121,16 +121,16 @@
         <ol class="plans__list">
           <li class="plans__item plan">
             <h3 class="plan__title">Франция, Италия</h3>
-              <span class="plan__friends">3 попутчика</span>
-              <p class="plan__date">
+            <span class="plan__friends">3 попутчика</span>
+            <p class="plan__date">
               <time datetime="2020-04-26">26 мар</time> — <time datetime="2020-04-29">29 мар</time>
             </p>
             <a href="change.html" class="plan__change">Изменить</a>
           </li>
           <li class="plans__item plan">
             <h3 class="plan__title">Таиланд, Индонезия</h3>
-              <span class="plan__friends">1 попутчик</span>
-              <p class="plan__date">
+            <span class="plan__friends">1 попутчик</span>
+            <p class="plan__date">
               <time datetime="2020-07-01">1 июл</time> — <time datetime="2020-07-15">15 июл</time>
             </p>
             <a href="change.html" class="plan__change">Изменить</a>
@@ -139,374 +139,392 @@
       </div>
     </section>
     <section class="add-plan">
-      <h2 class="add-plan__title">Добавить план:</h2>
-      <ul class="add-plan__pagination">
-        <li class="add-plan__pagination-item add-plan__pagination-item_current"></li>
-        <li class="add-plan__pagination-item"></li>
-        <li class="add-plan__pagination-item"></li>
-      </ul>
-      <ol class="add-plan__list steps">
-        <li class="step">
-          <h3 class="step__title">
-            Шаг 1.
-            Даты пребывания
-          </h3>
-          <p class="step__description">
-            Укажите предпочтительное количество попутчиков, которых
-            вы хотели бы позвать в поездку и ее предполагаемую длительность.
-          </p>
-          <p class="step__box">
-            <button class="less" aria-label="Уменьшить"></button>
-            <label class="step__label">
-              ищу попутчиков:
-              <input type="text" value="2" class="step__input">
-            </label>
-            <button class="more" aria-label="Увеличить"></button>
-          </p>
-          <p class="step__box">
-            <button class="less" aria-label="Уменьшить"></button>
-            <label class="step__label">
-              Длительность:
-              <input type="text" value="2" class="step__input">
-            </label>
-            <button class="more" aria-label="Увеличить"></button>
-          </p>
-          <label>
-            <input type="checkbox" class="visually-hidden" checked>
-            <span class="checkbox step__checkbox"></span>
-            Можно с детьми
-          </label>
-          <article class="calendar">
-            <h4 class="visually-hidden">Календарь</h4>
-            <p class="calendar__head">
-              <button class="calendar__button calendar__button_prev" aria-label="предыдущий месяц"></button>
-              <b class="calendar__month-title">Март 2019</b>
-              <button class="calendar__button calendar__button_next" aria-label="следующий месяц"></button>
+      <div class="add-plan__wrapper">
+        <h2 class="add-plan__title">Добавить план:</h2>
+        <ul class="add-plan__pagination">
+          <li class="add-plan__pagination-item add-plan__pagination-item_current"></li>
+          <li class="add-plan__pagination-item"></li>
+          <li class="add-plan__pagination-item"></li>
+        </ul>
+        <ol class="add-plan__list steps">
+          <li class="step step_first">
+            <h3 class="step__title">
+              Шаг 1.<br>
+              Даты пребывания
+            </h3>
+            <p class="step__description">
+              Укажите предпочтительное количество попутчиков, которых
+              вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.
             </p>
-            <table class="calendar__table">
-              <tr class="calendar__row">
-                <th class="calendar__th">П</th>
-                <th class="calendar__th">В</th>
-                <th class="calendar__th">С</th>
-                <th class="calendar__th">Ч</th>
-                <th class="calendar__th">П</th>
-                <th class="calendar__th">С</th>
-                <th class="calendar__th">В</th>
-              </tr>
-              <tr class="calendar__row">
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    23
-                    <input type="checkbox" name="date" value="23" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    24
-                    <input type="checkbox" name="date" value="24" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    25
-                    <input type="checkbox" name="date" value="25" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    26
-                    <input type="checkbox" name="date" value="26" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    27
-                    <input type="checkbox" name="date" value="27" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    28
-                    <input type="checkbox" name="date" value="28" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    1
-                    <input type="checkbox" name="date" value="1" class="calendar__input">
-                  </label>
-                </td>
-              </tr>
-              <tr class="calendar__row">
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    2
-                    <input type="checkbox" name="date" value="2" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    3
-                    <input type="checkbox" name="date" value="3" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    4
-                    <input type="checkbox" name="date" value="4" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    5
-                    <input type="checkbox" name="date" value="5" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    6
-                    <input type="checkbox" name="date" value="6" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    7
-                    <input type="checkbox" name="date" value="7" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    8
-                    <input type="checkbox" name="date" value="8" class="calendar__input">
-                  </label>
-                </td>
-              </tr>
-              <tr class="calendar__row">
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    9
-                    <input type="checkbox" name="date" value="9" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    10
-                    <input type="checkbox" name="date" value="10" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    11
-                    <input type="checkbox" name="date" value="11" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    12
-                    <input type="checkbox" name="date" value="12" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    13
-                    <input type="checkbox" name="date" value="13" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    14
-                    <input type="checkbox" name="date" value="14" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    15
-                    <input type="checkbox" name="date" value="15" class="calendar__input">
-                  </label>
-                </td>
-              </tr>
-              <tr class="calendar__row">
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    16
-                    <input type="checkbox" name="date" value="16" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    17
-                    <input type="checkbox" name="date" value="17" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    18
-                    <input type="checkbox" name="date" value="18" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    19
-                    <input type="checkbox" name="date" value="19" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    20
-                    <input type="checkbox" name="date" value="20" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    21
-                    <input type="checkbox" name="date" value="21" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    22
-                    <input type="checkbox" name="date" value="22" class="calendar__input">
-                  </label>
-                </td>
-              </tr>
-              <tr class="calendar__row">
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    23
-                    <input type="checkbox" name="date" value="23" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    24
-                    <input type="checkbox" name="date" value="24" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    25
-                    <input type="checkbox" name="date" value="25" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    26
-                    <input type="checkbox" name="date" value="26" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    27
-                    <input type="checkbox" name="date" value="27" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    28
-                    <input type="checkbox" name="date" value="28" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    29
-                    <input type="checkbox" name="date" value="29" class="calendar__input">
-                  </label>
-                </td>
-              </tr>
-              <tr class="calendar__row">
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    30
-                    <input type="checkbox" name="date" value="30" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    31
-                    <input type="checkbox" name="date" value="31" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    1
-                    <input type="checkbox" name="date" value="1" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    2
-                    <input type="checkbox" name="date" value="2" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    3
-                    <input type="checkbox" name="date" value="3" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    4
-                    <input type="checkbox" name="date" value="4" class="calendar__input">
-                  </label>
-                </td>
-                <td class="calendar__td">
-                  <label class="calendar__td-label">
-                    5
-                    <input type="checkbox" name="date" value="5" class="calendar__input">
-                  </label>
-                </td>
-              </tr>
-            </table>
-          </article>
-          <a href="#2" class="step__button button step__button_next">Следующий шаг</a>
-        </li>
-        <li class="step">
-          <h3 class="step__title">
-            Шаг 2.
-            Маршрут
-          </h3>
-          <p class="step__description">
-            Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
-          </p>
-          <select name="first-country" class="step__select select">
-            <option value="0" class="select__country">Выберите страну</option>
-            <option value="Босния и Герцеговина" class="select__country select__country_bos" selected>Босния и Герцеговина</option>
-          </select>
-          <select name="second-country" class="step__select select">
-            <option value="0" class="select__country">Выберите страну</option>
-            <option value="Чехия" class="select__country select__country_czech" selected>Чехия</option>
-          </select>
-          <select name="third-country" class="step__select select">
-            <option value="0" class="select__country" selected>Выберите страну</option>
-            <option value="same-country" class="select__country">same-country</option>
-          </select>
-          <button class="add-select">Добавить страну</button>
-          <a href="#3" class="step__button button step__button_next">Следующий шаг</a>
-          <a href="#1" class="step__button button step__button_prev">На шаг назад</a>
-        </li>
-        <li class="step">
-          <h3 class="step__title">
-            Шаг 3.
-            Развлечения
-          </h3>
-          <p class="step__description">
-            Наконец, расскажите о своих планах времяпровождения.
-            Можно писать в свободной форме и ставить тэги.
-          </p>
-          <label class="step__label step__label_bos">
-            Босния и Герцеговина
-            <textarea name="bos" cols="30" rows="10" placeholder="План действий" class="step__textarea"></textarea>
-          </label>
-          <label class="step__label step__label_czech">
-            Чехия
-            <textarea name="czech" cols="30" rows="10" placeholder="План действий" class="step__textarea">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+            <p class="step__box">
+              <button class="less" aria-label="Уменьшить"></button>
+              <label class="step__label">
+                ищу попутчиков:
+                <span class="step__label-mesure">ЧЕЛ.</span>
+                <input type="text" value="2" class="step__input">
+              </label>
+              <button class="more" aria-label="Увеличить"></button>
+            </p>
+            <p class="step__box">
+              <button class="less" aria-label="Уменьшить"></button>
+              <label class="step__label">
+                Длительность:
+                <span class="step__label-mesure">ДН.</span>
+                <input type="text" value="2" class="step__input">
+              </label>
+              <button class="more" aria-label="Увеличить"></button>
+            </p>
+            <label class="step__label-check">
+              <input type="checkbox" class="visually-hidden" checked>
+              <span class="checkbox step__checkbox"></span>
+              Можно с детьми
+            </label>
+            <article class="calendar step__calendar">
+              <h4 class="visually-hidden">Календарь</h4>
+              <p class="calendar__head">
+                <button class="calendar__button calendar__button_prev" aria-label="предыдущий месяц"></button>
+                <b class="calendar__month-title">Март 2019</b>
+                <button class="calendar__button calendar__button_next" aria-label="следующий месяц"></button>
+              </p>
+              <table class="calendar__table">
+                <tr class="calendar__row">
+                  <th class="calendar__th">
+                    П<span class="calendar__expand">н</span>
+                  </th>
+                  <th class="calendar__th">
+                    В<span class="calendar__expand">т</span>
+                  </th>
+                  <th class="calendar__th">
+                    С<span class="calendar__expand">р</span>
+                  </th>
+                  <th class="calendar__th">
+                    Ч<span class="calendar__expand">т</span>
+                  </th>
+                  <th class="calendar__th">
+                    П<span class="calendar__expand">т</span>
+                  </th>
+                  <th class="calendar__th">
+                    С<span class="calendar__expand">б</span>
+                  </th>
+                  <th class="calendar__th">
+                    В<span class="calendar__expand">с</span>
+                  </th>
+                </tr>
+                <tr class="calendar__row">
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      23
+                      <input type="checkbox" name="date" value="23" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      24
+                      <input type="checkbox" name="date" value="24" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      25
+                      <input type="checkbox" name="date" value="25" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      26
+                      <input type="checkbox" name="date" value="26" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      27
+                      <input type="checkbox" name="date" value="27" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      28
+                      <input type="checkbox" name="date" value="28" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      1
+                      <input type="checkbox" name="date" value="1" class="calendar__input">
+                    </label>
+                  </td>
+                </tr>
+                <tr class="calendar__row">
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      2
+                      <input type="checkbox" name="date" value="2" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      3
+                      <input type="checkbox" name="date" value="3" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      4
+                      <input type="checkbox" name="date" value="4" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      5
+                      <input type="checkbox" name="date" value="5" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      6
+                      <input type="checkbox" name="date" value="6" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      7
+                      <input type="checkbox" name="date" value="7" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      8
+                      <input type="checkbox" name="date" value="8" class="calendar__input">
+                    </label>
+                  </td>
+                </tr>
+                <tr class="calendar__row">
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      9
+                      <input type="checkbox" name="date" value="9" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      10
+                      <input type="checkbox" name="date" value="10" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      11
+                      <input type="checkbox" name="date" value="11" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      12
+                      <input type="checkbox" name="date" value="12" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      13
+                      <input type="checkbox" name="date" value="13" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      14
+                      <input type="checkbox" name="date" value="14" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      15
+                      <input type="checkbox" name="date" value="15" class="calendar__input">
+                    </label>
+                  </td>
+                </tr>
+                <tr class="calendar__row">
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      16
+                      <input type="checkbox" name="date" value="16" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      17
+                      <input type="checkbox" name="date" value="17" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      18
+                      <input type="checkbox" name="date" value="18" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      19
+                      <input type="checkbox" name="date" value="19" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      20
+                      <input type="checkbox" name="date" value="20" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      21
+                      <input type="checkbox" name="date" value="21" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      22
+                      <input type="checkbox" name="date" value="22" class="calendar__input">
+                    </label>
+                  </td>
+                </tr>
+                <tr class="calendar__row">
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      23
+                      <input type="checkbox" name="date" value="23" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      24
+                      <input type="checkbox" name="date" value="24" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      25
+                      <input type="checkbox" name="date" value="25" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      26
+                      <input type="checkbox" name="date" value="26" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      27
+                      <input type="checkbox" name="date" value="27" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      28
+                      <input type="checkbox" name="date" value="28" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      29
+                      <input type="checkbox" name="date" value="29" class="calendar__input">
+                    </label>
+                  </td>
+                </tr>
+                <tr class="calendar__row">
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      30
+                      <input type="checkbox" name="date" value="30" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      31
+                      <input type="checkbox" name="date" value="31" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      1
+                      <input type="checkbox" name="date" value="1" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      2
+                      <input type="checkbox" name="date" value="2" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      3
+                      <input type="checkbox" name="date" value="3" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      4
+                      <input type="checkbox" name="date" value="4" class="calendar__input">
+                    </label>
+                  </td>
+                  <td class="calendar__td">
+                    <label class="calendar__td-label">
+                      5
+                      <input type="checkbox" name="date" value="5" class="calendar__input">
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </article>
+            <a href="#2" class="step__button button step__button_next">Следующий шаг</a>
+          </li>
+          <li class="step">
+            <h3 class="step__title">
+              Шаг 2.<br>
+              Маршрут
+            </h3>
+            <p class="step__description">
+              Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+            </p>
+            <select name="first-country" class="step__select select">
+              <option value="0" class="select__country">Выберите страну</option>
+              <option value="Босния и Герцеговина" class="select__country select__country_bos" selected>Босния и Герцеговина</option>
+            </select>
+            <select name="second-country" class="step__select select">
+              <option value="0" class="select__country">Выберите страну</option>
+              <option value="Чехия" class="select__country select__country_czech" selected>Чехия</option>
+            </select>
+            <select name="third-country" class="step__select select">
+              <option value="0" class="select__country" selected>Выберите страну</option>
+              <option value="same-country" class="select__country">same-country</option>
+            </select>
+            <button class="add-select">Добавить страну</button>
+            <a href="#3" class="step__button button step__button_next">Следующий шаг</a>
+            <a href="#1" class="step__button button step__button_prev">На шаг назад</a>
+          </li>
+          <li class="step">
+            <h3 class="step__title">
+              Шаг 3.<br>
+              Развлечения
+            </h3>
+            <p class="step__description">
+              Наконец, расскажите о своих планах времяпровождения.
+              Можно писать в свободной форме и ставить тэги.
+            </p>
+            <label class="step__label step__label_bos">
+              Босния и Герцеговина
+              <textarea name="bos" cols="30" rows="10" placeholder="План действий" class="step__textarea"></textarea>
+            </label>
+            <label class="step__label step__label_czech">
+              Чехия
+              <textarea name="czech" cols="30" rows="10" placeholder="План действий" class="step__textarea">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
             </textarea>
-          </label>
-          <button type="submit" class="step__submit step__button button">Отправить</button>
-          <a href="#2" class="step__button button step__button_prev">На шаг назад</a>
-        </li>
-      </ol>
+            </label>
+            <button type="submit" class="step__submit step__button button">Отправить</button>
+            <a href="#2" class="step__button button step__button_prev">На шаг назад</a>
+          </li>
+        </ol>
+      </div>
     </section>
   </main>
   <footer class="footer">

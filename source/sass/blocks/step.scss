@@ -1,9 +1,17 @@
 .step {
+  margin-bottom: 10px;
+  padding: 25px;
+
   background-color: rgba(255, 255, 255, 1);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .step__title {
   margin: 0;
+  margin-bottom: 15px;
 
   font-weight: bold;
   font-size: 20px;
@@ -12,18 +20,46 @@
 
 .step__description {
   margin: 0;
+  margin-bottom: 25px;
 
   color: $grey;
 }
 
 .step__box {
+  position: relative;
+
+  width: 100%;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .step__label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
+}
+
+.step__label-check {
+  display: block;
+  margin-bottom: 25px;
+  padding-left: 40px;
+}
+
+.step__label-mesure {
+  @include opacity-color($blue, 0.3);
+}
+
+.step__input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 30px;
+
+  text-align: center;
 }
 
 .step__button_prev {
@@ -41,5 +77,97 @@
 
   &::placeholder {
     @include opacity-color($grey, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .step {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 50px 45px 55px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .step__title {
+    margin-bottom: 35px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .step__description {
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .step__box {
+    padding-top: 25px;
+
+    border-top: 1px solid #cbced9;
+
+    &:last-of-type {
+      order: 1;
+    }
+  }
+
+  .step__label-check {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .step__calendar {
+    order: 2;
+  }
+
+  .calendar__month-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .step_first {
+    .step__button {
+      order: 3;
+    }
+  }
+
+  .step__input {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .step {
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .step__title {
+    line-height: 50px;
+  }
+
+  .step__description {
+    margin-bottom: 55px;
+    padding-right: 660px;
+  }
+
+  .step__box {
+    width: 550px;
+
+    border-top: none;
   }
 }
