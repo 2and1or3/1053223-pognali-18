@@ -116,10 +116,6 @@
   border-radius: 50%;
 }
 
-.card__level {
-  position: static;
-}
-
 @media (min-width: $tablet-width) {
   .card {
     flex-direction: row;
