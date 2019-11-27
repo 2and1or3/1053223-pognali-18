@@ -520,331 +520,351 @@
         <button class="list-filter__button-close">Свернуть</button>
       </div>
     </section>
-    <form action="https://echo.htmlacademy.ru" method="post" class="form-filter">
-      <b class="form-filter__slogan">
-        Подберите идеального
-        попутчика
-      </b>
-      <fieldset class="form-filter__box">
-        <div class="form-filter__box-inner">
-          <label for="hobby-list" class="form-filter__title">Хобби</label>
-          <input type="checkbox" id="hobby-list" class="visually-hidden form-filter__category-toggle">
-          <ul class="form-filter__list">
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="sport" checked>
-                <span class="checkbox"></span>
-                Спортзал
-              </label>
-            </li>
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="hookah">
-                <span class="checkbox"></span>
-                Кальян
-              </label>
-            </li>
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="sofa">
-                <span class="checkbox"></span>
-                Диван
-              </label>
-            </li>
-          </ul>
-        </div>
-      </fieldset>
-      <fieldset class="form-filter__box">
-        <div class="form-filter__box-inner">
-          <label for="music-list" class="form-filter__title">Музыка</label>
-          <input type="checkbox" id="music-list" class="visually-hidden form-filter__category-toggle" checked>
-          <ul class="form-filter__list">
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="hard" checked>
-                <span class="checkbox"></span>
-                Тяжелый рок
-              </label>
-            </li>
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="rap">
-                <span class="checkbox"></span>
-                Русский рэп
-              </label>
-            </li>
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="euro">
-                <span class="checkbox"></span>
-                Евроденс
-              </label>
-            </li>
-          </ul>
-        </div>
-      </fieldset>
-      <fieldset class="form-filter__box">
-        <div class="form-filter__box-inner">
-          <label for="food-list" class="form-filter__title">Еда:</label>
-          <input type="checkbox" id="food-list" class="visually-hidden form-filter__category-toggle">
-          <ul class="form-filter__list">
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="meet" checked>
-                <span class="checkbox"></span>
-                Мясоед
-              </label>
-            </li>
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="pp">
-                <span class="checkbox"></span>
-                Сидит на ПП
-              </label>
-            </li>
-            <li class="form-filter__item">
-              <label class="form-filter__label">
-                <input type="checkbox" class="visually-hidden" name="vegan">
-                <span class="checkbox"></span>
-                Веган-сыроед
-              </label>
-            </li>
-          </ul>
-        </div>
-      </fieldset>
-      <fieldset class="form-filter__box">
-        <div class="form-filter__box-inner">
-          <label for="transport-list" class="form-filter__title">Транспорт:</label>
-          <input type="checkbox" id="transport-list" class="visually-hidden form-filter__category-toggle">
-          <ul class="form-filter__list form-filter__list_image prefer">
-            <li class="prefer__item">
-              <label class="prefer__label">
-                <input type="checkbox" class="visually-hidden" name="plane" checked>
-                <span class="checkbox-image"></span>
-                <span class="visually-hidden">Самолет</span>
-              </label>
-            </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
-                <input type="checkbox" class="visually-hidden" name="bus" checked>
-                <span class="checkbox-image"></span>
-                <span class="visually-hidden">Автобус</span>
-              </label>
-            </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
-                <input type="checkbox" class="visually-hidden" name="bicycle">
-                <span class="checkbox-image"></span>
-                <span class="visually-hidden">Велосипед</span>
-              </label>
-            </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
-                <input type="checkbox" class="visually-hidden" name="run" checked>
-                <span class="checkbox-image"></span>
-                <span class="visually-hidden">Бег</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-      </fieldset>
-      <fieldset class="form-filter__box">
-        <div class="form-filter__box-inner">
-          <label for="level" class="form-filter__title">Левел:</label>
-          <input type="checkbox" id="level" class="visually-hidden form-filter__category-toggle">
-          <div class="level-box form-filter__list">
-            <input type="text" value="30" name="Минимальный уровень" aria-label="Минимальный уровень" class="level-box__input">
-            <input type="text" value="100" name="Максимальный уровень" aria-label="Максимальный уровень" class="level-box__input">
-            <div class="range-box">
-              <span class="range-box__line range-box__line_back"></span>
-              <span class="range-box__line range-box__line_up"></span>
-              <button type="button" aria-label="Минимальный уровень" class="range-box__button range-box__button_min"></button>
-              <button type="button" aria-label="Максимальный уровень" class="range-box__button range-box__button_max"></button>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <button type="submit" class="form-filter__button button">Показать</button>
-    </form>
-    <section class="catalog">
-      <ul class="catalog__list">
-        <li class="catalog__item card">
-          <img src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" class="card__image">
-          <h3 class="card__title">Таня Фирсова</h3>
-          <b class="card__like card__like_more">1,5 m</b>
-          <ul class="card__tag-list">
-            <li class="card__tag-item">#ЗОЖ</li>
-            <li class="card__tag-item">#ПП</li>
-            <li class="card__tag-item">#Фитнес</li>
-            <li class="card__tag-item">#пляж</li>
-            <li class="card__tag-item">#авокадо</li>
-            <li class="card__tag-item">#смузи</li>
-          </ul>
-          <div class="card__section">
-            <span class="card__section-title">хочет посетить:</span>
-            <ul class="card__need-list">
-              <li class="card__need-country card__need-country_srilanka">Шри-ланка</li>
-              <li class="card__need-country card__need-country_tai">Таиланд</li>
-              <li class="card__need-country card__need-country_seychelles">Сейшелы</li>
+    <div class="page-catalog__wrapper">
+      <form action="https://echo.htmlacademy.ru" method="post" class="form-filter">
+        <b class="form-filter__slogan">
+          Подберите идеального
+          попутчика
+        </b>
+        <fieldset class="form-filter__box">
+          <div class="form-filter__box-inner">
+            <label for="hobby-list" class="form-filter__title">Хобби</label>
+            <input type="checkbox" id="hobby-list" class="visually-hidden form-filter__category-toggle">
+            <ul class="form-filter__list">
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="sport" checked>
+                  <span class="checkbox"></span>
+                  Спортзал
+                </label>
+              </li>
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="hookah">
+                  <span class="checkbox"></span>
+                  Кальян
+                </label>
+              </li>
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="sofa">
+                  <span class="checkbox"></span>
+                  Диван
+                </label>
+              </li>
             </ul>
           </div>
-          <div class="card__section">
-            <div class="card__sub-section">
-              <span class="card__section-title">транспорт:</span>
-              <ul class="card__prefer-list">
-                <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
-                <li class="card__prefer-item card__prefer-item_bus"></li>
-                <li class="card__prefer-item card__prefer-item_bicycle"></li>
-                <li class="card__prefer-item card__prefer-item_run"></li>
-              </ul>
-            </div>
-            <div class="card__sub-section">
-              <span class="card__section-title">левел:</span>
-              <p class="level card__level">99</p>
-            </div>
-          </div>
-          <a href="call.html" class="card__button button">Позвать!</a>
-          <b class="card__like card__like_more">1,5 m</b>
-        </li>
-        <li class="catalog__item card">
-          <img src="img/demin-mobile@1x.jpg" alt="Петя Демин" class="card__image">
-          <h3 class="card__title">Петя Демин</h3>
-          <b class="card__like">150</b>
-          <ul class="card__tag-list">
-            <li class="card__tag-item">#бургер</li>
-            <li class="card__tag-item">#бар</li>
-            <li class="card__tag-item">#футбол</li>
-            <li class="card__tag-item">#концерт</li>
-            <li class="card__tag-item">#крафт</li>
-          </ul>
-          <div class="card__section">
-            <span class="card__section-title">хочет посетить:</span>
-            <ul class="card__need-list">
-              <li class="card__need-country">Бельгия</li>
-              <li class="card__need-country">Чехия</li>
+        </fieldset>
+        <fieldset class="form-filter__box">
+          <div class="form-filter__box-inner">
+            <label for="music-list" class="form-filter__title">Музыка</label>
+            <input type="checkbox" id="music-list" class="visually-hidden form-filter__category-toggle" checked>
+            <ul class="form-filter__list">
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="hard" checked>
+                  <span class="checkbox"></span>
+                  Тяжелый рок
+                </label>
+              </li>
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="rap">
+                  <span class="checkbox"></span>
+                  Русский рэп
+                </label>
+              </li>
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="euro">
+                  <span class="checkbox"></span>
+                  Евроденс
+                </label>
+              </li>
             </ul>
           </div>
-          <div class="card__section">
-            <div class="card__sub-section">
-              <span class="card__section-title">транспорт:</span>
-              <ul class="card__prefer-list">
-                <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
-                <li class="card__prefer-item card__prefer-item_bus card__prefer-item_active"></li>
-                <li class="card__prefer-item card__prefer-item_bicycle"></li>
-                <li class="card__prefer-item card__prefer-item_run card__prefer-item_active"></li>
-              </ul>
-            </div>
-            <div class="card__sub-section">
-              <span class="card__section-title">левел:</span>
-              <p class="level card__level">80</p>
-            </div>
-          </div>
-          <a href="call.html" class="card__button button">Позвать!</a>
-          <b class="card__like">150</b>
-        </li>
-        <li class="catalog__item card">
-          <img src="img/smolov-mobile@1x.jpg" alt="Марк Смолов" class="card__image">
-          <h3 class="card__title">Марк Смолов</h3>
-          <b class="card__like">1700</b>
-          <ul class="card__tag-list">
-            <li class="card__tag-item">#рэп</li>
-            <li class="card__tag-item">#тату</li>
-            <li class="card__tag-item">#хайпбист</li>
-            <li class="card__tag-item">#кроссовки</li>
-            <li class="card__tag-item">#суприм</li>
-          </ul>
-          <div class="card__section">
-            <span class="card__section-title">хочет посетить:</span>
-            <ul class="card__need-list">
-              <li class="card__need-country">США</li>
-              <li class="card__need-country">Австралия</li>
-              <li class="card__need-country">Доминикана</li>
+        </fieldset>
+        <fieldset class="form-filter__box">
+          <div class="form-filter__box-inner">
+            <label for="food-list" class="form-filter__title">Еда:</label>
+            <input type="checkbox" id="food-list" class="visually-hidden form-filter__category-toggle">
+            <ul class="form-filter__list">
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="meet" checked>
+                  <span class="checkbox"></span>
+                  Мясоед
+                </label>
+              </li>
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="pp">
+                  <span class="checkbox"></span>
+                  Сидит на ПП
+                </label>
+              </li>
+              <li class="form-filter__item">
+                <label class="form-filter__label">
+                  <input type="checkbox" class="visually-hidden" name="vegan">
+                  <span class="checkbox"></span>
+                  Веган-сыроед
+                </label>
+              </li>
             </ul>
           </div>
-          <div class="card__section">
-            <div class="card__sub-section">
-              <span class="card__section-title">транспорт:</span>
-              <ul class="card__prefer-list">
-                <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
-                <li class="card__prefer-item card__prefer-item_bus"></li>
-                <li class="card__prefer-item card__prefer-item_bicycle card__prefer-item_active"></li>
-                <li class="card__prefer-item card__prefer-item_run"></li>
-              </ul>
-            </div>
-            <div class="card__sub-section">
-              <span class="card__section-title">левел:</span>
-              <p class="level card__level">25</p>
-            </div>
-          </div>
-          <a href="call.html" class="card__button button">Позвать!</a>
-          <b class="card__like">1700</b>
-        </li>
-        <li class="catalog__item card">
-          <img src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая" class="card__image">
-          <h3 class="card__title">Лариса Роговая</h3>
-          <b class="card__like">23</b>
-          <ul class="card__tag-list">
-            <li class="card__tag-item">#ЗОЖ</li>
-            <li class="card__tag-item">#ПП</li>
-            <li class="card__tag-item">#Фитнес</li>
-            <li class="card__tag-item">#пляж</li>
-            <li class="card__tag-item">#авокадо</li>
-            <li class="card__tag-item">#смузи</li>
-          </ul>
-          <div class="card__section">
-            <span class="card__section-title">хочет посетить:</span>
-            <ul class="card__need-list">
-              <li class="card__need-country">Великобритания</li>
-              <li class="card__need-country">Германия</li>
+        </fieldset>
+        <fieldset class="form-filter__box">
+          <div class="form-filter__box-inner">
+            <label for="transport-list" class="form-filter__title">Транспорт:</label>
+            <input type="checkbox" id="transport-list" class="visually-hidden form-filter__category-toggle" checked>
+            <ul class="form-filter__list form-filter__list_image prefer">
+              <li class="prefer__item">
+                <label class="prefer__label">
+                  <input type="checkbox" class="visually-hidden" name="plane" checked>
+                  <span class="checkbox-image"></span>
+                  <span class="visually-hidden">Самолет</span>
+                </label>
+              </li>
+              <li class="prefer__item">
+                <label class="prefer__label">
+                  <input type="checkbox" class="visually-hidden" name="bus" checked>
+                  <span class="checkbox-image"></span>
+                  <span class="visually-hidden">Автобус</span>
+                </label>
+              </li>
+              <li class="prefer__item">
+                <label class="prefer__label">
+                  <input type="checkbox" class="visually-hidden" name="bicycle">
+                  <span class="checkbox-image"></span>
+                  <span class="visually-hidden">Велосипед</span>
+                </label>
+              </li>
+              <li class="prefer__item">
+                <label class="prefer__label">
+                  <input type="checkbox" class="visually-hidden" name="run" checked>
+                  <span class="checkbox-image"></span>
+                  <span class="visually-hidden">Бег</span>
+                </label>
+              </li>
             </ul>
           </div>
-          <div class="card__section">
-            <div class="card__sub-section">
-              <span class="card__section-title">транспорт:</span>
-              <ul class="card__prefer-list">
-                <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
-                <li class="card__prefer-item card__prefer-item_bus card__prefer-item_active"></li>
-                <li class="card__prefer-item card__prefer-item_bicycle"></li>
-                <li class="card__prefer-item card__prefer-item_run"></li>
-              </ul>
-            </div>
-            <div class="card__sub-section">
-              <span class="card__section-title">левел:</span>
-              <p class="level card__level">50</p>
+        </fieldset>
+        <fieldset class="form-filter__box">
+          <div class="form-filter__box-inner">
+            <label for="level" class="form-filter__title">Левел:</label>
+            <input type="checkbox" id="level" class="visually-hidden form-filter__category-toggle" checked>
+            <div class="level-box form-filter__list">
+              <input type="text" value="30" name="Минимальный уровень" aria-label="Минимальный уровень" class="level-box__input">
+              <input type="text" value="100" name="Максимальный уровень" aria-label="Максимальный уровень" class="level-box__input">
+              <div class="range-box">
+                <span class="range-box__line range-box__line_back"></span>
+                <span class="range-box__line range-box__line_up"></span>
+                <button type="button" aria-label="Минимальный уровень" class="range-box__button range-box__button_min"></button>
+                <button type="button" aria-label="Максимальный уровень" class="range-box__button range-box__button_max"></button>
+              </div>
             </div>
           </div>
-          <a href="call.html" class="card__button button">Позвать!</a>
-          <b class="card__like">23</b>
-        </li>
-      </ul>
-      <a href="more.html" class="catalog__button">Показать еще</a>
-      <p class="catalog__pagination pagination">
-        <button class="pagination__button pagination__button_prev">
-          <span class="visually-hidden">Предыдущая страница</span>
-        </button>
-        <button class="pagination__button pagination__button_next">
-          <span class="visually-hidden">Следующая страница</span>
-        </button>
-      </p>
-    </section>
+        </fieldset>
+        <button type="submit" class="form-filter__button button">Показать</button>
+      </form>
+      <section class="catalog">
+        <ul class="catalog__list">
+          <li class="catalog__item card">
+            <img src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" class="card__image">
+            <h3 class="card__title">Таня Фирсова</h3>
+            <b class="card__like card__like_more">1,5 m</b>
+            <ul class="card__tag-list">
+              <li class="card__tag-item">#ЗОЖ</li>
+              <li class="card__tag-item">#ПП</li>
+              <li class="card__tag-item">#Фитнес</li>
+              <li class="card__tag-item">#пляж</li>
+              <li class="card__tag-item">#авокадо</li>
+              <li class="card__tag-item">#смузи</li>
+            </ul>
+            <div class="card__section">
+              <span class="card__section-title">хочет посетить:</span>
+              <ul class="card__need-list">
+                <li class="card__need-country card__need-country_srilanka">Шри-ланка</li>
+                <li class="card__need-country card__need-country_tai">Таиланд</li>
+                <li class="card__need-country card__need-country_seychelles">Сейшелы</li>
+              </ul>
+            </div>
+            <div class="card__section">
+              <div class="card__sub-section">
+                <span class="card__section-title">транспорт:</span>
+                <ul class="card__prefer-list">
+                  <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
+                  <li class="card__prefer-item card__prefer-item_bus"></li>
+                  <li class="card__prefer-item card__prefer-item_bicycle"></li>
+                  <li class="card__prefer-item card__prefer-item_run"></li>
+                </ul>
+              </div>
+              <div class="card__sub-section">
+                <span class="card__section-title">левел:</span>
+                <p class="level card__level">99</p>
+              </div>
+            </div>
+            <a href="call.html" class="card__button button">Позвать!</a>
+            <b class="card__like card__like_more">1,5 m</b>
+          </li>
+          <li class="catalog__item card">
+            <img src="img/demin-mobile@1x.jpg" alt="Петя Демин" class="card__image">
+            <h3 class="card__title">Петя Демин</h3>
+            <b class="card__like">150</b>
+            <ul class="card__tag-list">
+              <li class="card__tag-item">#бургер</li>
+              <li class="card__tag-item">#бар</li>
+              <li class="card__tag-item">#футбол</li>
+              <li class="card__tag-item">#концерт</li>
+              <li class="card__tag-item">#крафт</li>
+            </ul>
+            <div class="card__section">
+              <span class="card__section-title">хочет посетить:</span>
+              <ul class="card__need-list">
+                <li class="card__need-country">Бельгия</li>
+                <li class="card__need-country">Чехия</li>
+              </ul>
+            </div>
+            <div class="card__section">
+              <div class="card__sub-section">
+                <span class="card__section-title">транспорт:</span>
+                <ul class="card__prefer-list">
+                  <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
+                  <li class="card__prefer-item card__prefer-item_bus card__prefer-item_active"></li>
+                  <li class="card__prefer-item card__prefer-item_bicycle"></li>
+                  <li class="card__prefer-item card__prefer-item_run card__prefer-item_active"></li>
+                </ul>
+              </div>
+              <div class="card__sub-section">
+                <span class="card__section-title">левел:</span>
+                <p class="level card__level">80</p>
+              </div>
+            </div>
+            <a href="call.html" class="card__button button">Позвать!</a>
+            <b class="card__like">150</b>
+          </li>
+          <li class="catalog__item card">
+            <img src="img/smolov-mobile@1x.jpg" alt="Марк Смолов" class="card__image">
+            <h3 class="card__title">Марк Смолов</h3>
+            <b class="card__like">1700</b>
+            <ul class="card__tag-list">
+              <li class="card__tag-item">#рэп</li>
+              <li class="card__tag-item">#тату</li>
+              <li class="card__tag-item">#хайпбист</li>
+              <li class="card__tag-item">#кроссовки</li>
+              <li class="card__tag-item">#суприм</li>
+            </ul>
+            <div class="card__section">
+              <span class="card__section-title">хочет посетить:</span>
+              <ul class="card__need-list">
+                <li class="card__need-country">США</li>
+                <li class="card__need-country">Австралия</li>
+                <li class="card__need-country">Доминикана</li>
+              </ul>
+            </div>
+            <div class="card__section">
+              <div class="card__sub-section">
+                <span class="card__section-title">транспорт:</span>
+                <ul class="card__prefer-list">
+                  <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
+                  <li class="card__prefer-item card__prefer-item_bus"></li>
+                  <li class="card__prefer-item card__prefer-item_bicycle card__prefer-item_active"></li>
+                  <li class="card__prefer-item card__prefer-item_run"></li>
+                </ul>
+              </div>
+              <div class="card__sub-section">
+                <span class="card__section-title">левел:</span>
+                <p class="level card__level">25</p>
+              </div>
+            </div>
+            <a href="call.html" class="card__button button">Позвать!</a>
+            <b class="card__like">1700</b>
+          </li>
+          <li class="catalog__item card">
+            <img src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая" class="card__image">
+            <h3 class="card__title">Лариса Роговая</h3>
+            <b class="card__like">23</b>
+            <ul class="card__tag-list">
+              <li class="card__tag-item">#ЗОЖ</li>
+              <li class="card__tag-item">#ПП</li>
+              <li class="card__tag-item">#Фитнес</li>
+              <li class="card__tag-item">#пляж</li>
+              <li class="card__tag-item">#авокадо</li>
+              <li class="card__tag-item">#смузи</li>
+            </ul>
+            <div class="card__section">
+              <span class="card__section-title">хочет посетить:</span>
+              <ul class="card__need-list">
+                <li class="card__need-country">Великобритания</li>
+                <li class="card__need-country">Германия</li>
+              </ul>
+            </div>
+            <div class="card__section">
+              <div class="card__sub-section">
+                <span class="card__section-title">транспорт:</span>
+                <ul class="card__prefer-list">
+                  <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
+                  <li class="card__prefer-item card__prefer-item_bus card__prefer-item_active"></li>
+                  <li class="card__prefer-item card__prefer-item_bicycle"></li>
+                  <li class="card__prefer-item card__prefer-item_run"></li>
+                </ul>
+              </div>
+              <div class="card__sub-section">
+                <span class="card__section-title">левел:</span>
+                <p class="level card__level">50</p>
+              </div>
+            </div>
+            <a href="call.html" class="card__button button">Позвать!</a>
+            <b class="card__like">23</b>
+          </li>
+        </ul>
+        <a href="more.html" class="catalog__button">Показать еще</a>
+        <div class="catalog__pagination pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item pagination__item_current">
+              <a class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#2" class="pagination__link">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#3" class="pagination__link">3</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#4" class="pagination__link">4</a>
+            </li>
+          </ul>
+          <p class="pagination__buttons">
+            <button class="pagination__button pagination__button_prev">
+              <span class="visually-hidden">Предыдущая страница</span>
+            </button>
+            <button class="pagination__button pagination__button_next">
+              <span class="visually-hidden">Следующая страница</span>
+            </button>
+          </p>
+        </div>
+      </section>
+    </div>
   </main>
   <footer class="footer">
-    <a href="index.html" class="footer__link-logo link-logo"><img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?"></a>
-    <ul class="social footer__social">
-      <li class="social__item"><a href="fb.com" class="social__link">
-          <span class="visually-hidden">Мы в Facebook</span>
-        </a></li>
-      <li class="social__item"><a href="vk.com" class="social__link">
-          <span class="visually-hidden">Мы ВКонтакте</span>
-        </a></li>
-      <li class="social__item"><a href="instagram.com" class="social__link">
-          <span class="visually-hidden">Мы в Instagram</span>
-        </a></li>
-    </ul>
-    <p class="author">
-      <span class="author__develop">Разработано</span>
-      <a href="htmlacademy.ru" class="author__link"><img src="img/htmlacademy.svg" alt="логотип htmlacademy" width="27" height="34"></a>
-    </p>
+    <div class="footer__wrapper">
+      <a class="footer__link-logo link-logo"><img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?"></a>
+      <ul class="social footer__social">
+        <li class="social__item"><a href="fb.com" class="social__link">
+            <span class="visually-hidden">Мы в Facebook</span>
+          </a></li>
+        <li class="social__item"><a href="vk.com" class="social__link">
+            <span class="visually-hidden">Мы ВКонтакте</span>
+          </a></li>
+        <li class="social__item"><a href="instagram.com" class="social__link">
+            <span class="visually-hidden">Мы в Instagram</span>
+          </a></li>
+      </ul>
+      <p class="author">
+        <span class="author__develop">Разработано</span>
+        <a href="htmlacademy.ru" class="author__link"><img src="img/htmlacademy.svg" alt="логотип htmlacademy" width="27" height="34"></a>
+      </p>
+    </div>
   </footer>
 </body>
 </html>

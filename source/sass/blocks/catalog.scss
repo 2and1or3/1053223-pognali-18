@@ -1,4 +1,6 @@
 .catalog {
+  display: flex;
+  flex-direction: column;
   width: 270px;
   margin: 0 auto;
 }
@@ -12,10 +14,12 @@
 }
 
 .catalog__button {
-  color: $blue;
+  margin: 0 auto;
+
+  font-weight: bold;
   font-size: 17px;
   line-height: 30px;
-  font-weight: bold;
+  color: $blue;
   text-transform: uppercase;
 }
 
@@ -28,5 +32,6 @@
 @media (min-width: $desktop-width) {
   .catalog {
     width: 950px;
+    margin: 0;
   }
 }
