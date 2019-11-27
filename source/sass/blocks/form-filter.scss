@@ -73,6 +73,7 @@
     padding-bottom: 0;
 
     border: none;
+
     .form-filter__category-toggle ~ .form-filter__list {
       display: flex;
     }
@@ -118,6 +119,7 @@
         border: none;
       }
     }
+
     &:first-of-type {
       .form-filter__box-inner {
         border: none;

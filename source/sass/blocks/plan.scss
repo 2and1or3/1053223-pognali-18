@@ -8,6 +8,7 @@
       content: "1.";
     }
   }
+
   &:nth-child(2) {
     .plan__title::before {
       content: "2.";
@@ -90,6 +91,7 @@
     line-height: 50px;
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
     &::before {
       margin-right: 0;
 
