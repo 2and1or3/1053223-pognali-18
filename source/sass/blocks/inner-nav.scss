@@ -24,6 +24,10 @@
   display: none;
 }
 
+.inner-nav__profile-box {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .inner-nav__wrapper {
     box-sizing: border-box;
@@ -50,5 +54,45 @@
   .inner-nav__wrapper {
     width: 1440px;
     padding: 70px 120px;
+  }
+
+  .page-form {
+    .inner-nav__wrapper {
+      padding-bottom: 0;
+    }
+  }
+
+  .inner-nav__profile-box {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .inner-nav__level {
+    margin-right: 45px;
+
+    font-size: 38px;
+    line-height: 38px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .inner-nav__image {
+    width: 190px;
+    height: 190px;
+  }
+
+  .inner-nav__label-photo {
+    position: absolute;
+    right: 85px;
+    bottom: -30px;
+
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+    color: $darkness-blue;
+
+    background-color: $lightness-blue;
   }
 }

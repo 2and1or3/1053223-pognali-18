@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Направления</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -53,52 +54,66 @@
     </div>
   </header>
   <main class="page page-form">
-    <h1 class="page__title">Направления</h1>
+    <nav class="page__inner-nav inner-nav">
+      <div class="inner-nav__wrapper">
+        <h1 class="inner-nav__title">Направления</h1>
+        <div class="inner-nav__profile-box">
+          <p class="inner-nav__level level">80</p>
+          <img src="img/demin-mobile@1x.jpg" alt="Петя" class="inner-nav__image">
+          <label class="inner-nav__label-photo">
+            фото
+            <input type="file" class="visually-hidden">
+          </label>
+        </div>
+      </div>
+    </nav>
     <section class="profile">
-      <h2 class="visually-hidden">Ваш профиль</h2>
-      <p class="profile__level level">80</p>
-      <img src="img/demin-mobile@1x.jpg" alt="Петя" class="profile__image">
-      <label class="profile__label-photo">
-        сменить фото
-        <input type="file" class="visually-hidden">
-      </label>
-      <label class="profile__label">
-        Тэги
-        <textarea name="tags" cols="60" rows="5" class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
-      </label>
-      <fieldset>
-        <legend class="profile__label">Транспорт</legend>
-        <ul class="profile__prefer prefer">
-          <li class="prefer__item">
-            <label class="prefer__label">
-              <input type="checkbox" class="visually-hidden" name="plane" checked>
-              <span class="checkbox-image"></span>
-              <span class="visually-hidden">Самолет</span>
-            </label>
-          </li>
-          <li class="prefer__item">
-            <label class="prefer__label">
-              <input type="checkbox" class="visually-hidden" name="bus" checked>
-              <span class="checkbox-image"></span>
-              <span class="visually-hidden">Автобус</span>
-            </label>
-          </li>
-          <li class="prefer__item">
-            <label class="prefer__label">
-              <input type="checkbox" class="visually-hidden" name="bicycle">
-              <span class="checkbox-image"></span>
-              <span class="visually-hidden">Велосипед</span>
-            </label>
-          </li>
-          <li class="prefer__item">
-            <label class="prefer__label">
-              <input type="checkbox" class="visually-hidden" name="run" checked>
-              <span class="checkbox-image"></span>
-              <span class="visually-hidden">Бег</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="profile__wrapper">
+        <h2 class="visually-hidden">Ваш профиль</h2>
+        <p class="profile__level level">80</p>
+        <img src="img/demin-mobile@1x.jpg" alt="Петя" class="profile__image">
+        <label class="profile__label-photo">
+          сменить фото
+          <input type="file" class="visually-hidden">
+        </label>
+        <label class="profile__label">
+          Тэги
+          <textarea name="tags" cols="60" rows="5" class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+        </label>
+        <fieldset class="profile__prefer">
+          <legend class="profile__label">Транспорт</legend>
+          <ul class="profile__prefer-list prefer">
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="plane" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Самолет</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="bus" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Автобус</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="bicycle">
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Велосипед</span>
+              </label>
+            </li>
+            <li class="prefer__item">
+              <label class="prefer__label">
+                <input type="checkbox" class="visually-hidden" name="run" checked>
+                <span class="checkbox-image"></span>
+                <span class="visually-hidden">Бег</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
     </section>
     <section class="plans">
       <h2 class="plans__title">Мои планы:</h2>
