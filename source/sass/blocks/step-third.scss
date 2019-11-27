@@ -1,0 +1,65 @@
+.step-third__label {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 15px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.step-third__textarea {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.step-third__flag {
+  position: absolute;
+  right: 0;
+
+  display: block;
+  width: 35px;
+  height: 24px;
+
+  background-color: red;
+}
+
+@media (min-width: $tablet-width) {
+  .step-third__label {
+    margin-bottom: 35px;
+    padding-left: 0;
+
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .step-third__textarea {
+    margin-bottom: 50px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .step-third__flag {
+    position: static;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .step-third__textarea {
+    width: 80%;
+    margin-right: 20%;
+  }
+}

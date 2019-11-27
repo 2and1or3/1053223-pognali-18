@@ -518,7 +518,7 @@
             <a href="#3" class="step__button button step__button_next">Следующий шаг</a>
             <a href="#1" class="step__button button step__button_prev">На шаг назад</a>
           </li>
-          <li class="step step_third">
+          <li class="step step-third">
             <h3 class="step__title">
               Шаг 3.<br>
               Развлечения
@@ -527,16 +527,18 @@
               Наконец, расскажите о своих планах времяпровождения.
               Можно писать в свободной форме и ставить тэги.
             </p>
-            <label class="step__label step__label_bos">
+            <label for="bos" class="step-third__label">
               Босния и Герцеговина
-              <textarea name="bos" cols="30" rows="10" placeholder="План действий" class="step__textarea"></textarea>
+              <span class="step-third__flag"></span>
             </label>
-            <label class="step__label step__label_czech">
+            <textarea name="bos" id="bos" rows="10" placeholder="План действий" class="step-third__textarea"></textarea>
+            <label for="czech" class="step-third__label">
               Чехия
-              <textarea name="czech" cols="30" rows="10" placeholder="План действий" class="step__textarea">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-            </textarea>
+              <span class="step-third__flag"></span>
             </label>
-            <button type="submit" class="step__submit step__button button">Отправить</button>
+            <textarea name="czech" id="czech" rows="10" placeholder="План действий" class="step-third__textarea">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+            </textarea>
+            <button type="submit" class="step__submit step__button button step__button_next">Отправить</button>
             <a href="#2" class="step__button button step__button_prev">На шаг назад</a>
           </li>
         </ol>
