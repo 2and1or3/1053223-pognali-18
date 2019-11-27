@@ -1,14 +1,57 @@
 .plan {
+  padding: 25px;
+
   background-color: rgba(255, 255, 255, 1);
+
+  &:nth-child(1) {
+    .plan__title::before {
+      content: "1.";
+    }
+  }
+  &:nth-child(2) {
+    .plan__title::before {
+      content: "2.";
+    }
+  }
+}
+
+.plans__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    marign-bottom: 0;
+  }
 }
 
 .plan__title {
+  margin: 0;
+  margin-bottom: 20px;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
+
+  &::before {
+    margin-right: 5px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
-.plan__info {
+.plan__date {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.plan__friends {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -22,4 +65,97 @@
   text-transform: uppercase;
 
   @include opacity-color(#000000, 0.3);
+}
+
+@media (min-width: $tablet-width) {
+  .plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .plan__title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 40px 35px 40px;
+
+    font-size: 24px;
+    line-height: 50px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    &::before {
+      margin-right: 0;
+
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .plan__date {
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+
+  .plan__friends {
+    margin-bottom: 0;
+    margin-left: 35px;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+
+  .plan__change {
+    margin-right: 35px;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plan {
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 35px 45px;
+  }
+
+  .plan__title {
+    flex-direction: row;
+    width: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding: 0;
+
+    border-bottom: none;
+
+    &::before {
+      margin-right: 5px;
+    }
+  }
+
+  .plan__friends {
+    margin-right: 40px;
+    margin-left: 0;
+  }
+
+  .plan__date {
+    margin-right: 130px;
+  }
+
+  .plan__change {
+    margin-right: 0;
+  }
 }

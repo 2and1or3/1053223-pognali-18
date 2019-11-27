@@ -2,8 +2,16 @@
   background-color: $lightness-blue;
 }
 
+.plans__wrapper {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 25px;
+}
+
 .plans__title {
   margin: 0;
+  margin-bottom: 35px;
 
   font-size: 24px;
   line-height: 24px;
@@ -11,4 +19,24 @@
 
 .plans__list {
   @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .plans__wrapper {
+    width: 768px;
+    padding: 60px 75px;
+  }
+
+  .plans__title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plans__wrapper {
+    width: 1440px;
+    padding: 60px;
+    padding-left: 125px;
+  }
 }
