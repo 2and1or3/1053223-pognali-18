@@ -1,4 +1,6 @@
 .human {
+  position: relative;
+
   margin-bottom: 10px;
 
   &:last-child {
@@ -6,18 +8,29 @@
   }
 }
 
+.human__level {
+  position: absolute;
+}
+
+.human__image {
+  display: block;
+}
+
 .human__info {
+  padding: 25px 50px 20px;
+
   color: $blue;
 
   background-color: rgba(255, 255, 255, 1);
 }
 
-.human__need-list {
+.human__needs {
   @include list-reset;
 }
 
 .human__title {
   margin: 0;
+  margin-bottom: 15px;
 
   font-weight: bold;
   font-size: 21px;
@@ -25,13 +38,24 @@
   text-align: center;
 }
 
-.human__tag-list {
-  text-align: center;
-  color: $grey;
-
+.human__tags {
   @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  color: $grey;
 }
 
-.human__prefer-list {
-  @include list-reset;
+@media (min-width: $tablet-width) {
+  .human__title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .human__tags {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

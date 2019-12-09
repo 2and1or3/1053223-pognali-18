@@ -2,13 +2,41 @@
   background-color: $light-blue;
 }
 
+.add-plan__wrapper {
+  @include container;
+  @include padding-t-b(30px, 30px);
+}
+
 .add-plan__title {
   margin: 0;
+  margin-bottom: 30px;
+
+  font-weight: bold;
   font-size: 24px;
   line-height: 24px;
-  font-weight: bold;
 }
 
 .add-plan__pagination {
   @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .add-plan__wrapper {
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(60px, 60px);
+  }
+
+  .add-plan__title {
+    margin-bottom: 60px;
+
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-plan__wrapper {
+    @include container;
+    @include padding-t-b(60px, 60px);
+  }
 }

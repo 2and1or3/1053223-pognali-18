@@ -1,5 +1,17 @@
+.calendar {
+  width: 100%;
+}
+
 .calendar__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
+  padding: 15px 0;
+
+  border: 1px solid #cbced9;
+  border-right: none;
+  border-left: none;
 }
 
 .calendar__month-title {
@@ -10,10 +22,12 @@
 }
 
 .calendar__table {
+  @include opacity-color($grey, 0.3);
+
+  width: 100%;
+
   font-size: 14px;
   line-height: 18px;
-
-  @include opacity-color($grey, 0.3);
 }
 
 .calendar__row:first-child {
@@ -22,6 +36,10 @@
 
 .calendar__th {
   text-align: center;
+}
+
+.calendar__expand {
+  display: none;
 }
 
 .calendar__th:nth-last-child(1) {
@@ -34,4 +52,10 @@
 
 .calendar__td {
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .calendar__expand {
+    display: inline;
+  }
 }

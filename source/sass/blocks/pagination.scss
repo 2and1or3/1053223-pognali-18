@@ -1,8 +1,37 @@
 .pagination {
   margin: 0;
+
+  color: $darkness-blue;
+}
+
+.pagination__list {
+  @include list-reset;
+
+  display: none;
+}
+
+.pagination__link {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.pagination__buttons {
+  margin: 0;
 }
 
 .pagination__button {
   background-color: rgba(255, 255, 255, 1);
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pagination__list {
+    display: flex;
+  }
 }

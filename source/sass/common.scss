@@ -1,18 +1,25 @@
 body {
+  min-width: 320px;
   margin: 0;
 
   font-style: normal;
   font-weight: normal;
-  font-family: "BloggerSans", "Arial", sans-serif;
-  color: #ffffff;
   font-size: 16px;
   line-height: 22px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  color: #ffffff;
+
   background-color: $grey-blue;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {

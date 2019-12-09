@@ -1,13 +1,65 @@
 .about {
-  background: url("../img/about-mobile@1x.png") no-repeat center;
+  @include extra-offset (22px, 22px);
+  @include padding-t-b (30px, 85px);
+
+  background: url("../img/about-mobile@1x.png") no-repeat right center;
+}
+
+.about__text-box {
+  width: 215px;
 }
 
 .about__title {
   @include section-title-orange;
-  margin: 0;
 }
 
 .about__description {
-  font-weight: 300;
   margin: 0;
+  margin-bottom: 25px;
+
+  font-weight: 300;
+}
+
+.about__description-bold {
+  display: block;
+}
+
+.about__button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    @include extra-offset(32px, 345px);
+    @include padding-t-b(30px, 85px);
+  }
+
+  .about__text-box {
+    width: 300px;
+  }
+
+  .about__description {
+    @include content-text-light;
+  }
+
+  .about__description-bold {
+    @include content-text-bold;
+
+    margin-bottom: 53px;
+  }
+
+  .about__button {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    @include extra-offset(70px, 630px);
+    @include padding-t-b(130px, 160px);
+  }
+
+  .about__text-box {
+    width: 610px;
+  }
 }

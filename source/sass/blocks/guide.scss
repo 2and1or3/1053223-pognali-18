@@ -1,16 +1,34 @@
 .guide {
-  padding-bottom: 40px;
-
   background-image: linear-gradient(to bottom, $darkness-blue 0%, $darkness-blue 25%, transparent 25%);
 }
 
 .guide__list {
+  @include list-reset;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   color: $darkness-blue;
 
-  @include list-reset;
+  counter-reset: countItems;
+}
+
+.guide__item {
+  position: relative;
+
+  padding: 25px;
+  padding-right: 102px;
+
+  &::after {
+    content: counter(countItems);
+    position: absolute;
+    top: 25px;
+    right: 20px;
+
+    color: rgba(255, 255, 255, 1);
+
+    counter-increment: countItems;
+  }
 }
 
 .guide__item:nth-child(1) {
@@ -27,4 +45,34 @@
 
 .guide__item:nth-child(4) {
   background-color: $light-yellow;
+}
+
+@media (min-width: $tablet-width) {
+  .guide__list {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .guide__item {
+    &::after {
+      position: static;
+
+      display: block;
+
+      font-size: 30px;
+      line-height: 60px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .guide__item {
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
 }

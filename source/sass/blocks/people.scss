@@ -1,9 +1,59 @@
+.people__wrapper {
+  @include container;
+  @include padding-t-b(40px, 40px);
+
+  position: relative;
+}
+
+.people__text-box {
+  width: 215px;
+  margin-bottom: 60px;
+  padding-left: 25px;
+}
+
 .people__title {
   @include section-title-orange;
-  margin: 0;
 }
 
 .people__description {
-  font-weight: 300;
   margin: 0;
+  margin-bottom: 23px;
+
+  font-weight: 300;
+}
+
+.people__description-bold {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .people__wrapper {
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(80px, 80px);
+  }
+
+  .people__text-box {
+    width: 425px;
+    padding-left: 0;
+  }
+
+  .people__description {
+    @include content-text-light;
+  }
+
+  .people__description-bold {
+    @include content-text-bold;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .people__wrapper {
+    @include extra-offset(70px, 0);
+  }
+
+  .people__list {
+    position: absolute;
+    top: 150px;
+    right: 60px;
+  }
 }

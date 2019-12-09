@@ -1,25 +1,138 @@
 .form-filter {
-  background-color: $light-yellow;
+  margin-bottom: 25px;
+  padding: 25px;
+
   color: $blue;
+
+  background-color: $light-yellow;
 }
 
 .form-filter__slogan {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: bold;
   font-size: 22.5px;
   line-height: 22.5px;
-  font-weight: bold;
+}
+
+.form-filter__box {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.form-filter__box-inner {
+  padding: 15px 0;
+
+  border-top: 1px solid #f3c72b;
 }
 
 .form-filter__title {
   font-weight: bold;
   line-height: 18px;
+  text-transform: uppercase;
 }
 
 .form-filter__list {
   @include list-reset;
+
+  display: none;
+
   color: $grey;
 }
 
+.form-filter__category-toggle:checked ~ .form-filter__list {
+  display: block;
+}
+
 .form-filter__button {
+  text-transform: uppercase;
+
   background-color: rgba(255, 255, 255, 1);
   border: none;
+}
+
+.form-filter__checkbox-visual {
+  width: 18px;
+  height: 18px;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (min-width: $tablet-width) {
+  .form-filter {
+    padding: 35px;
+  }
+
+  .form-filter__slogan {
+    margin-bottom: 35px;
+  }
+
+  .form-filter__box-inner {
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 0;
+
+    border: none;
+
+    .form-filter__category-toggle ~ .form-filter__list {
+      display: flex;
+    }
+  }
+
+  .form-filter__box:first-of-type .form-filter__box-inner {
+    border-top: 1px solid #f3c72b;
+  }
+
+  .form-filter__box:last-of-type .form-filter__box-inner {
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid #f3c72b;
+  }
+
+  .form-filter__checkbox-visual {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-filter {
+    box-sizing: border-box;
+    width: 285px;
+    margin: 0;
+    padding: 50px;
+  }
+
+  .form-filter__box-inner {
+    display: block;
+
+    .form-filter__category-toggle ~ .form-filter__list {
+      display: none;
+    }
+
+    .form-filter__category-toggle:checked ~ .form-filter__list {
+      display: block;
+    }
+  }
+
+  .form-filter__box {
+    .form-filter__box-inner {
+      padding: 15px 0;
+    }
+
+    &:last-of-type {
+      .form-filter__box-inner {
+        border: none;
+      }
+    }
+
+    &:first-of-type {
+      .form-filter__box-inner {
+        border: none;
+      }
+    }
+  }
 }

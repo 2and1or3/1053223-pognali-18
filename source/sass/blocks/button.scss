@@ -1,7 +1,9 @@
 .button {
-  background-color: $light-yellow;
+  font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   color: $blue;
-  font-weight: bold;
+  text-transform: uppercase;
+
+  background-color: $light-yellow;
 }

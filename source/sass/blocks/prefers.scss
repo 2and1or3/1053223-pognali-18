@@ -1,0 +1,14 @@
+.prefers {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.prefers__item {
+  width: 33px;
+  height: 33px;
+
+  background-color: red;
+  border-radius: 50%;
+}

@@ -1,11 +1,29 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
 .catalog__list {
   @include list-reset;
 }
 
+.catalog__item {
+  margin-bottom: 10px;
+}
+
 .catalog__button {
-  color: $blue;
+  margin: 0 auto;
+
+  font-weight: bold;
   font-size: 17px;
   line-height: 30px;
-  font-weight: bold;
+  color: $blue;
   text-transform: uppercase;
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    width: 950px;
+    margin: 0;
+  }
 }

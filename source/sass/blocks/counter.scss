@@ -1,0 +1,43 @@
+.counter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+
+.counter__label {
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.counter__label-mesure {
+  @include opacity-color($blue, 0.3);
+}
+
+.counter__box {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.counter__less,
+.counter__more {
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+}
+
+.counter__input {
+  width: 100%;
+  padding: 15px;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .counter__box {
+    margin-top: 25px;
+  }
+}

@@ -1,16 +1,56 @@
-.registration__title {
-  margin: 0;
+.registration__wrapper {
+  @include container;
+  @include padding-t-b(70px, 0);
+}
 
+.registration__title {
   @include section-title-orange;
+
+  display: block;
+  margin-bottom: 23px;
+
+  text-align: center;
 }
 
 .registration__lead {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 15px;
+
   font-weight: 300;
   text-align: center;
-  margin: 0;
 }
 
 .registration__link {
   color: $light-yellow;
   text-decoration: underline;
+}
+
+@media (min-width: $tablet-width) {
+  .registration__wrapper {
+    @include extra-offset(32px, 32px);
+    @include padding-t-b(70px, 0);
+  }
+
+  .registration__title {
+    margin-bottom: 60px;
+  }
+
+  .registration__lead {
+    @include content-text-light;
+
+    margin-bottom: 60px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .registration__wrapper {
+    @include extra-offset(70px, 70px);
+    @include padding-t-b(100px, 0);
+  }
+
+  .registration__lead {
+    padding: 0 210px;
+  }
 }

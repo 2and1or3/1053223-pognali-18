@@ -1,4 +1,38 @@
 .footer {
-  background-color: rgba(255, 255, 255, 1);
   color: $grey;
+
+  background-color: rgba(255, 255, 255, 1);
 }
+
+.footer__wrapper {
+  @include container;
+  @include padding-t-b(40px, 15px);
+}
+
+.footer__link-logo {
+  margin-bottom: 40px;
+  padding: 0;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper {
+    @include padding-t-b(50px, 50px);
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__link-logo {
+    margin-bottom: 0;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+// @media (min-width: $desktop-width) {
+//
+// }

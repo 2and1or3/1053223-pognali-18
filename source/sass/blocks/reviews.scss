@@ -1,9 +1,22 @@
 .reviews__item {
   margin: 0;
+
   font-weight: 300;
-  background-color: $darkness-blue;
 }
 
 .reviews__author {
+  display: block;
+  margin: 20px 0 0;
+
   font-weight: bold;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    @include content-text-light;
+  }
+
+  .reviews__author {
+    @include content-text-bold;
+  }
 }

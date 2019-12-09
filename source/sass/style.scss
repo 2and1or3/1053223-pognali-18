@@ -1,16 +1,16 @@
 @import "font.scss";
 @import "colors.scss";
+@import "variables.scss";
 @import "mixins.scss";
 @import "common.scss";
+@import "blocks/link.scss";
+@import "blocks/button.scss";
+@import "blocks/link-logo.scss";
 @import "blocks/about.scss";
 @import "blocks/add-plan.scss";
-@import "blocks/add-select.scss";
-@import "blocks/area.scss";
 @import "blocks/author.scss";
 @import "blocks/bussines-offer.scss";
-@import "blocks/button.scss";
 @import "blocks/calendar.scss";
-@import "blocks/card.scss";
 @import "blocks/catalog.scss";
 @import "blocks/checkbox-image.scss";
 @import "blocks/checkbox.scss";
@@ -19,6 +19,7 @@
 @import "blocks/continents.scss";
 @import "blocks/countries.scss";
 @import "blocks/country-item.scss";
+@import "blocks/counter.scss";
 @import "blocks/directions.scss";
 @import "blocks/footer.scss";
 @import "blocks/form-filter.scss";
@@ -29,7 +30,7 @@
 @import "blocks/letters.scss";
 @import "blocks/level-box.scss";
 @import "blocks/level.scss";
-@import "blocks/link-logo.scss";
+@import "blocks/card.scss";
 @import "blocks/list-filter.scss";
 @import "blocks/map.scss";
 @import "blocks/more.scss";
@@ -45,7 +46,7 @@
 @import "blocks/plan.scss";
 @import "blocks/plans.scss";
 @import "blocks/popup.scss";
-@import "blocks/prefer.scss";
+@import "blocks/prefers.scss";
 @import "blocks/profile.scss";
 @import "blocks/promo.scss";
 @import "blocks/range-box.scss";
@@ -55,4 +56,6 @@
 @import "blocks/social.scss";
 @import "blocks/step.scss";
 @import "blocks/steps.scss";
-@import "blocks/link.scss";
+@import "blocks/inner-nav.scss";
+@import "blocks/textarea.scss";
+@import "blocks/fixme.scss";

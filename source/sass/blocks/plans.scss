@@ -2,8 +2,14 @@
   background-color: $lightness-blue;
 }
 
+.plans__wrapper {
+  @include container;
+  @include padding-t-b(30px, 30px);
+}
+
 .plans__title {
   margin: 0;
+  margin-bottom: 35px;
 
   font-size: 24px;
   line-height: 24px;
@@ -11,4 +17,22 @@
 
 .plans__list {
   @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .plans__wrapper {
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(60px, 60px);
+  }
+
+  .plans__title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plans__wrapper {
+    @include extra-offset(65px, 0);
+  }
 }

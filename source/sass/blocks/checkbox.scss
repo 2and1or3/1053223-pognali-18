@@ -1,3 +1,31 @@
 .checkbox {
-  z-index: 1;
+  position: relative;
+
+  display: block;
+  padding-left: 40px;
+
+  font-size: 15px;
+  line-height: 15px;
+  color: $grey;
+}
+
+.checkbox__visual {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  border-radius: 4px;
+  transform: translateY(-50%);
+}
+
+.checkbox input:checked + .checkbox__visual {
+  background-color: red;
+}
+
+@media (min-width: $tablet-width) {
+  .checkbox {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
