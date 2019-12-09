@@ -3,10 +3,8 @@
 }
 
 .plans__wrapper {
-  box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto;
-  padding: 30px 25px;
+  @include container;
+  @include padding-t-b(30px, 30px);
 }
 
 .plans__title {
@@ -23,8 +21,8 @@
 
 @media (min-width: $tablet-width) {
   .plans__wrapper {
-    width: 768px;
-    padding: 60px 75px;
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(60px, 60px);
   }
 
   .plans__title {
@@ -35,8 +33,6 @@
 
 @media (min-width: $desktop-width) {
   .plans__wrapper {
-    width: 1440px;
-    padding: 60px;
-    padding-left: 125px;
+    @include extra-offset(65px, 0);
   }
 }

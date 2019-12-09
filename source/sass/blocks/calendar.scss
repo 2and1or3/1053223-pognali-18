@@ -1,6 +1,5 @@
 .calendar {
   width: 100%;
-  margin-bottom: 25px;
 }
 
 .calendar__head {
@@ -23,12 +22,12 @@
 }
 
 .calendar__table {
+  @include opacity-color($grey, 0.3);
+
   width: 100%;
 
   font-size: 14px;
   line-height: 18px;
-
-  @include opacity-color($grey, 0.3);
 }
 
 .calendar__row:first-child {

@@ -20,7 +20,7 @@
         </a>
         <a href="login.html" class="header__login-link link">авторизация</a>
       </p>
-      <nav class="navigation">
+      <nav class="navigation header__navigation">
         <ul class="navigation__list">
           <li class="navigation__item"><a href="service.html" class="navigation__link">
               О сервисе
@@ -532,23 +532,23 @@
             <input type="checkbox" id="hobby-list" class="visually-hidden form-filter__category-toggle">
             <ul class="form-filter__list">
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="sport" checked>
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Спортзал
                 </label>
               </li>
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="hookah">
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Кальян
                 </label>
               </li>
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="sofa">
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Диван
                 </label>
               </li>
@@ -561,23 +561,23 @@
             <input type="checkbox" id="music-list" class="visually-hidden form-filter__category-toggle" checked>
             <ul class="form-filter__list">
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="hard" checked>
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Тяжелый рок
                 </label>
               </li>
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="rap">
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Русский рэп
                 </label>
               </li>
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="euro">
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Евроденс
                 </label>
               </li>
@@ -590,23 +590,23 @@
             <input type="checkbox" id="food-list" class="visually-hidden form-filter__category-toggle">
             <ul class="form-filter__list">
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="meet" checked>
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Мясоед
                 </label>
               </li>
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="pp">
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Сидит на ПП
                 </label>
               </li>
               <li class="form-filter__item">
-                <label class="form-filter__label">
+                <label class="form-filter__label checkbox">
                   <input type="checkbox" class="visually-hidden" name="vegan">
-                  <span class="checkbox"></span>
+                  <span class="checkbox__visual form-filter__checkbox-visual"></span>
                   Веган-сыроед
                 </label>
               </li>
@@ -673,7 +673,7 @@
             <img src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" class="card__image">
             <h3 class="card__title">Таня Фирсова</h3>
             <b class="card__like card__like_more">1,5 m</b>
-            <ul class="card__tag-list">
+            <ul class="card__tags">
               <li class="card__tag-item">#ЗОЖ</li>
               <li class="card__tag-item">#ПП</li>
               <li class="card__tag-item">#Фитнес</li>
@@ -683,7 +683,7 @@
             </ul>
             <div class="card__section">
               <span class="card__section-title">хочет посетить:</span>
-              <ul class="card__need-list">
+              <ul class="card__needs">
                 <li class="card__need-country card__need-country_srilanka">Шри-ланка</li>
                 <li class="card__need-country card__need-country_tai">Таиланд</li>
                 <li class="card__need-country card__need-country_seychelles">Сейшелы</li>
@@ -692,11 +692,11 @@
             <div class="card__section">
               <div class="card__sub-section">
                 <span class="card__section-title">транспорт:</span>
-                <ul class="card__prefer-list">
-                  <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
-                  <li class="card__prefer-item card__prefer-item_bus"></li>
-                  <li class="card__prefer-item card__prefer-item_bicycle"></li>
-                  <li class="card__prefer-item card__prefer-item_run"></li>
+                <ul class="card__prefers prefers">
+                  <li class="prefers__item prefers__item_plane prefers__item_active"></li>
+                  <li class="prefers__item prefers__item_bus"></li>
+                  <li class="prefers__item prefers__item_bicycle"></li>
+                  <li class="prefers__item prefers__item_run"></li>
                 </ul>
               </div>
               <div class="card__sub-section">
@@ -711,7 +711,7 @@
             <img src="img/demin-mobile@1x.jpg" alt="Петя Демин" class="card__image">
             <h3 class="card__title">Петя Демин</h3>
             <b class="card__like">150</b>
-            <ul class="card__tag-list">
+            <ul class="card__tags">
               <li class="card__tag-item">#бургер</li>
               <li class="card__tag-item">#бар</li>
               <li class="card__tag-item">#футбол</li>
@@ -720,7 +720,7 @@
             </ul>
             <div class="card__section">
               <span class="card__section-title">хочет посетить:</span>
-              <ul class="card__need-list">
+              <ul class="card__needs">
                 <li class="card__need-country">Бельгия</li>
                 <li class="card__need-country">Чехия</li>
               </ul>
@@ -728,11 +728,11 @@
             <div class="card__section">
               <div class="card__sub-section">
                 <span class="card__section-title">транспорт:</span>
-                <ul class="card__prefer-list">
-                  <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
-                  <li class="card__prefer-item card__prefer-item_bus card__prefer-item_active"></li>
-                  <li class="card__prefer-item card__prefer-item_bicycle"></li>
-                  <li class="card__prefer-item card__prefer-item_run card__prefer-item_active"></li>
+                <ul class="card__prefers prefers">
+                  <li class="prefers__item prefers__item_plane prefers__item_active"></li>
+                  <li class="prefers__item prefers__item_bus prefers__item_active"></li>
+                  <li class="prefers__item prefers__item_bicycle"></li>
+                  <li class="prefers__item prefers__item_run prefers__item_active"></li>
                 </ul>
               </div>
               <div class="card__sub-section">
@@ -747,7 +747,7 @@
             <img src="img/smolov-mobile@1x.jpg" alt="Марк Смолов" class="card__image">
             <h3 class="card__title">Марк Смолов</h3>
             <b class="card__like">1700</b>
-            <ul class="card__tag-list">
+            <ul class="card__tags">
               <li class="card__tag-item">#рэп</li>
               <li class="card__tag-item">#тату</li>
               <li class="card__tag-item">#хайпбист</li>
@@ -756,7 +756,7 @@
             </ul>
             <div class="card__section">
               <span class="card__section-title">хочет посетить:</span>
-              <ul class="card__need-list">
+              <ul class="card__needs">
                 <li class="card__need-country">США</li>
                 <li class="card__need-country">Австралия</li>
                 <li class="card__need-country">Доминикана</li>
@@ -765,11 +765,11 @@
             <div class="card__section">
               <div class="card__sub-section">
                 <span class="card__section-title">транспорт:</span>
-                <ul class="card__prefer-list">
-                  <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
-                  <li class="card__prefer-item card__prefer-item_bus"></li>
-                  <li class="card__prefer-item card__prefer-item_bicycle card__prefer-item_active"></li>
-                  <li class="card__prefer-item card__prefer-item_run"></li>
+                <ul class="card__prefers prefers">
+                  <li class="prefers__item prefers__item_plane prefers__item_active"></li>
+                  <li class="prefers__item prefers__item_bus"></li>
+                  <li class="prefers__item prefers__item_bicycle prefers__item_active"></li>
+                  <li class="prefers__item prefers__item_run"></li>
                 </ul>
               </div>
               <div class="card__sub-section">
@@ -784,7 +784,7 @@
             <img src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая" class="card__image">
             <h3 class="card__title">Лариса Роговая</h3>
             <b class="card__like">23</b>
-            <ul class="card__tag-list">
+            <ul class="card__tags">
               <li class="card__tag-item">#ЗОЖ</li>
               <li class="card__tag-item">#ПП</li>
               <li class="card__tag-item">#Фитнес</li>
@@ -794,7 +794,7 @@
             </ul>
             <div class="card__section">
               <span class="card__section-title">хочет посетить:</span>
-              <ul class="card__need-list">
+              <ul class="card__needs">
                 <li class="card__need-country">Великобритания</li>
                 <li class="card__need-country">Германия</li>
               </ul>
@@ -802,11 +802,11 @@
             <div class="card__section">
               <div class="card__sub-section">
                 <span class="card__section-title">транспорт:</span>
-                <ul class="card__prefer-list">
-                  <li class="card__prefer-item card__prefer-item_plane card__prefer-item_active"></li>
-                  <li class="card__prefer-item card__prefer-item_bus card__prefer-item_active"></li>
-                  <li class="card__prefer-item card__prefer-item_bicycle"></li>
-                  <li class="card__prefer-item card__prefer-item_run"></li>
+                <ul class="card__prefers prefers">
+                  <li class="prefers__item prefers__item_plane prefers__item_active"></li>
+                  <li class="prefers__item prefers__item_bus prefers__item_active"></li>
+                  <li class="prefers__item prefers__item_bicycle"></li>
+                  <li class="prefers__item prefers__item_run"></li>
                 </ul>
               </div>
               <div class="card__sub-section">

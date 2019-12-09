@@ -5,9 +5,8 @@
 }
 
 .footer__wrapper {
-  width: 270px;
-  margin: 0 auto;
-  padding: 40px 25px 15px;
+  @include container;
+  @include padding-t-b(40px, 15px);
 }
 
 .footer__link-logo {
@@ -19,10 +18,10 @@
 
 @media (min-width: $tablet-width) {
   .footer__wrapper {
+    @include padding-t-b(50px, 50px);
+
     display: flex;
     justify-content: space-between;
-    width: 688px;
-    padding: 50px 40px;
   }
 
   .footer__link-logo {
@@ -34,9 +33,6 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .footer__wrapper {
-    width: 1320px;
-    padding: 50 60px;
-  }
-}
+// @media (min-width: $desktop-width) {
+//
+// }

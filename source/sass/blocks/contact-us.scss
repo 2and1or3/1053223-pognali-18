@@ -1,7 +1,6 @@
 .contact-us__wrapper {
-  width: 270px;
-  margin: 0 auto;
-  padding: 20px 25px 35px;
+  @include container;
+  @include padding-t-b(20px, 35px);
 }
 
 .contact-us__lead {
@@ -40,7 +39,7 @@
 
 .contact-us__address {
   margin-bottom: 35px;
-  padding: 0 20px;
+  // padding: 0 20px;
   padding-left: 60px;
 
   font-style: normal;
@@ -49,16 +48,14 @@
 
 @media (min-width: $tablet-width) {
   .contact-us__wrapper {
-    box-sizing: border-box;
-    width: 768px;
-    padding: 70px 75px 85px;
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(70px, 85px);
   }
 
   .contact-us__lead {
-    margin-bottom: 45px;
+    @include content-text-light;
 
-    font-size: 28px;
-    line-height: 33px;
+    margin-bottom: 45px;
   }
 
   .contact-us {
@@ -88,8 +85,8 @@
 
 @media (min-width: $desktop-width) {
   .contact-us__wrapper {
-    width: 1440px;
-    padding: 70px 280px 80px;
+    @include extra-offset(223px, 73px);
+    @include padding-t-b(70px, 80px);
   }
 
   .contact-us__info {

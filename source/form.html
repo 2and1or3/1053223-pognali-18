@@ -20,7 +20,7 @@
         </a>
         <a href="login.html" class="header__login-link link">авторизация</a>
       </p>
-      <nav class="navigation">
+      <nav class="navigation header__navigation">
         <ul class="navigation__list">
           <li class="navigation__item"><a href="service.html" class="navigation__link">
               О сервисе
@@ -82,30 +82,30 @@
         </label>
         <fieldset class="profile__prefer">
           <legend class="profile__label">Транспорт</legend>
-          <ul class="profile__prefer-list prefer">
-            <li class="prefer__item">
-              <label class="prefer__label">
+          <ul class="profile__prefers prefers">
+            <li class="prefers__item">
+              <label class="prefers__label">
                 <input type="checkbox" class="visually-hidden" name="plane" checked>
                 <span class="checkbox-image"></span>
                 <span class="visually-hidden">Самолет</span>
               </label>
             </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
+            <li class="prefers__item">
+              <label class="prefers__label">
                 <input type="checkbox" class="visually-hidden" name="bus" checked>
                 <span class="checkbox-image"></span>
                 <span class="visually-hidden">Автобус</span>
               </label>
             </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
+            <li class="prefers__item">
+              <label class="prefers__label">
                 <input type="checkbox" class="visually-hidden" name="bicycle">
                 <span class="checkbox-image"></span>
                 <span class="visually-hidden">Велосипед</span>
               </label>
             </li>
-            <li class="prefer__item">
-              <label class="prefer__label">
+            <li class="prefers__item">
+              <label class="prefers__label">
                 <input type="checkbox" class="visually-hidden" name="run" checked>
                 <span class="checkbox-image"></span>
                 <span class="visually-hidden">Бег</span>
@@ -147,36 +147,47 @@
           <li class="add-plan__pagination-item"></li>
         </ul>
         <ol class="add-plan__list steps">
-          <li class="step step_first">
-            <h3 class="step__title">
-              Шаг 1.<br>
-              Даты пребывания
-            </h3>
-            <p class="step__description">
-              Укажите предпочтительное количество попутчиков, которых
-              вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.
+          <li class="step">
+            <header class="step__header">
+              <h3 class="step__title">
+                Шаг 1.<br>
+                Даты пребывания
+              </h3>
+              <p class="step__description">
+                Укажите предпочтительное количество попутчиков, которых
+                вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.
+              </p>
+              <ul class="step__pagination">
+                <li class="step__item step__item_current">Даты</li>
+                <li class="step__item">Маршрут</li>
+                <li class="step__item">Развлечения</li>
+              </ul>
+            </header>
+            <p class="step__box counter">
+              <label class="counter__label" for="count-people">
+                ищу попутчиков:</label>
+              <span class="counter__label-mesure step__label-mesure">ЧЕЛ.</span>
+
+              <span class="counter__box step__counter-box">
+                <button class="counter__less" aria-label="Уменьшить"></button>
+                <input type="text" id="count-people" value="2" class="step__input counter__input">
+                <button class="counter__more" aria-label="Увеличить"></button>
+              </span>
             </p>
-            <p class="step__box">
-              <button class="less" aria-label="Уменьшить"></button>
-              <label class="step__label">
-                ищу попутчиков:
-                <span class="step__label-mesure">ЧЕЛ.</span>
-                <input type="text" value="2" class="step__input">
-              </label>
-              <button class="more" aria-label="Увеличить"></button>
-            </p>
-            <p class="step__box">
-              <button class="less" aria-label="Уменьшить"></button>
-              <label class="step__label">
+            <p class="step__box counter">
+              <label class="counter__label" for="count-days">
                 Длительность:
-                <span class="step__label-mesure">ДН.</span>
-                <input type="text" value="2" class="step__input">
               </label>
-              <button class="more" aria-label="Увеличить"></button>
+              <span class="counter__label-mesure step__label-mesure">ДН.</span>
+              <span class="counter__box step__counter-box">
+                <button class="counter__less" aria-label="Уменьшить"></button>
+                <input type="text" id="count-days" value="2" class="counter__input">
+                <button class="counter__more" aria-label="Увеличить"></button>
+              </span>
             </p>
-            <label class="step__label-check">
+            <label class="step__label-check checkbox">
               <input type="checkbox" class="visually-hidden" checked>
-              <span class="checkbox step__checkbox"></span>
+              <span class="checkbox__visual step__checkbox-visual"></span>
               Можно с детьми
             </label>
             <article class="calendar step__calendar">
@@ -476,70 +487,90 @@
                 </tr>
               </table>
             </article>
-            <a href="#2" class="step__button button">Следующий шаг</a>
+            <div class="step__bottom">
+              <a href="#2" class="step__button button">Следующий шаг</a>
+            </div>
           </li>
-          <li class="step step-second">
-            <h3 class="step__title">
-              Шаг 2.<br>
-              Маршрут
-            </h3>
-            <p class="step__description">
-              Укажите страны, которые вы хотели посетить. Это&nbsp;может быть&nbsp;одна или сразу несколько.
-            </p>
-            <ul class="step-second__list">
-              <li class="step-second__box">
-                <select name="first-country" class="step-second__select select">
-                  <option value="0" class="select__country">Выберите страну</option>
-                  <option value="Босния и Герцеговина" class="select__country select__country_bos" selected>Босния и Герцеговина</option>
+          <li class="step">
+            <header class="step__header">
+              <h3 class="step__title">
+                Шаг 2.<br>
+                Маршрут
+              </h3>
+              <p class="step__description fixme-1">
+                Укажите страны, которые вы хотели посетить. Это&nbsp;может быть&nbsp;одна или сразу несколько.
+              </p>
+              <ul class="step__pagination">
+                <li class="step__item">Даты</li>
+                <li class="step__item step__item_current">Маршрут</li>
+                <li class="step__item">Развлечения</li>
+              </ul>
+            </header>
+            <ul class="step__list">
+              <li class="select step__select">
+                <select name="first-country" class="select__control">
+                  <option value="0" class="select__option">Выберите страну</option>
+                  <option value="Босния и Герцеговина" class="select__option select__option_bos" selected>Босния и Герцеговина</option>
                 </select>
-                <p class="step-second__flag"></p>
-                <button type="button" class="step-second__select-delete" aria-label="Убрать страну"></button>
+                <p class="select__flag"></p>
+                <button type="button" class="select__delete" aria-label="Убрать страну"></button>
               </li>
-              <li class="step-second__box">
-                <select name="second-country" class="step-second__select select">
-                  <option value="0" class="select__country">Выберите страну</option>
-                  <option value="Чехия" class="select__country select__country_czech" selected>Чехия</option>
+              <li class="select step__select">
+                <select name="second-country" class="select__control">
+                  <option value="0" class="select__option">Выберите страну</option>
+                  <option value="Чехия" class="select__option select__option_czech" selected>Чехия</option>
                 </select>
-                <p class="step-second__flag"></p>
-                <button type="button" class="step-second__select-delete" aria-label="Убрать страну"></button>
+                <p class="select__flag"></p>
+                <button type="button" class="select__delete" aria-label="Убрать страну"></button>
               </li>
-              <li class="step-second__box">
-                <select name="third-country" class="step-second__select select">
-                  <option value="0" class="select__country" selected>Выберите страну</option>
-                  <option value="same-country" class="select__country">same-country</option>
+              <li class="select step__select">
+                <select name="third-country" class="select__control">
+                  <option value="0" class="select__option" selected>Выберите страну</option>
+                  <option value="same-country" class="select__option">same-country</option>
                 </select>
-                <p class="step-second__flag"></p>
-                <button type="button" class="step-second__select-delete" aria-label="Убрать страну"></button>
+                <p class="select__flag select__flag_empty"></p>
+                <button type="button" class="select__delete" aria-label="Убрать страну"></button>
               </li>
-              <li class="step-second__box">
-                <button class="step-second__add-select">Добавить страну</button>
+              <li class="select step__select">
+                <button class="select__control select__control_add">Добавить страну</button>
+                <p class="select__flag select__flag_empty"></p>
               </li>
             </ul>
-            <a href="#3" class="step__button button step__button_next">Следующий шаг</a>
-            <a href="#1" class="step__button button step__button_prev">На шаг назад</a>
+            <div class="step__bottom">
+              <a href="#3" class="step__button button step__button_next">Следующий шаг</a>
+              <a href="#1" class="step__button button step__button_prev">На шаг назад</a>
+            </div>
           </li>
-          <li class="step step-third">
-            <h3 class="step__title">
-              Шаг 3.<br>
-              Развлечения
-            </h3>
-            <p class="step__description">
-              Наконец, расскажите о своих планах времяпровождения.
-              Можно писать в свободной форме и ставить тэги.
-            </p>
-            <label for="bos" class="step-third__label">
-              Босния и Герцеговина
-              <span class="step-third__flag"></span>
+          <li class="step">
+            <header class="step__header">
+              <h3 class="step__title">
+                Шаг 3.<br>
+                Развлечения
+              </h3>
+              <p class="step__description">
+                Наконец, расскажите о своих планах времяпровождения.
+                Можно писать в свободной форме и ставить тэги.
+              </p>
+              <ul class="step__pagination">
+                <li class="step__item">Даты</li>
+                <li class="step__item">Маршрут</li>
+                <li class="step__item step__item_current">Развлечения</li>
+              </ul>
+            </header>
+            <label class="textarea step__textarea">
+              <span class="textarea__title">Босния и Герцеговина</span>
+              <span class="textarea__flag"></span>
+              <textarea name="bos" rows="10" placeholder="План действий" class="textarea__control"></textarea>
             </label>
-            <textarea name="bos" id="bos" rows="10" placeholder="План действий" class="step-third__textarea"></textarea>
-            <label for="czech" class="step-third__label">
-              Чехия
-              <span class="step-third__flag"></span>
+            <label class="textarea step__textarea">
+              <span class="textarea__title">Чехия</span>
+              <span class="textarea__flag"></span>
+              <textarea name="czech" rows="10" placeholder="План действий" class="textarea__control">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </label>
-            <textarea name="czech" id="czech" rows="10" placeholder="План действий" class="step-third__textarea">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-            </textarea>
-            <button type="submit" class="step__submit step__button button step__button_next">Отправить</button>
-            <a href="#2" class="step__button button step__button_prev">На шаг назад</a>
+            <div class="step__bottom">
+              <button type="submit" class="step__submit step__button button step__button_next">Отправить</button>
+              <a href="#2" class="step__button button step__button_prev">На шаг назад</a>
+            </div>
           </li>
         </ol>
       </div>

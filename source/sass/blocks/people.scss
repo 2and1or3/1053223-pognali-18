@@ -1,84 +1,59 @@
 .people__wrapper {
-  width: 270px;
-  margin: 0 auto;
-  padding: 40px 25px;
+  @include container;
+  @include padding-t-b(40px, 40px);
+
   position: relative;
+}
+
+.people__text-box {
+  width: 215px;
+  margin-bottom: 60px;
+  padding-left: 25px;
 }
 
 .people__title {
   @include section-title-orange;
-
-  margin-top: 30px;
-  margin-left: 23px;
 }
 
 .people__description {
   margin: 0;
   margin-bottom: 23px;
-  margin-left: 23px;
 
   font-weight: 300;
 }
 
 .people__description-bold {
-  margin-bottom: 60px;
-  margin-left: 23px;
   display: block;
 }
 
 @media (min-width: $tablet-width) {
   .people__wrapper {
-    width: 688px;
-    margin: 0 auto;
-    padding: 80px 40px;
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(80px, 80px);
   }
 
-  .people__title {
-    @include section-title-orange;
-
-    margin-top: 30px;
-    margin-left: 30px;
-    font-size: 45px;
-    line-height: 45px;
+  .people__text-box {
+    width: 425px;
+    padding-left: 0;
   }
 
   .people__description {
-    margin-bottom: 23px;
-    margin-left: 30px;
-    padding-right: 240px;
-
-    font-weight: 300;
-    font-size: 28px;
-    line-height: 33px;
+    @include content-text-light;
   }
 
   .people__description-bold {
-    margin-bottom: 60px;
-    margin-left: 30px;
-    padding-right: 300px;
-
-    font-size: 21px;
-    line-height: 25px;
+    @include content-text-bold;
   }
 }
 
 @media (min-width: $desktop-width) {
   .people__wrapper {
-    width: 1320px;
-    padding: 80px 60px;
-  }
-
-  .people__description {
-    padding-right: 840px;
-  }
-
-  .people__description-bold {
-    padding-right: 900px;
+    @include extra-offset(70px, 0);
   }
 
   .people__list {
     position: absolute;
     top: 150px;
-    right: 0;
+    right: 60px;
   }
 }

@@ -1,6 +1,4 @@
 .form-filter {
-  width: 220px;
-  margin: 0 auto;
   margin-bottom: 25px;
   padding: 25px;
 
@@ -56,10 +54,15 @@
   border: none;
 }
 
+.form-filter__checkbox-visual {
+  width: 18px;
+  height: 18px;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
 @media (min-width: $tablet-width) {
   .form-filter {
-    box-sizing: border-box;
-    width: 688px;
     padding: 35px;
   }
 
@@ -88,10 +91,16 @@
 
     border-bottom: 1px solid #f3c72b;
   }
+
+  .form-filter__checkbox-visual {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .form-filter {
+    box-sizing: border-box;
     width: 285px;
     margin: 0;
     padding: 50px;

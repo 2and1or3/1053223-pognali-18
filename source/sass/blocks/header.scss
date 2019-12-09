@@ -5,11 +5,11 @@
 }
 
 .header__wrapper {
+  @include container;
+  @include padding-t-b(27px, 20px);
+
   display: flex;
   justify-content: space-between;
-  width: 270px;
-  margin: 0 auto;
-  padding: 0 25px;
 }
 
 .header__contact {
@@ -30,8 +30,7 @@
 
 @media (min-width: $tablet-width) {
   .header__wrapper {
-    width: 688px;
-    padding: 0 40px;
+    @include padding-t-b(55px, 51px);
   }
 
   .header__login-link {
@@ -42,12 +41,10 @@
 @media (min-width: $desktop-width) {
   .header__wrapper {
     justify-content: flex-start;
-    width: 1320px;
-    padding: 0 60px;
-  }
 
-  .header__link-logo {
-    margin-right: 245px;
+    .header__navigation {
+      margin-left: 245px;
+    }
   }
 
   .header__toggle {

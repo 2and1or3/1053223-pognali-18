@@ -43,7 +43,7 @@
   }
 }
 
-.card__tag-list {
+.card__tags {
   @include list-reset;
 
   display: flex;
@@ -79,7 +79,7 @@
   color: $grey;
 }
 
-.card__need-list {
+.card__needs {
   @include list-reset;
 
   flex-shrink: 0;
@@ -102,7 +102,7 @@
   }
 }
 
-.card__prefer-list {
+.card__prefers {
   @include list-reset;
 
   display: flex;
@@ -139,7 +139,7 @@
     line-height: 30px;
   }
 
-  .card__tag-list {
+  .card__tags {
     align-content: flex-start;
     width: 230px;
     padding-right: 0;
@@ -162,7 +162,6 @@
 
     &:last-of-type {
       display: block;
-      // margin-top: -40px;
       margin-right: auto;
       padding-left: 60px;
     }
@@ -192,7 +191,7 @@
     }
   }
 
-  .card__need-list {
+  .card__needs {
     display: flex;
     width: auto;
     margin-bottom: 0;
@@ -201,7 +200,7 @@
     line-height: 30px;
   }
 
-  .card__prefer-list {
+  .card__prefers {
     flex-direction: column;
   }
 
@@ -223,6 +222,7 @@
 @media (min-width: $desktop-width) {
   .card {
     padding: 50px;
+    padding-left: 360px;
   }
 
   .card__image {
@@ -232,13 +232,13 @@
 
   .card__title {
     order: -2;
-    padding-left: 310px;
+    padding-left: 0;
   }
 
-  .card__tag-list {
-    margin-right: 160px;
+  .card__tags {
+    margin-right: 250px;
     margin-bottom: 50px;
-    padding-left: 310px;
+    padding-left: 0;
   }
 
   .card__section {
@@ -259,17 +259,17 @@
     display: none;
   }
 
-  .card__need-list {
+  .card__needs {
     flex-direction: column;
   }
 
-  .card__prefer-list {
+  .card__prefers {
     flex-direction: row;
   }
 
   .card__button {
     margin-top: 0;
-    margin-left: 310px;
+    margin-left: 0;
   }
 
   .card__like {

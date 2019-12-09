@@ -1,25 +1,41 @@
-.step-third__label {
+.textarea {
   position: relative;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 10px;
-  padding-left: 15px;
 
-  font-weight: 500;
   font-size: 18px;
   line-height: 18px;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-.step-third__textarea {
-  width: 100%;
-  margin-bottom: 25px;
+.textarea__title {
+  margin-bottom: 15px;
+  padding-left: 15px;
+
+  font-weight: 500;
 }
 
-.step-third__flag {
+.textarea__control {
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+
+  border: 1px solid #cbced9;
+
+  resize: none;
+
+  &::placeholder {
+    @include opacity-color($grey, 0.3);
+  }
+}
+
+.textarea__flag {
   position: absolute;
   right: 0;
 
@@ -31,7 +47,15 @@
 }
 
 @media (min-width: $tablet-width) {
-  .step-third__label {
+  .textarea {
+    margin-bottom: 50px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .textarea__title {
     margin-bottom: 35px;
     padding-left: 0;
 
@@ -40,9 +64,7 @@
     line-height: 30px;
   }
 
-  .step-third__textarea {
-    margin-bottom: 50px;
-
+  .textarea__control {
     font-size: 20px;
     line-height: 24px;
 
@@ -52,13 +74,13 @@
     }
   }
 
-  .step-third__flag {
+  .textarea__flag {
     position: static;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .step-third__textarea {
+  .textarea__control {
     width: 80%;
     margin-right: 20%;
   }

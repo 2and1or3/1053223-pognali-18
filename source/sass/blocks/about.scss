@@ -1,8 +1,12 @@
 .about {
+  @include extra-offset (22px, 22px);
+  @include padding-t-b (30px, 85px);
+
   background: url("../img/about-mobile@1x.png") no-repeat right center;
-  width: 270px;
-  padding: 30px 25px 85px;
-  margin: 0 auto;
+}
+
+.about__text-box {
+  width: 215px;
 }
 
 .about__title {
@@ -10,9 +14,10 @@
 }
 
 .about__description {
-  font-weight: 300;
   margin: 0;
   margin-bottom: 25px;
+
+  font-weight: 300;
 }
 
 .about__description-bold {
@@ -25,24 +30,21 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    width: 688px;
-    padding: 30px 345px 85px 40px;
-    box-sizing: border-box;
+    @include extra-offset(32px, 345px);
+    @include padding-t-b(30px, 85px);
   }
 
-  .about__title {
-    font-size: 45px;
-    line-height: 45px;
+  .about__text-box {
+    width: 300px;
   }
 
   .about__description {
-    font-size: 28px;
-    line-height: 33px;
+    @include content-text-light;
   }
 
   .about__description-bold {
-    font-size: 21px;
-    line-height: 25px;
+    @include content-text-bold;
+
     margin-bottom: 53px;
   }
 
@@ -53,8 +55,11 @@
 
 @media (min-width: $desktop-width) {
   .about {
-    width: 1320px;
-    padding: 130px 630px 160px 60px;
-    box-sizing: border-box;
+    @include extra-offset(70px, 630px);
+    @include padding-t-b(130px, 160px);
+  }
+
+  .about__text-box {
+    width: 610px;
   }
 }

@@ -8,6 +8,8 @@
 
 .country-item__img {
   display: block;
+  width: 270px;
+  height: 110px;
 
   border-radius: 10px;
 }
@@ -35,35 +37,40 @@
 }
 
 .country-item__lead {
+  @include opacity-color($grey, 0.3);
+
   margin: 0;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-
-  @include opacity-color($grey, 0.3);
 }
 
 .country-item__statistic {
+  @include opacity-color($grey, 0.3);
+
   margin-left: auto;
 
   font-weight: 500;
-
-  @include opacity-color($grey, 0.3);
 }
 
 @media (min-width: $tablet-width) {
   .country-item {
     display: flex;
-    align-items: center;
-    width: 620px;
   }
 
   .country-item__img {
     order: 1;
+    width: 186px;
+    height: 140px;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .country-item__box {
+    flex-grow: 1;
+    flex-direction: column;
     margin-top: 0;
     padding-right: 190px;
 

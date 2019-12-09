@@ -8,9 +8,8 @@
 }
 
 .promo__wrapper {
-  width: 270px;
-  margin: 0 auto;
-  padding: 23px 25px;
+  @include container;
+  @include padding-t-b (23px, 40px);
 }
 
 .promo__contact {
@@ -33,10 +32,14 @@
   text-transform: uppercase;
 }
 
+.promo__reviews {
+  width: 230px;
+  margin-bottom: 30px;
+}
+
 @media (min-width: $tablet-width) {
   .promo__wrapper {
-    width: 688px;
-    padding: 29px 40px;
+    @include padding-t-b (29px, 29px);
   }
 
   .promo__contact {
@@ -44,24 +47,50 @@
   }
 
   .promo__title {
+    padding: 0 145px;
+
     font-size: 60px;
     line-height: 70px;
-    padding: 0 145px;
+  }
+
+  .promo__reviews {
+    width: 260px;
+  }
+
+  .promo__guide {
+    .guide__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .guide__item {
+      box-sizing: border-box;
+      width: 50%;
+      padding: 30px 25px 60px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .promo__wrapper {
-    width: 1320px;
-    padding: 29px 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .promo__title {
-    text-align: left;
-    padding: 0 20px;
     width: 400px;
+    padding: 0 20px;
+
+    text-align: left;
+  }
+
+  .promo__guide {
+    width: 100%;
+
+    .guide__item {
+      width: 25%;
+      padding: 30px;
+    }
   }
 }

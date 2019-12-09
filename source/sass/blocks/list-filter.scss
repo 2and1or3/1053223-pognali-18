@@ -3,9 +3,8 @@
 }
 
 .list-filter__wrapper {
-  width: 270px;
-  margin: 0 auto;
-  padding: 20 25px;
+  @include container;
+  @include padding-t-b(20px, 20px);
 }
 
 .list-filter__header {
@@ -98,9 +97,8 @@
 
 @media (min-width: $tablet-width) {
   .list-filter__wrapper {
-    box-sizing: border-box;
-    width: 768px;
-    padding: 70px 75px;
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(70px, 70px);
   }
 
   .list-filter__header {
@@ -146,8 +144,8 @@
 
 @media (min-width: $desktop-width) {
   .list-filter__wrapper {
-    width: 1320px;
-    padding: 60px 60px;
+    @include container;
+    @include padding-t-b(60px, 60px);
   }
 
   .list-filter__button_title {

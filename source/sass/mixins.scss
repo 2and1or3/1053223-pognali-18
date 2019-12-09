@@ -12,6 +12,11 @@
   font-size: 24px;
   line-height: 24px;
   color: $orange;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 @mixin opacity-color($color, $opacity) {
@@ -22,4 +27,55 @@
 @mixin opacity-bg($color, $opacity) {
   $color: transparentize($color, 1);
   background-color: opacify($color, $opacity);
+}
+
+@mixin container {
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@mixin extra-offset($left, $right) {
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: $left + 25px;
+  padding-right: $right + 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $left + 40px;
+    padding-right: $right + 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $left + 60px;
+    padding-right: $right + 60px;
+  }
+}
+
+@mixin padding-t-b ($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin content-text-light {
+  font-size: 28px;
+  line-height: 33px;
+}
+
+@mixin content-text-bold {
+  font-size: 21px;
+  line-height: 25px;
 }

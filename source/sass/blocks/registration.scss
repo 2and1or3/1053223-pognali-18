@@ -1,23 +1,24 @@
 .registration__wrapper {
-  width: 270px;
-  padding: 70px 25px 0;
-  margin: 0 auto;
+  @include container;
+  @include padding-t-b(70px, 0);
 }
 
 .registration__title {
   @include section-title-orange;
 
-  margin-bottom: 23px;
-  text-align: center;
   display: block;
+  margin-bottom: 23px;
+
+  text-align: center;
 }
 
 .registration__lead {
-  font-weight: 300;
-  padding: 0 15px;
-  text-align: center;
   margin: 0;
   margin-bottom: 30px;
+  padding: 0 15px;
+
+  font-weight: 300;
+  text-align: center;
 }
 
 .registration__link {
@@ -27,29 +28,26 @@
 
 @media (min-width: $tablet-width) {
   .registration__wrapper {
-    width: 768px;
-    box-sizing: border-box;
-    padding: 70px 75px 0;
+    @include extra-offset(32px, 32px);
+    @include padding-t-b(70px, 0);
   }
 
   .registration__title {
-    font-size: 45px;
-    line-height: 45px;
     margin-bottom: 60px;
   }
 
   .registration__lead {
-    padding: 0;
-    font-size: 28px;
-    line-height: 33px;
+    @include content-text-light;
+
     margin-bottom: 60px;
+    padding: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .registration__wrapper {
-    width: 1440px;
-    padding: 100px 130px 0;
+    @include extra-offset(70px, 70px);
+    @include padding-t-b(100px, 0);
   }
 
   .registration__lead {

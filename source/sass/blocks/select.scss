@@ -1,7 +1,65 @@
 .select {
-  font: inherit;
-  text-transform: uppercase;
-  color: $blue;
+  position: relative;
+
+  display: flex;
+
   font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.select__control {
+  width: 100%;
+
+  font: inherit;
+  color: $blue;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+
   border: 1px solid #cbced9;
+}
+
+.select__flag {
+  width: 53px;
+  height: 42px;
+  margin: 0;
+
+  background-color: red;
+  border: 1px solid #cbced9;
+}
+
+.select__flag_empty {
+  display: none;
+}
+
+.select__delete {
+  position: absolute;
+}
+
+.select__control_add {
+  background-color: $grey-blue;
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .select {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .select__control {
+    letter-spacing: 2px;
+  }
+
+  .select__flag {
+    padding: 0 55px;
+
+    border: none;
+  }
+
+  .select__flag_empty {
+    display: block;
+
+    background-color: transparent;
+  }
 }

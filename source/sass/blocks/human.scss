@@ -1,5 +1,6 @@
 .human {
   position: relative;
+
   margin-bottom: 10px;
 
   &:last-child {
@@ -23,7 +24,7 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.human__need-list {
+.human__needs {
   @include list-reset;
 }
 
@@ -37,21 +38,14 @@
   text-align: center;
 }
 
-.human__tag-list {
+.human__tags {
   @include list-reset;
 
-  margin-bottom: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
   color: $grey;
-}
-
-.human__prefer-list {
-  @include list-reset;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 @media (min-width: $tablet-width) {
@@ -60,7 +54,7 @@
     line-height: 24px;
   }
 
-  .human__tag-list {
+  .human__tags {
     font-size: 20px;
     line-height: 24px;
   }

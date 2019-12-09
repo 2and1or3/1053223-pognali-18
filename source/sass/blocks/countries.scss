@@ -12,6 +12,10 @@
   display: block;
 }
 
+.countries__item-sub {
+  color: $grey;
+}
+
 @media (min-width: $desktop-width) {
   .countries {
     flex-wrap: wrap;
@@ -22,7 +26,7 @@
   }
 
   .countries__item {
-    width: 20%;
+    width: 16.6%;
     margin-bottom: 55px;
   }
 

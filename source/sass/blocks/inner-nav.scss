@@ -3,12 +3,12 @@
 }
 
 .inner-nav__wrapper {
+  @include container;
+  @include padding-t-b(25px, 25px);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 270px;
-  margin: 0 auto;
-  padding: 25px;
 }
 
 .inner-nav__title {
@@ -30,9 +30,8 @@
 
 @media (min-width: $tablet-width) {
   .inner-nav__wrapper {
-    box-sizing: border-box;
-    width: 768px;
-    padding: 40px 75px;
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(40px, 40px);
   }
 
   .inner-nav__title {
@@ -52,8 +51,8 @@
 
 @media (min-width: $desktop-width) {
   .inner-nav__wrapper {
-    width: 1440px;
-    padding: 70px 120px;
+    @include extra-offset(70px, 60px);
+    @include padding-t-b(70px, 70px);
   }
 
   .page-form {

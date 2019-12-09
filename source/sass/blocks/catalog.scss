@@ -1,8 +1,6 @@
 .catalog {
   display: flex;
   flex-direction: column;
-  width: 270px;
-  margin: 0 auto;
 }
 
 .catalog__list {
@@ -21,12 +19,6 @@
   line-height: 30px;
   color: $blue;
   text-transform: uppercase;
-}
-
-@media (min-width: $tablet-width) {
-  .catalog {
-    width: 688px;
-  }
 }
 
 @media (min-width: $desktop-width) {

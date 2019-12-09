@@ -1,11 +1,10 @@
 .profile__wrapper {
+  @include container;
+  @include padding-t-b(25px, 25px);
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto;
-  padding: 25px;
 }
 
 .profile__image {
@@ -52,9 +51,10 @@
 
 @media (min-width: $tablet-width) {
   .profile__wrapper {
+    @include extra-offset(35px, 35px);
+    @include padding-t-b(60px, 60px);
+
     justify-content: space-between;
-    width: 768px;
-    padding: 60px 75px;
   }
 
   .profile__label {
@@ -80,8 +80,8 @@
 
 @media (min-width: $desktop-width) {
   .profile__wrapper {
-    width: 1440px;
-    padding: 70px 60px 65px 125px;
+    @include extra-offset(65px, 0);
+    @include padding-t-b(70px, 65px);
   }
 
   .profile__level {
