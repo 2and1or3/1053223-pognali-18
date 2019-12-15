@@ -8,12 +8,23 @@
   display: none;
 }
 
+.countries__letter {
+  display: none;
+}
+
 .countries__sub_active {
   display: block;
 }
 
 .countries__item-sub {
   color: $grey;
+}
+
+@media (min-width: $tablet-width) {
+  .countries__sub {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -26,11 +37,12 @@
   }
 
   .countries__item {
-    width: 16.6%;
+    width: 20%;
     margin-bottom: 55px;
   }
 
   .countries__letter {
+    display: block;
     margin-bottom: 50px;
 
     font-weight: bold;

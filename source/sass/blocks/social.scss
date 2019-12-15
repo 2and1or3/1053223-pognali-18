@@ -4,5 +4,33 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 40px;
+}
+
+
+.social__link {
+  display: flex;
+  width: 45px;
+  height: 45px;
+
+  background-color: $light-yellow;
+  border-radius: 50%;
+
+  svg {
+    margin: auto;
+  }
+}
+
+.social__link_transparent {
+  background-color: transparent;
+
+  path {
+    fill: $light-grey;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__link {
+    width: 60px;
+    height: 60px;
+  }
 }

@@ -49,9 +49,22 @@
 .country-item__statistic {
   @include opacity-color($grey, 0.3);
 
+  position: relative;
+
   margin-left: auto;
 
   font-weight: 500;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    padding-right: 10px;
+
+    background: url("../../img/user.svg") no-repeat center;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -86,9 +99,13 @@
   .country-item__statistic {
     order: 1;
     margin-left: 0;
-    padding-left: 40px;
 
     font-size: 20px;
+
+    &::before {
+      width: 21px;
+      height: 21px;
+    }
   }
 
   .country-item__lead {

@@ -21,12 +21,14 @@
 
 .textarea__control {
   width: 100%;
+  padding: 10px 15px;
 
   font-size: 16px;
   line-height: 22px;
   color: #444444;
 
   border: 1px solid #cbced9;
+  border-radius: 4px;
 
   resize: none;
 
@@ -65,6 +67,8 @@
   }
 
   .textarea__control {
+    padding: 15px 20px;
+
     font-size: 20px;
     line-height: 24px;
 
@@ -83,5 +87,6 @@
   .textarea__control {
     width: 80%;
     margin-right: 20%;
+    padding: 20px 25px;
   }
 }

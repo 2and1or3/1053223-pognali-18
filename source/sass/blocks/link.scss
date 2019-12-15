@@ -1,9 +1,39 @@
 .link {
+  padding: 6px 25px 4px 25px;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
-  color: $darkness-blue;
-  background-color: $light-yellow;
   text-align: center;
-  display: block;
+  color: $darkness-blue;
+  text-transform: uppercase;
+
+  background-color: $light-yellow;
+  border: none;
+  border-radius: 20px;
+}
+
+.link_blue {
+  background-color: #d6daed;
+}
+
+.link_white {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (min-width: $tablet-width) {
+  .link {
+    padding: 12px 30px 8px 30px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    border-radius: 25px;
+  }
+
+  .link_blue {
+    padding: 40px 10px;
+
+    border-radius: 20px;
+  }
 }

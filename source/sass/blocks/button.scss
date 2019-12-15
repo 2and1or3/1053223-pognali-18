@@ -1,9 +1,45 @@
 .button {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 25px;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   color: $blue;
-  text-transform: uppercase;
 
   background-color: $light-yellow;
+  border: none;
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+
+    height: 0;
+
+    border: 10px solid $blue;
+    border-top: 7px solid transparent;
+    border-right: none;
+    border-bottom: 7px solid transparent;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 30px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    width: 280px;
+  }
 }

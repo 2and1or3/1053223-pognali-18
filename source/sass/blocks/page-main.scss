@@ -1,3 +1,23 @@
 .page-main {
   background-color: $dark-blue;
 }
+
+.page-main__section_dark {
+  background-color: $darkness-blue;
+}
+
+.page-main__section_light {
+  background-color: $grey-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__section_dark {
+    background-color: $darkness-blue-2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__section_dark {
+    background-color: $darkness-blue;
+  }
+}

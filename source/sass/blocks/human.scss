@@ -14,14 +14,21 @@
 
 .human__image {
   display: block;
+  width: 270px;
+  height: 270px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .human__info {
-  padding: 25px 50px 20px;
+  padding: 25px 47px 20px;
 
   color: $blue;
 
   background-color: rgba(255, 255, 255, 1);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .human__needs {
@@ -38,17 +45,38 @@
   text-align: center;
 }
 
+.human__title-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    margin-right: 15px;
+  }
+}
+
 .human__tags {
   @include list-reset;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
 
   color: $grey;
 }
 
+.human__prefers {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: $tablet-width) {
+  .human {
+    display: flex;
+    flex-direction: column;
+  }
+
   .human__title {
     font-size: 24px;
     line-height: 24px;
@@ -57,5 +85,20 @@
   .human__tags {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .human__image {
+    width: 285px;
+    height: 285px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .human__info {
+    flex-grow: 1;
+
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 }

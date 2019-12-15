@@ -3,10 +3,9 @@
   top: 73px;
   right: 0;
   left: 0;
+  z-index: 1;
 
-  display: none;
-  width: 270px;
-  margin: 0 auto;
+  display: block;
   padding: 45px 25px;
 
   text-transform: uppercase;
@@ -16,6 +15,7 @@
 
 .navigation__list {
   @include list-reset;
+
   margin-bottom: 60px;
 
   font-weight: 500;
@@ -29,18 +29,28 @@
 }
 
 .navigation__login-link {
+  display: block;
   margin-bottom: 50px;
+  padding: 12px 25px 8px 25px;
+
+  border-radius: 25px;
 }
 
 .navigation__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 40px;
+}
+
+.navigation__icon {
+  margin-right: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .navigation {
     top: 132px;
 
-    width: 688px;
     padding: 45px 40px;
   }
 
@@ -54,6 +64,14 @@
 
   .navigation__login-link {
     display: none;
+  }
+
+  .navigation__footer {
+    margin-left: 40px;
+  }
+
+  .navigation__social {
+    justify-content: flex-start;
   }
 }
 

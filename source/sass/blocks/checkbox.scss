@@ -19,7 +19,8 @@
 }
 
 .checkbox input:checked + .checkbox__visual {
-  background-color: red;
+  background: rgba(255, 255, 255, 1) url("../../img/tick.svg") no-repeat center;
+  background-size: 9px 9px;
 }
 
 @media (min-width: $tablet-width) {
