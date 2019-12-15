@@ -8,18 +8,41 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__wrapper">
+    <div class="header__wrapper header_opene">
       <a href="index.html" class="header__link-logo link-logo"><img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали?"></a>
       <button class="header__toggle" aria-label="открыть меню"></button>
-      <p class="header__contact">
-        <a href="tel:88005558628" class="header__phone-link">
+      <div class="header__contact contact">
+        <a href="tel:88005558628" class="header__phone-link contact__icon">
+          <svg width="18" height="18" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+            <g>
+              <g id="UrwUhy_1_">
+                <g>
+                  <path fill="#161c35" d="M12.6,18c-0.3,0-0.5,0-0.8,0c-3.6-0.4-6.2-2.1-8.1-4.3C1.8,11.6,0.3,8.8,0,5c0-0.3,0-0.7,0-1
+          c0.1-0.7,0.4-1.1,0.8-1.5C1.2,2,2,1.4,2.6,1.3c0.5,0,1.3,0.3,1.6,0.8c0.3,0.4,0.4,1.2,0.6,1.8c0.1,0.6,0.4,1.4,0.4,2
+          C5,6.8,3.9,7.2,3.5,7.8c1.1,2.8,3,4.8,5.4,6.2c0.6-0.3,1.2-1.4,2-1.4c0.3,0,0.7,0.2,1,0.3c0.3,0.1,0.6,0.2,1,0.4
+          c0.5,0.2,1.4,0.5,1.7,0.9c0.3,0.4,0.5,1.2,0.4,1.7C14.9,16.7,13.4,17.7,12.6,18z" />
+                </g>
+              </g>
+              <path fill="#161c35" d="M9.1,1.1c4.3,0,7.8,3.6,7.8,8H18c0-5-4-9.1-8.9-9.1L9.1,1.1z" />
+              <path fill="#161c35" d="M9.1,6.9V8c0.6,0,1,0.5,1,1.1h1.1C11.2,7.9,10.3,6.9,9.1,6.9z" />
+              <path fill="#161c35" d="M9.1,4.6c2.4,0,4.4,2,4.4,4.5h1.2c0-3.1-2.5-5.7-5.5-5.7V4.6L9.1,4.6z" />
+            </g>
+          </svg>
           <span class="visually-hidden">Позвоните нам</span>
         </a>
-        <a href="mailto:mail@htmlacademy.ru" class="header__mail-link">
-          <span class="visually-hidden">Напишите нам</span>
-        </a>
+        <address class="contact__mail-address">
+          <a href="mailto:mail@htmlacademy.ru" class="header__mail-link contact__icon contact__icon_yellow">
+            <svg width="18" height="14" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 26" style="enable-background:new 0 0 36 26;" xml:space="preserve">
+              <path fill="#161c35" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+            c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+            L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+            c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z" />
+            </svg>
+            <span class="visually-hidden">Напишите нам</span>
+          </a>
+        </address>
         <a href="login.html" class="header__login-link link">авторизация</a>
-      </p>
+      </div>
       <nav class="navigation header__navigation">
         <ul class="navigation__list">
           <li class="navigation__item"><a href="service.html" class="navigation__link">
@@ -35,19 +58,85 @@
         <a href="login.html" class="navigation__login-link link">авторизация</a>
         <div class="navigation__footer">
           <div class="contact navigation__contact">
-            <a href="tel:88005558628" class="contact__phone-link">8 800 555-86-28</a>
-            <address class="contact__mail"><a href="mailto:mail@htmlacademy.ru" class="contact__mail-link">mail@htmlacademy.ru</a></address>
+            <a href="tel:88005558628" class="contact__item">
+              <span class="contact__icon navigation__icon contact__icon_dark">
+                <svg width="18" height="18" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+                  <path fill="#ffd74b" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5
+                c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3
+                c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3
+                c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,19.5z
+                M15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,3h0.8v1.9
+                c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,3-1.3,3-3v-3
+                c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6
+                c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z" />
+                </svg>
+              </span>
+              8 800 555-86-28
+            </a>
+            <address class="contact__mail-address">
+              <a href="mailto:mail@htmlacademy.ru" class="contact__item">
+                <span class="contact__icon navigation__icon contact__icon_dark">
+                  <svg width="18" height="14" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 26" style="enable-background:new 0 0 36 26;" xml:space="preserve">
+                    <path fill="#ffd74b" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+                c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+                L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+                c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z" />
+                  </svg>
+                </span>
+                mail@htmlacademy.ru</a>
+            </address>
           </div>
           <ul class="social navigation__social">
-            <li class="social__item"><a href="fb.com" class="social__link">
+            <li class="social__item">
+              <a href="fb.com" class="social__link social__link_transparent">
+                <svg width="11" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve">
+                  <g>
+                    <path fill="#ccc" d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
+              V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
+              C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z" />
+                  </g>
+                </svg>
                 <span class="visually-hidden">Мы в Facebook</span>
-              </a></li>
-            <li class="social__item"><a href="vk.com" class="social__link">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="vk.com" class="social__link social__link_transparent">
+                <svg width="23" height="12" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8" style="enable-background:new 0 0 30 15.8;"
+                  xml:space="preserve">
+                  <g>
+                    <path fill="#ccc" d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6
+              c0,0.1,0,0.8-0.5,1.2c-0.4,0.4-1.1,0.5-1.2,0.5l-1.9,0c-1,0-4.4-0.2-7.4-3c-3.7-3.4-6.8-9.8-7-10.1C0,2.2-0.1,1.5,0.3,1.1
+              c0.4-0.4,1.1-0.5,1.4-0.5l4.1,0l0.1,0c0.1,0,0.6,0.1,1,0.3c0.4,0.2,0.6,0.7,0.6,0.7c0,0,0.6,1.4,1.5,2.7c1.3,2,1.9,2.5,2.1,2.6
+              c0.2-0.4,0.3-1.7,0.2-2.9c0-0.5-0.1-1.1-0.3-1.3c-0.1-0.1-0.4-0.3-0.8-0.3L9.5,1.8c-0.1-0.7,0.6-1.2,1.1-1.4
+              C11.3,0.1,12.4,0,13.7,0l0.7,0c1.2,0,1.6,0.1,2.1,0.2c1.7,0.4,1.6,1.7,1.6,3.3c0,0.5,0,1,0,1.6c0,0.2,0,0.3,0,0.5
+              c0,0.4,0,1,0.1,1.3c0.2-0.1,0.9-0.7,2.1-2.5c0.8-1.2,1.4-2.5,1.5-2.8l0,0c0.2-0.4,0.6-0.9,1.6-0.9l4.3,0c0,0,0.2,0,0.4,0
+              c1,0,1.6,0.3,1.8,0.9c0.3,0.6,0.2,1.7-2.4,4.6c-0.4,0.4-0.7,0.8-1,1.1c-0.6,0.7-1.2,1.4-1.2,1.6C25.4,9,26,9.5,26.6,10
+              c1.5,1.2,2.5,2.3,3,3.1c0.5,0.8,0.4,1.3,0.3,1.7c-0.4,0.9-1.6,1-1.9,1l-3.8,0C24.1,15.8,24.1,15.8,23.9,15.8z M18.6,10.9
+              c0.9,0,1.7,0.8,2.5,1.6c0.5,0.5,1,1,1.5,1.3c0.7,0.4,1.3,0.4,1.4,0.4l0.1,0l3.8,0c0.2,0,0.4-0.1,0.5-0.1c0,0,0-0.1-0.1-0.2
+              c-0.4-0.7-1.4-1.7-2.7-2.7c-1.2-1-1.8-1.5-1.9-2.2c-0.1-0.8,0.5-1.4,1.6-2.7c0.3-0.3,0.6-0.7,1-1.1c1.6-1.8,2-2.6,2.1-3
+              c-0.2,0-0.6,0-0.7,0l-4.4,0c-0.2,0-0.2,0-0.2,0c-0.2,0.4-0.8,1.8-1.6,3c-1.9,2.8-2.8,3.2-3.4,3.2c-0.2,0-0.4,0-0.6-0.1
+              c-1-0.6-1-1.8-0.9-2.8c0-0.1,0-0.3,0-0.4c0-0.6,0-1.2,0-1.7c0.1-1.7,0-1.7-0.4-1.8c-0.4-0.1-0.7-0.1-1.9-0.2l-0.7,0
+              c-0.6,0-1.3,0-1.9,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.6,0.7,0.6,2,0.6,2.2c0.1,1.6,0.1,3.8-1,4.3c-0.2,0.1-0.4,0.1-0.6,0.1
+              c-0.9,0-1.9-0.9-3.4-3.3C6.8,3.9,6.1,2.4,6.1,2.3c0,0-0.1-0.1-0.1-0.1C5.9,2.2,5.8,2.1,5.7,2.1l-4,0c0,0,0,0-0.1,0
+              C2.2,3.3,5,8.7,8.1,11.6c2.7,2.5,5.8,2.6,6.4,2.6l1.9,0c0,0,0.2-0.1,0.3-0.1c0,0,0-0.1,0-0.1c0-0.3,0-2.6,1.6-3
+              C18.4,10.9,18.5,10.9,18.6,10.9z" />
+                  </g>
+                </svg>
                 <span class="visually-hidden">Мы ВКонтакте</span>
-              </a></li>
-            <li class="social__item"><a href="instagram.com" class="social__link">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="instagram.com" class="social__link social__link_transparent">
+                <svg width="18" height="18" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
+                  <path fill="#ccc" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
+              M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z" />
+                  <path fill="#ccc" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6
+              c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z" />
+                  <circle fill="#ccc" cx="17.6" cy="5.4" r="1.3" />
+                </svg>
                 <span class="visually-hidden">Мы в Instagram</span>
-              </a></li>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -76,43 +165,75 @@
           сменить фото
           <input type="file" class="visually-hidden">
         </label>
-        <label class="profile__label">
-          Тэги
-          <textarea name="tags" cols="60" rows="5" class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
-        </label>
-        <fieldset class="profile__prefer">
-          <legend class="profile__label">Транспорт</legend>
-          <ul class="profile__prefers prefers">
+        <div class="profile__box-outer">
+          <label for="tags" class="profile__label">
+            Тэги
+          </label>
+          <textarea name="tags" id="tags" class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+        </div>
+        <div class="profile__prefer profile__box-outer">
+          <span class="profile__label">Транспорт</span>
+          <ul class="profile__list-prefers prefers">
             <li class="prefers__item">
-              <label class="prefers__label">
+              <label class="prefers__label checkbox-image">
                 <input type="checkbox" class="visually-hidden" name="plane" checked>
-                <span class="checkbox-image"></span>
+                <svg class="checkbox-image__visual" width="14" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 21"
+                  style="enable-background:new 0 0 19 21;" xml:space="preserve">
+                  <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
+                c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
+                C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1
+                c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1
+                c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9
+                c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5
+                c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z" />
+                </svg>
                 <span class="visually-hidden">Самолет</span>
               </label>
             </li>
             <li class="prefers__item">
-              <label class="prefers__label">
+              <label class="prefers__label checkbox-image">
                 <input type="checkbox" class="visually-hidden" name="bus" checked>
-                <span class="checkbox-image"></span>
+                <svg width="13" height="16" version="1.1" id="svg2103" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
+                  <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
+                c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
+                C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z
+                M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9
+                H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z" />
+                </svg>
                 <span class="visually-hidden">Автобус</span>
               </label>
             </li>
             <li class="prefers__item">
-              <label class="prefers__label">
-                <input type="checkbox" class="visually-hidden" name="bicycle">
-                <span class="checkbox-image"></span>
+              <label class="prefers__label checkbox-image">
+                <input type="checkbox" class="visually-hidden" name="bike">
+                <svg width="19" height="17" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
+                  <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
+                S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
+                l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5
+                l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5
+                s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z" />
+                </svg>
                 <span class="visually-hidden">Велосипед</span>
               </label>
             </li>
             <li class="prefers__item">
-              <label class="prefers__label">
+              <label class="prefers__label checkbox-image">
                 <input type="checkbox" class="visually-hidden" name="run" checked>
-                <span class="checkbox-image"></span>
+                <svg width="15" height="17" version="1.1" id="Icons_Run" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;" xml:space="preserve">
+                  <g>
+                    <ellipse cx="14.3" cy="2" rx="2.1" ry="2" />
+                    <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6
+                C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5
+                c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4
+                c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6
+                z" />
+                  </g>
+                </svg>
                 <span class="visually-hidden">Бег</span>
               </label>
             </li>
           </ul>
-        </fieldset>
+        </div>
       </div>
     </section>
     <section class="plans">
@@ -198,300 +319,302 @@
                 <button class="calendar__button calendar__button_next" aria-label="следующий месяц"></button>
               </p>
               <table class="calendar__table">
-                <tr class="calendar__row">
-                  <th class="calendar__th">
-                    П<span class="calendar__expand">н</span>
-                  </th>
-                  <th class="calendar__th">
-                    В<span class="calendar__expand">т</span>
-                  </th>
-                  <th class="calendar__th">
-                    С<span class="calendar__expand">р</span>
-                  </th>
-                  <th class="calendar__th">
-                    Ч<span class="calendar__expand">т</span>
-                  </th>
-                  <th class="calendar__th">
-                    П<span class="calendar__expand">т</span>
-                  </th>
-                  <th class="calendar__th">
-                    С<span class="calendar__expand">б</span>
-                  </th>
-                  <th class="calendar__th">
-                    В<span class="calendar__expand">с</span>
-                  </th>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      23
-                      <input type="checkbox" name="date" value="23" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      24
-                      <input type="checkbox" name="date" value="24" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      25
-                      <input type="checkbox" name="date" value="25" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      26
-                      <input type="checkbox" name="date" value="26" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      27
-                      <input type="checkbox" name="date" value="27" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      28
-                      <input type="checkbox" name="date" value="28" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      1
-                      <input type="checkbox" name="date" value="1" class="calendar__input">
-                    </label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      2
-                      <input type="checkbox" name="date" value="2" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      3
-                      <input type="checkbox" name="date" value="3" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      4
-                      <input type="checkbox" name="date" value="4" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      5
-                      <input type="checkbox" name="date" value="5" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      6
-                      <input type="checkbox" name="date" value="6" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      7
-                      <input type="checkbox" name="date" value="7" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      8
-                      <input type="checkbox" name="date" value="8" class="calendar__input">
-                    </label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      9
-                      <input type="checkbox" name="date" value="9" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      10
-                      <input type="checkbox" name="date" value="10" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      11
-                      <input type="checkbox" name="date" value="11" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      12
-                      <input type="checkbox" name="date" value="12" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      13
-                      <input type="checkbox" name="date" value="13" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      14
-                      <input type="checkbox" name="date" value="14" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      15
-                      <input type="checkbox" name="date" value="15" class="calendar__input">
-                    </label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      16
-                      <input type="checkbox" name="date" value="16" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      17
-                      <input type="checkbox" name="date" value="17" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      18
-                      <input type="checkbox" name="date" value="18" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      19
-                      <input type="checkbox" name="date" value="19" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      20
-                      <input type="checkbox" name="date" value="20" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      21
-                      <input type="checkbox" name="date" value="21" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      22
-                      <input type="checkbox" name="date" value="22" class="calendar__input">
-                    </label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      23
-                      <input type="checkbox" name="date" value="23" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      24
-                      <input type="checkbox" name="date" value="24" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      25
-                      <input type="checkbox" name="date" value="25" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      26
-                      <input type="checkbox" name="date" value="26" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      27
-                      <input type="checkbox" name="date" value="27" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      28
-                      <input type="checkbox" name="date" value="28" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      29
-                      <input type="checkbox" name="date" value="29" class="calendar__input">
-                    </label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      30
-                      <input type="checkbox" name="date" value="30" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      31
-                      <input type="checkbox" name="date" value="31" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      1
-                      <input type="checkbox" name="date" value="1" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      2
-                      <input type="checkbox" name="date" value="2" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      3
-                      <input type="checkbox" name="date" value="3" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      4
-                      <input type="checkbox" name="date" value="4" class="calendar__input">
-                    </label>
-                  </td>
-                  <td class="calendar__td">
-                    <label class="calendar__td-label">
-                      5
-                      <input type="checkbox" name="date" value="5" class="calendar__input">
-                    </label>
-                  </td>
-                </tr>
+                <tbody class="calendar__table-body">
+                  <tr class="calendar__row">
+                    <th class="calendar__th">
+                      П<span class="calendar__expand-head">н</span>
+                    </th>
+                    <th class="calendar__th">
+                      В<span class="calendar__expand-head">т</span>
+                    </th>
+                    <th class="calendar__th">
+                      С<span class="calendar__expand-head">р</span>
+                    </th>
+                    <th class="calendar__th">
+                      Ч<span class="calendar__expand-head">т</span>
+                    </th>
+                    <th class="calendar__th">
+                      П<span class="calendar__expand-head">т</span>
+                    </th>
+                    <th class="calendar__th">
+                      С<span class="calendar__expand-head">б</span>
+                    </th>
+                    <th class="calendar__th">
+                      В<span class="calendar__expand-head">с</span>
+                    </th>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__td">
+                      <input id="february23" type="checkbox" name="date" value="february23" class="calendar__input visually-hidden">
+                      <label for="february23" class="calendar__td-label">
+                        23
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="february24" type="checkbox" name="date" value="february24" class="calendar__input visually-hidden">
+                      <label for="february24" class="calendar__td-label">
+                        24
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="february25" type="checkbox" name="date" value="february25" class="calendar__input visually-hidden">
+                      <label for="february25" class="calendar__td-label">
+                        25
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="february26" type="checkbox" name="date" value="february26" class="calendar__input visually-hidden">
+                      <label for="february26" class="calendar__td-label">
+                        26
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="february27" type="checkbox" name="date" value="february27" class="calendar__input visually-hidden">
+                      <label for="february27" class="calendar__td-label">
+                        27
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="february28" type="checkbox" name="date" value="february28" class="calendar__input visually-hidden">
+                      <label for="february28" class="calendar__td-label">
+                        28
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march1" type="checkbox" name="date" value="march1" class="calendar__input visually-hidden">
+                      <label for="march1" class="calendar__td-label">
+                        1<span class="calendar__expand-month">мар</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__td">
+                      <input id="march2" type="checkbox" name="date" value="march2" class="calendar__input visually-hidden">
+                      <label for="march2" class="calendar__td-label">
+                        2
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march3" type="checkbox" name="date" value="march3" class="calendar__input visually-hidden">
+                      <label for="march3" class="calendar__td-label">
+                        3
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march4" type="checkbox" name="date" value="march4" class="calendar__input visually-hidden">
+                      <label for="march4" class="calendar__td-label">
+                        4
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march5" type="checkbox" name="date" value="march5" class="calendar__input visually-hidden">
+                      <label for="march5" class="calendar__td-label">
+                        5
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march6" type="checkbox" name="date" value="march6" class="calendar__input visually-hidden">
+                      <label for="march6" class="calendar__td-label">
+                        6
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march7" type="checkbox" name="date" value="march7" class="calendar__input visually-hidden">
+                      <label for="march7" class="calendar__td-label">
+                        7
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march8" type="checkbox" name="date" value="march8" class="calendar__input visually-hidden">
+                      <label for="march8" class="calendar__td-label">
+                        8
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__td">
+                      <input id="march9" type="checkbox" name="date" value="march9" class="calendar__input visually-hidden">
+                      <label for="march9" class="calendar__td-label">
+                        9
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march10" type="checkbox" name="date" value="march10" class="calendar__input visually-hidden">
+                      <label for="march10" class="calendar__td-label">
+                        10
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march11" type="checkbox" name="date" value="march11" class="calendar__input visually-hidden">
+                      <label for="march11" class="calendar__td-label">
+                        11
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march12" type="checkbox" name="date" value="march12" class="calendar__input visually-hidden">
+                      <label for="march12" class="calendar__td-label">
+                        12
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march13" type="checkbox" name="date" value="march13" class="calendar__input visually-hidden">
+                      <label for="march13" class="calendar__td-label">
+                        13
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march14" type="checkbox" name="date" value="march14" class="calendar__input visually-hidden">
+                      <label for="march14" class="calendar__td-label">
+                        14
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march15" type="checkbox" name="date" value="march15" class="calendar__input visually-hidden">
+                      <label for="march15" class="calendar__td-label">
+                        15
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__td">
+                      <input id="march16" type="checkbox" name="date" value="march16" class="calendar__input visually-hidden">
+                      <label for="march16" class="calendar__td-label">
+                        16
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march17" type="checkbox" name="date" value="march17" class="calendar__input visually-hidden">
+                      <label for="march17" class="calendar__td-label">
+                        17
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march18" type="checkbox" name="date" value="march18" class="calendar__input visually-hidden">
+                      <label for="march18" class="calendar__td-label">
+                        18
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march19" type="checkbox" name="date" value="march19" class="calendar__input visually-hidden">
+                      <label for="march19" class="calendar__td-label">
+                        19
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march20" type="checkbox" name="date" value="march20" class="calendar__input visually-hidden">
+                      <label for="march20" class="calendar__td-label">
+                        20
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march21" type="checkbox" name="date" value="march21" class="calendar__input visually-hidden">
+                      <label for="march21" class="calendar__td-label">
+                        21
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march22" type="checkbox" name="date" value="march22" class="calendar__input visually-hidden">
+                      <label for="march22" class="calendar__td-label">
+                        22
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__td">
+                      <input id="march23" type="checkbox" name="date" value="march23" class="calendar__input visually-hidden">
+                      <label for="march23" class="calendar__td-label">
+                        23
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march24" type="checkbox" name="date" value="march24" class="calendar__input visually-hidden">
+                      <label for="march24" class="calendar__td-label">
+                        24
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march25" type="checkbox" name="date" value="march25" class="calendar__input visually-hidden">
+                      <label for="march25" class="calendar__td-label">
+                        25
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march26" type="checkbox" name="date" value="march26" class="calendar__input visually-hidden" checked>
+                      <label for="march26" class="calendar__td-label calendar__td-label_check-in">
+                        26
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march27" type="checkbox" name="date" value="march27" class="calendar__input visually-hidden" checked>
+                      <label for="march27" class="calendar__td-label">
+                        27
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march28" type="checkbox" name="date" value="march28" class="calendar__input visually-hidden" checked>
+                      <label for="march28" class="calendar__td-label calendar__td-label_check-out">
+                        28
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march29" type="checkbox" name="date" value="march29" class="calendar__input visually-hidden" disabled>
+                      <label for="march29" class="calendar__td-label">
+                        29
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__td">
+                      <input id="march30" type="checkbox" name="date" value="march30" class="calendar__input visually-hidden" disabled>
+                      <label for="march30" class="calendar__td-label">
+                        30
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="march31" type="checkbox" name="date" value="march31" class="calendar__input visually-hidden" disabled>
+                      <label for="march31" class="calendar__td-label">
+                        31
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="april1" type="checkbox" name="date" value="april1" class="calendar__input visually-hidden" disabled>
+                      <label for="april1" class="calendar__td-label">
+                        1<span class="calendar__expand-month">апр</span>
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="april2" type="checkbox" name="date" value="april2" class="calendar__input visually-hidden" disabled>
+                      <label for="april2" class="calendar__td-label">
+                        2
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="april3" type="checkbox" name="date" value="april3" class="calendar__input visually-hidden" disabled>
+                      <label for="april3" class="calendar__td-label">
+                        3
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="april4" type="checkbox" name="date" value="april4" class="calendar__input visually-hidden" disabled>
+                      <label for="april4" class="calendar__td-label">
+                        4
+                      </label>
+                    </td>
+                    <td class="calendar__td">
+                      <input id="april5" type="checkbox" name="date" value="april5" class="calendar__input visually-hidden" disabled>
+                      <label for="april5" class="calendar__td-label">
+                        5
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </article>
             <div class="step__bottom">
               <a href="#2" class="step__button button">Следующий шаг</a>
             </div>
           </li>
-          <li class="step">
+          <li class="step step_line">
             <header class="step__header">
               <h3 class="step__title">
                 Шаг 2.<br>
@@ -508,30 +631,54 @@
             </header>
             <ul class="step__list">
               <li class="select step__select">
-                <select name="first-country" class="select__control">
-                  <option value="0" class="select__option">Выберите страну</option>
-                  <option value="Босния и Герцеговина" class="select__option select__option_bos" selected>Босния и Герцеговина</option>
-                </select>
+                <div class="select__control-box">
+                  <select name="first-country" class="select__control">
+                    <option value="0" class="select__option">Выберите страну</option>
+                    <option value="Босния и Герцеговина" class="select__option select__option_bos" selected>Босния и Герцеговина</option>
+                  </select>
+                </div>
                 <p class="select__flag"></p>
-                <button type="button" class="select__delete" aria-label="Убрать страну"></button>
+                <button type="button" class="select__delete" aria-label="Убрать страну">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 9" style="enable-background:new 0 0 9 9;" xml:space="preserve">
+                    <path d="M5.2,4.5l3.7-3.7C9,0.6,9,0.3,8.9,0.1S8.4,0,8.2,0.1L4.5,3.8L0.8,0.1C0.6,0,0.3,0,0.1,0.1S0,0.6,0.1,0.8l3.7,3.7L0.1,8.2
+                  C0,8.4,0,8.7,0.1,8.9C0.2,9,0.4,9,0.5,9s0.2,0,0.3-0.1l3.7-3.7l3.7,3.7C8.3,9,8.4,9,8.5,9s0.2,0,0.3-0.1C9,8.7,9,8.4,8.9,8.2
+                  L5.2,4.5z" />
+                  </svg>
+                </button>
               </li>
               <li class="select step__select">
-                <select name="second-country" class="select__control">
-                  <option value="0" class="select__option">Выберите страну</option>
-                  <option value="Чехия" class="select__option select__option_czech" selected>Чехия</option>
-                </select>
+                <div class="select__control-box">
+                  <select name="second-country" class="select__control">
+                    <option value="0" class="select__option">Выберите страну</option>
+                    <option value="Чехия" class="select__option select__option_czech" selected>Чехия</option>
+                  </select>
+                </div>
                 <p class="select__flag"></p>
-                <button type="button" class="select__delete" aria-label="Убрать страну"></button>
+                <button type="button" class="select__delete" aria-label="Убрать страну">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 9" style="enable-background:new 0 0 9 9;" xml:space="preserve">
+                    <path d="M5.2,4.5l3.7-3.7C9,0.6,9,0.3,8.9,0.1S8.4,0,8.2,0.1L4.5,3.8L0.8,0.1C0.6,0,0.3,0,0.1,0.1S0,0.6,0.1,0.8l3.7,3.7L0.1,8.2
+                  C0,8.4,0,8.7,0.1,8.9C0.2,9,0.4,9,0.5,9s0.2,0,0.3-0.1l3.7-3.7l3.7,3.7C8.3,9,8.4,9,8.5,9s0.2,0,0.3-0.1C9,8.7,9,8.4,8.9,8.2
+                  L5.2,4.5z" />
+                  </svg>
+                </button>
               </li>
-              <li class="select step__select">
-                <select name="third-country" class="select__control">
-                  <option value="0" class="select__option" selected>Выберите страну</option>
-                  <option value="same-country" class="select__option">same-country</option>
-                </select>
+              <li class="select step__select step__select_empty">
+                <div class="select__control-box">
+                  <select name="third-country" class="select__control">
+                    <option value="0" class="select__option" selected>Выберите страну</option>
+                    <option value="same-country" class="select__option">same-country</option>
+                  </select>
+                </div>
                 <p class="select__flag select__flag_empty"></p>
-                <button type="button" class="select__delete" aria-label="Убрать страну"></button>
+                <button type="button" class="select__delete" aria-label="Убрать страну">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 9" style="enable-background:new 0 0 9 9;" xml:space="preserve">
+                    <path d="M5.2,4.5l3.7-3.7C9,0.6,9,0.3,8.9,0.1S8.4,0,8.2,0.1L4.5,3.8L0.8,0.1C0.6,0,0.3,0,0.1,0.1S0,0.6,0.1,0.8l3.7,3.7L0.1,8.2
+                  C0,8.4,0,8.7,0.1,8.9C0.2,9,0.4,9,0.5,9s0.2,0,0.3-0.1l3.7-3.7l3.7,3.7C8.3,9,8.4,9,8.5,9s0.2,0,0.3-0.1C9,8.7,9,8.4,8.9,8.2
+                  L5.2,4.5z" />
+                  </svg>
+                </button>
               </li>
-              <li class="select step__select">
+              <li class="select step__select step__select_empty">
                 <button class="select__control select__control_add">Добавить страну</button>
                 <p class="select__flag select__flag_empty"></p>
               </li>
@@ -542,7 +689,7 @@
             </div>
           </li>
           <li class="step">
-            <header class="step__header">
+            <header class="step__header fixme-2">
               <h3 class="step__title">
                 Шаг 3.<br>
                 Развлечения
@@ -557,16 +704,22 @@
                 <li class="step__item step__item_current">Развлечения</li>
               </ul>
             </header>
-            <label class="textarea step__textarea">
-              <span class="textarea__title">Босния и Герцеговина</span>
-              <span class="textarea__flag"></span>
-              <textarea name="bos" rows="10" placeholder="План действий" class="textarea__control"></textarea>
-            </label>
-            <label class="textarea step__textarea">
-              <span class="textarea__title">Чехия</span>
-              <span class="textarea__flag"></span>
-              <textarea name="czech" rows="10" placeholder="План действий" class="textarea__control">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            </label>
+            <ul class="step__list">
+              <li class="step__textarea">
+                <label class="textarea">
+                  <span class="textarea__title">Босния и Герцеговина</span>
+                  <span class="textarea__flag"></span>
+                  <textarea name="bos" rows="10" placeholder="План действий" class="textarea__control"></textarea>
+                </label>
+              </li>
+              <li class="step__textarea">
+                <label class="textarea">
+                  <span class="textarea__title">Чехия</span>
+                  <span class="textarea__flag"></span>
+                  <textarea name="czech" rows="10" placeholder="План действий" class="textarea__control">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </label>
+              </li>
+            </ul>
             <div class="step__bottom">
               <button type="submit" class="step__submit step__button button step__button_next">Отправить</button>
               <a href="#2" class="step__button button step__button_prev">На шаг назад</a>
@@ -580,15 +733,55 @@
     <div class="footer__wrapper">
       <a href="index.html" class="footer__link-logo link-logo"><img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?"></a>
       <ul class="social footer__social">
-        <li class="social__item"><a href="fb.com" class="social__link">
+        <li class="social__item">
+          <a href="fb.com" class="social__link">
+            <svg width="11" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve">
+              <g>
+                <path fill="#1d2e5b" d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
+          V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
+          C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z" />
+              </g>
+            </svg>
             <span class="visually-hidden">Мы в Facebook</span>
-          </a></li>
-        <li class="social__item"><a href="vk.com" class="social__link">
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="vk.com" class="social__link">
+            <svg width="23" height="12" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8" style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
+              <g>
+                <path fill="#1d2e5b" d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6
+          c0,0.1,0,0.8-0.5,1.2c-0.4,0.4-1.1,0.5-1.2,0.5l-1.9,0c-1,0-4.4-0.2-7.4-3c-3.7-3.4-6.8-9.8-7-10.1C0,2.2-0.1,1.5,0.3,1.1
+          c0.4-0.4,1.1-0.5,1.4-0.5l4.1,0l0.1,0c0.1,0,0.6,0.1,1,0.3c0.4,0.2,0.6,0.7,0.6,0.7c0,0,0.6,1.4,1.5,2.7c1.3,2,1.9,2.5,2.1,2.6
+          c0.2-0.4,0.3-1.7,0.2-2.9c0-0.5-0.1-1.1-0.3-1.3c-0.1-0.1-0.4-0.3-0.8-0.3L9.5,1.8c-0.1-0.7,0.6-1.2,1.1-1.4
+          C11.3,0.1,12.4,0,13.7,0l0.7,0c1.2,0,1.6,0.1,2.1,0.2c1.7,0.4,1.6,1.7,1.6,3.3c0,0.5,0,1,0,1.6c0,0.2,0,0.3,0,0.5
+          c0,0.4,0,1,0.1,1.3c0.2-0.1,0.9-0.7,2.1-2.5c0.8-1.2,1.4-2.5,1.5-2.8l0,0c0.2-0.4,0.6-0.9,1.6-0.9l4.3,0c0,0,0.2,0,0.4,0
+          c1,0,1.6,0.3,1.8,0.9c0.3,0.6,0.2,1.7-2.4,4.6c-0.4,0.4-0.7,0.8-1,1.1c-0.6,0.7-1.2,1.4-1.2,1.6C25.4,9,26,9.5,26.6,10
+          c1.5,1.2,2.5,2.3,3,3.1c0.5,0.8,0.4,1.3,0.3,1.7c-0.4,0.9-1.6,1-1.9,1l-3.8,0C24.1,15.8,24.1,15.8,23.9,15.8z M18.6,10.9
+          c0.9,0,1.7,0.8,2.5,1.6c0.5,0.5,1,1,1.5,1.3c0.7,0.4,1.3,0.4,1.4,0.4l0.1,0l3.8,0c0.2,0,0.4-0.1,0.5-0.1c0,0,0-0.1-0.1-0.2
+          c-0.4-0.7-1.4-1.7-2.7-2.7c-1.2-1-1.8-1.5-1.9-2.2c-0.1-0.8,0.5-1.4,1.6-2.7c0.3-0.3,0.6-0.7,1-1.1c1.6-1.8,2-2.6,2.1-3
+          c-0.2,0-0.6,0-0.7,0l-4.4,0c-0.2,0-0.2,0-0.2,0c-0.2,0.4-0.8,1.8-1.6,3c-1.9,2.8-2.8,3.2-3.4,3.2c-0.2,0-0.4,0-0.6-0.1
+          c-1-0.6-1-1.8-0.9-2.8c0-0.1,0-0.3,0-0.4c0-0.6,0-1.2,0-1.7c0.1-1.7,0-1.7-0.4-1.8c-0.4-0.1-0.7-0.1-1.9-0.2l-0.7,0
+          c-0.6,0-1.3,0-1.9,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.6,0.7,0.6,2,0.6,2.2c0.1,1.6,0.1,3.8-1,4.3c-0.2,0.1-0.4,0.1-0.6,0.1
+          c-0.9,0-1.9-0.9-3.4-3.3C6.8,3.9,6.1,2.4,6.1,2.3c0,0-0.1-0.1-0.1-0.1C5.9,2.2,5.8,2.1,5.7,2.1l-4,0c0,0,0,0-0.1,0
+          C2.2,3.3,5,8.7,8.1,11.6c2.7,2.5,5.8,2.6,6.4,2.6l1.9,0c0,0,0.2-0.1,0.3-0.1c0,0,0-0.1,0-0.1c0-0.3,0-2.6,1.6-3
+          C18.4,10.9,18.5,10.9,18.6,10.9z" />
+              </g>
+            </svg>
             <span class="visually-hidden">Мы ВКонтакте</span>
-          </a></li>
-        <li class="social__item"><a href="instagram.com" class="social__link">
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="instagram.com" class="social__link">
+            <svg width="18" height="18" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
+              <path fill="#1d2e5b" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
+          M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z" />
+              <path fill="#1d2e5b" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6
+          c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z" />
+              <circle fill="#1d2e5b" cx="17.6" cy="5.4" r="1.3" />
+            </svg>
             <span class="visually-hidden">Мы в Instagram</span>
-          </a></li>
+          </a>
+        </li>
       </ul>
       <p class="author">
         <span class="author__develop">Разработано</span>

@@ -1,7 +1,5 @@
 .directions {
   color: $grey;
-
-  background-color: $grey-blue;
 }
 
 .directions__wrapper {
@@ -54,9 +52,9 @@
     margin-bottom: 45px;
   }
 
-  .directions__button {
-    width: 100%;
-  }
+  // .directions__button {
+  //   width: 100%;
+  // }
 }
 
 @media (min-width: $desktop-width) {

@@ -1,3 +1,11 @@
 .checkbox-image {
-  z-index: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.checkbox-image__visual {
+  margin: auto;
+}
+
+.checkbox-image input:checked + svg {
+  opacity: 1;
 }

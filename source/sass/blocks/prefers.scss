@@ -1,14 +1,44 @@
 .prefers {
   @include list-reset;
 
-  display: flex;
   flex-wrap: wrap;
 }
 
 .prefers__item {
+  display: flex;
   width: 33px;
   height: 33px;
 
-  background-color: red;
   border-radius: 50%;
+
+  svg {
+    margin: auto;
+
+    opacity: 0.15;
+  }
+
+  path {
+    fill: $blue;
+  }
+}
+
+.prefers__item_grey {
+  background-color: $grey-blue;
+}
+
+.prefers__item_active svg {
+  opacity: 1;
+}
+
+.prefers__label {
+  display: flex;
+  width: 100%;
+
+  border-radius: 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .prefers__item_grey {
+    background-color: transparent;
+  }
 }

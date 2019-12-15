@@ -16,12 +16,17 @@
   text-align: center;
 }
 
+.footer__social {
+  margin-bottom: 40px;
+}
+
 @media (min-width: $tablet-width) {
   .footer__wrapper {
     @include padding-t-b(50px, 50px);
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .footer__link-logo {
@@ -31,8 +36,8 @@
       vertical-align: middle;
     }
   }
-}
 
-// @media (min-width: $desktop-width) {
-//
-// }
+  .footer__social {
+    margin-bottom: 0;
+  }
+}

@@ -1,11 +1,15 @@
 .bussines-offer {
-  display: none;
+  display: block;
   width: 270px;
-  padding: 30px 25px 0;
 
   font-weight: 300;
 
   background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+}
+
+.bussines-offer__box {
+  padding: 30px 25px;
 }
 
 .bussines-offer__title {
@@ -14,8 +18,6 @@
 
 .bussines-offer__list {
   @include list-reset;
-
-  margin-bottom: 30px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -28,19 +30,31 @@
 }
 
 .bussines-offer__button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 5px;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: $blue;
   text-transform: uppercase;
+
+  background-color: #f3f4f8;
+  border: none;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .bussines-offer {
     box-sizing: border-box;
     width: 688px;
-    padding: 60px 90px 0;
+  }
+
+  .bussines-offer__box {
+    padding: 60px 90px;
   }
 
   .bussines-offer__item {
@@ -48,12 +62,18 @@
     justify-content: space-between;
     padding-right: 5px;
   }
+
+  .bussines-offer__button {
+    padding: 40px 5px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .bussines-offer {
     width: 750px;
-    padding: 60px;
-    padding-bottom: 0;
+  }
+
+  .bussines-offer__box {
+    padding: 50px 60px;
   }
 }

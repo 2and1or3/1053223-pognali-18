@@ -1,5 +1,6 @@
 .promo {
-  background: $darkness-blue;
+  position: relative;
+
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -29,12 +30,26 @@
 }
 
 .promo__login-link {
+  flex-grow: 1;
+
   text-transform: uppercase;
 }
 
 .promo__reviews {
   width: 230px;
   margin-bottom: 30px;
+}
+
+.promo__guide::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 290px;
+
+  background-color: $dark-blue;
 }
 
 @media (min-width: $tablet-width) {
@@ -57,17 +72,8 @@
     width: 260px;
   }
 
-  .promo__guide {
-    .guide__list {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .guide__item {
-      box-sizing: border-box;
-      width: 50%;
-      padding: 30px 25px 60px;
-    }
+  .promo__guide::before {
+    content: none;
   }
 }
 
@@ -83,14 +89,5 @@
     padding: 0 20px;
 
     text-align: left;
-  }
-
-  .promo__guide {
-    width: 100%;
-
-    .guide__item {
-      width: 25%;
-      padding: 30px;
-    }
   }
 }

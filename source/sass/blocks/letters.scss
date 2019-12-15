@@ -1,11 +1,65 @@
 .letters {
   @include list-reset;
 
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
   color: $blue;
 
   background-color: rgba(255, 255, 255, 1);
+  border-top: 1px solid #cbced9;
+  border-left: 1px solid #cbced9;
+}
+
+.letters__item {
+  display: flex;
+  width: 20%;
+  height: 42px;
 }
 
 .letters__label {
-  border: 1px solid #cbced9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+
+  border-right: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+}
+
+.letters__input:checked + .letters__label {
+  color: rgba(255, 255, 255, 1);
+
+  background-color: $blue;
+}
+
+@media (min-width: $tablet-width) {
+  .letters {
+    @include opacity-color($dark-blue, 0.2);
+
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+
+    background-color: transparent;
+    border: 0;
+  }
+
+  .letters__item {
+    height: 77px;
+
+    background-color: transparent;
+  }
+
+  .letters__label {
+    background-color: transparent;
+    border: 0;
+  }
+
+  .letters__input:checked + .letters__label {
+    color: $dark-blue;
+
+    background-color: transparent;
+  }
 }

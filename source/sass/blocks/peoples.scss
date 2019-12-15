@@ -8,7 +8,8 @@
 }
 
 .peoples__item {
-  width: 270px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {

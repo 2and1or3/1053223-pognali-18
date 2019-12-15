@@ -21,9 +21,35 @@
   text-align: center;
 }
 
+.registration__email-form {
+  display: flex;
+}
+
+.registration__mail {
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin-right: -15px;
+  padding: 25px;
+
+  border: none;
+  border-radius: 10px;
+
+  &::placeholder {
+    @include opacity-color($grey, 0.3);
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
 .registration__link {
   color: $light-yellow;
   text-decoration: underline;
+}
+
+.registration__button-text {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -42,6 +68,19 @@
     margin-bottom: 60px;
     padding: 0;
   }
+
+  .registration__mail {
+    margin-right: 0;
+
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .registration__button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -52,5 +91,13 @@
 
   .registration__lead {
     padding: 0 210px;
+  }
+
+  .registration__button {
+    width: 320px;
+  }
+
+  .registration__button-text {
+    display: inline;
   }
 }

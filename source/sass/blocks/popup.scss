@@ -2,6 +2,13 @@
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: 1;
+
+  display: none;
 
   transform: translateX(-50%);
+}
+
+.popup_show {
+  display: block;
 }

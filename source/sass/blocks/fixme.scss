@@ -1,5 +1,15 @@
+@media (min-width: $tablet-width) {
+  .fixme-2 {
+    border-bottom: 0;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .fixme-1 {
     padding-right: 530px;
+  }
+
+  .fixme-2 {
+    border-bottom: 1px solid #d6d9e6;
   }
 }

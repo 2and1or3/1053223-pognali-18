@@ -1,3 +1,5 @@
+$bed-offset: 25px;
+
 .list-filter {
   background-color: #e2e5f2;
 }
@@ -9,6 +11,19 @@
 
 .list-filter__header {
   position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-filter__countries {
+  display: none;
+  margin-bottom: 25px;
+  margin-right: $bed-offset;
+  margin-left: $bed-offset;
+
+  color: $grey;
 }
 
 .list-filter__header_active {
@@ -16,28 +31,6 @@
 
   .list-filter__continents {
     display: flex;
-  }
-
-  .list-filter__countries {
-    display: none;
-    margin-bottom: 25px;
-
-    color: $grey;
-  }
-
-  .list-filter__button-close {
-    display: none;
-
-    font: inherit;
-    font-weight: bold;
-    font-size: 16.5px;
-    line-height: 29.5px;
-    text-align: center;
-    color: $darkness-blue;
-    text-transform: uppercase;
-
-    background-color: #d6daed;
-    border: none;
   }
 
   ~ .list-filter__countries {
@@ -48,17 +41,23 @@
     display: block;
   }
 
-  .list-filter__button_show-all_hide {
-    display: inline;
+  .list-filter__button-toggle {
+    width: 12px;
+    height: 12px;
+
+    background-image: url("../../img/filter-close.svg");
   }
 
-  .list-filter__button_show-all_show {
-    display: none;
+  .list-filter__letters {
+    display: flex;
   }
 }
 
 .list-filter__button {
+  position: relative;
+
   margin: 0;
+  margin-bottom: 20px;
 
   font-weight: bold;
   font-size: 16px;
@@ -71,28 +70,83 @@
   border: none;
 }
 
+.list-filter__button_title {
+  padding-left: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 15px;
+    height: 10px;
+
+    background: url("../../img/filter.svg") no-repeat center;
+    transform: translateY(-50%);
+  }
+}
+
 .list-filter__continents {
   display: none;
   flex-direction: column;
-}
-
-.list-filter__button_show-all {
-  display: none;
+  width: 100%;
+  margin-right: $bed-offset;
+  margin-bottom: 20px;
+  margin-left: $bed-offset;
 }
 
 .list-filter__button_show-all_hide {
   display: none;
 }
 
+.list-filter__button_show-all_show {
+  display: none;
+}
+
 .list-filter__button-toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: inline-block;
+  width: 17px;
+  height: 3px;
+  padding: 0;
+
+  background-color: transparent;
+  background-image: url("../../img/dots.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
 }
 
 .list-filter__letters {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
+  margin-right: $bed-offset;
+  margin-left: $bed-offset;
+}
+
+.list-filter__button-close {
+  display: none;
+  width: 100%;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+
+  border: none;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+
+    background: url("../../img/filter-close.svg") no-repeat center;
+  }
+}
+
+.list-filter__button_show-all {
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -102,16 +156,40 @@
   }
 
   .list-filter__header {
-    display: flex;
-    justify-content: space-between;
-
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .list-filter__header_active {
+    margin-bottom: 15px;
+
+    .list-filter__button-toggle {
+      width: 19px;
+      height: 19px;
+    }
+
+    .list-filter__button_show-all_hide {
+      display: initial;
+    }
+
+    .list-filter__button_show-all_show {
+      display: none;
+    }
   }
 
   .list-filter__button {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .list-filter__button-toggle {
+    width: 30px;
+    height: 10px;
+    margin-left: 30px;
+  }
+
+  .list-filter__button_show-all_show {
+    display: initial;
   }
 
   .list-filter__button_title {
@@ -121,11 +199,12 @@
   .list-filter__continents {
     display: flex;
     flex-direction: row;
+    width: auto;
+    margin-bottom: 0;
   }
 
   .list-filter__button_show-all {
-    display: block;
-    padding-right: 85px;
+    order: 1;
   }
 
   .list-filter__letters {
@@ -133,12 +212,21 @@
     top: 50px;
     left: 0;
 
-    width: 280px;
+    width: 385px;
+    margin: 0;
   }
 
   .list-filter__countries {
     margin-bottom: 135px;
     margin-left: 460px;
+  }
+
+  .list-filter__button-close {
+    &::before {
+      width: 19px;
+      height: 19px;
+      margin-right: 20px;
+    }
   }
 }
 
@@ -153,6 +241,8 @@
   }
 
   .list-filter__header_active {
+    margin-bottom: 60px;
+
     .list-filter__letters {
       display: none;
     }
