@@ -400,6 +400,7 @@
   .step__header {
     margin-bottom: 30px;
     padding-bottom: 55px;
+    padding-right: 170px;
   }
 
   .step__title {
@@ -407,7 +408,7 @@
   }
 
   .step__description {
-    padding-right: 420px;
+    padding-right: 250px;
   }
 
   .step__pagination {
@@ -425,10 +426,6 @@
 
   .step__label-mesure {
     order: 1;
-  }
-
-  .step__counter-box {
-    width: 180px;
   }
 
   .step__list {

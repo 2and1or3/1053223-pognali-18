@@ -69,7 +69,7 @@
   }
 
   .counter__box {
-    margin-top: 25px;
+    margin-top: 0;
   }
 
   .counter__input {
@@ -91,5 +91,9 @@
 @media (min-width: $desktop-width) {
   .counter__input {
     padding: 25px 5px;
+  }
+
+  .counter__box {
+    width: 180px;
   }
 }

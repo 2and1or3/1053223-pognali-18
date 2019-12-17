@@ -13,6 +13,11 @@
   align-items: center;
 }
 
+.header__open-logo {
+  display: none;
+}
+
+
 .header_opened {
   background-color: rgba(255, 255, 255, 1);
 
@@ -24,6 +29,14 @@
   }
 
   .header__navigation {
+    display: block;
+  }
+
+  .header__close-logo {
+    display: none;
+  }
+
+  .header__open-logo {
     display: block;
   }
 }
@@ -63,6 +76,10 @@
 @media (min-width: $tablet-width) {
   .header_dark-tablet {
     background-color: $darkness-blue-2;
+  }
+
+  .header_opened {
+    background-color: rgba(255, 255, 255, 1);
   }
 
   .header__wrapper {
@@ -110,7 +127,13 @@
   }
 
   .header_opened {
-    background-color: initial;
+    .header__close-logo {
+      display: block;
+    }
+
+    .header__open-logo {
+      display: none;
+    }
   }
 
   .header__toggle {

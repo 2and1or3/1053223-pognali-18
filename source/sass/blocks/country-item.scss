@@ -70,10 +70,10 @@
 @media (min-width: $tablet-width) {
   .country-item {
     display: flex;
+    flex-direction: row-reverse;
   }
 
   .country-item__img {
-    order: 1;
     width: 186px;
     height: 140px;
 

@@ -2,7 +2,14 @@
   @include extra-offset (22px, 22px);
   @include padding-t-b (30px, 85px);
 
-  background: url("../img/about-mobile@1x.png") no-repeat right center;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 292px 352px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
 }
 
 .about__text-box {
@@ -32,6 +39,13 @@
   .about {
     @include extra-offset(32px, 345px);
     @include padding-t-b(30px, 85px);
+
+    background-image: url("../../img/about-tablet@1x.png");
+    background-size: 376px 548px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/about-tablet@2x.png");
+    }
   }
 
   .about__text-box {
@@ -57,6 +71,13 @@
   .about {
     @include extra-offset(70px, 630px);
     @include padding-t-b(130px, 160px);
+
+    background-image: url("../../img/about-desktop@1x.png");
+    background-size: 630px 655px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/about-desktop@2x.png");
+    }
   }
 
   .about__text-box {

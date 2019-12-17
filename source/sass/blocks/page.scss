@@ -1,3 +1,23 @@
-.page {
-  z-index: 1;
+.page_dark-blue {
+  background-color: $dark-blue;
+}
+
+.page__section_dark {
+  background-color: $darkness-blue;
+}
+
+.page__section_light {
+  background-color: $grey-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .page__section_dark {
+    background-color: $darkness-blue-2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__section_dark {
+    background-color: $darkness-blue;
+  }
 }

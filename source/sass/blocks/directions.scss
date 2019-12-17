@@ -37,6 +37,11 @@
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-position: right top;
+    background-size: 289px 575px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   .directions__text-box {
