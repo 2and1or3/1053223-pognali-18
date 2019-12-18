@@ -89,6 +89,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .counter__label {
+    min-width: 170px;
+  }
+
+  .counter__label-mesure {
+    min-width: 50px;
+    order: 1;
+  }
+
   .counter__input {
     padding: 25px 5px;
   }
