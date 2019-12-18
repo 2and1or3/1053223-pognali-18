@@ -3,6 +3,16 @@
   @include padding-t-b(40px, 40px);
 
   position: relative;
+  background-image: url("../../img/smolov-back-desktop@1x.png"),
+    url("../../img/rogovaya-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: top left, top right;
+  background-size: 143px, 61px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../../img/smolov-back-desktop@2x.png"),
+      url("../../img/rogovaya-back-mobile@2x.png");
+  }
 }
 
 .people__text-box {
@@ -30,6 +40,17 @@
   .people__wrapper {
     @include extra-offset(35px, 35px);
     @include padding-t-b(80px, 80px);
+
+    background-image: url("../../img/smolov-back-desktop@1x.png"),
+      url("../../img/rogovaya-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: top left, top right;
+    background-size: 143px, 285px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/smolov-back-desktop@2x.png"),
+        url("../../img/rogovaya-back-desktop@2x.png");
+    }
   }
 
   .people__text-box {

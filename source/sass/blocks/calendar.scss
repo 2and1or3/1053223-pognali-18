@@ -91,11 +91,14 @@
 }
 
 .calendar__td-label {
+  color: $grey;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 30px;
+  background-color: $grey-blue;
 }
 
 .calendar__input:checked + .calendar__td-label {
@@ -105,9 +108,8 @@
 }
 
 .calendar__input:disabled + .calendar__td-label {
-  color: $grey;
-
-  background-color: $grey-blue;
+  @include opacity-color($grey, 0.3);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .calendar__expand-month {
@@ -150,10 +152,11 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    color: $blue;
   }
 
   .calendar__input:disabled + .calendar__td-label {
-    color: $blue;
+    @include opacity-color($blue, 0.3);
   }
 }
 
@@ -189,6 +192,11 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 30px;
+    color: $grey;
+  }
+
+  .calendar__input:disabled + .calendar__td-label {
+    @include opacity-color($grey, 0.3);
   }
 
   .calendar__expand-month {

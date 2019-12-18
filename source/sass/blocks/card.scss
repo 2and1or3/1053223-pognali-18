@@ -21,11 +21,14 @@ $bed-offset: 100px;
 
   width: 70px;
   height: 70px;
+}
 
+.card__image-img {
   border-radius: 50%;
 }
 
 .card__title {
+  position: relative;
   margin: 0;
   margin-bottom: 10px;
   padding-right: 40px;
@@ -34,14 +37,22 @@ $bed-offset: 100px;
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: $pink;
+  }
 }
 
-.card__title-dot::before {
-  position: absolute;
-  top: 7px;
-  right: 0;
-
-  transform: translateY(-50%);
+.card__title_active::before {
+  background-color: $light-green;
 }
 
 .card__like {
@@ -153,7 +164,6 @@ $bed-offset: 100px;
     box-sizing: border-box;
     min-height: 330px;
     padding: 35px 25px 25px 35px;
-    padding-right: 80px;
   }
 
   .card__image {
@@ -162,30 +172,25 @@ $bed-offset: 100px;
 
     width: 190px;
     height: 190px;
+  }
 
+  .card__image-img {
     border-radius: 20px;
   }
 
   .card__title {
     order: -2;
-    width: 270px;
-    padding-right: 0;
     padding-left: $bed-offset;
 
     font-size: 30px;
     line-height: 30px;
-  }
-
-  .card__title-dot {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
+    padding-right: 20px;
 
     &::before {
-      position: static;
-
-      margin-left: 20px;
+      width: 7px;
+      height: 7px;
+      top: 50%;
+      right: 0;
     }
   }
 
@@ -246,7 +251,7 @@ $bed-offset: 100px;
     &:last-of-type {
       flex-direction: column;
       order: -1;
-      margin-right: -60px;
+      margin-left: 60px;
       margin-bottom: -100px;
     }
   }
@@ -294,7 +299,9 @@ $bed-offset: 100px;
 
     width: 285px;
     height: 285px;
+  }
 
+  .card__image-img {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -303,19 +310,12 @@ $bed-offset: 100px;
     order: -2;
     align-self: flex-start;
     padding-left: 0;
-  }
-
-  .card__title-dot {
-    display: initial;
 
     &::before {
       position: absolute;
-      top: 50%;
       left: -20px;
 
       margin-left: 0;
-
-      transform: translateY(-50%);
     }
   }
 

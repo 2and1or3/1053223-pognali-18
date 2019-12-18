@@ -4,7 +4,7 @@
 
 .inner-nav__wrapper {
   @include container;
-  @include padding-t-b(25px, 25px);
+  @include padding-t-b(25px, 0);
 
   display: flex;
   justify-content: space-between;
@@ -13,6 +13,7 @@
 
 .inner-nav__title {
   position: relative;
+  padding-bottom: 25px;
 
   margin: 0;
 
@@ -25,7 +26,7 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: -27px;
+    bottom: -2px;
     left: 0;
 
     height: 5px;
@@ -46,15 +47,16 @@
 @media (min-width: $tablet-width) {
   .inner-nav__wrapper {
     @include extra-offset(35px, 35px);
-    @include padding-t-b(40px, 40px);
+    @include padding-t-b(40px, 0);
   }
 
   .inner-nav__title {
     font-size: 60px;
     line-height: 70px;
+    padding-bottom: 40px;
 
     &::after {
-      bottom: -43px;
+      bottom: -4px;
 
       height: 8px;
 
@@ -91,6 +93,10 @@
 @media (min-width: $desktop-width) {
   .inner-nav__wrapper {
     @include extra-offset(70px, 60px);
+  }
+
+  .inner-nav__title {
+    align-self: flex-end;
   }
 
   .page-form {

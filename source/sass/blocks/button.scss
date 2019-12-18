@@ -1,6 +1,6 @@
 .button {
   position: relative;
-
+  font-family: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +24,7 @@
     border-top: 7px solid transparent;
     border-right: none;
     border-bottom: 7px solid transparent;
+    margin-left: 15px;
   }
 }
 

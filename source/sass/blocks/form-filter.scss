@@ -99,10 +99,6 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.form-filter__input-set {
-  margin-bottom: 20px;
-}
-
 @media (min-width: $tablet-width) {
   .form-filter {
     padding: 35px;
@@ -163,17 +159,6 @@
   .form-filter__checkbox-visual {
     width: 24px;
     height: 24px;
-  }
-
-  .form-filter__input-set {
-    order: 1;
-    width: 29.6%;
-    margin-bottom: 0;
-    margin-left: auto;
-  }
-
-  .form-filter__range-box {
-    width: 54.6%;
   }
 
   .form-filter__button {
@@ -246,17 +231,6 @@
 
   .form-filter__category-toggle:checked + .form-filter__title {
     padding-bottom: 15px;
-  }
-
-  .form-filter__input-set {
-    order: 0;
-    width: auto;
-    margin-bottom: 20px;
-    margin-left: 0;
-  }
-
-  .form-filter__range-box {
-    width: auto;
   }
 
   .form-filter__button {

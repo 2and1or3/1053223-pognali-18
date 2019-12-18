@@ -10,6 +10,7 @@
   height: 33px;
 
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
 
   svg {
     margin: auto;
@@ -26,7 +27,8 @@
   background-color: $grey-blue;
 }
 
-.prefers__item_active svg {
+.prefers__item_active svg,
+.prefers__input:checked + svg {
   opacity: 1;
 }
 
@@ -35,6 +37,7 @@
   width: 100%;
 
   border-radius: 50%;
+  padding-left: 0;
 }
 
 @media (min-width: $tablet-width) {

@@ -7,9 +7,20 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header header_dark-tablet">
-    <div class="header__wrapper header_opene">
-      <a class="header__link-logo link-logo"><img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали?"></a>
+  <header class="header header_dark-tablet header_opene">
+    <div class="header__wrapper">
+      <a class="header__link-logo link-logo">
+        <picture class="header__close-logo">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+          <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип Погнали?">
+        </picture>
+        <picture class="header__open-logo">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали?">
+        </picture>
+      </a>
       <button class="header__toggle" aria-label="открыть меню"></button>
       <div class="header__contact contact">
         <a href="tel:88005558628" class="header__phone-link contact__icon">
@@ -142,8 +153,8 @@
       </nav>
     </div>
   </header>
-  <main class="page page-main">
-    <section class="promo page-main__section_dark">
+  <main class="page page_dark-blue">
+    <section class="promo page__section_dark">
       <div class="promo__wrapper">
         <h1 class="promo__title">
           В путешествие
@@ -230,7 +241,7 @@
         <a href="form.html" class="about__button button">Подробнее</a>
       </div>
     </section>
-    <section class="directions page-main__section_light">
+    <section class="directions page__section_light">
       <div class="directions__wrapper">
         <div class="directions__text-box">
           <h2 class="directions__title">Направления</h2>
@@ -243,25 +254,34 @@
         </div>
         <ul class="directions__list">
           <li class="country-item">
-            <img src="img/thailand-mobile@1x.jpg" alt="Берега Тайланда" class="country-item__img">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+              <img src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Берега Тайланда" class="country-item__img">
+            </picture>
             <blockquote class="country-item__box">
-              <h3 class="country-item__title country-item__title_tai">Таиланд</h3>
+              <h3 class="country-item__title">Таиланд</h3>
               <span class="country-item__statistic">18321</span>
               <p class="country-item__lead">Джунгли зовут!</p>
             </blockquote>
           </li>
           <li class="country-item">
-            <img src="img/france-mobile@1x.jpg" alt="Улицы Франции" class="country-item__img">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+              <img src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Улицы Франции" class="country-item__img">
+            </picture>
             <blockquote class="country-item__box">
-              <h3 class="country-item__title country-item__title_france">Франция</h3>
+              <h3 class="country-item__title">Франция</h3>
               <span class="country-item__statistic">12518</span>
               <p class="country-item__lead">Трэ бьен, манифик!</p>
             </blockquote>
           </li>
           <li class="country-item">
-            <img src="img/czech-mobile@1x.jpg" alt="Каналы Чехии" class="country-item__img">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+              <img src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Река Чехии" class="country-item__img">
+            </picture>
             <blockquote class="country-item__box">
-              <h3 class="country-item__title country-item__title_czech">Чехия</h3>
+              <h3 class="country-item__title">Чехия</h3>
               <span class="country-item__statistic">5326</span>
               <p class="country-item__lead">Закоулки старой Европы</p>
             </blockquote>
@@ -282,14 +302,14 @@
         <ul class="people__list peoples">
           <li class="peoples__item human">
             <p class="level human__level">99</p>
-            <img src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" class="human__image">
+            <img src="img/firsova-desktop@1x.jpg" srcset="img/firsova-destop@2x.jpg 2x" alt="Таня Фирсова" class="human__image">
             <footer class="human__info">
               <ul class="human__needs">
                 <li class="human__need-country human__need-country_srilanka"></li>
                 <li class="human__need-country human__need-country_tai"></li>
                 <li class="human__need-country human__need-country_seychelles"></li>
               </ul>
-              <h3 class="human__title human__title-dot title-dot title-dot_pink">Таня Фирсова</h3>
+              <h3 class="human__title">Таня Фирсова</h3>
               <ul class="human__tags">
                 <li class="human__tag-item">#ЗОЖ</li>
                 <li class="human__tag-item">#ПП</li>
@@ -299,7 +319,7 @@
                 <li class="human__tag-item">#смузи</li>
               </ul>
               <ul class="human__prefers prefers">
-                <li class="prefers__item prefers__item_plane prefers__item_active">
+                <li class="prefers__item prefers__item_active">
                   <svg width="19" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
                     <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
                   c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
@@ -310,7 +330,7 @@
                   c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z" />
                   </svg>
                 </li>
-                <li class="prefers__item prefers__item_bus">
+                <li class="prefers__item">
                   <svg width="17" height="21" version="1.1" id="svg2103" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
                     <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
                   c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
@@ -319,7 +339,7 @@
                   H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z" />
                   </svg>
                 </li>
-                <li class="prefers__item prefers__item_bicycle">
+                <li class="prefers__item">
                   <svg width="24" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
                     <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
                   S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
@@ -328,7 +348,7 @@
                   s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z" />
                   </svg>
                 </li>
-                <li class="prefers__item prefers__item_run">
+                <li class="prefers__item">
                   <svg width="20" height="21" version="1.1" id="Icons_Run" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;"
                     xml:space="preserve">
                     <g>
@@ -346,13 +366,13 @@
           </li>
           <li class="peoples__item human">
             <p class="level human__level">80</p>
-            <img src="img/demin-mobile@1x.jpg" alt="Петя Демин" class="human__image">
+            <img src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" alt="Петя Демин" class="human__image">
             <footer class="human__info">
               <ul class="human__needs">
                 <li class="human__need-country human__need-country_belgium"></li>
                 <li class="human__need-country human__need-country_czech"></li>
               </ul>
-              <h3 class="human__title human__title-dot title-dot title-dot_green">Петя Демин</h3>
+              <h3 class="human__title human__title_active">Петя Демин</h3>
               <ul class="human__tags">
                 <li class="human__tag-item">#бургер</li>
                 <li class="human__tag-item">#бар</li>
@@ -361,7 +381,7 @@
                 <li class="human__tag-item">#крафт</li>
               </ul>
               <ul class="human__prefers prefers">
-                <li class="prefers__item prefers__item_plane prefers__item_active">
+                <li class="prefers__item prefers__item_active">
                   <svg width="19" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
                     <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
                   c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
@@ -372,7 +392,7 @@
                   c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z" />
                   </svg>
                 </li>
-                <li class="prefers__item prefers__item_bus prefers__item_active">
+                <li class="prefers__item prefers__item_active">
                   <svg width="17" height="21" version="1.1" id="svg2103" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
                     <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
                   c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
@@ -381,7 +401,7 @@
                   H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z" />
                   </svg>
                 </li>
-                <li class="prefers__item prefers__item_bicycle">
+                <li class="prefers__item">
                   <svg width="24" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
                     <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
                   S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
@@ -390,7 +410,7 @@
                   s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z" />
                   </svg>
                 </li>
-                <li class="prefers__item prefers__item_run prefers__item_active">
+                <li class="prefers__item prefers__item_active">
                   <svg width="20" height="21" version="1.1" id="Icons_Run" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;"
                     xml:space="preserve">
                     <g>
@@ -410,7 +430,7 @@
         <a href="catalog.html" class="people__button button">Показать всех</a>
       </div>
     </section>
-    <section class="offer page-main__section_light">
+    <section class="offer page__section_light">
       <div class="offer__wrapper">
         <h2 class="offer__title">
           Добавьте
@@ -548,7 +568,13 @@
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
-      <a class="footer__link-logo link-logo"><img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?"></a>
+      <a class="footer__link-logo link-logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали?">
+        </picture>
+      </a>
       <ul class="social footer__social">
         <li class="social__item">
           <a href="fb.com" class="social__link">

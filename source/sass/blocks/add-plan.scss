@@ -5,6 +5,8 @@
 .add-plan__wrapper {
   @include container;
   @include padding-t-b(30px, 30px);
+
+  position: relative;
 }
 
 .add-plan__title {
@@ -14,10 +16,33 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
+  padding-right: 80px;
 }
 
 .add-plan__pagination {
   @include list-reset;
+
+  position: absolute;
+  display: flex;
+  top: 40px;
+  right: 40px;
+}
+
+.add-plan__pagination-item {
+  background-color: $blue;
+  opacity: 0.3;
+  width: 5px;
+  border-radius: 50%;
+  height: 5px;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.add-plan__pagination-item_current {
+  opacity: 1;
 }
 
 @media (min-width: $tablet-width) {
@@ -32,11 +57,20 @@
     font-size: 36px;
     line-height: 50px;
   }
+
+  .add-plan__pagination {
+    top: 80px;
+    right: 80px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .add-plan__wrapper {
     @include container;
     @include padding-t-b(60px, 60px);
+  }
+
+  .add-plan__pagination {
+    display: none;
   }
 }
