@@ -78,10 +78,13 @@
   width: 53px;
   height: 42px;
   margin: 0;
-
-  background-color: red;
+  display: flex;
   border: 1px solid #cbced9;
   border-radius: 4px;
+}
+
+.select__flag-svg {
+  margin: auto;
 }
 
 .select__flag_empty {
@@ -140,6 +143,13 @@
     margin-left: auto;
 
     border: none;
+    width: 70px;
+    height: 47px;
+  }
+
+  .select__flag-svg {
+    width: 70px;
+    height: 47px;
   }
 
   .select__flag_empty {

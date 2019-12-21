@@ -79,3 +79,16 @@
   font-size: 21px;
   line-height: 25px;
 }
+
+@mixin level-circle ($radius, $width, $level) {
+  $radius: $radius - ($width / 2);
+  $circle-length: 2 * 3.14 * $radius;
+  $frac: $level / 100;
+  $stroke-length: $circle-length * $frac;
+  $space-length: $circle-length - $stroke-length;
+
+  stroke-width: $width;
+  r: $radius;
+  stroke-dasharray: $stroke-length $space-length;
+  stroke-dashoffset: $circle-length * 0.25;
+}
