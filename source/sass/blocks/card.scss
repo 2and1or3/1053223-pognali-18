@@ -129,11 +129,16 @@ $bed-offset: 100px;
   min-width: 120px;
   margin-right: 25px;
   margin-bottom: 10px;
-  padding-left: 40px;
+  display: flex;
+  align-items: center;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+  // &:last-child {
+  //   margin-bottom: 0;
+  // }
+}
+
+.card__flag {
+  margin-right: 15px;
 }
 
 .card__prefers {
@@ -271,6 +276,7 @@ $bed-offset: 100px;
 
   .card__need-country {
     margin-bottom: 0;
+    min-width: auto;
 
     &:last-child {
       margin-right: 0;
@@ -287,7 +293,6 @@ $bed-offset: 100px;
 
 @media (min-width: $desktop-width) {
   .card {
-    align-items: center;
     min-height: 285px;
     padding: 50px;
     padding-left: 360px;
@@ -325,12 +330,18 @@ $bed-offset: 100px;
     padding-left: 0;
   }
 
+  .card__need-country {
+    margin-right: 0;
+    min-width: 210px;
+  }
+
   .card__section {
     &:first-of-type {
       flex-direction: column;
       order: -1;
       width: auto;
       margin-bottom: -40px;
+      margin-top: 0;
     }
 
     &:last-of-type {

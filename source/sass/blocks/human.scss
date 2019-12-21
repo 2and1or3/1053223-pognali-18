@@ -23,6 +23,7 @@
 
 .human__info {
   padding: 25px 47px 20px;
+  position: relative;
 
   color: $blue;
 
@@ -34,6 +35,20 @@
 
 .human__needs {
   @include list-reset;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.human__need-country {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .human__title {

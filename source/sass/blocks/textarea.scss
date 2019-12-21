@@ -44,8 +44,6 @@
   display: block;
   width: 35px;
   height: 24px;
-
-  background-color: red;
 }
 
 @media (min-width: $tablet-width) {
@@ -80,6 +78,8 @@
 
   .textarea__flag {
     position: static;
+    width: 70px;
+    height: 47px;
   }
 }
 

@@ -4,4 +4,13 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
+
+  svg {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}
+
+.level__circle {
+  @include level-circle(300, 20, 80);
+  stroke: blue;
 }
