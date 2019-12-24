@@ -13,9 +13,9 @@
 
 .inner-nav__title {
   position: relative;
-  padding-bottom: 25px;
 
   margin: 0;
+  padding-bottom: 25px;
 
   font-weight: bold;
   font-size: 36px;
@@ -51,9 +51,10 @@
   }
 
   .inner-nav__title {
+    padding-bottom: 40px;
+
     font-size: 60px;
     line-height: 70px;
-    padding-bottom: 40px;
 
     &::after {
       bottom: -4px;
@@ -113,11 +114,33 @@
   }
 
   .inner-nav__level {
+    position: relative;
+
+    width: 94px;
+    height: 94px;
     margin-right: 45px;
 
     font-size: 38px;
     line-height: 38px;
     color: rgba(255, 255, 255, 1);
+
+    &::before {
+      content: "";
+
+      width: 49px;
+      height: 2px;
+
+      background-color: #cbced9;
+      opacity: 0.3;
+    }
+
+    &::after {
+      content: "level";
+
+      font-size: 18px;
+      line-height: 22px;
+      color: rgba(255, 255, 255, 1);
+    }
   }
 
   .inner-nav__image {
