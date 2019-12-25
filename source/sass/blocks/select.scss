@@ -47,6 +47,7 @@
   text-transform: uppercase;
   letter-spacing: 1.4px;
 
+  background-color: rgba(255, 255, 255, 1);
   border: 0;
   border-radius: 4px;
 
@@ -75,10 +76,11 @@
 }
 
 .select__flag {
+  display: flex;
   width: 53px;
   height: 42px;
   margin: 0;
-  display: flex;
+
   border: 1px solid #cbced9;
   border-radius: 4px;
 }
@@ -112,6 +114,70 @@
   }
 }
 
+.select_active {
+  color: rgba(255, 255, 255, 1);
+
+  .select__control-box_add {
+    border: 0;
+
+    &::after {
+      width: 9px;
+      height: 9px;
+
+      background-image: url("../../img/small-cross.svg");
+      opacity: 1;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .select__control {
+    color: rgba(255, 255, 255, 1);
+
+    background-color: $blue;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .select__delete,
+  &::before {
+    display: none;
+  }
+
+  .select__popup {
+    display: flex;
+  }
+}
+
+.select__popup {
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 20px;
+
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid #cbced9;
+  border-top: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+}
+
+.select__letters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1px;
+  margin-bottom: 50px;
+}
+
+.select__countries {
+  margin-left: 20px;
+}
+
 @media (min-width: $tablet-width) {
   .select {
     align-items: center;
@@ -140,11 +206,11 @@
   }
 
   .select__flag {
+    width: 70px;
+    height: 47px;
     margin-left: auto;
 
     border: none;
-    width: 70px;
-    height: 47px;
   }
 
   .select__flag-svg {
@@ -188,10 +254,54 @@
       opacity: 0.2;
     }
   }
+
+  .select__popup {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 108.8%;
+    padding: 35px 27px;
+
+    border: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 64.1%;
+
+      width: 1px;
+
+      background-color: #cbced9;
+    }
+  }
+
+  .select__letters {
+    margin-bottom: 0;
+  }
+
+  .select__countries {
+    margin-left: 105px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .select__delete {
     margin-left: 110px;
+  }
+
+  .select__popup {
+    align-items: flex-start;
+    width: 730px;
+  }
+
+  .select__countries {
+    .countries__sub {
+      display: none;
+    }
+
+    .countries__sub_active {
+      display: block;
+    }
   }
 }

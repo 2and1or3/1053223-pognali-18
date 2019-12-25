@@ -19,9 +19,6 @@ gulp.task("svgClean", function() {
   return gulp.src("source/img/*.svg")
   .pipe(svgmin({
             plugins: [
-            //   {
-            //     removeXMLNS: true
-            // },
              {
                 removeStyleElement: true
             }, {
