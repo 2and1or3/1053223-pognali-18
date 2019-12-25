@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Направления</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
   <header class="header header_opene">
@@ -33,14 +33,14 @@
       <div class="header__contact contact">
         <a href="tel:88005558628" class="header__phone-link contact__icon">
           <svg width="18" height="18">
-            <use xlink:href="img/sprite.svg#call"></use>
+            <use xlink:href="img/sprite.svg#topmenu-phone"></use>
           </svg>
           <span class="visually-hidden">Позвоните нам</span>
         </a>
         <address class="contact__mail-address">
           <a href="mailto:mail@htmlacademy.ru" class="header__mail-link contact__icon contact__icon_yellow">
             <svg width="18" height="14">
-              <use xlink:href="img/sprite.svg#mail"></use>
+              <use xlink:href="img/sprite.svg#topmenu-mail"></use>
             </svg>
             <span class="visually-hidden">Напишите нам</span>
           </a>
@@ -65,7 +65,7 @@
             <a href="tel:88005558628" class="contact__item">
               <span class="contact__icon navigation__icon contact__icon_dark">
                 <svg width="18" height="18">
-                  <use xlink:href="img/sprite.svg#phone"></use>
+                  <use xlink:href="img/sprite.svg#contacts-phone"></use>
                 </svg>
               </span>
               8 800 555-86-28
@@ -74,7 +74,7 @@
               <a href="mailto:mail@htmlacademy.ru" class="contact__item">
                 <span class="contact__icon navigation__icon contact__icon_dark">
                   <svg width="18" height="18">
-                    <use xlink:href="img/sprite.svg#mail"></use>
+                    <use xlink:href="img/sprite.svg#contacts-mail"></use>
                   </svg>
                 </span>
                 mail@htmlacademy.ru</a>
@@ -115,7 +115,12 @@
       <div class="inner-nav__wrapper">
         <h1 class="inner-nav__title">Направления</h1>
         <div class="inner-nav__profile-box">
-          <p class="inner-nav__level level">80</p>
+          <p class="level inner-nav__level">
+            80
+            <svg class="level__svg" viewBox="0 0 60 60">
+              <circle class="level__circle level__circle_80" cx="50%" cy="50%"></circle>
+            </svg>
+          </p>
           <picture>
             <source type="image/webp" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
 
@@ -131,7 +136,12 @@
     <section class="profile">
       <div class="profile__wrapper">
         <h2 class="visually-hidden">Ваш профиль</h2>
-        <p class="profile__level level">80</p>
+        <p class="level profile__level">
+          80
+          <svg class="level__svg" viewBox="0 0 60 60">
+            <circle class="level__circle level__circle_80" cx="50%" cy="50%"></circle>
+          </svg>
+        </p>
         <picture>
           <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">
 
@@ -593,7 +603,7 @@
                 </div>
                 <p class="select__flag">
                   <svg class="select__flag-svg" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-bosnia"></use>
+                    <use xlink:href="img/sprite.svg#flag-bosnia"></use>
                   </svg>
                 </p>
                 <button type="button" class="select__delete" aria-label="Убрать страну">
@@ -611,7 +621,7 @@
                 </div>
                 <p class="select__flag">
                   <svg class="select__flag-svg" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-czech"></use>
+                    <use xlink:href="img/sprite.svg#flag-czech"></use>
                   </svg>
                 </p>
                 <button type="button" class="select__delete" aria-label="Убрать страну">
@@ -620,12 +630,9 @@
                   </svg>
                 </button>
               </li>
-              <li class="select step__select step__select_empty">
-                <div class="select__control-box">
-                  <select name="third-country" class="select__control">
-                    <option value="0" class="select__option" selected>Выберите страну</option>
-                    <option value="same-country" class="select__option">same-country</option>
-                  </select>
+              <li class="select step__select step__select_empty select_active">
+                <div class="select__control-box select__control-box_add">
+                  <button type="button" class="select__control">Выберите страну</button>
                 </div>
                 <p class="select__flag select__flag_empty"></p>
                 <button type="button" class="select__delete" aria-label="Убрать страну">
@@ -633,6 +640,195 @@
                     <use xlink:href="img/sprite.svg#small-cross"></use>
                   </svg>
                 </button>
+                <div class="select__popup">
+                  <ul class="select__letters letters letters_light">
+                    <li class="letters__item">
+                      <input type="radio" id="A1" name="letter" value="А" class="letters__input visually-hidden" checked>
+                      <label for="A1" class="letters__label letters__label_select">
+                        А
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="A2" name="letter" value="Б" class="letters__input visually-hidden">
+                      <label for="A2" class="letters__label letters__label_select">
+                        Б
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="A3" name="letter" value="В" class="letters__input visually-hidden">
+                      <label for="A3" class="letters__label letters__label_select">
+                        В
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="A4" name="letter" value="Г" class="letters__input visually-hidden">
+                      <label for="A4" class="letters__label letters__label_select">
+                        Г
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="A5" name="letter" value="Д" class="letters__input visually-hidden">
+                      <label for="A5" class="letters__label letters__label_select">
+                        Д
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="B1" name="letter" value="Е" class="letters__input visually-hidden">
+                      <label for="B1" class="letters__label letters__label_select">
+                        Е
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="B2" name="letter" value="З" class="letters__input visually-hidden">
+                      <label for="B2" class="letters__label letters__label_select">
+                        З
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="B3" name="letter" value="И" class="letters__input visually-hidden">
+                      <label for="B3" class="letters__label letters__label_select">
+                        И
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="B4" name="letter" value="К" class="letters__input visually-hidden">
+                      <label for="B4" class="letters__label letters__label_select">
+                        К
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="B5" name="letter" value="Л" class="letters__input visually-hidden">
+                      <label for="B5" class="letters__label letters__label_select">
+                        Л
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="C1" name="letter" value="М" class="letters__input visually-hidden">
+                      <label for="C1" class="letters__label letters__label_select">
+                        М
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="C2" name="letter" value="Н" class="letters__input visually-hidden">
+                      <label for="C2" class="letters__label letters__label_select">
+                        Н
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="C3" name="letter" value="О" class="letters__input visually-hidden">
+                      <label for="C3" class="letters__label letters__label_select">
+                        О
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="C4" name="letter" value="П" class="letters__input visually-hidden">
+                      <label for="C4" class="letters__label letters__label_select">
+                        П
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="C5" name="letter" value="Р" class="letters__input visually-hidden">
+                      <label for="C5" class="letters__label letters__label_select">
+                        Р
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="D1" name="letter" value="С" class="letters__input visually-hidden">
+                      <label for="D1" class="letters__label letters__label_select">
+                        С
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="D2" name="letter" value="Т" class="letters__input visually-hidden">
+                      <label for="D2" class="letters__label letters__label_select">
+                        Т
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="D3" name="letter" value="У" class="letters__input visually-hidden">
+                      <label for="D3" class="letters__label letters__label_select">
+                        У
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="D4" name="letter" value="Ф" class="letters__input visually-hidden">
+                      <label for="D4" class="letters__label letters__label_select">
+                        Ф
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="D5" name="letter" value="Х" class="letters__input visually-hidden">
+                      <label for="D5" class="letters__label letters__label_select">
+                        Х
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="E1" name="letter" value="Ч" class="letters__input visually-hidden">
+                      <label for="E1" class="letters__label letters__label_select">
+                        Ч
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="E2" name="letter" value="Ш" class="letters__input visually-hidden">
+                      <label for="E2" class="letters__label letters__label_select">
+                        Ш
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="E3" name="letter" value="Э" class="letters__input visually-hidden">
+                      <label for="E3" class="letters__label letters__label_select">
+                        Э
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="E4" name="letter" value="Ю" class="letters__input visually-hidden">
+                      <label for="E4" class="letters__label letters__label_select">
+                        Ю
+                      </label>
+                    </li>
+                    <li class="letters__item">
+                      <input type="radio" id="E5" name="letter" value="Я" class="letters__input visually-hidden">
+                      <label for="E5" class="letters__label letters__label_select">
+                        Я
+                      </label>
+                    </li>
+                  </ul>
+                  <ul class="select__countries countries">
+                    <li class="countries__item">
+                      <ul class="countries__sub countries__sub_active">
+                        <li class="countries__item-sub">Афганистан</li>
+                        <li class="countries__item-sub">Албания</li>
+                        <li class="countries__item-sub">Алжир</li>
+                        <li class="countries__item-sub">Андорра</li>
+                        <li class="countries__item-sub">Аргентина</li>
+                        <li class="countries__item-sub">Армения</li>
+                        <li class="countries__item-sub">Австралия</li>
+                        <li class="countries__item-sub">Австрия</li>
+                        <li class="countries__item-sub">Азербайджан</li>
+                      </ul>
+                    </li>
+                    <li class="countries__item">
+                      <ul class="countries__sub">
+                        <li class="countries__item-sub">Багамские Острова</li>
+                        <li class="countries__item-sub">Бангладеш</li>
+                        <li class="countries__item-sub">Барбадос</li>
+                        <li class="countries__item-sub">Бахрейн</li>
+                        <li class="countries__item-sub">Белоруссия</li>
+                        <li class="countries__item-sub">Белиз</li>
+                        <li class="countries__item-sub">Бельгия</li>
+                        <li class="countries__item-sub">Бенин</li>
+                        <li class="countries__item-sub">Болгария</li>
+                        <li class="countries__item-sub">Боливия</li>
+                        <li class="countries__item-sub">Босния и Герцеговина</li>
+                        <li class="countries__item-sub">Ботсвана</li>
+                        <li class="countries__item-sub">Бразилия</li>
+                        <li class="countries__item-sub">Бруней</li>
+                        <li class="countries__item-sub">Буркина-Фасо</li>
+                        <li class="countries__item-sub">Бурунди</li>
+                        <li class="countries__item-sub">Бутан</li>
+                      </ul>
+                    </li>
+                </div>
               </li>
               <li class="select step__select step__select_empty">
                 <button class="select__control select__control_add">Добавить страну</button>
@@ -665,7 +861,7 @@
                 <label class="textarea">
                   <span class="textarea__title">Босния и Герцеговина</span>
                   <svg class="textarea__flag" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-bosnia"></use>
+                    <use xlink:href="img/sprite.svg#flag-bosnia"></use>
                   </svg>
                   <textarea name="bos" rows="10" placeholder="План действий" class="textarea__control"></textarea>
                 </label>
@@ -674,7 +870,7 @@
                 <label class="textarea">
                   <span class="textarea__title">Чехия</span>
                   <svg class="textarea__flag" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-czech"></use>
+                    <use xlink:href="img/sprite.svg#flag-czech"></use>
                   </svg>
                   <textarea name="czech" rows="10" placeholder="План действий" class="textarea__control">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </label>

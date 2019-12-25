@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <title>Главная страница Погнали</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header header_dark-tablet header_opene">
+  <header class="header header_dark-tablet header_opened">
     <div class="header__wrapper">
       <a class="header__link-logo link-logo">
         <picture class="header__close-logo">
@@ -33,14 +33,14 @@
       <div class="header__contact contact">
         <a href="tel:88005558628" class="header__phone-link contact__icon">
           <svg width="18" height="18">
-            <use xlink:href="img/sprite.svg#call"></use>
+            <use xlink:href="img/sprite.svg#topmenu-phone"></use>
           </svg>
           <span class="visually-hidden">Позвоните нам</span>
         </a>
         <address class="contact__mail-address">
           <a href="mailto:mail@htmlacademy.ru" class="header__mail-link contact__icon contact__icon_yellow">
             <svg width="18" height="14">
-              <use xlink:href="img/sprite.svg#mail"></use>
+              <use xlink:href="img/sprite.svg#topmenu-mail"></use>
             </svg>
             <span class="visually-hidden">Напишите нам</span>
           </a>
@@ -65,7 +65,7 @@
             <a href="tel:88005558628" class="contact__item">
               <span class="contact__icon navigation__icon contact__icon_dark">
                 <svg width="18" height="18">
-                  <use xlink:href="img/sprite.svg#phone"></use>
+                  <use xlink:href="img/sprite.svg#contacts-phone"></use>
                 </svg>
               </span>
               8 800 555-86-28
@@ -74,7 +74,7 @@
               <a href="mailto:mail@htmlacademy.ru" class="contact__item">
                 <span class="contact__icon navigation__icon contact__icon_dark">
                   <svg width="18" height="18">
-                    <use xlink:href="img/sprite.svg#mail"></use>
+                    <use xlink:href="img/sprite.svg#contacts-mail"></use>
                   </svg>
                 </span>
                 mail@htmlacademy.ru</a>
@@ -120,14 +120,14 @@
         <div class="promo__contact contact">
           <a href="tel:88005558628" class="promo__phone-link contact__icon">
             <svg width="18" height="18">
-              <use xlink:href="img/sprite.svg#call"></use>
+              <use xlink:href="img/sprite.svg#topmenu-phone"></use>
             </svg>
             <span class="visually-hidden">Позвоните нам</span>
           </a>
           <address class="contact__mail-address">
             <a href="mailto:mail@htmlacademy.ru" class="promo__mail-link contact__icon contact__icon_yellow">
               <svg width="18" height="18">
-                <use xlink:href="img/sprite.svg#mail"></use>
+                <use xlink:href="img/sprite.svg#topmenu-mail"></use>
               </svg>
               <span class="visually-hidden">Напишите нам</span>
             </a>
@@ -208,7 +208,7 @@
               <span class="country-item__statistic">18321</span>
               <p class="country-item__lead">Джунгли зовут!</p>
               <svg class="country-item__flag" width="35" height="24">
-                <use xlink:href="img/sprite.svg#f-thailand"></use>
+                <use xlink:href="img/sprite.svg#flag-thailand"></use>
               </svg>
             </blockquote>
           </li>
@@ -225,7 +225,7 @@
               <span class="country-item__statistic">12518</span>
               <p class="country-item__lead">Трэ бьен, манифик!</p>
               <svg class="country-item__flag" width="35" height="24">
-                <use xlink:href="img/sprite.svg#f-france"></use>
+                <use xlink:href="img/sprite.svg#flag-france"></use>
               </svg>
             </blockquote>
           </li>
@@ -242,7 +242,7 @@
               <span class="country-item__statistic">5326</span>
               <p class="country-item__lead">Закоулки старой Европы</p>
               <svg class="country-item__flag" width="35" height="24">
-                <use xlink:href="img/sprite.svg#f-czech"></use>
+                <use xlink:href="img/sprite.svg#flag-czech"></use>
               </svg>
             </blockquote>
           </li>
@@ -261,9 +261,10 @@
         </div>
         <ul class="people__list peoples">
           <li class="peoples__item human">
-            <p class="level human__level">99
-              <svg width="60" height="60">
-                <circle class="level__circle" fill="red" cx="50%" cy="50%"></circle>
+            <p class="level human__level">
+              99
+              <svg class="level__svg level__svg_dark" viewBox="0 0 60 60">
+                <circle class="level__circle level__circle_99" cx="50%" cy="50%"></circle>
               </svg>
             </p>
             <picture>
@@ -275,17 +276,17 @@
               <ul class="human__needs">
                 <li class="human__need-country">
                   <svg class="human__flag" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-sri-lanka"></use>
+                    <use xlink:href="img/sprite.svg#flag-sri-lanka"></use>
                   </svg>
                 </li>
                 <li class="human__need-country">
                   <svg class="human__flag" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-thailand"></use>
+                    <use xlink:href="img/sprite.svg#flag-thailand"></use>
                   </svg>
                 </li>
                 <li class="human__need-country">
                   <svg class="human__flag" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-seychelles"></use>
+                    <use xlink:href="img/sprite.svg#flag-seychelles"></use>
                   </svg>
                 </li>
               </ul>
@@ -323,7 +324,12 @@
             </footer>
           </li>
           <li class="peoples__item human">
-            <p class="level human__level">80</p>
+            <p class="level human__level">
+              80
+              <svg class="level__svg level__svg_dark" viewBox="0 0 60 60">
+                <circle class="level__circle" cx="50%" cy="50%"></circle>
+              </svg>
+            </p>
             <picture>
               <source type="image/webp" srcset="img/demin-desktop@2x.webp 1x, img/demin-desktop@2x.webp 2x">
 
@@ -333,12 +339,12 @@
               <ul class="human__needs">
                 <li class="human__need-country">
                   <svg class="human__flag" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-belgium"></use>
+                    <use xlink:href="img/sprite.svg#flag-belgium"></use>
                   </svg>
                 </li>
                 <li class="human__need-country">
                   <svg class="human__flag" width="35" height="24">
-                    <use xlink:href="img/sprite.svg#f-czech"></use>
+                    <use xlink:href="img/sprite.svg#flag-czech"></use>
                   </svg>
                 </li>
               </ul>
@@ -402,7 +408,7 @@
         <a href="" class="offer__button">
           <span class="offer__button-icon">
             <svg width="18" height="18">
-              <use xlink:href="img/sprite.svg#bussines"></use>
+              <use xlink:href="img/sprite.svg#business"></use>
             </svg>
           </span>
           Показать тарифы для бизнеса
@@ -461,7 +467,7 @@
           <a href="tel:88005558628" class="contact__item">
             <span class="contact__icon contact__icon_dark contact-us__icon">
               <svg width="18" height="18">
-                <use xlink:href="img/sprite.svg#phone"></use>
+                <use xlink:href="img/sprite.svg#contacts-phone"></use>
               </svg>
             </span>
             8 800 555-86-28
@@ -470,7 +476,7 @@
             <a href="mailto:mail@htmlacademy.ru" class="contact__item">
               <span class="contact__icon contact__icon_dark contact-us__icon">
                 <svg width="18" height="14">
-                  <use xlink:href="img/sprite.svg#mail"></use>
+                  <use xlink:href="img/sprite.svg#contacts-mail"></use>
                 </svg>
               </span>
               mail@htmlacademy.ru</a>
@@ -482,7 +488,7 @@
           <address class="contact-us__address contact__item">
             <span class="contact__icon contact__icon_dark contact-us__icon">
               <svg width="14" height="22">
-                <use xlink:href="img/sprite.svg#location"></use>
+                <use xlink:href="img/sprite.svg#contacts-location"></use>
               </svg>
             </span>
             <b>
