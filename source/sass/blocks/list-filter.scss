@@ -19,8 +19,8 @@ $bed-offset: 25px;
 
 .list-filter__countries {
   display: none;
-  margin-bottom: 25px;
   margin-right: $bed-offset;
+  margin-bottom: 25px;
   margin-left: $bed-offset;
 
   color: $grey;
@@ -68,6 +68,15 @@ $bed-offset: 25px;
 
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .list-filter__button_title {
@@ -131,6 +140,19 @@ $bed-offset: 25px;
   font-family: "BloggerSans", "Arial", sans-serif;
 
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
 
   &::before {
     content: "";

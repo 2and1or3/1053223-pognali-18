@@ -1,6 +1,6 @@
 .button {
   position: relative;
-  font-family: inherit;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,6 +9,7 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
+  font-family: inherit;
   color: $blue;
 
   background-color: $light-yellow;
@@ -19,12 +20,25 @@
     content: "";
 
     height: 0;
+    margin-left: 15px;
 
     border: 10px solid $blue;
     border-top: 7px solid transparent;
     border-right: none;
     border-bottom: 7px solid transparent;
-    margin-left: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+  }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 

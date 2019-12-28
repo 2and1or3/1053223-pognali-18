@@ -43,10 +43,6 @@
   margin-bottom: 40px;
 }
 
-.navigation__icon {
-  margin-right: 20px;
-}
-
 @media (min-width: $tablet-width) {
   .navigation {
     top: 132px;
@@ -107,6 +103,15 @@
 
   .navigation__link {
     color: rgba(255, 255, 255, 1);
+
+    &:hover,
+    &:focus {
+      color: $light-yellow;
+    }
+
+    &:active {
+      @include opacity-color($light-yellow, 0.3);
+    }
   }
 
   .navigation__footer {

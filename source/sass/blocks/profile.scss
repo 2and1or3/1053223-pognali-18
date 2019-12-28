@@ -84,19 +84,30 @@
 }
 
 .profile__tags {
+  @include opacity-color($grey, 0.6);
+
   box-sizing: border-box;
   width: 100%;
   padding: 25px;
 
   font-size: 16px;
   line-height: 22px;
-  color: $grey;
 
   background-color: $grey-blue;
   border: 1px solid #cbced9;
   border-radius: 10px;
 
   resize: none;
+
+  &:hover {
+    border: 1px solid #aeb4cb;
+  }
+
+  &:focus {
+    color: $grey;
+
+    border: 1px solid $darkness-blue;
+  }
 }
 
 .profile__list-prefers {

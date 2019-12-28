@@ -3,6 +3,10 @@
   @include padding-t-b(20px, 35px);
 }
 
+.contact-us_dark {
+  color: $dark-blue;
+}
+
 .contact-us__lead {
   margin: 0;
   margin-bottom: 20px;
@@ -18,8 +22,42 @@
   color: $light-yellow;
 }
 
+.contact-us__item {
+  display: flex;
+  align-items: center;
+
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: $yellow;
+
+    .contact-us__icon {
+      color: $yellow;
+    }
+  }
+
+  &:active {
+    @include opacity-color($yellow, 0.3);
+
+    .contact-us__icon {
+      @include opacity-color($yellow, 0.3);
+    }
+  }
+}
+
 .contact-us__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
   margin-right: 20px;
+
+  color: $light-yellow;
+
+  background-color: $black-blue;
+  border-radius: 50%;
 }
 
 .contact-us__yellow-box {
@@ -37,8 +75,31 @@
 }
 
 .contact-us__link {
-  border: 3px solid $darkness-blue;
+  border: 3px solid $dark-blue;
   border-radius: 10px;
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 1);
+
+    background-color: $dark-blue;
+
+    &::after {
+      border-color: rgba(255, 255, 255, 1);
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+
+      &::after {
+        border-color: rgba(255, 255, 255, 0.3);
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+      }
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -62,6 +123,22 @@
     font-size: 24px;
     line-height: 24px;
   }
+
+  .contact-us__icon {
+    width: 67px;
+    height: 67px;
+
+    svg {
+      width: 27px;
+      height: auto;
+    }
+  }
+
+  .contact-us__yellow-box {
+    svg {
+      width: 21px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -72,14 +149,16 @@
 
   .contact-us__info {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+  }
 
-    .contact__phone-link {
-      padding-left: 120px;
-    }
+  .contact-us__icon {
+    width: 90px;
+    height: 90px;
 
-    .contact__mail-link {
-      padding-left: 120px;
+    svg {
+      width: 36px;
     }
   }
 
@@ -89,6 +168,10 @@
       justify-content: space-between;
       align-items: center;
       padding-bottom: 60px;
+    }
+
+    svg {
+      width: 28px;
     }
   }
 

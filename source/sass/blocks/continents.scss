@@ -13,9 +13,18 @@
 
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    @include opacity-color($dark-blue, 0.6);
+  }
+
+  &:active {
+    @include opacity-color($dark-blue, 1);
+  }
 }
 
-.continents__button_select {
+.continents__button.continents__button_select {
   color: $dark-blue;
 }
 

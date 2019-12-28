@@ -66,6 +66,15 @@
   text-transform: uppercase;
 
   @include opacity-color(#000000, 0.3);
+
+  &:hover,
+  &:focus {
+    @include opacity-color(#000000, 0.6);
+  }
+
+  &:active {
+    @include opacity-color(#000000, 0.1);
+  }
 }
 
 @media (min-width: $tablet-width) {

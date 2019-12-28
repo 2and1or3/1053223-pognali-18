@@ -82,6 +82,15 @@
   font-size: 16px;
   line-height: 16px;
   color: $dark-blue;
+
+  &:hover,
+  &:focus {
+    @include opacity-color($dark-blue, 0.7);
+  }
+
+  &:active {
+    @include opacity-color($dark-blue, 0.3);
+  }
 }
 
 .offer__button-icon {

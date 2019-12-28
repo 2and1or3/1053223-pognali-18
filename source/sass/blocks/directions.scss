@@ -17,7 +17,7 @@
   @include section-title-orange;
 }
 
-.directions__desription {
+.directions__description {
   margin: 0;
 
   font-weight: 300;
@@ -49,7 +49,7 @@
     padding-left: 0;
   }
 
-  .directions__desription {
+  .directions__description {
     @include content-text-light;
   }
 

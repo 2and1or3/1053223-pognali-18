@@ -12,7 +12,6 @@
   width: 45px;
   height: 45px;
 
-  background-color: $light-yellow;
   border-radius: 50%;
 
   svg {
@@ -20,17 +19,49 @@
   }
 }
 
-.social__link_transparent {
-  background-color: transparent;
+.social__link_yellow {
+  background-color: $light-yellow;
 
-  path {
-    fill: $light-grey;
+  &:focus,
+  &:hover {
+    background-color: $yellow;
   }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+  }
+}
+
+.social__link_dark {
+  color: $light-grey;
+
+  background-color: transparent;
 }
 
 @media (min-width: $tablet-width) {
   .social__link {
     width: 60px;
     height: 60px;
+  }
+
+  .social__link_fb {
+    svg {
+      width: 14px;
+      height: auto;
+    }
+  }
+
+  .social__link_vk {
+    svg {
+      width: 31px;
+      height: auto;
+    }
+  }
+
+  .social__link_inst {
+    svg {
+      width: 24px;
+      height: auto;
+    }
   }
 }

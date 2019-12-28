@@ -23,6 +23,14 @@
 
   border: 1px solid #cbced9;
   border-radius: 4px;
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:focus-within {
+    border: 1px solid $darkness-blue;
+  }
 }
 
 .counter__less,
@@ -37,6 +45,15 @@
   background-size: 14px auto;
   border: 0;
   opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .counter__less {
@@ -94,8 +111,8 @@
   }
 
   .counter__label-mesure {
-    min-width: 50px;
     order: 1;
+    min-width: 50px;
   }
 
   .counter__input {

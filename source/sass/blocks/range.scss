@@ -47,6 +47,14 @@
     border-top-right-radius: $border-radius-1;
     border-bottom-right-radius: $border-radius-1;
   }
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:focus {
+    border: 1px solid $darkness-blue;
+  }
 }
 
 @media (min-width: $tablet-width) {

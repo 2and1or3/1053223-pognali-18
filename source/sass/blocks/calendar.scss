@@ -33,6 +33,15 @@
   background-size: 9px auto;
   border: 0;
   opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .calendar__button_prev {
@@ -91,14 +100,35 @@
 }
 
 .calendar__td-label {
-  color: $grey;
-
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 30px;
+
+  color: $grey;
+
   background-color: $grey-blue;
+
+  &:hover {
+    position: relative;
+    z-index: 1;
+
+    color: rgba(255, 255, 255, 1);
+
+    background-color: $blue;
+    outline: 4px solid #ff5c23;
+  }
+}
+
+.calendar__input:focus + .calendar__td-label {
+  position: relative;
+  z-index: 1;
+
+  color: rgba(255, 255, 255, 1);
+
+  background-color: $blue;
+  outline: 4px solid #ff5c23;
 }
 
 .calendar__input:checked + .calendar__td-label {
@@ -109,6 +139,7 @@
 
 .calendar__input:disabled + .calendar__td-label {
   @include opacity-color($grey, 0.3);
+
   background-color: rgba(255, 255, 255, 1);
 }
 

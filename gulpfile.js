@@ -21,9 +21,8 @@ gulp.task("svgClean", function() {
     .pipe(svgmin({
       plugins: [{
         removeStyleElement: true
-      }, {
-        convertStyleToAttrs: false
-      }, {
+      },
+       {
         removeDimensions: true
       }]
     }))

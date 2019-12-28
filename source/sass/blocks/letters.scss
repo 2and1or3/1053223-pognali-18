@@ -44,6 +44,21 @@
   }
 }
 
+.letters__label_select:hover {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+
+    border: 1px solid #959bb2;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .letters {
     @include opacity-color($dark-blue, 0.2);
@@ -119,5 +134,9 @@
       border: 1px solid #cbced9;
       border-radius: 4px;
     }
+  }
+
+  .letters__label_select:hover::after {
+    border-radius: 4px;
   }
 }

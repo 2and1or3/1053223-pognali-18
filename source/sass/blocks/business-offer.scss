@@ -1,4 +1,4 @@
-.bussines-offer {
+.business-offer {
   display: block;
   width: 270px;
 
@@ -8,28 +8,28 @@
   border-radius: 20px;
 }
 
-.bussines-offer__box {
+.business-offer__box {
   padding: 30px 25px;
 }
 
-.bussines-offer__title {
+.business-offer__title {
   @include section-title-orange;
 }
 
-.bussines-offer__list {
+.business-offer__list {
   @include list-reset;
 
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.bussines-offer__item {
+.business-offer__item {
   padding: 10px 0;
   padding-right: 100px;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.bussines-offer__button {
+.business-offer__button {
   box-sizing: border-box;
   width: 100%;
   padding: 20px 5px;
@@ -45,35 +45,44 @@
   border: none;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: #edeff6;
+  }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .bussines-offer {
+  .business-offer {
     box-sizing: border-box;
     width: 688px;
   }
 
-  .bussines-offer__box {
+  .business-offer__box {
     padding: 60px 90px;
   }
 
-  .bussines-offer__item {
+  .business-offer__item {
     display: flex;
     justify-content: space-between;
     padding-right: 5px;
   }
 
-  .bussines-offer__button {
+  .business-offer__button {
     padding: 40px 5px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .bussines-offer {
+  .business-offer {
     width: 750px;
   }
 
-  .bussines-offer__box {
+  .business-offer__box {
     padding: 50px 60px;
   }
 }

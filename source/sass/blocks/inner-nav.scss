@@ -88,6 +88,15 @@
       background: url("../../img/return.svg");
       transform: translateY(-50%);
     }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -150,15 +159,31 @@
 
   .inner-nav__label-photo {
     position: absolute;
-    right: 85px;
-    bottom: -30px;
+    right: 0;
+    bottom: -47px;
 
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 30px;
+    box-sizing: border-box;
+    width: 190px;
+    padding: 13px 5px 14px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
     text-align: center;
     color: $darkness-blue;
+    text-transform: uppercase;
 
     background-color: $lightness-blue;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    &:hover,
+    &:focus {
+      background-color: #d1d7e9;
+    }
+
+    &:active {
+      @include opacity-color($blue, 0.3);
+    }
   }
 }

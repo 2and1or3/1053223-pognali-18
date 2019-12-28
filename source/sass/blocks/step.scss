@@ -92,9 +92,44 @@
   margin-bottom: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  input:checked + .step__checkbox-visual {
+    background-image: none;
+  }
+
+  &:hover .step__checkbox-visual,
+  &:focus .step__checkbox-visual {
+    background-image: none;
+    border: 1px solid #959bb2;
+  }
+
+  &:active .step__checkbox-visual {
+    background-color: #e2e5f1;
+    background-image: none;
+    border: 0;
+  }
+
+  &:hover input:checked + .step__checkbox-visual,
+  &:focus input:checked + .step__checkbox-visual {
+    background-image: none;
+    border: 1px solid #959bb2;
+  }
+
+  &:active input:checked + .step__checkbox-visual {
+    background-color: #e2e5f1;
+    background-image: none;
+    border: 0;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 .step__checkbox-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 26px;
   height: 26px;
 
@@ -230,6 +265,27 @@
 
 .step__button_prev {
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    @include opacity-color($blue, 0.7);
+
+    background-color: transparent;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+
+    background-color: transparent;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 .step__button_next {
@@ -296,6 +352,11 @@
     color: $blue;
     text-transform: uppercase;
     letter-spacing: 2px;
+
+    svg {
+      width: 12px;
+      height: auto;
+    }
   }
 
   .step__checkbox-visual {
@@ -399,8 +460,8 @@
 
   .step__header {
     margin-bottom: 30px;
-    padding-bottom: 55px;
     padding-right: 170px;
+    padding-bottom: 55px;
   }
 
   .step__title {

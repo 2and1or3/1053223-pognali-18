@@ -17,6 +17,22 @@
   border: 1px solid #cbced9;
   border-radius: 4px;
 
+  &:hover {
+    border: 1px solid #959bb2;
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &:focus-within {
+    border: 1px solid #959bb2;
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -71,7 +87,26 @@
 
     background: url("../../img/qty-plus-mobile.svg");
     transform: translateY(-50%);
-    opacity: 0.3;
+    opacity: 0.2;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #cbced9;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+
+    background-color: #dfe3f0;
+
+    &::after {
+      opacity: 0.1;
+    }
   }
 }
 
@@ -106,11 +141,19 @@
   border: 0;
   border-radius: 50%;
   transform: translate(50%, -50%);
+  opacity: 0.2;
 
   svg {
     width: 9px;
+  }
 
+  &:hover,
+  &:focus {
     opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.05;
   }
 }
 
@@ -121,12 +164,37 @@
     border: 0;
 
     &::after {
-      width: 9px;
-      height: 9px;
+      content: none;
+    }
 
-      background-image: url("../../img/small-cross.svg");
-      opacity: 1;
-      filter: brightness(0) invert(1);
+    .select__control {
+      &:hover,
+      &:focus {
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        &::after {
+          opacity: 0.1;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 15px;
+
+        width: 9px;
+        height: 9px;
+
+        background-image: url("../../img/small-cross.svg");
+        transform: translateY(-50%);
+        opacity: 0.3;
+        filter: brightness(0) invert(1);
+      }
     }
   }
 
@@ -205,6 +273,19 @@
     letter-spacing: 2px;
   }
 
+  .select_active {
+    .select__control-box_add {
+      .select__control {
+        &::after {
+          right: 25px;
+
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+  }
+
   .select__flag {
     width: 70px;
     height: 47px;
@@ -239,6 +320,7 @@
 
     svg {
       width: 17px;
+      height: auto;
     }
   }
 

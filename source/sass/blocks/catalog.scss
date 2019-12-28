@@ -10,6 +10,14 @@
 .catalog__item {
   margin-bottom: 10px;
 
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:focus-within {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -25,6 +33,15 @@
   line-height: 30px;
   color: $blue;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     content: "";

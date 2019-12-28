@@ -33,6 +33,11 @@ $border-radius-1: 20px;
   font-weight: bold;
   font-size: 20px;
   line-height: 30px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .pagination__buttons {
@@ -49,6 +54,15 @@ $border-radius-1: 20px;
   background-position: center;
   background-size: 10px 20px;
   border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .pagination__button_prev {
@@ -90,8 +104,9 @@ $border-radius-1: 20px;
     border-radius: 50%;
   }
 
-  .pagination__link_current {
+  .pagination__link.pagination__link_current {
     background-color: $light-yellow;
+    opacity: 1;
   }
 
   .pagination__buttons {

@@ -22,6 +22,17 @@
   color: $grey;
 }
 
+.countries__link {
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+  }
+}
+
 @media (min-width: $tablet-width) {
   .countries__sub {
     font-size: 20px;

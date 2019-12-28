@@ -41,6 +41,14 @@
   line-height: 18px;
   text-transform: uppercase;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     content: "";
 
@@ -49,6 +57,10 @@
 
     background: url("../../img/dropdown.svg") no-repeat center;
   }
+}
+
+.form-filter__category-toggle:focus + .form-filter__title {
+  opacity: 0.6;
 }
 
 .form-filter__category-toggle:checked + .form-filter__title {
@@ -87,9 +99,33 @@
   }
 }
 
+.form-filter__label {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-within {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .form-filter__button {
   width: 100%;
   margin-top: 5px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    background-color: #f3c72b;
+    box-shadow: none;
+  }
 }
 
 .form-filter__checkbox-visual {

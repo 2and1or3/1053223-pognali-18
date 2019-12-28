@@ -10,6 +10,7 @@
 }
 
 .footer__link-logo {
+  width: 96px;
   margin-bottom: 40px;
   padding: 0;
 
@@ -30,6 +31,7 @@
   }
 
   .footer__link-logo {
+    width: 165px;
     margin-bottom: 0;
 
     img {
@@ -39,5 +41,11 @@
 
   .footer__social {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__link-logo {
+    width: 198px;
   }
 }

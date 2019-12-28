@@ -14,6 +14,21 @@
   background-color: $grey-blue;
   border: none;
   border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: #e2e5f2;
+
+    .like__icon {
+      opacity: 0.5;
+    }
+
+    &:active {
+      .like__icon {
+        opacity: 0.1;
+      }
+    }
+  }
 }
 
 .like__icon {
@@ -27,12 +42,27 @@
 .like_more {
   .like__button {
     background-color: $light-pink;
+
+    &:hover,
+    &:focus {
+      background-color: #f9d8d8;
+
+      .like__icon {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      .like__icon {
+        opacity: 0.3;
+      }
+    }
   }
 
   .like__icon {
-    opacity: 1;
+    color: #f02323;
 
-    fill: #f02323;
+    opacity: 1;
   }
 }
 
