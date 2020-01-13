@@ -4,29 +4,61 @@
 
 .promo__wrapper {
   @include container;
-  @include padding-t-b (23px, 40px);
+  @include padding-t-b (19px, 40px);
 
-  background-image: url("../img/traveller-illustration-mobile@1x.png"),
-    url("../img/globe-back-mobile@1x.jpg");
+  // background-image: linear-gradient($darkness-blue),
+  //    url("../img/traveller-illustration-mobile@1x.png"),
+  //   url("../img/globe-back-desktop@1x.jpg");
+  // background-repeat: no-repeat;
+  // background-position-x: 0, 63%, 51%;
+  //   background-position-y: 82.7%, 20.5%, 50px;
+  // background-size: 100% 500px, 192px auto, 1165px auto;
+  //
+  // @media (min-resolution: $retina-dppx) {
+  //   background-image: linear-gradient($darkness-blue),
+  //     url("../img/traveller-illustration-mobile@2x.png"),
+  //     url("../img/globe-back-desktop@2x.jpg");
+  // }
+}
+
+.promo__wrapper-mobile {
+  margin: 0 -25px;
+  padding: 0 25px;
+
+  background-image:
+  // linear-gradient($darkness-blue),
+     url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center,
-    center;
-  background-size: 192px, 320px;
+  background-position-x:
+  // 0,
+  63%,
+  51%;
+    background-position-y:
+    // 82.7%,
+    100%,
+    -32%;
+  background-size:
+  // 100% 500px,
+  192px auto,
+  1165px auto;
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/traveller-illustration-mobile@2x.png"),
-      url("../img/globe-back-mobile@2x.jpg");
+    background-image:
+    // linear-gradient($darkness-blue),
+      url("../img/traveller-illustration-mobile@2x.png"),
+      url("../img/globe-back-desktop@2x.jpg");
   }
 }
 
 .promo__contact {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: -140px;
 }
 
 .promo__title {
-  margin: 0;
-  margin-bottom: 242px;
+  margin: 0 auto;
+  margin-bottom: 227px;
   padding: 0 15px;
 
   font-weight: bold;
@@ -44,6 +76,7 @@
 .promo__reviews {
   width: 230px;
   margin-bottom: 30px;
+  margin-left: 25px;
 }
 
 .promo__guide::before {
