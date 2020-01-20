@@ -14,7 +14,7 @@
 .letters__item {
   display: flex;
   width: 20%;
-  height: 42px;
+  height: 41px;
 }
 
 .letters__label {
@@ -72,7 +72,7 @@
   }
 
   .letters__item {
-    height: 77px;
+    height: 82px;
 
     background-color: transparent;
   }
@@ -89,7 +89,7 @@
   }
 
   .letters_light {
-    width: 52.1%;
+    width: 49.5%;
 
     font-weight: 500;
     font-size: 20px;
@@ -110,6 +110,10 @@
       border-right: 1px solid #cbced9;
       border-bottom: 1px solid #cbced9;
     }
+
+    .letters__item {
+      height: 69px;
+    }
   }
 }
 
@@ -117,6 +121,7 @@
   .letters_light {
     display: flex;
     justify-content: space-between;
+    width: 53.2%;
 
     border: 0;
 

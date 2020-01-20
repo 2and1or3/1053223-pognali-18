@@ -1,5 +1,5 @@
 .form-filter {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   padding: 25px;
 
   color: $blue;
@@ -137,6 +137,7 @@
 
 @media (min-width: $tablet-width) {
   .form-filter {
+    margin-bottom: 40px;
     padding: 35px;
   }
 
@@ -207,7 +208,14 @@
     box-sizing: border-box;
     width: 285px;
     margin: 0;
-    padding: 50px;
+    padding: 45px 47px;
+  }
+
+  .form-filter__slogan {
+    margin-bottom: 19px;
+
+    font-size: 30px;
+    line-height: 30px;
   }
 
   .form-filter__box-inner {
@@ -224,22 +232,25 @@
     .form-filter__category-toggle:checked ~ .form-filter__list {
       display: block;
       width: auto;
+      margin-bottom: 17px;
     }
 
     .form-filter__category-toggle:checked ~ .form-filter__list-prefers {
       display: flex;
       width: auto;
+      margin-bottom: 17px;
     }
   }
 
   .form-filter__box {
     .form-filter__box-inner {
       padding: 0;
-      padding-bottom: 15px;
     }
 
     &:last-of-type {
       .form-filter__box-inner {
+        padding: 0;
+
         border: none;
       }
     }
@@ -253,23 +264,35 @@
 
   .form-filter__title {
     width: 100%;
-    padding-top: 15px;
+    padding-top: 11px;
+
+    font-size: 20px;
+    line-height: 30px;
 
     &::after {
       content: "";
+
+      width: 10px;
+      height: 5px;
     }
+  }
+
+  .form-filter__label {
+    padding-left: 37px;
+
+    font-weight: normal;
   }
 
   .form-filter__item {
     width: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .form-filter__category-toggle:checked + .form-filter__title {
-    padding-bottom: 15px;
+    padding-bottom: 23px;
   }
 
   .form-filter__button {
-    margin-top: 5px;
+    margin-top: 40px;
   }
 }

@@ -1,6 +1,6 @@
 .profile__wrapper {
   @include container;
-  @include padding-t-b(25px, 25px);
+  @include padding-t-b(55px, 51px);
 
   display: flex;
   flex-wrap: wrap;
@@ -38,14 +38,14 @@
 .profile__image {
   width: 100px;
   height: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   border-radius: 50%;
 }
 
 .profile__label-photo {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   padding: 6px 10px 4px;
 
   font-weight: bold;
@@ -65,7 +65,7 @@
   display: flex;
   width: 100%;
   margin-top: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 8px;
 }
 
 .profile__label {
@@ -88,10 +88,11 @@
 
   box-sizing: border-box;
   width: 100%;
-  padding: 25px;
+  padding: 22px 20px 22px 25px;
 
   font-size: 16px;
   line-height: 22px;
+  font-family: inherit;
 
   background-color: $grey-blue;
   border: 1px solid #cbced9;
@@ -125,7 +126,7 @@
 @media (min-width: $tablet-width) {
   .profile__wrapper {
     @include extra-offset(35px, 35px);
-    @include padding-t-b(60px, 60px);
+    @include padding-t-b(125px, 75px);
 
     justify-content: space-between;
   }
@@ -144,24 +145,31 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 2px;
   }
 
   .profile__label-photo {
-    margin: 50px 0;
+    margin: 37px 0 51px;
     padding: 20px;
 
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 2px;
 
     border-radius: 10px;
   }
 
   .profile__tags {
-    padding: 35px;
+    padding: 31px 38px 12px;
 
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .profile__list-prefers {
+    justify-content: space-between;
+    padding: 24px 55px;
   }
 
   .profile__level {
@@ -188,9 +196,13 @@
 @media (min-width: $desktop-width) {
   .profile__wrapper {
     @include extra-offset(65px, 0);
-    @include padding-t-b(70px, 65px);
+    @include padding-t-b(135px, 80px);
 
     display: flex;
+
+    picture {
+      display: none;
+    }
   }
 
   .profile__level {
@@ -199,6 +211,14 @@
 
   .profile__image {
     display: none;
+  }
+
+  .profile__label_tags {
+    left: 63px;
+  }
+
+  .profile__list-prefers {
+    justify-content: center;
   }
 
   .profile__label-photo {

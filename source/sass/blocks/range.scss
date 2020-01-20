@@ -67,6 +67,13 @@
 }
 
 @media (min-width: $desktop-width) {
+  .range__input {
+    padding: 10px 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   .range__input-set {
     order: 0;
     width: auto;

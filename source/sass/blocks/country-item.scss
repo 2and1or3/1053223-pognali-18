@@ -19,7 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: -15px;
+  margin-top: -11px;
   padding: 25px;
 
   background-color: rgba(255, 255, 255, 1);
@@ -37,6 +37,7 @@
 .country-item__lead {
   @include opacity-color($grey, 0.3);
 
+  width: 100%;
   margin: 0;
 
   font-weight: 500;
@@ -45,13 +46,14 @@
 }
 
 .country-item__statistic {
-  @include opacity-color($grey, 0.3);
-
   position: relative;
 
   margin-left: auto;
 
   font-weight: 500;
+  color: $grey;
+
+  opacity: 0.3;
 
   &::before {
     content: "";
@@ -59,7 +61,7 @@
     display: inline-block;
     width: 11px;
     height: 11px;
-    padding-right: 10px;
+    margin-right: 6px;
 
     background: url("../../img/user.svg") no-repeat center;
   }
@@ -80,6 +82,7 @@
     width: 186px;
     height: 140px;
 
+    border-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -88,18 +91,25 @@
     flex-grow: 1;
     flex-direction: column;
     margin-top: 0;
+    padding-top: 28px;
     padding-right: 190px;
+    padding-bottom: 23px;
+    padding-left: 30px;
 
+    border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
   .country-item__title {
+    margin-bottom: 4px;
+
     font-size: 24px;
     line-height: 24px;
   }
 
   .country-item__statistic {
+    display: inherit;
     order: 1;
     margin-left: 0;
 
@@ -112,7 +122,7 @@
   }
 
   .country-item__lead {
-    margin-bottom: 10px;
+    margin-bottom: 19px;
 
     font-size: 20px;
     line-height: 20px;
@@ -133,6 +143,14 @@
   }
 
   .country-item__box {
-    padding-right: 130px;
+    padding: 21px 40px 21px 31px;
+  }
+
+  .country-item__lead {
+    margin-bottom: 25px;
+  }
+
+  .country-item__flag {
+    top: 22px;
   }
 }

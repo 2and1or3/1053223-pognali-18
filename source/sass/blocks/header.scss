@@ -9,6 +9,7 @@
   @include padding-t-b(27px, 20px);
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -29,6 +30,9 @@
   }
 
   .header__navigation {
+    position: absolute;
+    z-index: 10;
+
     display: block;
   }
 
@@ -51,6 +55,18 @@
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+}
+
+.header_no-js {
+  .header__navigation {
+    position: static;
+
+    width: 100%;
+  }
+
+  .header__toggle {
+    display: none;
+  }
 }
 
 .header__contact {
@@ -83,7 +99,7 @@
   }
 
   .header__wrapper {
-    @include padding-t-b(55px, 51px);
+    @include padding-t-b(41px, 41px);
   }
 
   .header__contact {
@@ -100,7 +116,16 @@
     background-color: $darkness-blue;
   }
 
+  .header_no-js {
+    .header__navigation {
+      width: auto;
+    }
+  }
+
   .header__wrapper {
+    @include padding-t-b(46px, 5px);
+
+    flex-wrap: nowrap;
     justify-content: flex-start;
 
     .header__navigation {

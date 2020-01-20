@@ -1,13 +1,23 @@
-.page_dark-blue {
-  background-color: $dark-blue;
-}
-
 .page__section_dark {
   background-color: $darkness-blue;
 }
 
 .page__section_light {
   background-color: $grey-blue;
+}
+
+.page_main {
+  @for $i from 1 to 10 {
+    section:nth-child(#{$i}) {
+      z-index: 10 - $i;
+    }
+  }
+}
+
+.page_main {
+  section.people {
+    z-index: 5;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -1,15 +1,17 @@
 .directions {
+  @include bordered-bottom;
+
   color: $grey;
 }
 
 .directions__wrapper {
   @include container;
-  @include padding-t-b(70px, 30px);
+  @include padding-t-b(100px, 32px);
 }
 
 .directions__text-box {
   width: 195px;
-  margin-bottom: 65px;
+  margin-bottom: 63px;
   padding-left: 25px;
 }
 
@@ -31,12 +33,13 @@
 
 @media (min-width: $tablet-width) {
   .directions__wrapper {
-    @include extra-offset(32px, 32px);
-    @include padding-t-b (75px, 75px);
+    @include extra-offset(35px, 34px);
+    @include padding-t-b (130px, 80px);
 
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position-x: 91.9%;
+    background-position-y: 24%;
     background-size: 289px 575px;
 
     @media (min-resolution: $retina-dppx) {
@@ -46,7 +49,12 @@
 
   .directions__text-box {
     width: 340px;
+    margin-bottom: 68px;
     padding-left: 0;
+  }
+
+  .directions__title {
+    margin-bottom: 58px;
   }
 
   .directions__description {
@@ -54,31 +62,53 @@
   }
 
   .directions__list {
-    margin-bottom: 45px;
-  }
+    position: relative;
 
-  // .directions__button {
-  //   width: 100%;
-  // }
+    margin-bottom: 45px;
+    padding-top: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -34px;
+
+      width: 141px;
+      height: 141px;
+
+      background-color: #e2e5f2;
+      border-radius: 20px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .directions__wrapper {
-    @include extra-offset(780px, 170px);
-    @include padding-t-b(200px, 140px);
+    @include extra-offset(802px, 170px);
+    @include padding-t-b(224px, 138px);
 
     position: relative;
 
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position-x: 94.8%;
+    background-position-y: 63%;
   }
 
   .directions__list {
     position: absolute;
-    top: 200px;
+    top: 149px;
     left: 130px;
 
     margin-bottom: 0;
+    padding-top: 74px;
+
+    &::before {
+      left: -70px;
+    }
+  }
+
+  .directions__text-box {
+    margin-bottom: 100px;
   }
 }

@@ -8,13 +8,14 @@
 
   font-size: 18px;
   line-height: 18px;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
 .textarea__title {
-  margin-bottom: 15px;
-  padding-left: 15px;
+  flex-grow: 1;
+  margin-right: 35px;
+  margin-bottom: 18px;
+  padding-left: 11px;
 
   font-weight: 500;
 }
@@ -22,8 +23,10 @@
 .textarea__control {
   position: relative;
 
+  box-sizing: border-box;
   width: 100%;
-  padding: 10px 15px;
+  min-height: 220px;
+  padding: 10px 13px;
 
   font-size: 16px;
   line-height: 22px;
@@ -98,7 +101,8 @@
   }
 
   .textarea__title {
-    margin-bottom: 35px;
+    margin-right: 105px;
+    margin-bottom: 39px;
     padding-left: 0;
 
     font-weight: bold;
@@ -107,7 +111,10 @@
   }
 
   .textarea__control {
-    padding: 15px 20px;
+    width: 94%;
+    min-height: 142px;
+    padding: 15px 17px;
+    padding-right: 30px;
 
     font-size: 20px;
     line-height: 24px;
@@ -118,8 +125,13 @@
     }
   }
 
+  .textarea__message {
+    width: calc(94% - 2px);
+  }
+
   .textarea__flag {
-    position: static;
+    top: -6px;
+    right: 32px;
 
     width: 70px;
     height: 47px;
@@ -128,12 +140,17 @@
 
 @media (min-width: $desktop-width) {
   .textarea__control {
-    width: 80%;
+    width: 73%;
     margin-right: 20%;
     padding: 20px 25px;
+    padding-right: 19px;
+  }
+
+  .textarea__flag {
+    right: 116px;
   }
 
   .textarea__message {
-    width: calc(80% - 2px);
+    width: calc(73% - 2px);
   }
 }

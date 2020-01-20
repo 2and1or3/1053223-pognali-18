@@ -8,7 +8,7 @@
   box-sizing: border-box;
   min-height: 43px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 
   border: 1px solid #cbced9;
   border-right: none;
@@ -117,7 +117,7 @@
     color: rgba(255, 255, 255, 1);
 
     background-color: $blue;
-    outline: 4px solid #ff5c23;
+    outline: 2px solid #ff5c23;
   }
 }
 
@@ -128,7 +128,7 @@
   color: rgba(255, 255, 255, 1);
 
   background-color: $blue;
-  outline: 4px solid #ff5c23;
+  outline: 2px solid #ff5c23;
 }
 
 .calendar__input:checked + .calendar__td-label {
@@ -160,7 +160,7 @@
 
   .calendar__head {
     min-height: 85px;
-    margin-bottom: 40px;
+    margin-bottom: 31px;
   }
 
   .calendar__button {
@@ -178,22 +178,31 @@
   }
 
   .calendar__td-label {
-    height: 70px;
+    height: 68px;
 
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
     color: $blue;
+
+    &:hover {
+      outline: 4px solid #ff5c23;
+    }
   }
 
   .calendar__input:disabled + .calendar__td-label {
     @include opacity-color($blue, 0.3);
   }
+
+  .calendar__input:focus + .calendar__td-label {
+    outline: 4px solid #ff5c23;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .calendar__head {
-    margin-bottom: 20px;
+    min-height: 87px;
+    margin-bottom: 8px;
   }
 
   .calendar__button {
@@ -209,8 +218,10 @@
   }
 
   .calendar__th {
-    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-left: 16px;
 
+    font-weight: normal;
     text-align: initial;
   }
 
@@ -218,7 +229,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 10px 15px;
+    height: 70px;
+    padding: 5px 15px;
 
     font-weight: normal;
     font-size: 18px;
@@ -241,7 +253,7 @@
     &::after {
       content: "Заезд";
       position: absolute;
-      bottom: 0;
+      bottom: 8px;
       left: 15px;
     }
   }
@@ -252,7 +264,7 @@
     &::after {
       content: "Выезд";
       position: absolute;
-      bottom: 0;
+      bottom: 8px;
       left: 15px;
     }
   }

@@ -1,15 +1,19 @@
 .plans {
+  margin-top: -30px;
+
   background-color: $lightness-blue;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .plans__wrapper {
   @include container;
-  @include padding-t-b(30px, 30px);
+  @include padding-t-b(27px, 60px);
 }
 
 .plans__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 
   font-size: 24px;
   line-height: 24px;
@@ -22,17 +26,29 @@
 @media (min-width: $tablet-width) {
   .plans__wrapper {
     @include extra-offset(35px, 35px);
-    @include padding-t-b(60px, 60px);
+    @include padding-t-b(47px, 107px);
   }
 
   .plans__title {
+    margin-bottom: 44px;
+
     font-size: 36px;
     line-height: 50px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .plans {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
   .plans__wrapper {
     @include extra-offset(65px, 0);
+    @include padding-t-b(45px, 123px);
+  }
+
+  .plans__title {
+    margin-bottom: 45px;
   }
 }

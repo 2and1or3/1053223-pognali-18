@@ -1,12 +1,14 @@
-$bed-offset: 100px;
+$bed-offset: 84px;
+$bed-design: 4px;
 
 .card {
   position: relative;
+  z-index: 0;
 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 15px 20px 20px;
+  padding: 14px 20px 23px;
 
   color: $blue;
 
@@ -29,7 +31,7 @@ $bed-offset: 100px;
 .card__image {
   position: absolute;
   top: 15px;
-  left: 15px;
+  left: 18px;
 
   width: 70px;
   height: 70px;
@@ -46,7 +48,7 @@ $bed-offset: 100px;
   position: relative;
 
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   padding-right: 40px;
   padding-left: $bed-offset;
 
@@ -68,7 +70,7 @@ $bed-offset: 100px;
   &::before {
     content: "";
     position: absolute;
-    top: 7px;
+    top: 14px;
     right: 0;
 
     width: 6px;
@@ -87,7 +89,7 @@ $bed-offset: 100px;
 .card__like {
   position: relative;
 
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   padding-left: $bed-offset;
 
   &:last-of-type {
@@ -97,8 +99,8 @@ $bed-offset: 100px;
 
 .card__like-button {
   position: absolute;
-  top: -10px;
-  left: 40px;
+  top: -8px;
+  left: 47px;
 }
 
 .card__tags {
@@ -106,8 +108,9 @@ $bed-offset: 100px;
 
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
-  padding-right: 60px;
+  margin-bottom: 12px;
+  margin-left: $bed-design;
+  padding-right: 52px;
 
   font-size: 15px;
   line-height: 18px;
@@ -126,15 +129,35 @@ $bed-offset: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 8px;
+  margin-left: $bed-design;
 }
 
 .card__section-title {
-  display: block;
-  margin-bottom: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+  margin-left: -10px;
+  padding: 0 10px;
 
   font-size: 15px;
   line-height: 18px;
+  vertical-align: middle;
   color: $grey;
+
+  background-color: rgba(255, 255, 255, 1);
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: -1;
+
+    height: 1px;
+    margin-top: 11px;
+
+    background-color: $grey-blue;
+  }
 }
 
 .card__needs {
@@ -144,7 +167,7 @@ $bed-offset: 100px;
   flex-shrink: 0;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: -5px;
 
   font-weight: 500;
   font-size: 15px;
@@ -185,7 +208,7 @@ $bed-offset: 100px;
 }
 
 .card__button {
-  margin-top: 20px;
+  margin-top: 3px;
 
   &:hover,
   &:focus {
@@ -202,6 +225,7 @@ $bed-offset: 100px;
 
   width: 45px;
   height: 45px;
+  margin-top: -6px;
 
   font-size: 24px;
   line-height: 24px;
@@ -216,7 +240,7 @@ $bed-offset: 100px;
     align-items: flex-start;
     box-sizing: border-box;
     min-height: 330px;
-    padding: 35px 25px 25px 35px;
+    padding: 30px 25px 16px 35px;
   }
 
   .card__image {
@@ -235,7 +259,7 @@ $bed-offset: 100px;
 
   .card__title {
     order: -2;
-    padding-right: 20px;
+    padding-right: 28px;
     padding-left: $bed-offset;
 
     font-size: 30px;
@@ -255,7 +279,7 @@ $bed-offset: 100px;
   .card__tags {
     align-content: flex-start;
     width: 230px;
-    margin-bottom: 37px;
+    margin-bottom: 47px;
     padding-right: 0;
     padding-left: $bed-offset;
 
@@ -264,6 +288,9 @@ $bed-offset: 100px;
   }
 
   .card__section-title {
+    align-self: baseline;
+    margin-left: 34px;
+
     font-size: 15px;
     line-height: 18px;
   }
@@ -304,7 +331,7 @@ $bed-offset: 100px;
     &:last-of-type {
       flex-direction: column;
       order: -1;
-      margin-bottom: -100px;
+      margin-bottom: -148px;
       margin-left: 60px;
     }
   }
@@ -320,10 +347,12 @@ $bed-offset: 100px;
 
   .card__prefers {
     flex-direction: column;
+    align-items: center;
   }
 
   .card__need-country {
     min-width: auto;
+    margin-right: 30px;
     margin-bottom: 0;
 
     &:last-child {
@@ -335,12 +364,13 @@ $bed-offset: 100px;
     margin-top: 0;
     margin-right: 225px;
     margin-bottom: 20px;
-    margin-left: $bed-offset;
+    margin-left: $bed-offset - 4px;
   }
 
   .card__level {
     width: 60px;
     height: 60px;
+    margin-top: 5px;
 
     &::before {
       content: "";
@@ -360,14 +390,32 @@ $bed-offset: 100px;
       line-height: 14px;
     }
   }
+
+  .card__flag {
+    width: 35px;
+    height: auto;
+    margin-right: 8px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .card {
     height: 285px;
     min-height: 285px;
-    padding: 50px;
-    padding-left: 360px;
+    padding: 45px 44px 40px 344px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 630px;
+
+      width: 1px;
+      height: 187px;
+
+      background: linear-gradient(180deg, #ffffff 0%, $grey-blue 15%, $grey-blue 85%, #ffffff 100%);
+      background-color: #edeff6;
+    }
   }
 
   .card__image {
@@ -395,7 +443,7 @@ $bed-offset: 100px;
   .card__link {
     &::before {
       position: absolute;
-      left: -20px;
+      left: -25px;
 
       margin-left: 0;
     }
@@ -403,13 +451,26 @@ $bed-offset: 100px;
 
   .card__tags {
     margin-right: 250px;
-    margin-bottom: 37px;
+    margin-bottom: 47px;
     padding-left: 0;
+  }
+
+  .card__needs {
+    margin-right: 20px;
   }
 
   .card__need-country {
     min-width: 210px;
     margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .card__flag {
+    margin-right: 16px;
+  }
+
+  .card__level {
+    margin-top: 0;
   }
 
   .card__section {
@@ -418,14 +479,15 @@ $bed-offset: 100px;
       order: -1;
       width: auto;
       margin-top: 0;
-      margin-bottom: -40px;
+      margin-bottom: -67px;
     }
 
     &:last-of-type {
       flex-direction: row;
+      align-items: center;
       order: 1;
-      margin-right: 0;
-      margin-bottom: 0;
+      width: 42.3%;
+      margin: 0;
     }
   }
 

@@ -18,12 +18,20 @@
   transform: translateY(-50%);
 }
 
+.checkbox__svg {
+  display: none;
+}
+
 .checkbox input:checked + .checkbox__visual {
   background-color: rgba(255, 255, 255, 1);
   background-image: url("../../img/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 9px 9px;
+
+  .checkbox__svg {
+    display: initial;
+  }
 }
 
 @media (min-width: $tablet-width) {

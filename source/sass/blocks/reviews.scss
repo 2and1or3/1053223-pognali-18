@@ -8,6 +8,7 @@
   display: block;
   margin: 20px 0 0;
 
+  font-style: normal;
   font-weight: bold;
 }
 
@@ -18,5 +19,7 @@
 
   .reviews__author {
     @include content-text-bold;
+
+    margin-top: 45px;
   }
 }

@@ -1,11 +1,15 @@
 .business-offer {
+  top: 20px;
+
   display: block;
-  width: 270px;
+  width: 84.4%;
 
   font-weight: 300;
+  color: $grey;
 
   background-color: rgba(255, 255, 255, 1);
   border-radius: 20px;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
 }
 
 .business-offer__box {
@@ -14,6 +18,10 @@
 
 .business-offer__title {
   @include section-title-orange;
+
+  margin-bottom: 31px;
+
+  text-align: center;
 }
 
 .business-offer__list {
@@ -23,8 +31,7 @@
 }
 
 .business-offer__item {
-  padding: 10px 0;
-  padding-right: 100px;
+  padding: 11px 59px 10px 0;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -37,6 +44,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
+  font-family: inherit;
   text-align: center;
   color: $blue;
   text-transform: uppercase;
@@ -58,31 +66,53 @@
 
 @media (min-width: $tablet-width) {
   .business-offer {
+    top: 58px;
+
     box-sizing: border-box;
-    width: 688px;
+    width: 89%;
+
+    border-radius: 30px;
+  }
+
+  .business-offer__title {
+    margin-bottom: 50px;
   }
 
   .business-offer__box {
-    padding: 60px 90px;
+    padding: 50px 88px 50px 85px;
   }
 
   .business-offer__item {
     display: flex;
     justify-content: space-between;
     padding-right: 5px;
+    padding-bottom: 16px;
+
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .business-offer__button {
-    padding: 40px 5px;
+    padding: 41px 5px;
+
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .business-offer {
+    top: 167px;
+
     width: 750px;
   }
 
   .business-offer__box {
     padding: 50px 60px;
+  }
+
+  .business-offer__item {
+    padding-right: 0;
   }
 }

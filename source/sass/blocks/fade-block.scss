@@ -1,0 +1,22 @@
+.fade-block {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    height: 80px;
+
+    background: linear-gradient(to bottom, transparent 10%, rgba(237, 239, 246, 0.5), $grey-blue 90%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fade-block_absolute {
+    position: absolute;
+  }
+}

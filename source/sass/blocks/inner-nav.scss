@@ -1,10 +1,14 @@
 .inner-nav {
+  @include bordered-bottom;
+
+  z-index: 4;
+
   background-color: $darkness-blue;
 }
 
 .inner-nav__wrapper {
   @include container;
-  @include padding-t-b(25px, 0);
+  @include padding-t-b(27px, 0);
 
   display: flex;
   justify-content: space-between;
@@ -15,7 +19,7 @@
   position: relative;
 
   margin: 0;
-  padding-bottom: 25px;
+  padding-bottom: 12px;
 
   font-weight: bold;
   font-size: 36px;
@@ -47,11 +51,11 @@
 @media (min-width: $tablet-width) {
   .inner-nav__wrapper {
     @include extra-offset(35px, 35px);
-    @include padding-t-b(40px, 0);
+    @include padding-t-b(82px, 0);
   }
 
   .inner-nav__title {
-    padding-bottom: 40px;
+    padding-bottom: 66px;
 
     font-size: 60px;
     line-height: 70px;
@@ -69,6 +73,8 @@
     position: relative;
 
     display: block;
+    align-self: baseline;
+    margin-top: 27px;
     padding-right: 60px;
 
     font-weight: bold;
@@ -102,7 +108,14 @@
 
 @media (min-width: $desktop-width) {
   .inner-nav__wrapper {
-    @include extra-offset(70px, 60px);
+    @include extra-offset(66px, 64px);
+
+    padding-top: 105px;
+  }
+
+  .inner-nav__wrapper_direct {
+    @include extra-offset(66px, 96px)
+    @include padding-t-b(51px, 0);
   }
 
   .inner-nav__title {
@@ -153,6 +166,7 @@
   }
 
   .inner-nav__image {
+    display: block;
     width: 190px;
     height: 190px;
   }

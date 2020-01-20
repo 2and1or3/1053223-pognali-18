@@ -81,4 +81,18 @@
   .prefers__item_grey {
     background-color: transparent;
   }
+
+  .prefers__item {
+    svg {
+      width: auto;
+      height: 21px;
+    }
+  }
+
+  .prefers_big {
+    .prefers__item {
+      width: 43px;
+      height: 43px;
+    }
+  }
 }

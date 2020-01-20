@@ -2,6 +2,14 @@
   @include list-reset;
 }
 
+.continents__item {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .continents__button {
   @include opacity-color($dark-blue, 0.3);
 
@@ -30,7 +38,8 @@
 
 @media (min-width: $tablet-width) {
   .continents__item {
-    margin-right: 25px;
+    margin: 0;
+    margin-right: 27px;
 
     &:last-child {
       margin-right: 0;

@@ -7,7 +7,7 @@
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header header_dark-tablet header_opene">
+  <header class="header header_opene header_n-js">
     <div class="header__wrapper">
       <a href="index.html" class="header__link-logo link-logo">
         <picture class="header__close-logo">
@@ -50,13 +50,13 @@
       <nav class="navigation header__navigation">
         <ul class="navigation__list">
           <li class="navigation__item"><a href="service.html" class="navigation__link">
-              О сервисе
+              <span class="navigation__link-span" data-hover="О сервисе">О сервисе</span>
             </a></li>
           <li class="navigation__item"><a href="form.html" class="navigation__link">
-              Направления
+              <span class="navigation__link-span" data-hover="Направления">Направления</span>
             </a></li>
           <li class="navigation__item"><a class="navigation__link">
-              Попутчики
+              <span class="navigation__link-span" data-hover="Попутчики">Попутчики</span>
             </a></li>
         </ul>
         <a href="login.html" class="navigation__login-link link">авторизация</a>
@@ -117,10 +117,10 @@
         <a href="index.html" class="inner-nav__link-to-main">На главную</a>
       </div>
     </nav>
-    <section class="list-filter">
+    <section class="list-filter list-filter_active list-filter_n-js">
       <h2 class="visually-hidden">Фильтрация по странам</h2>
       <div class="list-filter__wrapper">
-        <header class="list-filter__header list-filter__header_active">
+        <header class="list-filter__header">
           <button class="list-filter__button list-filter__button_title">Фильтрация по странам</button>
           <button class="list-filter__button list-filter__button_show-all">
             <span class="list-filter__button_show-all_show">Показать все</span>
@@ -290,15 +290,17 @@
           <li class="countries__item">
             <h3 class="countries__letter">А</h3>
             <ul class="countries__sub countries__sub_active">
-              <li class="countries__item-sub"><a class="countries__link" href="#">Афганистан</a></li>
-              <li class="countries__item-sub"><a class="countries__link" href="#">Албания</a></li>
-              <li class="countries__item-sub"><a class="countries__link" href="#">Алжир</a></li>
-              <li class="countries__item-sub"><a class="countries__link" href="#">Андорра</a></li>
-              <li class="countries__item-sub"><a class="countries__link" href="#">Аргентина</a></li>
-              <li class="countries__item-sub"><a class="countries__link" href="#">Армения</a></li>
-              <li class="countries__item-sub"><a class="countries__link" href="#">Австралия</a></li>
-              <li class="countries__item-sub"><a class="countries__link" href="#">Австрия</a></li>
-              <li class="countries__item-sub"><a class="countries__link" href="#">Азербайджан</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Австралия</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Австрия</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Азербайджан</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Албания</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Алжир</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Ангола</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Андорра</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Антигуа и Барбуда</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Аргентина</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Армения</a></li>
+              <li class="countries__item-sub"><a href="#" class="countries__link">Афганистан</a></li>
             </ul>
           </li>
           <li class="countries__item">
@@ -423,7 +425,7 @@
           <li class="countries__item">
             <h3 class="countries__letter">М</h3>
             <ul class="countries__sub">
-              Маврикий
+              <li class="countries__item-sub"><a href="#" class="countries__link">Маврикий</a></li>
               <li class="countries__item-sub"><a href="#" class="countries__link">Мавритания</a></li>
               <li class="countries__item-sub"><a href="#" class="countries__link">Мадагаскар</a></li>
               <li class="countries__item-sub"><a href="#" class="countries__link">Малави</a></li>
@@ -674,7 +676,7 @@
           <div class="form-filter__box-inner">
             <input type="checkbox" id="transport-list" class="visually-hidden form-filter__category-toggle" checked>
             <label for="transport-list" class="form-filter__title">Транспорт:</label>
-            <ul class="form-filter__list-prefers prefers">
+            <ul class="form-filter__list-prefers prefers prefers_big">
               <li class="prefers__item">
                 <label class="prefers__label checkbox">
                   <input type="checkbox" class="visually-hidden prefers__input" name="plane" checked>
@@ -737,19 +739,21 @@
       <section class="catalog">
         <ul class="catalog__list">
           <li class="catalog__item card">
-            <picture class="card__image">
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-destop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+            <a href="#" class="card__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-destop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-              <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова" class="card__image-img">
-            </picture>
+                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова" class="card__image-img">
+              </picture>
+            </a>
             <h3 class="card__title"><a class="card__link" href="#">Таня Фирсова</a></h3>
             <b class="card__like like like_more">
               <button class="like__button card__like-button">
-                <svg width="13" height="11">
+                <svg class="like__icon" width="13" height="11">
                   <use xlink:href="img/sprite.svg#heart-active"></use>
                 </svg>
               </button>
@@ -821,7 +825,7 @@
                 <p class="level card__level">
                   99
                   <svg class="level__svg" viewBox="0 0 60 60">
-                    <circle class="level__circle level__circle_99" cx="50%" cy="50%"></circle>
+                    <circle class="level__circle level__circle_99" cx="50%" cy="50%" r="60"></circle>
                   </svg>
                 </p>
               </div>
@@ -837,15 +841,17 @@
             </b>
           </li>
           <li class="catalog__item card">
-            <picture class="card__image">
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+            <a href="#" class="card__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-              <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин" class="card__image-img">
-            </picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин" class="card__image-img">
+              </picture>
+            </a>
             <h3 class="card__title"><a class="card__link" href="#">Петя Демин</a></h3>
             <b class="card__like like">
               <button class="like__button card__like-button">
@@ -914,7 +920,7 @@
                 <p class="level card__level">
                   80
                   <svg class="level__svg" viewBox="0 0 60 60">
-                    <circle class="level__circle level__circle_80" cx="50%" cy="50%"></circle>
+                    <circle class="level__circle level__circle_80" cx="50%" cy="50%" r="60"></circle>
                   </svg>
                 </p>
               </div>
@@ -930,15 +936,17 @@
             </b>
           </li>
           <li class="catalog__item card">
-            <picture class="card__image">
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
+            <a href="#" class="card__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
-              <img src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов" class="card__image-img">
-            </picture>
+                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                <img src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов" class="card__image-img">
+              </picture>
+            </a>
             <h3 class="card__title"><a class="card__link" href="#">Марк Смолов</a></h3>
             <b class="card__like like">
               <button class="like__button card__like-button">
@@ -1013,7 +1021,7 @@
                 <p class="level card__level">
                   25
                   <svg class="level__svg" viewBox="0 0 60 60">
-                    <circle class="level__circle level__circle_25" cx="50%" cy="50%"></circle>
+                    <circle class="level__circle level__circle_25" cx="50%" cy="50%" r="60"></circle>
                   </svg>
                 </p>
               </div>
@@ -1029,15 +1037,17 @@
             </b>
           </li>
           <li class="catalog__item card">
-            <picture class="card__image">
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
+            <a href="#" class="card__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-              <img src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая" class="card__image-img">
-            </picture>
+                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                <img src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая" class="card__image-img">
+              </picture>
+            </a>
             <h3 class="card__title"><a class="card__link card__link_active" href="#">Лариса Роговая</a></h3>
             <b class="card__like like">
               <button class="like__button card__like-button">
@@ -1048,12 +1058,10 @@
               23
             </b>
             <ul class="card__tags">
-              <li class="card__tag-item">#ЗОЖ</li>
-              <li class="card__tag-item">#ПП</li>
-              <li class="card__tag-item">#Фитнес</li>
-              <li class="card__tag-item">#пляж</li>
-              <li class="card__tag-item">#авокадо</li>
-              <li class="card__tag-item">#смузи</li>
+              <li class="card__tag-item">#образование</li>
+              <li class="card__tag-item">#карьера</li>
+              <li class="card__tag-item">#учеба</li>
+              <li class="card__tag-item">#линкедин</li>
             </ul>
             <div class="card__section">
               <span class="card__section-title">хочет посетить:</span>
@@ -1105,7 +1113,7 @@
                 <p class="level card__level">
                   50
                   <svg class="level__svg" viewBox="0 0 60 60">
-                    <circle class="level__circle level__circle_50" cx="50%" cy="50%"></circle>
+                    <circle class="level__circle level__circle_50" cx="50%" cy="50%" r="60"></circle>
                   </svg>
                 </p>
               </div>

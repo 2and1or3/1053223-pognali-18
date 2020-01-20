@@ -26,7 +26,8 @@
 .catalog__button {
   position: relative;
 
-  margin: 25px auto;
+  margin: 17px auto 20px;
+  padding-left: 33px;
 
   font-weight: bold;
   font-size: 17px;
@@ -47,7 +48,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: -30px;
+    left: 0;
 
     width: 18px;
     height: 18px;
@@ -67,13 +68,14 @@
   }
 
   .catalog__button {
-    margin: 50px auto;
+    margin: 44px auto 50px;
+    padding-left: 50px;
 
     font-size: 20px;
     line-height: 30px;
 
     &::before {
-      left: -50px;
+      left: 0;
 
       width: 27px;
       height: 27px;
@@ -96,6 +98,7 @@
   }
 
   .catalog__button {
-    margin: 70px auto;
+    margin: 64px auto 67px;
+    padding-right: 74px;
   }
 }
