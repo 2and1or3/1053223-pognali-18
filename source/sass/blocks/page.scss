@@ -14,12 +14,6 @@
   }
 }
 
-.page_main {
-  section.people {
-    z-index: 5;
-  }
-}
-
 @media (min-width: $tablet-width) {
   .page__section_dark {
     background-color: $darkness-blue-2;

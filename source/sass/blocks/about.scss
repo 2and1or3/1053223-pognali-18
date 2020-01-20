@@ -71,9 +71,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .about {
-  }
-
   .about__wrapper {
     @include extra-offset(34px, 345px);
     @include padding-t-b(40px, 86px);
@@ -126,9 +123,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .about {
-  }
-
   .about__wrapper {
     @include extra-offset(70px, 630px);
     @include padding-t-b(190px, 161px);

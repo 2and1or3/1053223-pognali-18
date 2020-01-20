@@ -324,6 +324,17 @@
 
   .step__select {
     margin-bottom: 15px;
+
+    &::before {
+      right: 129px;
+
+      width: 15px;
+      height: 15px;
+    }
+
+    &::after {
+      content: none;
+    }
   }
 
   .step__header {
@@ -449,19 +460,6 @@
       width: 1px;
 
       background: linear-gradient(to bottom, #cbced9 80%, transparent 95%);
-    }
-  }
-
-  .step__select {
-    &::before {
-      right: 129px;
-
-      width: 15px;
-      height: 15px;
-    }
-
-    &::after {
-      content: none;
     }
   }
 

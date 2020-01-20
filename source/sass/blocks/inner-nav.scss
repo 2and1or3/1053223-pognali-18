@@ -114,7 +114,7 @@
   }
 
   .inner-nav__wrapper_direct {
-    @include extra-offset(66px, 96px)
+    @include extra-offset(66px, 96px);
     @include padding-t-b(51px, 0);
   }
 

@@ -457,6 +457,7 @@ $bed-design: 4px;
 
   .card__needs {
     margin-right: 20px;
+    flex-direction: column;
   }
 
   .card__need-country {
@@ -493,10 +494,6 @@ $bed-design: 4px;
 
   .card__section-title {
     display: none;
-  }
-
-  .card__needs {
-    flex-direction: column;
   }
 
   .card__prefers {
