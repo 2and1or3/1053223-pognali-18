@@ -25,7 +25,57 @@
 }
 
 .navigation__link {
+  display: inline-block;
+  overflow: hidden;
+
   color: $dark-blue;
+
+  &:hover .navigation__link-span {
+    color: $light-yellow;
+
+    transform: translateY(-100%);
+  }
+
+  &:focus .navigation__link-span {
+    color: $light-yellow;
+
+    transform: translateY(-100%);
+  }
+
+  &:active .navigation__link-span {
+    @include opacity-color($light-yellow, 0.3);
+  }
+}
+
+.navigation__link:not([href]) {
+  .navigation__link-span {
+    transition: none;
+  }
+
+  &:hover .navigation__link-span,
+  &:focus .navigation__link-span {
+    color: $dark-blue;
+  }
+
+  &:active .navigation__link-span {
+    color: $dark-blue;
+  }
+}
+
+.navigation__link-span {
+  position: relative;
+
+  display: inline-block;
+
+  transition: transform 0.3s;
+
+  &::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .navigation__login-link {
@@ -41,10 +91,6 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 40px;
-}
-
-.navigation__icon {
-  margin-right: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -98,7 +144,7 @@
   }
 
   .navigation__item {
-    margin-right: 20px;
+    margin-right: 33px;
 
     &:last-child {
       margin-right: 0;
@@ -107,6 +153,21 @@
 
   .navigation__link {
     color: rgba(255, 255, 255, 1);
+  }
+
+  .navigation__link:not([href]) {
+    .navigation__link-span {
+      transition: none;
+    }
+
+    &:hover .navigation__link-span,
+    &:focus .navigation__link-span {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active .navigation__link-span {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 
   .navigation__footer {

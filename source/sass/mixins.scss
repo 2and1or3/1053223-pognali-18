@@ -7,7 +7,7 @@
 
 @mixin section-title-orange {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
@@ -16,6 +16,11 @@
   @media (min-width: $tablet-width) {
     font-size: 45px;
     line-height: 45px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
   }
 }
 
@@ -88,7 +93,58 @@
   $space-length: $circle-length - $stroke-length;
 
   stroke-width: $width;
-  r: $radius;
+  r: 1px * $radius;
   stroke-dasharray: $stroke-length $space-length;
   stroke-dashoffset: $circle-length * 0.25;
+}
+
+@mixin bordered-bottom {
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: -30px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-bottom: -60px;
+  }
+}
+
+@mixin bordered-top {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -30px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin-top: -60px;
+  }
+}
+
+@mixin pseudo-border($color: red) {
+  position: relative;
+
+  &::after {
+    content: "";
+    top: -1px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    height: 30px;
+    background-color: $color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      height: 60px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
 }

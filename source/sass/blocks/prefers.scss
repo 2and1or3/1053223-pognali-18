@@ -5,12 +5,14 @@
 }
 
 .prefers__item {
+  position: relative;
+
   display: flex;
   width: 33px;
   height: 33px;
 
-  border-radius: 50%;
   background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
 
   svg {
     margin: auto;
@@ -18,8 +20,10 @@
     opacity: 0.15;
   }
 
-  path {
-    fill: $blue;
+  &:hover {
+    .prefers__tooltip {
+      display: block;
+    }
   }
 }
 
@@ -35,13 +39,60 @@
 .prefers__label {
   display: flex;
   width: 100%;
+  padding-left: 0;
+
+  color: $blue;
 
   border-radius: 50%;
-  padding-left: 0;
+}
+
+.prefers__input:not(:checked):hover + svg,
+.prefers__input:not(:checked):focus + svg {
+  opacity: 0.3;
+}
+
+.prefers__input:not(:checked):active + svg {
+  opacity: 0.1;
+}
+
+.prefers__label:hover,
+.prefers__label:focus {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.prefers__label:active {
+  background-color: #e2e5f1;
+}
+
+.prefers__input:checked:hover + svg,
+.prefers__input:checked:focus + svg {
+  color: #101e44;
+
+  opacity: 0.7;
+}
+
+.prefers__input:checked:active + svg {
+  color: #101e44;
+
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
   .prefers__item_grey {
     background-color: transparent;
+  }
+
+  .prefers__item {
+    svg {
+      width: auto;
+      height: 21px;
+    }
+  }
+
+  .prefers_big {
+    .prefers__item {
+      width: 43px;
+      height: 43px;
+    }
   }
 }

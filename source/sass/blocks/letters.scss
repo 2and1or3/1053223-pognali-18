@@ -14,7 +14,7 @@
 .letters__item {
   display: flex;
   width: 20%;
-  height: 42px;
+  height: 41px;
 }
 
 .letters__label {
@@ -44,6 +44,21 @@
   }
 }
 
+.letters__label_select:hover {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+
+    border: 1px solid #959bb2;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .letters {
     @include opacity-color($dark-blue, 0.2);
@@ -57,7 +72,7 @@
   }
 
   .letters__item {
-    height: 77px;
+    height: 82px;
 
     background-color: transparent;
   }
@@ -74,7 +89,7 @@
   }
 
   .letters_light {
-    width: 52.1%;
+    width: 49.5%;
 
     font-weight: 500;
     font-size: 20px;
@@ -95,6 +110,10 @@
       border-right: 1px solid #cbced9;
       border-bottom: 1px solid #cbced9;
     }
+
+    .letters__item {
+      height: 69px;
+    }
   }
 }
 
@@ -102,6 +121,7 @@
   .letters_light {
     display: flex;
     justify-content: space-between;
+    width: 53.2%;
 
     border: 0;
 
@@ -119,5 +139,9 @@
       border: 1px solid #cbced9;
       border-radius: 4px;
     }
+  }
+
+  .letters__label_select:hover::after {
+    border-radius: 4px;
   }
 }

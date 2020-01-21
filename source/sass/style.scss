@@ -3,13 +3,14 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "common.scss";
+@import "normalize.scss";
 @import "blocks/link.scss";
 @import "blocks/button.scss";
 @import "blocks/link-logo.scss";
 @import "blocks/about.scss";
 @import "blocks/add-plan.scss";
 @import "blocks/author.scss";
-@import "blocks/bussines-offer.scss";
+@import "blocks/business-offer.scss";
 @import "blocks/calendar.scss";
 @import "blocks/catalog.scss";
 @import "blocks/checkbox.scss";
@@ -57,4 +58,7 @@
 @import "blocks/inner-nav.scss";
 @import "blocks/textarea.scss";
 @import "blocks/fixme.scss";
+@import "blocks/fade.scss";
+@import "blocks/fade-block.scss";
 @import "blocks/like.scss";
+@import "blocks/tooltip.scss";

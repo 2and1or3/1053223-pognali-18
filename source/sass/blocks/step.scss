@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 10px;
-  padding: 25px;
+  padding: 23px 25px;
 
   background-color: rgba(255, 255, 255, 1);
   border-radius: 10px;
@@ -16,16 +16,20 @@
 .step__header {
   position: relative;
 
-  padding-bottom: 25px;
+  padding-bottom: 21px;
 }
 
 .step__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
+
+  span {
+    display: block;
+  }
 }
 
 .step__description {
@@ -89,14 +93,54 @@
 }
 
 .step__label-check {
-  margin-bottom: 25px;
-  padding-top: 5px;
+  margin-bottom: 22px;
+  padding-top: 6px;
   padding-bottom: 5px;
+
+  input:checked + .step__checkbox-visual {
+    background-image: none;
+  }
+
+  &:hover .step__checkbox-visual,
+  &:focus .step__checkbox-visual {
+    background-image: none;
+    border: 1px solid #959bb2;
+  }
+
+  &:focus-within .step__checkbox-visual {
+    background-image: none;
+    border: 1px solid #959bb2;
+  }
+
+  &:active .step__checkbox-visual {
+    background-color: #e2e5f1;
+    background-image: none;
+    border: 0;
+  }
+
+  &:hover input:checked + .step__checkbox-visual,
+  &:focus input:checked + .step__checkbox-visual {
+    background-image: none;
+    border: 1px solid #959bb2;
+  }
+
+  &:active input:checked + .step__checkbox-visual {
+    background-color: #e2e5f1;
+    background-image: none;
+    border: 0;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 .step__checkbox-visual {
-  width: 26px;
-  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
 
   border: 1px solid #cbced9;
 }
@@ -110,13 +154,13 @@
 .step__select {
   position: relative;
 
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    right: 52px;
+    right: 49px;
     z-index: 1;
 
     box-sizing: border-box;
@@ -131,8 +175,8 @@
   &::after {
     content: "";
     position: absolute;
-    right: 52px;
-    bottom: -14px;
+    right: 50px;
+    bottom: -16px;
 
     width: 5px;
     height: 10px;
@@ -161,13 +205,13 @@
 .step__textarea {
   position: relative;
 
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 8px;
+    left: 0;
 
     width: 6px;
     height: 6px;
@@ -179,12 +223,12 @@
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    left: -10px;
+    top: 10px;
+    left: -14px;
 
     box-sizing: border-box;
     width: 15px;
-    height: 271px;
+    height: 283px;
 
     border: 2px solid $blue;
     border-right: 0;
@@ -204,10 +248,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  padding-top: 25px;
+  padding-top: 23px;
+  // margin-bottom: -10px;
 }
 
-@media (max-width: $tablet-width) {
+// .step:first-child {
+//   .step__bottom {
+//     margin-bottom: 0;
+//   }
+// }
+
+@media (max-width: $tablet-width - 1px) {
   .step__button {
     justify-content: center;
     width: 100%;
@@ -229,22 +280,60 @@
 }
 
 .step__button_prev {
-  background-color: transparent;
-}
+  margin-top: 19px;
+  margin-bottom: -6px;
+  padding: 0 5px;
 
-.step__button_next {
-  margin-bottom: 20px;
+  line-height: 18px;
+
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    @include opacity-color($blue, 0.7);
+
+    background-color: transparent;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+
+    background-color: transparent;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .step {
     margin-bottom: 40px;
-    padding: 50px 45px 55px;
+    padding: 45px 43px 54px 44px;
 
     border-radius: 30px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .step__select {
+    margin-bottom: 15px;
+
+    &::before {
+      right: 129px;
+
+      width: 15px;
+      height: 15px;
+    }
+
+    &::after {
+      content: none;
     }
   }
 
@@ -267,8 +356,7 @@
   }
 
   .step__description {
-    padding-right: 100px;
-
+    // padding-right: 100px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -290,21 +378,28 @@
   }
 
   .step__label-check {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 13px;
+    padding-left: 58px;
 
     color: $blue;
     text-transform: uppercase;
     letter-spacing: 2px;
+
+    svg {
+      width: 12px;
+      height: auto;
+    }
   }
 
   .step__checkbox-visual {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
 
   .step__calendar {
     order: 2;
+    margin-top: 40px;
   }
 
   .calendar__month-title {
@@ -314,7 +409,15 @@
 
   .step__bottom {
     order: 3;
-    padding-top: 50px;
+    padding-top: 48px;
+  }
+
+  .step__list {
+    margin-top: 17px;
+  }
+
+  .step__list_area {
+    margin-top: 5px;
   }
 
   .step__button {
@@ -327,6 +430,10 @@
   }
 
   .step__button_prev {
+    min-width: 205px;
+    margin-top: 0;
+    margin-right: -6px;
+
     text-align: right;
 
     &::after {
@@ -347,35 +454,32 @@
       content: "";
       position: absolute;
       top: 180px;
-      right: 170px;
+      right: 179px;
       bottom: 110px;
 
       width: 1px;
 
-      background-color: #cbced9;
-    }
-  }
-
-  .step__select {
-    &::before {
-      right: 118px;
-
-      width: 15px;
-      height: 15px;
-    }
-
-    &::after {
-      content: none;
+      background: linear-gradient(to bottom, #cbced9 80%, transparent 95%);
     }
   }
 
   .step__textarea {
+    margin-bottom: 50px;
+
     &::after {
-      content: none;
+      right: 6px;
+      left: auto;
+
+      width: 3px;
+      height: 275px;
+
+      background-color: $blue;
+      border: 0;
     }
 
     &::before {
-      right: 100px;
+      top: 10px;
+      right: 0;
       left: auto;
 
       width: 15px;
@@ -388,7 +492,7 @@
   .step {
     align-items: baseline;
     margin-bottom: 45px;
-    padding: 100px 160px;
+    padding: 89px 160px 104px;
 
     border-radius: 60px;
 
@@ -399,55 +503,99 @@
 
   .step__header {
     margin-bottom: 30px;
+    padding-right: 240px;
     padding-bottom: 55px;
-    padding-right: 170px;
   }
 
   .step__title {
+    margin-bottom: 29px;
+
     line-height: 50px;
+
+    span {
+      display: inline;
+    }
   }
 
   .step__description {
-    padding-right: 250px;
+    padding-right: 180px;
   }
 
   .step__pagination {
+    top: 17px;
+    right: 46px;
+
     display: block;
+  }
+
+  .step__item {
+    padding-left: 42px;
   }
 
   .step__box {
     flex-wrap: nowrap;
     align-items: center;
-    width: 500px;
+    width: 488px;
+    margin-bottom: 13px;
     padding-top: 0;
 
     border-top: none;
   }
 
+  .step__calendar {
+    margin-top: 20px;
+  }
+
   .step__list {
+    margin-top: 32px;
+
     &::after {
       right: 252px;
     }
   }
 
+  .step__list_area {
+    margin-top: 50px;
+  }
+
   .step__select {
     &::before {
-      right: 245px;
+      right: 218px;
     }
   }
 
   .step__textarea {
+    &::before {
+      right: 219px;
+    }
+
     &::after {
       content: "";
       top: 20px;
-      right: 106px;
+      right: 225px;
       left: auto;
 
       width: 3px;
-      height: 310px;
+      height: 255px;
 
       background-color: $blue;
       border: 0;
+    }
+  }
+
+  .step__bottom {
+    padding-top: 56px;
+  }
+
+  .step__button_prev {
+    width: auto;
+    margin-right: 0;
+  }
+
+  .step_line {
+    &::after {
+      right: 384px;
+      bottom: 70px;
     }
   }
 }

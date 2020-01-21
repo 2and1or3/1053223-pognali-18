@@ -18,9 +18,20 @@
   transform: translateY(-50%);
 }
 
+.checkbox__svg {
+  display: none;
+}
+
 .checkbox input:checked + .checkbox__visual {
-  background: rgba(255, 255, 255, 1) url("../../img/tick.svg") no-repeat center;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url("../../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 9px 9px;
+
+  .checkbox__svg {
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -1,13 +1,17 @@
+.registration {
+  background-color: $dark-blue;
+}
+
 .registration__wrapper {
   @include container;
-  @include padding-t-b(70px, 0);
+  @include padding-t-b(100px, 9px);
 }
 
 .registration__title {
   @include section-title-orange;
 
   display: block;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 
   text-align: center;
 }
@@ -23,13 +27,19 @@
 
 .registration__email-form {
   display: flex;
+  width: 100%;
 }
 
 .registration__mail {
   flex-grow: 1;
   box-sizing: border-box;
+  min-width: 210px;
   margin-right: -15px;
-  padding: 25px;
+  padding: 20px 21px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
 
   border: none;
   border-radius: 10px;
@@ -40,12 +50,45 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 18px;
+    font-family: "BloggerSans", "Arial", sans-serif;
+  }
+
+  &:hover {
+    background-color: #edeff6;
+
+    &::placeholder {
+      @include opacity-color($grey, 0.5);
+    }
+  }
+
+  &:focus {
+    color: rgba(255, 255, 255, 1);
+
+    background-color: transparent;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 1);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 }
 
 .registration__link {
   color: $light-yellow;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &:active {
+    @include opacity-color($orange, 0.3);
+  }
+}
+
+.registration__button::after {
+  margin: 0;
 }
 
 .registration__button-text {
@@ -54,8 +97,8 @@
 
 @media (min-width: $tablet-width) {
   .registration__wrapper {
-    @include extra-offset(32px, 32px);
-    @include padding-t-b(70px, 0);
+    @include extra-offset(34px, 34px);
+    @include padding-t-b(130px, 9px);
   }
 
   .registration__title {
@@ -65,16 +108,25 @@
   .registration__lead {
     @include content-text-light;
 
-    margin-bottom: 60px;
+    margin-bottom: 66px;
     padding: 0;
   }
 
   .registration__mail {
     margin-right: 0;
+    padding: 26px 34px;
+
+    font-size: 24px;
+    line-height: 24px;
 
     border-radius: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+
+    &::placeholder {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   .registration__button {
@@ -85,11 +137,12 @@
 
 @media (min-width: $desktop-width) {
   .registration__wrapper {
-    @include extra-offset(70px, 70px);
-    @include padding-t-b(100px, 0);
+    @include extra-offset(70px, 75px);
+    @include padding-t-b(160px, 9px);
   }
 
   .registration__lead {
+    margin-bottom: 60px;
     padding: 0 210px;
   }
 

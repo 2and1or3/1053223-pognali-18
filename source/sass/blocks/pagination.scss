@@ -33,6 +33,11 @@ $border-radius-1: 20px;
   font-weight: bold;
   font-size: 20px;
   line-height: 30px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .pagination__buttons {
@@ -47,8 +52,17 @@ $border-radius-1: 20px;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 10px 20px;
+  background-size: 13px 26px;
   border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .pagination__button_prev {
@@ -68,6 +82,8 @@ $border-radius-1: 20px;
     display: flex;
     justify-content: space-between;
     padding: 25px;
+    padding-right: 22px;
+    padding-left: 28px;
 
     &::before {
       content: none;
@@ -90,8 +106,9 @@ $border-radius-1: 20px;
     border-radius: 50%;
   }
 
-  .pagination__link_current {
+  .pagination__link.pagination__link_current {
     background-color: $light-yellow;
+    opacity: 1;
   }
 
   .pagination__buttons {
@@ -100,5 +117,15 @@ $border-radius-1: 20px;
 
   .pagination__button {
     padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    padding: 25px 28px;
+  }
+
+  .pagination__buttons {
+    width: 90px;
   }
 }

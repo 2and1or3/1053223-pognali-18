@@ -4,6 +4,7 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
+  font-family: inherit;
   text-align: center;
   color: $darkness-blue;
   text-transform: uppercase;
@@ -32,7 +33,7 @@
   }
 
   .link_blue {
-    padding: 40px 10px;
+    padding: 36px 10px;
 
     border-radius: 20px;
   }

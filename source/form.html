@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <title>Направления</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
   <link href="css/style.min.css" rel="stylesheet">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
-  <header class="header header_opene">
+  <header class="header header_opene header_n-js">
     <div class="header__wrapper">
       <a href="index.html" class="header__link-logo link-logo">
         <picture class="header__close-logo">
@@ -31,7 +39,7 @@
       </a>
       <button class="header__toggle" aria-label="открыть меню"></button>
       <div class="header__contact contact">
-        <a href="tel:88005558628" class="header__phone-link contact__icon">
+        <a href="tel:88005558628" class="header__phone-link contact__icon contact__icon_orange">
           <svg width="18" height="18">
             <use xlink:href="img/sprite.svg#topmenu-phone"></use>
           </svg>
@@ -45,35 +53,35 @@
             <span class="visually-hidden">Напишите нам</span>
           </a>
         </address>
-        <a href="login.html" class="header__login-link link">авторизация</a>
+        <a href="login.html" class="header__login-link contact__link link">авторизация</a>
       </div>
       <nav class="navigation header__navigation">
         <ul class="navigation__list">
           <li class="navigation__item"><a href="service.html" class="navigation__link">
-              О сервисе
+              <span class="navigation__link-span" data-hover="О сервисе">О сервисе</span>
             </a></li>
           <li class="navigation__item"><a class="navigation__link">
-              Направления
+              <span class="navigation__link-span" data-hover="Направления">Направления</span>
             </a></li>
           <li class="navigation__item"><a href="catalog.html" class="navigation__link">
-              Попутчики
+              <span class="navigation__link-span" data-hover="Попутчики">Попутчики</span>
             </a></li>
         </ul>
         <a href="login.html" class="navigation__login-link link">авторизация</a>
         <div class="navigation__footer">
-          <div class="contact navigation__contact">
-            <a href="tel:88005558628" class="contact__item">
-              <span class="contact__icon navigation__icon contact__icon_dark">
+          <div class="contact-us navigation__contact-us contact-us_dark">
+            <a href="tel:88005558628" class="contact-us__item">
+              <span class="contact-us__icon">
                 <svg width="18" height="18">
                   <use xlink:href="img/sprite.svg#contacts-phone"></use>
                 </svg>
               </span>
               8 800 555-86-28
             </a>
-            <address class="contact__mail-address">
-              <a href="mailto:mail@htmlacademy.ru" class="contact__item">
-                <span class="contact__icon navigation__icon contact__icon_dark">
-                  <svg width="18" height="18">
+            <address class="contact-us__mail-address">
+              <a href="mailto:mail@htmlacademy.ru" class="contact-us__item">
+                <span class="contact-us__icon navigation__icon">
+                  <svg width="18" height="13">
                     <use xlink:href="img/sprite.svg#contacts-mail"></use>
                   </svg>
                 </span>
@@ -82,7 +90,7 @@
           </div>
           <ul class="social navigation__social">
             <li class="social__item">
-              <a href="fb.com" class="social__link social__link_transparent">
+              <a href="fb.com" class="social__link social__link_fb social__link_dark">
                 <svg width="11" height="21">
                   <use xlink:href="img/sprite.svg#facebook"></use>
                 </svg>
@@ -90,7 +98,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="vk.com" class="social__link social__link_transparent">
+              <a href="vk.com" class="social__link social__link_vk social__link_dark">
                 <svg width="23" height="12">
                   <use xlink:href="img/sprite.svg#vk"></use>
                 </svg>
@@ -98,7 +106,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="instagram.com" class="social__link social__link_transparent">
+              <a href="instagram.com" class="social__link social__link_inst social__link_dark">
                 <svg width="18" height="18">
                   <use xlink:href="img/sprite.svg#instagram"></use>
                 </svg>
@@ -112,13 +120,13 @@
   </header>
   <main class="page page-form">
     <nav class="page__inner-nav inner-nav">
-      <div class="inner-nav__wrapper">
+      <div class="inner-nav__wrapper inner-nav__wrapper_direct">
         <h1 class="inner-nav__title">Направления</h1>
         <div class="inner-nav__profile-box">
           <p class="level inner-nav__level">
             80
             <svg class="level__svg" viewBox="0 0 60 60">
-              <circle class="level__circle level__circle_80" cx="50%" cy="50%"></circle>
+              <circle class="level__circle level__circle_80" cx="50%" cy="50%" r="28.5"></circle>
             </svg>
           </p>
           <picture>
@@ -139,27 +147,27 @@
         <p class="level profile__level">
           80
           <svg class="level__svg" viewBox="0 0 60 60">
-            <circle class="level__circle level__circle_80" cx="50%" cy="50%"></circle>
+            <circle class="level__circle level__circle_80" cx="50%" cy="50%" r="28.5"></circle>
           </svg>
         </p>
         <picture>
           <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">
 
-          <img src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Петя" class="inner-nav__image">
+          <img src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Петя" class="profile__image">
         </picture>
         <label class="profile__label-photo">
           сменить фото
           <input type="file" class="visually-hidden">
         </label>
         <div class="profile__box-outer">
-          <label for="tags" class="profile__label">
+          <label for="tags" class="profile__label profile__label_tags">
             Тэги
           </label>
           <textarea name="tags" id="tags" class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
         <div class="profile__prefer profile__box-outer">
           <span class="profile__label">Транспорт</span>
-          <ul class="profile__list-prefers prefers">
+          <ul class="profile__list-prefers prefers prefers_big">
             <li class="prefers__item">
               <label class="prefers__label checkbox">
                 <input type="checkbox" class="visually-hidden prefers__input" name="plane" checked>
@@ -191,7 +199,7 @@
               <label class="prefers__label checkbox">
                 <input type="checkbox" class="visually-hidden prefers__input" name="run" checked>
                 <svg width="15" height="17">
-                  <use xlink:href="img/sprite.svg#plane"></use>
+                  <use xlink:href="img/sprite.svg#run"></use>
                 </svg>
                 <span class="visually-hidden">Бег</span>
               </label>
@@ -232,10 +240,10 @@
           <li class="add-plan__pagination-item"></li>
         </ul>
         <ol class="add-plan__list steps">
-          <li class="step">
+          <li class="step" id="step1">
             <header class="step__header">
               <h3 class="step__title">
-                Шаг 1.<br>
+                <span>Шаг 1.</span>
                 Даты пребывания
               </h3>
               <p class="step__description">
@@ -271,8 +279,12 @@
               </span>
             </p>
             <label class="step__label-check checkbox">
-              <input type="checkbox" class="visually-hidden" checked>
-              <span class="checkbox__visual step__checkbox-visual"></span>
+              <input type="checkbox" class="visually-hidden">
+              <span class="checkbox__visual step__checkbox-visual">
+                <svg class="checkbox__svg" width="9" height="9">
+                  <use xlink:href="img/sprite.svg#tick"></use>
+                </svg>
+              </span>
               Можно с детьми
             </label>
             <article class="calendar step__calendar">
@@ -575,13 +587,13 @@
               </table>
             </article>
             <div class="step__bottom">
-              <button type="button" class="step__button button">Следующий шаг</button>
+              <a class="step__button step__button_next button" href="#step2">Следующий шаг</a>
             </div>
           </li>
-          <li class="step step_line">
+          <li class="step step_line" id="step2">
             <header class="step__header">
               <h3 class="step__title">
-                Шаг 2.<br>
+                <span>Шаг 2.</span>
                 Маршрут
               </h3>
               <p class="step__description fixme-1">
@@ -595,10 +607,10 @@
             </header>
             <ul class="step__list">
               <li class="select step__select">
-                <div class="select__control-box">
+                <div class="select__control-box fade">
                   <select name="first-country" class="select__control">
                     <option value="0" class="select__option">Выберите страну</option>
-                    <option value="Босния и Герцеговина" class="select__option" selected>Босния и Герцеговина</option>
+                    <option value="Босния и Герцеговина" class="select__option" selected>Босния и герцеговина</option>
                   </select>
                 </div>
                 <p class="select__flag">
@@ -607,13 +619,13 @@
                   </svg>
                 </p>
                 <button type="button" class="select__delete" aria-label="Убрать страну">
-                  <svg width="18" height="18">
+                  <svg width="9" height="9">
                     <use xlink:href="img/sprite.svg#small-cross"></use>
                   </svg>
                 </button>
               </li>
               <li class="select step__select">
-                <div class="select__control-box">
+                <div class="select__control-box fade">
                   <select name="second-country" class="select__control">
                     <option value="0" class="select__option">Выберите страну</option>
                     <option value="Чехия" class="select__option" selected>Чехия</option>
@@ -625,18 +637,18 @@
                   </svg>
                 </p>
                 <button type="button" class="select__delete" aria-label="Убрать страну">
-                  <svg width="18" height="18">
+                  <svg width="9" height="9">
                     <use xlink:href="img/sprite.svg#small-cross"></use>
                   </svg>
                 </button>
               </li>
-              <li class="select step__select step__select_empty select_active">
+              <li class="select step__select step__select_empty select_activ">
                 <div class="select__control-box select__control-box_add">
                   <button type="button" class="select__control">Выберите страну</button>
                 </div>
                 <p class="select__flag select__flag_empty"></p>
                 <button type="button" class="select__delete" aria-label="Убрать страну">
-                  <svg width="18" height="18">
+                  <svg width="9" height="9">
                     <use xlink:href="img/sprite.svg#small-cross"></use>
                   </svg>
                 </button>
@@ -796,15 +808,51 @@
                   <ul class="select__countries countries">
                     <li class="countries__item">
                       <ul class="countries__sub countries__sub_active">
-                        <li class="countries__item-sub">Афганистан</li>
-                        <li class="countries__item-sub">Албания</li>
-                        <li class="countries__item-sub">Алжир</li>
-                        <li class="countries__item-sub">Андорра</li>
-                        <li class="countries__item-sub">Аргентина</li>
-                        <li class="countries__item-sub">Армения</li>
-                        <li class="countries__item-sub">Австралия</li>
-                        <li class="countries__item-sub">Австрия</li>
-                        <li class="countries__item-sub">Азербайджан</li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Афганистан
+                          </a>
+                        </li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Албания
+                          </a>
+                        </li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Алжир
+                          </a>
+                        </li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Андорра
+                          </a>
+                        </li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Аргентина
+                          </a>
+                        </li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Армения
+                          </a>
+                        </li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Австралия
+                          </a>
+                        </li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Австрия
+                          </a>
+                        </li>
+                        <li class="countries__item-sub">
+                          <a href="#" class="countries__link">
+                            Азербайджан
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li class="countries__item">
@@ -828,6 +876,7 @@
                         <li class="countries__item-sub">Бутан</li>
                       </ul>
                     </li>
+                  </ul>
                 </div>
               </li>
               <li class="select step__select step__select_empty">
@@ -836,14 +885,14 @@
               </li>
             </ul>
             <div class="step__bottom">
-              <button type="button" class="step__button button step__button_next">Следующий шаг</button>
-              <button type="button" class="step__button button step__button_prev">На шаг назад</button>
+              <a class="step__button button step__button_next" href="#step3">Следующий шаг</a>
+              <a class="step__button button step__button_prev" href="#step1">На шаг назад</a>
             </div>
           </li>
           <li class="step">
-            <header class="step__header fixme-2">
-              <h3 class="step__title">
-                Шаг 3.<br>
+            <header class="step__header">
+              <h3 class="step__title" id="step3">
+                <span>Шаг 3.</span>
                 Развлечения
               </h3>
               <p class="step__description">
@@ -856,29 +905,30 @@
                 <li class="step__item step__item_current">Развлечения</li>
               </ul>
             </header>
-            <ul class="step__list">
+            <ul class="step__list step__list_area">
               <li class="step__textarea">
                 <label class="textarea">
-                  <span class="textarea__title">Босния и Герцеговина</span>
+                  <span class="textarea__title fade">Босния и герцеговина</span>
                   <svg class="textarea__flag" width="35" height="24">
                     <use xlink:href="img/sprite.svg#flag-bosnia"></use>
                   </svg>
-                  <textarea name="bos" rows="10" placeholder="План действий" class="textarea__control"></textarea>
+                  <textarea name="bos" placeholder="План действий" class="textarea__control" required></textarea>
+                  <span class="textarea__message">Это поле должно быть заполнено</span>
                 </label>
               </li>
               <li class="step__textarea">
                 <label class="textarea">
-                  <span class="textarea__title">Чехия</span>
+                  <span class="textarea__title fade">Чехия</span>
                   <svg class="textarea__flag" width="35" height="24">
                     <use xlink:href="img/sprite.svg#flag-czech"></use>
                   </svg>
-                  <textarea name="czech" rows="10" placeholder="План действий" class="textarea__control">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <textarea name="czech" placeholder="План действий" class="textarea__control" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </label>
               </li>
             </ul>
             <div class="step__bottom">
               <button type="submit" class="step__submit step__button button step__button_next">Отправить</button>
-              <button type="button" class="step__button button step__button_prev">На шаг назад</button>
+              <a class="step__button button step__button_prev" href="#step2">На шаг назад</a>
             </div>
           </li>
         </ol>
@@ -900,7 +950,7 @@
       </a>
       <ul class="social footer__social">
         <li class="social__item">
-          <a href="fb.com" class="social__link">
+          <a href="fb.com" class="social__link social__link_fb social__link_yellow">
             <svg width="11" height="22">
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
@@ -908,7 +958,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="vk.com" class="social__link">
+          <a href="vk.com" class="social__link social__link_vk social__link_yellow">
             <svg width="23" height="12">
               <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
@@ -916,7 +966,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="instagram.com" class="social__link">
+          <a href="instagram.com" class="social__link social__link_inst social__link_yellow">
             <svg width="18" height="18">
               <use xlink:href="img/sprite.svg#instagram"></use>
             </svg>
@@ -924,11 +974,15 @@
           </a>
         </li>
       </ul>
-      <p class="author">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="author">
         <span class="author__develop">Разработано</span>
-        <a href="htmlacademy.ru" class="author__link"><img src="img/htmlacademy.svg" alt="логотип htmlacademy" width="27" height="34"></a>
-      </p>
+        <img src="img/htmlacademy.svg" alt="логотип htmlacademy" width="27" height="34">
+      </a>
     </div>
   </footer>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </body>
 </html>

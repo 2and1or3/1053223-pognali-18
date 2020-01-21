@@ -4,29 +4,42 @@
 
 .promo__wrapper {
   @include container;
-  @include padding-t-b (23px, 40px);
+  @include padding-t-b (19px, 40px);
+}
 
-  background-image: url("../img/traveller-illustration-mobile@1x.png"),
-    url("../img/globe-back-mobile@1x.jpg");
+.promo__wrapper-mobile {
+  margin: 0 -25px;
+  margin-bottom: 25px;
+  padding: 0 25px;
+
+  background-image: linear-gradient($darkness-blue),
+    url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center,
-    center;
-  background-size: 192px, 320px;
+  background-position-x: 0,
+    62%,
+    51%;
+  background-position-y: 100%,
+    87%,
+    -38%;
+  background-size: 100% 20px,
+    192px auto,
+    1165px auto;
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/traveller-illustration-mobile@2x.png"),
-      url("../img/globe-back-mobile@2x.jpg");
+    background-image: linear-gradient($darkness-blue),
+      url("../img/traveller-illustration-mobile@2x.png"),
+      url("../img/globe-back-desktop@2x.jpg");
   }
 }
 
 .promo__contact {
   margin: 0;
-  margin-bottom: 30px;
 }
 
 .promo__title {
-  margin: 0;
-  margin-bottom: 242px;
+  margin: 0 auto;
+  margin-bottom: 246px;
   padding: 0 15px;
 
   font-weight: bold;
@@ -42,8 +55,9 @@
 }
 
 .promo__reviews {
-  width: 230px;
+  width: 180px;
   margin-bottom: 30px;
+  margin-left: 25px;
 }
 
 .promo__guide::before {
@@ -60,14 +74,14 @@
 
 @media (min-width: $tablet-width) {
   .promo__wrapper {
-    @include padding-t-b (29px, 29px);
+    @include padding-t-b (26px, 94px);
 
     background-image: url("../img/traveller-illustration-tablet@1x.png"),
       url("../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center,
-      center;
-    background-size: auto 591px, auto 591px;
+    background-position-x: 71.9%, 50.5%;
+    background-position-y: 42.2%, 51%;
+    background-size: auto 450px, auto 615px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/traveller-illustration-tablet@2x.png"),
@@ -75,11 +89,19 @@
     }
   }
 
+  .promo__wrapper-mobile {
+    margin: 0;
+    padding: 0;
+
+    background: none;
+  }
+
   .promo__contact {
     display: none;
   }
 
   .promo__title {
+    margin-bottom: 88px;
     padding: 0 145px;
 
     font-size: 60px;
@@ -88,6 +110,8 @@
 
   .promo__reviews {
     width: 260px;
+    margin-bottom: 213px;
+    margin-left: 34px;
   }
 
   .promo__guide::before {
@@ -96,28 +120,69 @@
 }
 
 @media (min-width: $desktop-width) {
+  .promo {
+    @include bordered-bottom;
+
+    overflow: hidden;
+  }
+
   .promo__wrapper {
+    @include padding-t-b (95px, 123px);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    background-image: url("../img/traveller-illustration-desktop@1x.png"),
-      url("../img/globe-back-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center,
-      center;
-    background-size: 431px, 1439px;
+    background: none;
 
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/traveller-illustration-desktop@2x.png"),
-        url("../img/globe-back-desktop@2x.jpg");
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 641px;
+
+      background-image: url("../img/traveller-illustration-desktop@1x.png"),
+        url("../img/globe-back-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position-x: 60%,
+        center;
+      background-position-y: 0,
+        100%;
+      background-size: 431px, 1800px;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/traveller-illustration-desktop@2x.png"),
+          url("../img/globe-back-desktop@2x.jpg");
+      }
     }
   }
 
+  .promo__wrapper-mobile {
+    margin-right: auto;
+  }
+
   .promo__title {
+    position: relative;
+
     width: 400px;
+    margin-bottom: 0;
     padding: 0 20px;
+    padding-left: 68px;
 
     text-align: left;
+  }
+
+  .promo__reviews {
+    position: relative;
+
+    margin-bottom: 0;
+    padding: 13px 26px 0 0;
+  }
+
+  .promo__guide {
+    margin-top: 105px;
   }
 }

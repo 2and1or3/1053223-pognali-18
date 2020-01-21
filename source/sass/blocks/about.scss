@@ -1,28 +1,63 @@
 .about {
-  @include extra-offset (22px, 22px);
-  @include padding-t-b (30px, 85px);
+  @include bordered-bottom;
 
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 292px 352px;
+  background-color: $dark-blue;
+}
 
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/about-mobile@2x.png");
+.about__wrapper {
+  @include extra-offset (24px, 24px);
+  @include padding-t-b (30px, 80px);
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/about-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 292px 352px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-mobile@2x.png");
+    }
   }
 }
 
 .about__text-box {
-  width: 215px;
+  width: 222px;
 }
 
 .about__title {
   @include section-title-orange;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 215px;
+    left: 0;
+    z-index: -2;
+
+    height: 132px;
+
+    background-color: #141b3b;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 .about__description {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   font-weight: 300;
 }
@@ -36,24 +71,43 @@
 }
 
 @media (min-width: $tablet-width) {
-  .about {
-    @include extra-offset(32px, 345px);
-    @include padding-t-b(30px, 85px);
+  .about__wrapper {
+    @include extra-offset(34px, 345px);
+    @include padding-t-b(40px, 86px);
 
-    background-image: url("../../img/about-tablet@1x.png");
-    background-size: 376px 548px;
+    &::before {
+      background-image: url("../../img/about-tablet@1x.png");
+      background-position-x: 98%;
+      background-position-y: 36%;
+      background-size: 376px 548px;
 
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/about-tablet@2x.png");
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/about-tablet@2x.png");
+      }
     }
   }
 
   .about__text-box {
-    width: 300px;
+    // width: 300px;
+    width: auto;
+    max-width: 611px;
+  }
+
+  .about__title {
+    &::before {
+      right: 40px;
+      left: 40px;
+
+      height: 213px;
+
+      border-radius: 20px;
+    }
   }
 
   .about__description {
     @include content-text-light;
+
+    margin-bottom: 32px;
   }
 
   .about__description-bold {
@@ -64,23 +118,42 @@
 
   .about__button {
     display: flex;
+    margin-right: 34px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .about {
+  .about__wrapper {
     @include extra-offset(70px, 630px);
-    @include padding-t-b(130px, 160px);
+    @include padding-t-b(190px, 161px);
 
-    background-image: url("../../img/about-desktop@1x.png");
-    background-size: 630px 655px;
+    &::before {
+      background-image: url("../../img/about-desktop@1x.png");
+      background-position-x: 92.6%;
+      background-position-y: 95.5%;
+      background-size: 630px 655px;
 
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/about-desktop@2x.png");
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/about-desktop@2x.png");
+      }
     }
   }
 
-  .about__text-box {
-    width: 610px;
+  .about__title {
+    &::before {
+      top: 131px;
+      left: 60px;
+
+      width: 213px;
+    }
+  }
+
+  .about__description {
+    margin-bottom: 40px;
+  }
+
+  .about__description-bold {
+    margin-right: 140px;
+    margin-bottom: 85px;
   }
 }

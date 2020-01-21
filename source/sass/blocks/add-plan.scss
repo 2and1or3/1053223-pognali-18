@@ -1,10 +1,14 @@
 .add-plan {
+  margin-top: -30px;
+
   background-color: $light-blue;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .add-plan__wrapper {
   @include container;
-  @include padding-t-b(30px, 30px);
+  @include padding-t-b(27px, 70px);
 
   position: relative;
 }
@@ -12,29 +16,31 @@
 .add-plan__title {
   margin: 0;
   margin-bottom: 30px;
+  padding-right: 80px;
 
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
-  padding-right: 80px;
 }
 
 .add-plan__pagination {
   @include list-reset;
 
   position: absolute;
+  top: 38px;
+  right: 43px;
+
   display: flex;
-  top: 40px;
-  right: 40px;
 }
 
 .add-plan__pagination-item {
-  background-color: $blue;
-  opacity: 0.3;
   width: 5px;
-  border-radius: 50%;
   height: 5px;
-  margin-right: 20px;
+  margin-right: 16px;
+
+  background-color: $blue;
+  border-radius: 50%;
+  opacity: 0.3;
 
   &:last-child {
     margin-right: 0;
@@ -48,26 +54,41 @@
 @media (min-width: $tablet-width) {
   .add-plan__wrapper {
     @include extra-offset(35px, 35px);
-    @include padding-t-b(60px, 60px);
+    @include padding-t-b(43px, 120px);
   }
 
   .add-plan__title {
-    margin-bottom: 60px;
+    margin-bottom: 52px;
 
     font-size: 36px;
     line-height: 50px;
   }
 
   .add-plan__pagination {
-    top: 80px;
-    right: 80px;
+    top: 66px;
+    right: 75px;
+  }
+
+  .add-plan__pagination-item {
+    margin-right: 29px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .add-plan {
+    margin-top: -60px;
+
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
   .add-plan__wrapper {
     @include container;
-    @include padding-t-b(60px, 60px);
+    @include padding-t-b(46px, 130px);
+  }
+
+  .add-plan__title {
+    margin-left: 70px;
   }
 
   .add-plan__pagination {

@@ -1,11 +1,27 @@
+.contact-us {
+  margin-top: -1px;
+}
+
+.contact-us__blue-box {
+  @include bordered-bottom;
+
+  z-index: 2;
+
+  background-color: $dark-blue;
+}
+
 .contact-us__wrapper {
   @include container;
-  @include padding-t-b(20px, 35px);
+  @include padding-t-b(20px, 29px);
+}
+
+.contact-us_dark {
+  color: $dark-blue;
 }
 
 .contact-us__lead {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   text-align: center;
 }
@@ -18,11 +34,55 @@
   color: $light-yellow;
 }
 
+.contact-us__item {
+  display: flex;
+  align-items: center;
+
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: $yellow;
+
+    .contact-us__icon {
+      color: $yellow;
+    }
+  }
+
+  &:active {
+    @include opacity-color($yellow, 0.3);
+
+    .contact-us__icon {
+      @include opacity-color($yellow, 0.3);
+    }
+  }
+}
+
 .contact-us__icon {
-  margin-right: 20px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+
+  color: $light-yellow;
+
+  background-color: $black-blue;
+  border-radius: 50%;
 }
 
 .contact-us__yellow-box {
+  @include bordered-bottom;
+
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: -35px;
+  padding-top: 42px;
+  padding-bottom: 6px;
+
   font-weight: bold;
   color: $dark-blue;
 
@@ -30,15 +90,50 @@
 }
 
 .contact-us__address {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   font-style: normal;
   text-transform: uppercase;
 }
 
+.contact-us__mail-address {
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 .contact-us__link {
-  border: 3px solid $darkness-blue;
+  padding: 20px;
+
+  border: 3px solid $dark-blue;
   border-radius: 10px;
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 1);
+
+    background-color: $dark-blue;
+
+    &::after {
+      border-color: rgba(255, 255, 255, 1);
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+
+      &::after {
+        border-color: rgba(255, 255, 255, 0.3);
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+.contact-us__map {
+  height: 546px;
+  margin-bottom: -238px;
 }
 
 @media (min-width: $tablet-width) {
@@ -49,50 +144,109 @@
 
   .contact-us__wrapper {
     @include extra-offset(35px, 35px);
-    @include padding-t-b(70px, 85px);
+    @include padding-t-b(48px, 61px);
   }
 
   .contact-us__lead {
     @include content-text-light;
 
-    margin-bottom: 45px;
+    margin-bottom: 42px;
   }
 
   .contact-us__link {
+    padding: 25px 33px;
+
     font-size: 24px;
     line-height: 24px;
+
+    border-radius: 20px;
+  }
+
+  .contact-us__icon {
+    width: 67px;
+    height: 67px;
+    margin-right: 25px;
+
+    svg {
+      width: 27px;
+      height: auto;
+    }
+  }
+
+  .contact-us__yellow-box {
+    margin-bottom: -85px;
+    padding-top: 60px;
+    padding-bottom: 25px;
+
+    svg {
+      width: 21px;
+    }
+  }
+
+  .contact-us__address {
+    margin-bottom: 44px;
+  }
+
+  .contact-us__map {
+    height: 700px;
+    margin-bottom: -153px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .contact-us__wrapper {
-    @include extra-offset(223px, 73px);
-    @include padding-t-b(70px, 80px);
+    @include extra-offset(223px, 227px);
+    @include padding-t-b(58px, 105px);
   }
 
   .contact-us__info {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+  }
 
-    .contact__phone-link {
-      padding-left: 120px;
-    }
+  .contact-us__lead {
+    font-size: 29px;
+  }
 
-    .contact__mail-link {
-      padding-left: 120px;
+  .contact-us__icon {
+    width: 90px;
+    height: 90px;
+    margin-right: 30px;
+
+    svg {
+      width: 36px;
     }
   }
 
   .contact-us__yellow-box {
+    margin-bottom: -200px;
+    padding-bottom: 0;
+
     .contact-us__wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 60px;
+      padding-top: 53px;
+      padding-right: 135px;
+      padding-bottom: 58px;
+    }
+
+    svg {
+      width: 28px;
     }
   }
 
   .contact-us__address {
     margin-bottom: 0;
+  }
+
+  .contact-us__link {
+    width: auto;
+  }
+
+  .contact-us__map {
+    height: 750px;
+    margin-bottom: -155px;
   }
 }

@@ -1,13 +1,21 @@
+.people {
+  z-index: 0;
+
+  background-color: $dark-blue;
+}
+
 .people__wrapper {
   @include container;
-  @include padding-t-b(40px, 40px);
+  @include padding-t-b(100px, 1px);
 
   position: relative;
+  z-index: 0;
+
   background-image: url("../../img/smolov-back-desktop@1x.png"),
     url("../../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: top left, top right;
-  background-size: 143px, 61px;
+  background-position: right 25px top 69px, left 0 top 27.1%;
+  background-size: 143px, 19%;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../../img/smolov-back-desktop@2x.png"),
@@ -17,17 +25,33 @@
 
 .people__text-box {
   width: 215px;
-  margin-bottom: 60px;
+  margin-bottom: 57px;
   padding-left: 25px;
 }
 
 .people__title {
   @include section-title-orange;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 68px;
+    right: 209px;
+    left: 0;
+    z-index: -2;
+
+    height: 132px;
+
+    background-color: #141b3b;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 .people__description {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 
   font-weight: 300;
 }
@@ -39,12 +63,13 @@
 @media (min-width: $tablet-width) {
   .people__wrapper {
     @include extra-offset(35px, 35px);
-    @include padding-t-b(80px, 80px);
+    @include padding-t-b(198px, 30px);
 
     background-image: url("../../img/smolov-back-desktop@1x.png"),
       url("../../img/rogovaya-back-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: top left, top right;
+    background-position-x: 6.3%, 84.4%;
+    background-position-y: 43.5%, 14.5%;
     background-size: 143px, 285px;
 
     @media (min-resolution: $retina-dppx) {
@@ -55,26 +80,64 @@
 
   .people__text-box {
     width: 425px;
+    margin-bottom: 59px;
     padding-left: 0;
+  }
+
+  .people__title {
+    margin-bottom: 57px;
+
+    &::before {
+      top: 140px;
+      left: 40px;
+
+      width: 213px;
+      height: 213px;
+
+      border-radius: 20px;
+    }
   }
 
   .people__description {
     @include content-text-light;
+
+    margin-bottom: 40px;
   }
 
   .people__description-bold {
     @include content-text-bold;
+  }
+
+  @media (max-width: 1439px) {
+    .people__wrapper {
+      max-width: 1000px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .people__wrapper {
     @include extra-offset(70px, 0);
+    @include padding-t-b(186px, 71px);
+
+    background-position-x: 547px, 191px;
+    background-position-y: 193px, 445px;
   }
 
   .people__list {
     position: absolute;
-    top: 60px;
+    top: 193px;
     right: 60px;
+  }
+
+  .people__text-box {
+    margin-bottom: 86px;
+  }
+
+  .people__title {
+    &::before {
+      top: 129px;
+      left: 60px;
+    }
   }
 }

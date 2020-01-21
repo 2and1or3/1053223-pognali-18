@@ -1,28 +1,43 @@
 .offer {
+  @include bordered-bottom;
+  @include pseudo-border($dark-blue);
+
   font-weight: 300;
   color: $grey;
 }
 
 .offer__wrapper {
   @include extra-offset(25px, 0);
-  @include padding-t-b(65px, 35px);
+  @include padding-t-b(81px, 35px);
 
   position: relative;
 
-  background-image: url("../img/rates@1x.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 99px 99px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/rates@2x.png");
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/rates@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 26px top 67px;
+    background-size: 99px 99px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/rates@2x.png");
+    }
   }
 }
 
 .offer__title {
   @include section-title-orange;
 
-  margin-bottom: 40px;
+  min-height: 45px;
+  margin-bottom: 45px;
   padding-right: 145px;
 }
 
@@ -32,7 +47,7 @@
   box-sizing: border-box;
   width: 100%;
   min-width: 200px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   padding-right: 45px;
 
   counter-reset: countItems;
@@ -41,6 +56,7 @@
 .offer__item {
   position: relative;
 
+  margin-bottom: 1px;
   padding: 10px 0;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -49,11 +65,15 @@
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &::before {
     content: counter(countItems);
     position: absolute;
-    top: 0;
-    right: -40px;
+    top: 3px;
+    right: -44px;
 
     width: 34px;
     height: 34px;
@@ -78,10 +98,22 @@
 }
 
 .offer__button {
+  position: relative;
+  z-index: 2;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
   color: $dark-blue;
+
+  &:hover,
+  &:focus {
+    @include opacity-color($dark-blue, 0.7);
+  }
+
+  &:active {
+    @include opacity-color($dark-blue, 0.3);
+  }
 }
 
 .offer__button-icon {
@@ -91,11 +123,15 @@
 @media (min-width: $tablet-width) {
   .offer__wrapper {
     @include container;
-    @include padding-t-b(70px, 70px);
+    @include padding-t-b(130px, 66px);
+
+    &::after {
+      background-position: right 86px bottom 48px;
+    }
   }
 
   .offer__title {
-    margin-bottom: 70px;
+    margin-bottom: 75px;
     padding: 0;
 
     text-align: center;
@@ -106,6 +142,7 @@
     z-index: 1;
 
     min-width: 562px;
+    margin-bottom: 32px;
     padding-right: 35px;
     padding-left: 90px;
 
@@ -129,10 +166,10 @@
 
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 16px 0;
 
     &::before {
-      left: -85px;
+      left: -90px;
 
       width: 67px;
       height: 67px;
@@ -154,7 +191,7 @@
     display: flex;
     width: 67px;
     height: 67px;
-    margin-right: 20px;
+    margin-right: 21px;
 
     background-color: #e2e5f2;
     border-radius: 50%;
@@ -167,19 +204,34 @@
 
 @media (min-width: $desktop-width) {
   .offer__wrapper {
-    @include extra-offset(70px, 75px);
-    @include padding-t-b(150px, 150px);
+    @include extra-offset(71px, 75px);
+    @include padding-t-b(164px, 166px);
 
-    background-size: 198px 198px;
+    &::after {
+      background-position: right 134px top 345px;
+      background-size: 198px 198px;
+    }
+  }
+
+  .offer__title {
+    margin-bottom: 133px;
   }
 
   .offer__list {
     width: 1070px;
-    padding-right: 170px;
+    margin-bottom: 36px;
+    padding-right: 166px;
 
     &::after {
+      top: -49px;
+
       width: 444px;
       height: 300px;
     }
+  }
+
+  .offer__item {
+    margin-bottom: 3px;
+    padding: 15px 0;
   }
 }

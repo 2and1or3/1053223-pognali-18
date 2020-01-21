@@ -13,21 +13,20 @@
   position: relative;
 
   margin-bottom: -15px;
-  padding: 25px;
-  padding-right: 102px;
-  padding-bottom: 35px;
+  padding: 23px 102px 36px 25px;
 
   background-color: $orange;
   border-radius: 10px;
 
   &:last-child {
     margin-bottom: 0;
+    padding-bottom: 22px;
   }
 
   &::after {
     content: counter(countItems);
     position: absolute;
-    top: 25px;
+    top: 22px;
     right: 20px;
 
     color: rgba(255, 255, 255, 1);
@@ -62,7 +61,7 @@
     box-sizing: border-box;
     width: 50%;
     margin-bottom: -1px;
-    padding: 30px;
+    padding: 29px 33px 14px;
 
     border-radius: 0;
 
@@ -72,7 +71,7 @@
       display: block;
 
       font-size: 30px;
-      line-height: 60px;
+      line-height: 50px;
     }
 
     &:nth-child(1),
@@ -84,12 +83,14 @@
     &:nth-last-child(1),
     &:nth-last-child(2) {
       margin-bottom: 0;
+      padding-bottom: 13px;
 
       border-bottom-right-radius: 20px;
       border-bottom-left-radius: 20px;
     }
 
     &:nth-child(2n+1) {
+      min-width: 378.7px;
       margin-right: -35px;
     }
   }
@@ -104,10 +105,10 @@
     display: flex;
     justify-content: space-between;
     width: 25%;
+    min-width: auto;
     margin: 0;
     margin-right: -35px;
-    padding: 30px;
-    padding-right: 50px;
+    padding: 29px 69px 31px 30px;
 
     border-radius: 20px;
 
@@ -116,8 +117,16 @@
       line-height: 24px;
     }
 
+    &:first-child {
+      margin-right: -61px;
+      padding-right: 100px;
+    }
+
     &:last-child {
+      flex-grow: 0;
+      width: 315px;
       margin-right: 0;
+      padding-right: 33px;
     }
   }
 }

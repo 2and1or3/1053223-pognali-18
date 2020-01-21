@@ -17,11 +17,27 @@
   border: 1px solid #cbced9;
   border-radius: 4px;
 
+  &:hover {
+    border: 1px solid #959bb2;
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &:focus-within {
+    border: 1px solid #959bb2;
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 13px;
     z-index: 1;
 
     width: 12px;
@@ -38,8 +54,8 @@
 .select__control {
   box-sizing: border-box;
   width: 100%;
-  min-height: 42px;
-  padding: 5px 12px;
+  min-height: 39px;
+  padding: 5px 11px;
 
   font: inherit;
   text-align: left;
@@ -52,10 +68,16 @@
   border-radius: 4px;
 
   appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 .select__control_add {
   position: relative;
+
+  min-height: 41px;
 
   background-color: $grey-blue;
   border: none;
@@ -71,14 +93,33 @@
 
     background: url("../../img/qty-plus-mobile.svg");
     transform: translateY(-50%);
-    opacity: 0.3;
+    opacity: 0.2;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #cbced9;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    @include opacity-color($blue, 0.3);
+
+    background-color: #dfe3f0;
+
+    &::after {
+      opacity: 0.1;
+    }
   }
 }
 
 .select__flag {
   display: flex;
   width: 53px;
-  height: 42px;
+  min-height: 39px;
   margin: 0;
 
   border: 1px solid #cbced9;
@@ -110,7 +151,16 @@
   svg {
     width: 9px;
 
+    opacity: 0.2;
+  }
+
+  &:hover,
+  &:focus {
     opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.05;
   }
 }
 
@@ -121,12 +171,37 @@
     border: 0;
 
     &::after {
-      width: 9px;
-      height: 9px;
+      content: none;
+    }
 
-      background-image: url("../../img/small-cross.svg");
-      opacity: 1;
-      filter: brightness(0) invert(1);
+    .select__control {
+      &:hover,
+      &:focus {
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        &::after {
+          opacity: 0.1;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 15px;
+
+        width: 9px;
+        height: 9px;
+
+        background-image: url("../../img/small-cross.svg");
+        transform: translateY(-50%);
+        opacity: 0.3;
+        filter: brightness(0) invert(1);
+      }
     }
   }
 
@@ -171,11 +246,13 @@
   display: flex;
   flex-wrap: wrap;
   margin-right: -1px;
-  margin-bottom: 50px;
+  margin-bottom: 56px;
 }
 
 .select__countries {
   margin-left: 20px;
+
+  font-weight: normal;
 }
 
 @media (min-width: $tablet-width) {
@@ -188,7 +265,7 @@
 
   .select__control-box {
     flex-grow: 0;
-    width: 69.8%;
+    width: 69%;
 
     &::after {
       right: 25px;
@@ -199,10 +276,23 @@
   }
 
   .select__control {
-    min-height: 70px;
+    min-height: 67px;
     padding: 5px 25px;
 
     letter-spacing: 2px;
+  }
+
+  .select_active {
+    .select__control-box_add {
+      .select__control {
+        &::after {
+          right: 25px;
+
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
   }
 
   .select__flag {
@@ -239,6 +329,7 @@
 
     svg {
       width: 17px;
+      height: auto;
     }
   }
 
@@ -258,8 +349,8 @@
   .select__popup {
     flex-direction: row;
     justify-content: space-between;
-    width: 108.8%;
-    padding: 35px 27px;
+    width: 108.3%;
+    padding: 36px 27px;
 
     border: 0;
 
@@ -268,7 +359,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 64.1%;
+      left: 64%;
 
       width: 1px;
 
@@ -281,27 +372,50 @@
   }
 
   .select__countries {
-    margin-left: 105px;
+    margin-right: 44px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .select__delete {
-    margin-left: 110px;
+    margin-left: 75px;
+    padding-right: 7px;
+  }
+
+  .select__control-box {
+    width: 72.8%;
+  }
+
+  .select__control_add {
+    width: 72.8%;
   }
 
   .select__popup {
     align-items: flex-start;
     width: 730px;
+    padding: 35px 27px 18px;
+
+    &::after {
+      left: 67%;
+    }
   }
 
   .select__countries {
+    margin: 0;
+    margin-right: 78px;
+    padding: 0;
+
     .countries__sub {
       display: none;
     }
 
     .countries__sub_active {
       display: block;
+    }
+
+    .countries__item {
+      width: auto;
+      margin: 0;
     }
   }
 }

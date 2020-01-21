@@ -10,19 +10,32 @@
   font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
+  letter-spacing: 1.6px;
 }
 
 .counter__label-mesure {
   @include opacity-color($blue, 0.3);
+
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1.6px;
 }
 
 .counter__box {
   display: flex;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 9px;
 
   border: 1px solid #cbced9;
   border-radius: 4px;
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:focus-within {
+    border: 1px solid $darkness-blue;
+  }
 }
 
 .counter__less,
@@ -37,6 +50,15 @@
   background-size: 14px auto;
   border: 0;
   opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .counter__less {
@@ -49,7 +71,8 @@
 
 .counter__input {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
+  padding-bottom: 11px;
 
   font-weight: 500;
   font-size: 15px;
@@ -69,11 +92,11 @@
   }
 
   .counter__box {
-    margin-top: 0;
+    margin-top: 26px;
   }
 
   .counter__input {
-    padding: 25px 15px;
+    padding: 22px 15px;
 
     font-size: 20px;
     line-height: 20px;
@@ -82,7 +105,7 @@
 
   .counter__less,
   .counter__more {
-    width: 70px;
+    width: 68px;
 
     background-size: 20px auto;
   }
@@ -90,19 +113,23 @@
 
 @media (min-width: $desktop-width) {
   .counter__label {
-    min-width: 170px;
+    min-width: 190px;
   }
 
   .counter__label-mesure {
-    min-width: 50px;
     order: 1;
+    min-width: 50px;
+
+    color: $blue;
   }
 
   .counter__input {
-    padding: 25px 5px;
+    padding: 22px 5px;
   }
 
   .counter__box {
     width: 180px;
+    margin-top: 0;
+    margin-right: 5px;
   }
 }

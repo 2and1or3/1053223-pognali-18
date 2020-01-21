@@ -10,6 +10,14 @@
 .catalog__item {
   margin-bottom: 10px;
 
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:focus-within {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -18,7 +26,9 @@
 .catalog__button {
   position: relative;
 
-  margin: 25px auto;
+  align-self: center;
+  margin: 17px auto 20px;
+  padding-left: 33px;
 
   font-weight: bold;
   font-size: 17px;
@@ -26,11 +36,20 @@
   color: $blue;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: -30px;
+    left: 0;
 
     width: 18px;
     height: 18px;
@@ -50,13 +69,14 @@
   }
 
   .catalog__button {
-    margin: 50px auto;
+    margin: 44px auto 50px;
+    padding-left: 50px;
 
     font-size: 20px;
     line-height: 30px;
 
     &::before {
-      left: -50px;
+      left: 0;
 
       width: 27px;
       height: 27px;
@@ -79,6 +99,7 @@
   }
 
   .catalog__button {
-    margin: 70px auto;
+    margin: 64px auto 67px;
+    padding-right: 74px;
   }
 }

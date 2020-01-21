@@ -2,13 +2,7 @@
   display: flex;
   align-items: center;
 
-  font-weight: bold;
   color: $darkness-blue;
-}
-
-.contact__item {
-  display: flex;
-  align-items: center;
 }
 
 .contact__icon {
@@ -16,28 +10,45 @@
   width: 40px;
   height: 40px;
 
-  background-color: $orange;
   border-radius: 50%;
 
   svg {
     margin: auto;
   }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
-.contact__item .contact__icon {
-  width: 45px;
-  height: 45px;
+.contact__link {
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+  }
+
+  &:active {
+    @include opacity-color($darkness-blue, 0.3);
+  }
 }
 
 .contact__icon_yellow {
   background-color: $yellow;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $orange;
+  }
 }
 
-.contact__icon_dark {
-  background-color: $black-blue;
+.contact__icon_orange {
+  background-color: $orange;
 
-  path {
-    fill: $light-yellow;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #f26926;
   }
 }
 
@@ -45,17 +56,5 @@
   .contact__icon {
     width: 50px;
     height: 50px;
-  }
-
-  .contact__item .contact__icon {
-    width: 67px;
-    height: 67px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .contact__item .contact__icon {
-    width: 90px;
-    height: 90px;
   }
 }
