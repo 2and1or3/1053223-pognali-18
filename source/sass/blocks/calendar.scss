@@ -206,7 +206,9 @@
   }
 
   .calendar__button {
-    background-size: 18px auto;
+    min-height: 85px;
+
+    background-size: 18px 32px;
   }
 
   .calendar__button_prev {

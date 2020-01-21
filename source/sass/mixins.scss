@@ -93,7 +93,7 @@
   $space-length: $circle-length - $stroke-length;
 
   stroke-width: $width;
-  r: $radius;
+  r: 1px * $radius;
   stroke-dasharray: $stroke-length $space-length;
   stroke-dashoffset: $circle-length * 0.25;
 }
@@ -130,7 +130,7 @@
 
   &::after {
     content: "";
-    top: 0;
+    top: -1px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     left: 0;

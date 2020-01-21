@@ -5,6 +5,10 @@
   <title>Главная страница Погнали</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.min.css" rel="stylesheet">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
   <header class="header header_dark-tablet header_opene header_n-js">
@@ -115,7 +119,7 @@
       <div class="promo__wrapper">
         <div class="promo__wrapper-mobile">
           <h1 class="promo__title">
-            В путешествие
+            В&nbsp;путешествие
             с крутыми попутчиками!
           </h1>
           <div class="promo__contact contact">
@@ -268,7 +272,7 @@
             <p class="level human__level">
               99
               <svg class="level__svg level__svg_dark" viewBox="0 0 60 60">
-                <circle class="level__circle level__circle_99" cx="50%" cy="50%" r="60"></circle>
+                <circle class="level__circle level__circle_99" cx="50%" cy="50%" r="28.5"></circle>
               </svg>
             </p>
             <picture class="human__image-box">
@@ -338,7 +342,7 @@
             <p class="level human__level">
               80
               <svg class="level__svg level__svg_dark" viewBox="0 0 60 60">
-                <circle class="level__circle" cx="50%" cy="50%" r="60"></circle>
+                <circle class="level__circle" cx="50%" cy="50%" r="28.5"></circle>
               </svg>
             </p>
             <picture class="human__image-box">
@@ -570,5 +574,9 @@
       </a>
     </div>
   </footer>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </body>
 </html>

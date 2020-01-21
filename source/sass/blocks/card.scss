@@ -393,7 +393,7 @@ $bed-design: 4px;
 
   .card__flag {
     width: 35px;
-    height: auto;
+    height: 24px;
     margin-right: 8px;
   }
 }
@@ -456,8 +456,8 @@ $bed-design: 4px;
   }
 
   .card__needs {
-    margin-right: 20px;
     flex-direction: column;
+    margin-right: 20px;
   }
 
   .card__need-country {
@@ -481,6 +481,7 @@ $bed-design: 4px;
       width: auto;
       margin-top: 0;
       margin-bottom: -67px;
+      margin-left: auto;
     }
 
     &:last-of-type {

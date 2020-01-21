@@ -8,6 +8,7 @@
 
 .country-item__img {
   display: block;
+  width: 100%;
 
   border-radius: 10px;
 }
@@ -70,6 +71,7 @@
 .country-item__flag {
   position: absolute;
   top: -12px;
+  left: 25px;
 }
 
 @media (min-width: $tablet-width) {
@@ -131,6 +133,7 @@
   .country-item__flag {
     top: 15px;
     right: -35px;
+    left: auto;
 
     width: 71px;
     height: 48px;
