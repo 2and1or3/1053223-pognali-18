@@ -84,10 +84,14 @@
 
 @media (min-width: $desktop-width) {
   .directions__wrapper {
-    @include extra-offset(802px, 170px);
-    @include padding-t-b(224px, 138px);
+    @include extra-offset(70px, 179px);
+    @include padding-t-b(224px, 147px);
 
     position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
@@ -96,19 +100,22 @@
   }
 
   .directions__list {
-    position: absolute;
-    top: 149px;
-    left: 130px;
-
     margin-bottom: 0;
-    padding-top: 74px;
+    padding-top: 0;
 
     &::before {
+      top: -75px;
       left: -70px;
     }
   }
 
   .directions__text-box {
     margin-bottom: 100px;
+  }
+
+  .directions__button {
+    position: absolute;
+    right: 298px;
+    bottom: 139px;
   }
 }

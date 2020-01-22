@@ -206,7 +206,7 @@
             и чем можно там заняться.
           </p>
         </div>
-        <ul class="directions__list fade-block fade-block_absolute">
+        <ul class="directions__list fade-block">
           <li class="country-item">
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x">
@@ -275,7 +275,7 @@
           <li class="peoples__item human">
             <p class="level human__level">
               99
-              <svg class="level__svg level__svg_dark" viewBox="0 0 60 60">
+              <svg class="level__svg level__svg_dark" viewBox="0 0 60 60" height="60" width="60">
                 <circle class="level__circle level__circle_99" cx="50%" cy="50%" r="28.5"></circle>
               </svg>
             </p>
@@ -345,7 +345,7 @@
           <li class="peoples__item human">
             <p class="level human__level">
               80
-              <svg class="level__svg level__svg_dark" viewBox="0 0 60 60">
+              <svg class="level__svg level__svg_dark" viewBox="0 0 60 60" height="60" width="60">
                 <circle class="level__circle" cx="50%" cy="50%" r="28.5"></circle>
               </svg>
             </p>
@@ -474,7 +474,8 @@
           Уже&nbsp;зарегистрированы? Тогда скорее <a href="registration.html" class="registration__link">авторизуйтесь.</a>
         </p>
         <form action="https://echo.htmlacademy.ru" class="registration__email-form" method="post">
-          <input type="email" class="registration__mail" placeholder="E-mail" required>
+          <label class="visually-hidden" for="registration-input">Поле для почты</label>
+          <input type="email" class="registration__mail" placeholder="E-mail" required id="registration-input">
           <button class="registration__button button" type="submit">
             <span class="registration__button-text">Регистрация</span>
           </button>

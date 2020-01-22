@@ -59,3 +59,12 @@
 .level__circle_50 {
   @include level-circle(30, 3, 50);
 }
+
+@media (min-width: $tablet-width) {
+  .card__level {
+    .level__svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
