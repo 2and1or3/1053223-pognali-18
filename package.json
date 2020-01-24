@@ -27,7 +27,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "gulp start",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
@@ -44,5 +45,9 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "homepage": "https://github.com/2and1or3/1053223-pognali-18",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
